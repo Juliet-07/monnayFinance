@@ -1,7 +1,67 @@
 .container {
-  padding: 0 2rem;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
-
+.addressBar {
+  display: inline;
+  height: 60px;
+  background-color: #057d99;
+  /* margin-bottom: 0px; */
+}
+.topBar {
+  display: inline;
+  height: 80px;
+  /* background-color: #057d99; */
+  padding-left: 20px;
+  padding-right: 30px;
+  background-color: #ffffff;
+  /* margin-top: 0px; */
+}
+.navLink {
+  color: #057d99;
+  font-size: 13px;
+}
+.button {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  padding: 0.46875rem 1rem;
+  font-size: 13px;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  background-color: #057d99;
+  color: #ffffff;
+}
+.buttonOutline {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-color: #057d99;
+  padding: 0.46875rem 1rem;
+  font-size: 13px;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  color: #057d99;
+  background-color: #ffffff;
+  margin-left: 10px;
+}
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0.3rem;
+}
+.jumbotron-fluid {
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+}
 .main {
   min-height: 100vh;
   padding: 4rem 0;
