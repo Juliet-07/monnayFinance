@@ -3,8 +3,10 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineClockCircle } from "react-icons/ai";
+import { FaHandshake } from "react-icons/fa";
+import { BiBarChartSquare } from "react-icons/bi";
 import Logo from "../asset/monnayLogo.png";
-import monnayJumbo from "../asset/monnayJumbo.jpg";
+import Trade from "../asset/monnayHome.jpg";
 
 const Home = () => {
   return (
@@ -84,10 +86,103 @@ const Home = () => {
         </nav>
       </div>
       <main className={styles.main}>
-        <div className="jumbotron jumbotron-fluid">
-          <Image src={monnayJumbo} width={100} height={100} />
+        {/* Jumbotron */}
+        <div className={styles.jumbotron}>
+          <div className={styles.jumbotronFluid}>
+            <h2 className={styles.properties}>
+              Dedicated to your
+              <br />
+              financial growth
+            </h2>
+            <p className={styles.content}>
+              We create equal opportunities for all investors to
+              <br /> thrive in the crypto and forex markets
+            </p>
+            <a href="#" className={styles.jumboButton}>
+              GET STARTED
+            </a>
+          </div>
         </div>
-
+        {/* Jumbotron Ends */}
+        {/* Trade */}
+        <div className={styles.trade}>
+          <div>
+            <Image
+              src={Trade}
+              width={450}
+              height={300}
+              className={styles.tradeImage}
+            />
+          </div>
+          <div style={{ margin: 50 }}>
+            <h3 className={styles.tradeText}>
+              You have the <font color="#057d99">best hands</font>
+              <br />
+              handling your funds.
+            </h3>
+            <p className={styles.tradeMessage}>
+              Nibh in purus volutpat nibh sit leo, phasellus consectetur tortor.
+              <br />
+              Est molestie facilisi fermentum eu dignissim volutpat vitae. Sed
+              ac nunc <br /> non nibh. Urna sed in neque lacus netus ut varius.
+              Iaculis molestie morbi <br />
+              pharetra, pretium ut ipsum. Risus, et pellentesque vitae vitae
+              arcu rhoncus <br />
+              laoreet odio. Nibh in purus volutpat nibh sit leo, phasellus
+              consectetur tortor.
+              <br /> Est molestie facilisi fermentum eu dignissim volutpat
+              vitae. Sed ac nunc <br />
+              non nibh. Urna sed in neque lacus netus ut varius. Iaculis
+              molestie morbi
+              <br />
+              pharetra, pretium ut ipsum. Risus, et pellentesque vitae vitae
+              arcu rhoncus <br />
+              laoreet odio.
+            </p>
+          </div>
+        </div>
+        {/* Trade Ends */}
+        {/* Trust */}
+        <div className={styles.trustContainer}>
+          <h3 className={styles.trustText}>
+            Why should you <font color="#057d99">trust us</font>?
+          </h3>
+          <p className={styles.trustMessage}>
+            We see it as our responsibility to invest for everyone's tomorrow.
+            <br />
+            That means doing the right thing for our clients and for others too.
+          </p>
+          <div className={styles.trustShowBox}>
+            <div className={styles.box}>
+              <div className={styles.boxIconContainer}>
+                <i className={styles.boxIcon}>
+                  <FaHandshake />
+                </i>
+              </div>
+              <h4 className={styles.boxText}>COLLABORATION</h4>
+              <p className={styles.boxMessage}>
+                It's through responsible entrepreneurship that we achieve the
+                best results for our clients. Our people are trusted to pursue
+                value. They know when to change course to preserve it too.
+              </p>
+            </div>
+            <div className={styles.box}>
+              <div className={styles.boxIconContainer}>
+                <i className={styles.boxIcon}>
+                  <BiBarChartSquare />
+                </i>
+              </div>
+              <h4 className={styles.boxText}>RESPONSIBILITY</h4>
+              <p className={styles.boxMessage}>
+                Responsibility demands courage. We are not afraid to ask
+                difficult questions or make changes that need to be made. We
+                stand up for what's right, accepting that this can be<br/>
+                challenging sometimes.
+              </p>
+            </div>
+          </div>
+        </div>
+        {/* Trust Ends */}
         <p className={styles.description}>
           Get started by editing{" "}
           <code className={styles.code}>pages/index.js</code>
