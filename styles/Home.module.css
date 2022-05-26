@@ -1,5 +1,5 @@
 .container {
-  display: block;
+  /* display: block; */
   width: 100%;
   height: 100%;
 }
@@ -21,6 +21,12 @@
 .navLink {
   color: #057d99;
   font-size: 13px;
+}
+.navLink a:hover,
+.navLink a:focus,
+.navLink a:active {
+  font-style: bold;
+  color: #057d99;
 }
 .button {
   display: inline-block;
@@ -138,7 +144,7 @@
 .trustContainer {
   display: block;
   width: 100%;
-  height: 840px;
+  height: 650px;
   /* background-color: #000000; */
 }
 .trustText {
@@ -207,22 +213,135 @@
   line-height: 18px;
   color: #000000;
 }
-.footer {
+.strategyContainer {
   display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
+  flex-direction: row;
+  width: 100%;
+  height: 700px;
+}
+.strategyTextContainer {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 50px;
+  width: 50%;
+  background-color: #0a4f60;
+}
+.strategyText {
+  font-style: bold;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57px;
+  color: #ffffff;
+}
+.strategyMessage {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  color: #ffffff;
+}
+/* .strategyRectangle {
+  position: fixed;
+  width: 40px;
+  height: 250px;
+  top: 250px;
+  right: 20px;
+  left: 50%;
+  background: rgba(5, 125, 153, 0.61);
+} */
+.strategyImageContainer {
+  width: 50%;
+  background: url("../asset/monnayStrategy.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.investmentHeader {
+  margin-top: 50px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57px;
+}
+.investmentContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 3%;
+}
+.plans {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 500px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  border-color: #000000;
+  background-color: #fafafa;
+}
+.plans a:active {
+  background-color: #057d99;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 500px;
+  /* margin: 1rem; */
+  /* padding: 1.5rem; */
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 300px;
 }
 
+.card:hover,
+.card:focus,
+.card:active {
+  color: #057d99;
+  border-color: #057d99;
+}
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+.footer {
+  display: block;
+  /* flex-direction: column; */
+  padding: 2rem 0;
+  /* border-top: 1px solid #eaeaea; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  background-color: #0a4f60;
+}
 .footer a {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
 }
-
+.footerOne{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid transparent;
+  border-color: #ffffff;
+}
+.footerOneStyle{
+  color: #ffffff;
+}
 .title a {
   color: #0070f3;
   text-decoration: none;
@@ -260,51 +379,13 @@
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
 .logo {
   height: 1em;
   margin-left: 0.5rem;
 }
 
 @media (max-width: 600px) {
-  .grid {
+  .investmentContainer {
     width: 100%;
     flex-direction: column;
   }

@@ -42,7 +42,7 @@ const Home = () => {
             <Image src={Logo} width={100} height={30} />
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               <li>
-                <a href="#" className={styles.navLink}>
+                <a href="/" className={styles.navLink}>
                   HOME
                 </a>
               </li>
@@ -121,23 +121,13 @@ const Home = () => {
               handling your funds.
             </h3>
             <p className={styles.tradeMessage}>
-              Nibh in purus volutpat nibh sit leo, phasellus consectetur tortor.
+              We are dedicated in the cryptocurrency industry,
+              <br /> with outstanding technology of bitcoin trading and bitcoin
+              mining. <br />
+              Since we came into existence, our role is to offer <br />
+              each person the chance to attend the bitcoin related business{" "}
               <br />
-              Est molestie facilisi fermentum eu dignissim volutpat vitae. Sed
-              ac nunc <br /> non nibh. Urna sed in neque lacus netus ut varius.
-              Iaculis molestie morbi <br />
-              pharetra, pretium ut ipsum. Risus, et pellentesque vitae vitae
-              arcu rhoncus <br />
-              laoreet odio. Nibh in purus volutpat nibh sit leo, phasellus
-              consectetur tortor.
-              <br /> Est molestie facilisi fermentum eu dignissim volutpat
-              vitae. Sed ac nunc <br />
-              non nibh. Urna sed in neque lacus netus ut varius. Iaculis
-              molestie morbi
-              <br />
-              pharetra, pretium ut ipsum. Risus, et pellentesque vitae vitae
-              arcu rhoncus <br />
-              laoreet odio.
+              and earn profit easily with our powerful investment sytem.
             </p>
           </div>
         </div>
@@ -176,50 +166,103 @@ const Home = () => {
               <p className={styles.boxMessage}>
                 Responsibility demands courage. We are not afraid to ask
                 difficult questions or make changes that need to be made. We
-                stand up for what's right, accepting that this can be<br/>
+                stand up for what's right, accepting that this can be
+                <br />
                 challenging sometimes.
               </p>
             </div>
           </div>
         </div>
         {/* Trust Ends */}
-        <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        {/* Strategy */}
+        <div className={styles.strategyContainer}>
+          <div className={styles.strategyTextContainer}>
+            <h4 className={styles.strategyText}>Our Strategy</h4>
+            <text className={styles.strategyMessage}>
+              Our commitment to be a leader in responsible business (RB) stems
+              from our <br />
+              purpose in society. It is core to our business. Thinking, acting
+              and investing <br />
+              responsibly not only shapes what we do but how we do it. We will
+              actively
+              <br /> manage your portfolio to ensure it remains appropriate for
+              the ever-changing <br />
+              conditions in the global economy and financial markets. We will
+              also be <br />
+              responsible for making any adjustments if your personal situation
+              or objectives change.
+              <br />
+              <br /> A diversified investment strategy (sometimes called a
+              “balanced portfolio” or <br />
+              “multi-asset portfolio”) that combines different assets can be one
+              of the best <br />
+              ways to preserve and enhance wealth over the long term. This
+              approach can <br />
+              provide exposure to a wide set of investment opportunities and
+              reduce losses
+              <br /> when market conditions are challenging.
+            </text>
+          </div>
+          {/* <div className={styles.strategyRectangle}></div> */}
+          <div className={styles.strategyImageContainer}></div>
         </div>
+        {/* Strategy Ends */}
+        {/* Investment Plans */}
+        <h3 className={styles.investmentHeader}>
+          Our <font color="#057d99">Investment Plans</font>
+        </h3>
+        <div className={styles.investmentContainer}>
+          <div className={styles.card}>
+            <h3>Basic</h3>
+            <h5>2% ROI Daily</h5>
+            <ul className="m-5 p-5 text-center">
+              <li>
+                <i className="material-icons">
+                  <FaHandshake />
+                </i>
+                Profit withdrawal: <b>Active daily</b>
+              </li>
+              <li>
+                Capital withdrawal: <b>After investment duration</b>
+              </li>
+              <li>
+                Minimum investment: <b>$100</b>
+              </li>
+              <li>
+                Maximum investment: <b>$4,999</b>
+              </li>
+              <li>
+                Daily profit range: <b>$2 - $99.98</b>
+              </li>
+              <li>
+                Referral bonus: <b>5% 3% 1%</b>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.plans}>
+            <h3>Standard</h3>
+            <h5>3.5% ROI Daily</h5>
+          </div>
+          <div className={styles.plans}>
+            <h3>Premium</h3>
+            <h5>5% ROI Daily</h5>
+          </div>
+        </div>
+        {/* Investment Plans End */}
       </main>
 
       <footer className={styles.footer}>
+        <div className={styles.footerOne}>
+          <p className={styles.footerOneStyle}>
+          <i className="material-icons">
+            <FaHandshake />
+          </i>
+            Support teams across the country
+          </p>
+          <p className={styles.footerOneStyle}>
+            Safe and secure online payment
+          </p>
+        </div>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
