@@ -5,6 +5,7 @@ import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { FaHandshake } from "react-icons/fa";
 import { BiBarChartSquare } from "react-icons/bi";
+import { AiFillCheckCircle } from "react-icons/ai";
 import Logo from "../asset/monnayLogo.png";
 import Trade from "../asset/monnayHome.jpg";
 
@@ -213,31 +214,54 @@ const Home = () => {
         </h3>
         <div className={styles.investmentContainer}>
           <div className={styles.card}>
-            <h3>Basic</h3>
-            <h5>2% ROI Daily</h5>
-            <ul className="m-5 p-5 text-center">
-              <li>
+            <div className={styles.cardTitle}>
+              <h2 className={styles.basic}>Basic</h2>
+              <p className={styles.basicTitle}>2% ROI Daily</p>
+              <hr />
+            </div>
+            <ul>
+              <li className={styles.cardList}>
                 <i className="material-icons">
-                  <FaHandshake />
+                  <AiFillCheckCircle />
                 </i>
                 Profit withdrawal: <b>Active daily</b>
               </li>
-              <li>
-                Capital withdrawal: <b>After investment duration</b>
+              <li className={styles.cardList}>
+                <i className="material-icons">
+                  <AiFillCheckCircle />
+                </i>
+                After investment duration
               </li>
-              <li>
+              <li className={styles.cardList}>
+                <i className="material-icons">
+                  <AiFillCheckCircle />
+                </i>
                 Minimum investment: <b>$100</b>
               </li>
-              <li>
+              <li className={styles.cardList}>
+                <i className="material-icons">
+                  <AiFillCheckCircle />
+                </i>
                 Maximum investment: <b>$4,999</b>
               </li>
-              <li>
+              <li className={styles.cardList}>
+                <i className="material-icons">
+                  <AiFillCheckCircle />
+                </i>
                 Daily profit range: <b>$2 - $99.98</b>
               </li>
-              <li>
+              <li className={styles.cardList}>
+                <i className="material-icons">
+                  <AiFillCheckCircle />
+                </i>
                 Referral bonus: <b>5% 3% 1%</b>
               </li>
             </ul>
+            <div className={styles.buttonDiv}>
+              <a href="#" className={styles.cardButton}>
+                SELECT PLAN
+              </a>
+            </div>
           </div>
           <div className={styles.plans}>
             <h3>Standard</h3>
@@ -249,28 +273,58 @@ const Home = () => {
           </div>
         </div>
         {/* Investment Plans End */}
+        {/* Subscribe */}
+        <div className={styles.subscribecontainer}>
+          <h3 className={styles.investmentHeader}>Subscribe to our <font color="#057d99">Newletter</font>.</h3>
+          <p className={styles.trustMessage}>Stay up-to-date with our latest trends. Enter your e-mail to subscribe.</p>
+        </div>
+        {/* Subscribe Ends */}
       </main>
 
       <footer className={styles.footer}>
         <div className={styles.footerOne}>
-          <p className={styles.footerOneStyle}>
-          <i className="material-icons">
-            <FaHandshake />
-          </i>
-            Support teams across the country
-          </p>
+          <div className={styles.footerOneStyle}>
+            <a>
+              <i className="material-icons">
+                <FaHandshake />
+              </i>
+            </a>
+
+            <p>Support teams across the country</p>
+          </div>
           <p className={styles.footerOneStyle}>
             Safe and secure online payment
           </p>
         </div>
+        <div className={styles.footerTwo}>
+          <ul>
+            <li>WHO WE ARE</li>
+            <li>About</li>
+            <li>Team</li>
+            <li>Work With Us</li>
+          </ul>
+          <ul>
+            <li>MONNAY FINANCE</li>
+            <li>Features</li>
+            <li>Payments</li>
+            <li></li>
+          </ul>
+          <ul>
+            <li>SUPPORT</li>
+            <li>Documentation</li>
+            <li>Customizations</li>
+            <li>Support Policy</li>
+            <li>Contact</li>
+          </ul>
+        </div>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{" "}
+          MONNAYFINANCE 2022{" "}
           <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+            <Image src="/icon.png" alt=" Logo" width={30} height={25} />
           </span>
         </a>
       </footer>
