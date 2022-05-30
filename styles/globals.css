@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 html,
 body {
   padding: 0;
@@ -17,7 +20,7 @@ a :active {
 }
 hr {
   width: 100%;
-  background-color:#057d99;
+  background-color: #057d99;
   border: 1px solid transparent;
   margin-bottom: 10px;
 }

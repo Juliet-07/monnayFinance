@@ -73,7 +73,7 @@ const Home = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className={styles.button}>
+                <a href="/auth/signup" className={styles.button}>
                   REGISTER
                 </a>
               </li>
@@ -219,64 +219,173 @@ const Home = () => {
               <p className={styles.basicTitle}>2% ROI Daily</p>
               <hr />
             </div>
-            <ul>
-              <li className={styles.cardList}>
-                <i className="material-icons">
-                  <AiFillCheckCircle />
-                </i>
-                Profit withdrawal: <b>Active daily</b>
-              </li>
-              <li className={styles.cardList}>
-                <i className="material-icons">
-                  <AiFillCheckCircle />
-                </i>
-                After investment duration
-              </li>
-              <li className={styles.cardList}>
-                <i className="material-icons">
-                  <AiFillCheckCircle />
-                </i>
-                Minimum investment: <b>$100</b>
-              </li>
-              <li className={styles.cardList}>
-                <i className="material-icons">
-                  <AiFillCheckCircle />
-                </i>
-                Maximum investment: <b>$4,999</b>
-              </li>
-              <li className={styles.cardList}>
-                <i className="material-icons">
-                  <AiFillCheckCircle />
-                </i>
-                Daily profit range: <b>$2 - $99.98</b>
-              </li>
-              <li className={styles.cardList}>
-                <i className="material-icons">
-                  <AiFillCheckCircle />
-                </i>
-                Referral bonus: <b>5% 3% 1%</b>
-              </li>
-            </ul>
+            <div className={styles.listContainer}>
+              <ul>
+                <li className={styles.cardList}>
+                  <i className="material-icons">
+                    <AiFillCheckCircle />
+                  </i>
+                  Profit withdrawal: <b>Active daily</b>
+                </li>
+                <li className={styles.cardList}>
+                  <i className="material-icons">
+                    <AiFillCheckCircle />
+                  </i>
+                  Capital withdrawal: <b>After investment duration</b>
+                </li>
+                <li className={styles.cardList}>
+                  <i className="material-icons">
+                    <AiFillCheckCircle />
+                  </i>
+                  Minimum investment: <b>$100</b>
+                </li>
+                <li className={styles.cardList}>
+                  <i className="material-icons">
+                    <AiFillCheckCircle />
+                  </i>
+                  Maximum investment: <b>$4,999</b>
+                </li>
+                <li className={styles.cardList}>
+                  <i className="material-icons">
+                    <AiFillCheckCircle />
+                  </i>
+                  Daily profit range: <b>$2 - $99.98</b>
+                </li>
+                <li className={styles.cardList}>
+                  <i className="material-icons">
+                    <AiFillCheckCircle />
+                  </i>
+                  Referral bonus: <b>5% 3% 1%</b>
+                </li>
+              </ul>
+            </div>
             <div className={styles.buttonDiv}>
               <a href="#" className={styles.cardButton}>
                 SELECT PLAN
               </a>
             </div>
           </div>
-          <div className={styles.plans}>
-            <h3>Standard</h3>
-            <h5>3.5% ROI Daily</h5>
+          <div className={styles.card}>
+            <div className={styles.cardTitle}>
+              <h2 className={styles.basic}>Standard</h2>
+              <p className={styles.basicTitle}>3.5% ROI Daily</p>
+              <hr />
+            </div>
+            <div className={styles.listContainer}>
+              <ul>
+                <li className={styles.cardList}>
+                  <i className="material-icons">
+                    <AiFillCheckCircle />
+                  </i>
+                  Profit withdrawal: <b>Active daily</b>
+                </li>
+                <li className={styles.cardList}>
+                  <i className="material-icons">
+                    <AiFillCheckCircle />
+                  </i>
+                  Capital withdrawal: <b>After investment duration</b>
+                </li>
+                <li className={styles.cardList}>
+                  <i className="material-icons">
+                    <AiFillCheckCircle />
+                  </i>
+                  Minimum investment: <b>$5000</b>
+                </li>
+                <li className={styles.cardList}>
+                  <i className="material-icons">
+                    <AiFillCheckCircle />
+                  </i>
+                  Maximum investment: <b>$24,999</b>
+                </li>
+                <li className={styles.cardList}>
+                  <i className="material-icons">
+                    <AiFillCheckCircle />
+                  </i>
+                  Daily profit range: <b>$175-$874.96</b>
+                </li>
+                <li className={styles.cardList}>
+                  <i className="material-icons">
+                    <AiFillCheckCircle />
+                  </i>
+                  Referral bonus: <b>5% 3% 1%</b>
+                </li>
+              </ul>
+            </div>
+            <div className={styles.buttonDiv}>
+              <a href="#" className={styles.cardButton}>
+                SELECT PLAN
+              </a>
+            </div>
           </div>
-          <div className={styles.plans}>
-            <h3>Premium</h3>
-            <h5>5% ROI Daily</h5>
+          <div className={styles.card}>
+            <div className={styles.cardTitle}>
+              <h2 className={styles.basic}>Platinum</h2>
+              <p className={styles.basicTitle}>5% ROI Daily for 3 days</p>
+              <hr />
+            </div>
+            <div className={styles.listContainer}>
+              <ul>
+                <li className={styles.cardList}>
+                  <i className="material-icons">
+                    <AiFillCheckCircle />
+                  </i>
+                  Profit withdrawal: <b>Active daily</b>
+                </li>
+                <li className={styles.cardList}>
+                  <i className="material-icons">
+                    <AiFillCheckCircle />
+                  </i>
+                  Capital withdrawal: <b>After investment duration</b>
+                </li>
+                <li className={styles.cardList}>
+                  <i className="material-icons">
+                    <AiFillCheckCircle />
+                  </i>
+                  Minimum investment: <b>$25,000</b>
+                </li>
+                <li className={styles.cardList}>
+                  <i className="material-icons">
+                    <AiFillCheckCircle />
+                  </i>
+                  Maximum investment: <b>Unlimited</b>
+                </li>
+                <li className={styles.cardList}>
+                  <i className="material-icons">
+                    <AiFillCheckCircle />
+                  </i>
+                  Daily profit range: <b>+$1,250</b>
+                </li>
+                <li className={styles.cardList}>
+                  <i className="material-icons">
+                    <AiFillCheckCircle />
+                  </i>
+                  Referral bonus: <b>5% 3% 1%</b>
+                </li>
+              </ul>
+            </div>
+            <div className={styles.buttonDiv}>
+              <a href="#" className={styles.cardButton}>
+                SELECT PLAN
+              </a>
+            </div>
           </div>
         </div>
         {/* Investment Plans End */}
         {/* Subscribe */}
         <div className={styles.subscribecontainer}>
-          <h3 className={styles.investmentHeader}>Subscribe to our <font color="#057d99">Newletter</font>.</h3>
-          <p className={styles.trustMessage}>Stay up-to-date with our latest trends. Enter your e-mail to subscribe.</p>
+          <h3 className={styles.investmentHeader}>
+            Subscribe to our <font color="#057d99">Newsletter</font>.
+          </h3>
+          <p className={styles.trustMessage}>
+            Stay up-to-date with our latest trends. Enter your e-mail to
+            subscribe.
+          </p>
+          <div className={styles.subscribeInput}>
+            <input type="email" placeholder="Email" />
+            <a href="#" className="btn">
+              SUBSCRIBE
+            </a>
+          </div>
         </div>
         {/* Subscribe Ends */}
       </main>
@@ -317,14 +426,10 @@ const Home = () => {
             <li>Contact</li>
           </ul>
         </div>
-        <a
-          href="/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          MONNAYFINANCE 2022{" "}
+        <a href="/" target="_blank" rel="noopener noreferrer">
+          MONNAYFINANCE{" "}
           <span className={styles.logo}>
-            <Image src="/icon.png" alt=" Logo" width={30} height={25} />
+            <Image src="/icon.png" alt=" Logo" width={25} height={25} />
           </span>
         </a>
       </footer>
