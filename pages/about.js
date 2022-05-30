@@ -88,53 +88,40 @@ const Home = () => {
       </div>
       <main className={styles.main}>
         {/* Jumbotron */}
-        <div className={styles.jumbotron}>
+        <div className={styles.jumbotronAbout}>
           <div className={styles.jumbotronFluid}>
-            <div className={styles.jumbotronProps}>
-              <h2 className={styles.properties}>
-                Dedicated to your
-                <br />
-                financial growth
-              </h2>
-              <p className={styles.content}>
-                We create equal opportunities for all investors to
-                <br /> thrive in the crypto and forex markets
-              </p>
-              <a href="#" className={styles.jumboButton}>
-                GET STARTED
-              </a>
-            </div>
+            <h2 className={styles.about}>About Us</h2>
           </div>
         </div>
         {/* Jumbotron Ends */}
-        {/* Trade */}
-        <div className={styles.trade}>
-          <div>
-            <Image
-              src={Trade}
-              width={450}
-              height={300}
-              className={styles.tradeImage}
-            />
+        {/* Description */}
+        <div className={styles.description}>
+          <div className={styles.whoAreWe}>
+            <h4 className={styles.whoAreWeHeader}>Who Are We?</h4>
+            <hr />
+            <p className={styles.whoAreWeMessage}>
+              We are an investment company, offering and trading crypto-based
+              assets an other financial instruments for investors.
+            </p>
           </div>
-          <div style={{ margin: 50 }}>
-            <h3 className={styles.tradeText}>
-              You have the <font color="#057d99">best hands</font>
-              <br />
-              handling your funds.
-            </h3>
-            <p className={styles.tradeMessage}>
-              We are dedicated in the cryptocurrency industry,
-              <br /> with outstanding technology of bitcoin trading and bitcoin
-              mining. <br />
-              Since we came into existence, our role is to offer <br />
-              each person the chance to attend the bitcoin related business{" "}
-              <br />
-              and earn profit easily with our powerful investment sytem.
+          <div className={styles.whoAreWe}>
+            <h4 className={styles.whoAreWeHeader}>What do we do?</h4>
+            <hr />
+            <p className={styles.whoAreWeMessage}>
+              We allocate investor's funs to financial instruments intrading and
+              manage these trades to bring profits for investors.
+            </p>
+          </div>
+          <div className={styles.whoAreWe}>
+            <h4 className={styles.whoAreWeHeader}>Meet our CEO</h4>
+            <hr />
+            <p className={styles.whoAreWeMessage}>
+              We allocate investor's funs to financial instruments intrading and
+              manage these trades to bring profits for investors.
             </p>
           </div>
         </div>
-        {/* Trade Ends */}
+        {/* Description Ends */}
         {/* Trust */}
         <div className={styles.trustContainer}>
           <h3 className={styles.trustText}>
