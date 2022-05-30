@@ -75,9 +75,9 @@
 /* Jumbotron */
 .jumbotron {
   position: relative;
-  background: url("../asset/monnayJumbo.jpg");
+  background: url("../asset/monnayJumbo.png");
   background-size: cover;
-  height: 600px;
+  height: 650px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -90,6 +90,10 @@
   bottom: 0px;
   left: 0px;
   background-color: rgba(10, 79, 96, 0.72);
+}
+.jumbotronProps{
+  position: relative;
+  top: 140px;
 }
 .properties {
   color: #ffffff;
@@ -360,13 +364,24 @@
 /* auth styling */
 .signupContainer {
   position: relative;
-  width: 350px;
+  width: 500px;
   height: 100%;
   top: 10px;
   left: 500px;
   bottom: 0px;
   background-color: #ffffff;
   border-radius: 20px;
+  padding: 15px;
+}
+.signinContainer {
+  position: relative;
+  width: 500px;
+  top: 50px;
+  left: 500px;
+  bottom: 0px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 15px;
 }
 .createDiv {
   display: flex;
@@ -382,9 +397,17 @@
   line-height: 40px;
   color: #000000;
 }
+.createButtonDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  /* background-color: red; */
+}
 .form{
   /* background-color: red; */
 }
+/* about page */
 .footer {
   display: block;
   padding: 2rem 0;

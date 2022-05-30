@@ -48,7 +48,7 @@ const Home = () => {
                 </a>
               </li>
               <li>
-                <a href="/about" className={styles.navLink}>
+                <a href="#" className={styles.navLink}>
                   ABOUT US
                 </a>
               </li>
