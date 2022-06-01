@@ -450,26 +450,105 @@
   text-align: left;
   font-style: normal;
 }
-.tradeImage {
-  position: absolute;
-  top: 700px;
-  left: 300px;
-  border-radius: 11.04px;
+.ourStrategy {
+  position: relative;
+  width: 700px;
+  height: 500px;
+  right: 280px;
+  padding: 40px;
+  margin: 0%;
+  /* background-color: rebeccapurple; */
 }
-.tradeText {
+.ourStrategyHeader {
+  color: #057d99;
   font-weight: 700;
-  font-style: bold;
-  font-size: 45px;
-  color: #000000;
+  font-size: 32px;
+  line-height: 57px;
 }
-.tradeMessage {
+.ourStrategyMessage {
+  color: #000000;
   font-weight: 500;
-  font-style: medium;
   font-size: 16px;
   line-height: 23px;
-  color: #000000;
+  text-align: left;
+}
+.investorHeader {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+}
+.investorCardDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.investorCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 250px;
+  margin: 2rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  background-clip: border-box;
+  border: 1px solid #eaeaea;
+  border-radius: 1rem;
+  box-shadow: 12px 12px 2px 1px white;
+}
+.investorMessage {
+  font-size: 16px;
+  line-height: 32px;
+  text-align: left;
+}
+.investorName {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: right;
 }
 /* about page */
+/* faq section */
+.faqCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #ffffff;
+  background-clip: border-box;
+  border: 2px solid #eeeeee;
+  border-radius: 0.25rem;
+}
+.faqCardHeader {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: #057d99;
+  border-bottom: 1px solid #eeeeee;
+  /* border-left: 10px; */
+  /* border-right: 10px; */
+  border-radius: 15px;
+}
+.faqCardTitle {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+  color: #ffffff;
+}
+/* faq section */
+/* contact section */
+.contactHeader{
+  font-weight: 700;
+  font-size: 28px;
+  text-align: left;
+  line-height: 40px;
+  padding: 20px;
+  margin-top: 5px;
+}
+/* contact section */
 .footer {
   display: block;
   padding: 2rem 0;

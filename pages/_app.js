@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "../styles/globals.css";
-import "materialize-css/dist/css/materialize.min.css";
 // import "bootstrap/dist/css/bootstrap.css"
+import "materialize-css/dist/css/materialize.min.css";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {

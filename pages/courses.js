@@ -9,7 +9,7 @@ import { AiFillCheckCircle } from "react-icons/ai";
 import Logo from "../asset/monnayLogo.png";
 import Trade from "../asset/monnayHome.jpg";
 
-const Home = () => {
+const Courses = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -68,7 +68,7 @@ const Home = () => {
                 </a>
               </li>
               <li>
-                <a href="contact" className={styles.navLink}>
+                <a href="/contact" className={styles.navLink}>
                   CONTACT
                 </a>
               </li>
@@ -88,22 +88,9 @@ const Home = () => {
       </div>
       <main className={styles.main}>
         {/* Jumbotron */}
-        <div className={styles.jumbotron}>
+        <div className={styles.jumbotronAbout}>
           <div className={styles.jumbotronFluid}>
-            <div className={styles.jumbotronProps}>
-              <h2 className={styles.properties}>
-                Dedicated to your
-                <br />
-                financial growth
-              </h2>
-              <p className={styles.content}>
-                We create equal opportunities for all investors to
-                <br /> thrive in the crypto and forex markets
-              </p>
-              <a href="#" className={styles.jumboButton}>
-                GET STARTED
-              </a>
-            </div>
+            <h2 className={styles.about}>Our Courses</h2>
           </div>
         </div>
         {/* Jumbotron Ends */}
@@ -442,4 +429,4 @@ const Home = () => {
     </div>
   );
 };
-export default Home;
+export default Courses;

@@ -5,6 +5,7 @@ import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { FaHandshake } from "react-icons/fa";
 import Logo from "../../asset/monnayLogo.png";
+import Link from "next/link";
 
 const Signup = () => {
   return (
@@ -45,27 +46,27 @@ const Signup = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className={styles.navLink}>
+                <a href="/about" className={styles.navLink}>
                   ABOUT US
                 </a>
               </li>
               <li>
-                <a href="#" className={styles.navLink}>
+                <a href="/investment" className={styles.navLink}>
                   INVESTMENTS
                 </a>
               </li>
               <li>
-                <a href="#" className={styles.navLink}>
+                <a href="/faq" className={styles.navLink}>
                   FAQ
                 </a>
               </li>
               <li>
-                <a href="#" className={styles.navLink}>
+                <a href="/courses" className={styles.navLink}>
                   COURSES
                 </a>
               </li>
               <li>
-                <a href="#" className={styles.navLink}>
+                <a href="/contact" className={styles.navLink}>
                   CONTACT
                 </a>
               </li>
@@ -248,9 +249,11 @@ const Signup = () => {
                   </p>
                 </div>
                 <div className={styles.createButtonDiv}>
-                  <a href="#" className={styles.button}>
-                    Create account
-                  </a>
+                  <Link href="/auth/reg-successful">
+                    <a className={styles.button}>
+                      Create account
+                    </a>
+                  </Link>
                 </div>
               </form>
               {/* form proper ends */}

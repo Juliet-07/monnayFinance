@@ -4,9 +4,12 @@ import styles from "../styles/Home.module.css";
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { FaHandshake } from "react-icons/fa";
+import { BiBarChartSquare } from "react-icons/bi";
+import { AiFillCheckCircle } from "react-icons/ai";
 import Logo from "../asset/monnayLogo.png";
+import Trade from "../asset/monnayHome.jpg";
 
-const About = () => {
+const Contact = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -87,87 +90,89 @@ const About = () => {
         {/* Jumbotron */}
         <div className={styles.jumbotronAbout}>
           <div className={styles.jumbotronFluid}>
-            <h2 className={styles.about}>About Us</h2>
+            <h2 className={styles.about}>Contact Us</h2>
+            <p className={styles.content}>
+              We would love to hear from you. Kindly fill the form
+              <br />
+              below and we'll get back to you within 24 hours.
+            </p>
           </div>
         </div>
         {/* Jumbotron Ends */}
-        {/* Description */}
-        <div className={styles.description}>
-          <div className={styles.whoAreWe}>
-            <h4 className={styles.whoAreWeHeader}>Who Are We?</h4>
-            <hr />
-            <p className={styles.whoAreWeMessage}>
-              We are an investment company, offering and trading crypto-based
-              assets an other financial instruments for investors.
-            </p>
-          </div>
-          <div className={styles.whoAreWe}>
-            <h4 className={styles.whoAreWeHeader}>What do we do?</h4>
-            <hr />
-            <p className={styles.whoAreWeMessage}>
-              We allocate investor's funs to financial instruments intrading and
-              manage these trades to bring profits for investors.
-            </p>
-          </div>
-          <div className={styles.whoAreWe}>
-            <h4 className={styles.whoAreWeHeader}>Meet our CEO</h4>
-            <hr />
-            <p className={styles.whoAreWeMessage}>
-              We allocate investor's funs to financial instruments intrading and
-              manage these trades to bring profits for investors.
-            </p>
+        {/* Contact form */}
+        <div className="mt-8">
+          <div className="card">
+            <h4 className={styles.contactHeader}>Contact Form</h4>
+            <form className="bg-white shadow-md rounded px-8 pt-2 pb-8 mb-4">
+              <div className="mb-4">
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  for="fullname"
+                >
+                  Full name
+                </label>
+                <input
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="fullname"
+                  type="text"
+                />
+              </div>
+              <div className="mb-4">
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  for="email"
+                >
+                  E-mail
+                </label>
+                <input
+                  className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                  id="email"
+                  type="email"
+                />
+              </div>
+              <div className="mb-4">
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  for="email"
+                >
+                  Message
+                </label>
+                <textarea
+                  className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                  id="email"
+                  type="email"
+                />
+              </div>
+              <div className={styles.createButtonDiv}>
+                <a href="#" className={styles.button}>
+                  Submit
+                </a>
+              </div>
+            </form>
           </div>
         </div>
-        {/* Description Ends */}
-        {/* ourStrategy */}
-        <div className={styles.ourStrategy}>
-          <h3 className={styles.ourStrategyHeader}>Our Strategy</h3>
-          <hr />
-          <p className={styles.ourStrategyMessage}>
-            Our commitment to be a leader in responsible business (RB) stems
-            from our purpose in society. It is core to our business. Thinking,
-            acting and investing responsibly not only shapes what we do but how
-            we do it. We will actively manage your portfolio to ensure it
-            remains appropriate for the ever-changing conditions in the global
-            economy and financial markets. We will also be responsible for
-            making any adjustments if your personal situation or objectives
-            change.
-            <br />
-            <br /> A diversified investment strategy (sometimes called a
-            “balanced portfolio” or “multi-asset portfolio”) that combines
-            different assets can be one of the best ways to preserve and enhance
-            wealth over the long term. This approach can provide exposure to a
-            wide set of investment opportunities and reduce losses when market
-            conditions are challenging.
+        {/* Contact form */}
+        {/* Subscribe */}
+        <div className={styles.subscribecontainer}>
+          <h3 className={styles.investmentHeader}>
+            Subscribe to our <font color="#057d99">Newsletter</font>.
+          </h3>
+          <p className={styles.trustMessage}>
+            Stay up-to-date with our latest trends. Enter your e-mail to
+            subscribe.
           </p>
-        </div>
-        {/* ourStrategy Ends */}
-        {/* Investors */}
-        <h3 className={styles.investorHeader}>
-          What our <font color="#057d99"> investors</font> have to say
-        </h3>
-        <div className={styles.investorCardDiv}>
-          <div className={styles.investorCard}>
-            <p className={styles.investorMessage}>
-              A broad range of excellent investment opportunities and high
-              quality events.
-              <br /> The team at Monnay Finance are highly professional and
-              they've helped build my portfolio.
-            </p>
-            <p className={styles.investorName}>Tony Angelo</p>
+          <div className={styles.subscribeInput}>
+            <input
+              type="email"
+              placeholder="Email"
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            />
+            <a href="#" className={styles.button}>
+              SUBSCRIBE
+            </a>
           </div>
-          <div className={styles.investorCard}>
-            <p className={styles.investorMessage}>
-              A broad range of excellent investment opportunities and high
-              quality events.
-              <br /> The team at Monnay Finance are highly professional and
-              they've helped build my portfolio.
-            </p>
-            <p className={styles.investorName}>Tony Angelo</p>
-          </div>
-          <div></div>
         </div>
-        {/* Investors Ends */}
+        {/* Subscribe Ends */}
       </main>
 
       <footer className={styles.footer}>
@@ -216,4 +221,4 @@ const About = () => {
     </div>
   );
 };
-export default About;
+export default Contact;
