@@ -4,6 +4,7 @@ import styles from "../../styles/Home.module.css";
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { FaHandshake } from "react-icons/fa";
+import { TiTick } from "react-icons/ti";
 import Logo from "../../asset/monnayLogo.png";
 
 const Signup = () => {
@@ -84,10 +85,21 @@ const Signup = () => {
       <main className={styles.main}>
         <div className={styles.jumbotron}>
           <div className={styles.jumbotronFluid}>
-            <div className={styles.signupContainer}>
+            <div className={styles.registrationContainer}>
               <div className={styles.createDiv}>
-                <Image src="/icon.png" alt=" Logo" width={20} height={20} />
-                {/* <p className={styles.create}>Create Account</p> */}
+                <Image src="/icon.png" alt=" Logo" width={30} height={30} />
+              </div>
+              <div className={styles.tickBorder}>
+                <TiTick className={styles.tick} />
+              </div>
+              <div>
+                <h5 className={styles.registrationHeader}>
+                  Registration Successful
+                </h5>
+                <p className={styles.registrationText}>Welcome! Your account has been created successfully. Click on the login button to access your account. </p>
+                <a href="/auth/signin" className={styles.registrationButton}>
+                  Log in 
+                </a>
               </div>
             </div>
           </div>

@@ -24,3 +24,15 @@ hr {
   border: 1px solid transparent;
   margin-bottom: 10px;
 }
+.sidebar-wrapper {
+  position: relative;
+  /* height: calc(100vh - 75px); */
+  overflow: auto;
+  width: 300px;
+  z-index: 1;
+  padding-bottom: 30px;
+}
+.material-icons {
+  font-size: 17px;
+  line-height: 29px;
+}

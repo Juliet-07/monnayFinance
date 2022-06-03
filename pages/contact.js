@@ -4,10 +4,7 @@ import styles from "../styles/Home.module.css";
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { FaHandshake } from "react-icons/fa";
-import { BiBarChartSquare } from "react-icons/bi";
-import { AiFillCheckCircle } from "react-icons/ai";
 import Logo from "../asset/monnayLogo.png";
-import Trade from "../asset/monnayHome.jpg";
 
 const Contact = () => {
   return (

@@ -78,7 +78,7 @@ const Home = () => {
                 </a>
               </li>
               <li>
-                <a href="/auth/sigin" className={styles.buttonOutline}>
+                <a href="/auth/signin" className={styles.buttonOutline}>
                   LOG IN
                 </a>
               </li>

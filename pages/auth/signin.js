@@ -5,6 +5,7 @@ import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { FaHandshake } from "react-icons/fa";
 import Logo from "../../asset/monnayLogo.png";
+import Link from "next/link";
 
 const Signin = () => {
   return (
@@ -136,9 +137,11 @@ const Signin = () => {
                     </a>
                   </div>
                   <div className={styles.createButtonDiv}>
-                    <a href="#" className={styles.button}>
-                      Log in
-                    </a>
+                    <Link href="/dashboard/dashboard">
+                      <a className={styles.button}>
+                        Log in
+                      </a>
+                    </Link>
                   </div>
                 </form>
               </div>
