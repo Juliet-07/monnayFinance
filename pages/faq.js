@@ -5,7 +5,6 @@ import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { FaHandshake } from "react-icons/fa";
 import Logo from "../asset/monnayLogo.png";
-import "bootstrap/dist/css/bootstrap.css";
 
 const FAQ = () => {
   return (
