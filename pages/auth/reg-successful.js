@@ -83,8 +83,8 @@ const Signup = () => {
         </nav>
       </div>
       <main className={styles.main}>
-        <div className={styles.jumbotron}>
-          <div className={styles.jumbotronFluid}>
+        <div className={styles.jumbotronReg}>
+          <div className={styles.jumbotronFluidReg}>
             <div className={styles.registrationContainer}>
               <div className={styles.createDiv}>
                 <Image src="/icon.png" alt=" Logo" width={30} height={30} />
@@ -96,9 +96,13 @@ const Signup = () => {
                 <h5 className={styles.registrationHeader}>
                   Registration Successful
                 </h5>
-                <p className={styles.registrationText}>Welcome! Your account has been created successfully. Click on the login button to access your account. </p>
+                <p className={styles.registrationText}>
+                  Welcome! Your account has been created successfully.
+                  <br />
+                  Click on the login button to access your account.{" "}
+                </p>
                 <a href="/auth/signin" className={styles.registrationButton}>
-                  Log in 
+                  Log in
                 </a>
               </div>
             </div>

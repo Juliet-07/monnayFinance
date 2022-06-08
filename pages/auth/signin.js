@@ -92,7 +92,7 @@ const Signin = () => {
               </div>
               {/* form proper */}
               <div className="w-full">
-                <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-10">
                   <div className="mb-4">
                     <label
                       className="block text-gray-700 text-sm font-bold mb-2"
@@ -101,7 +101,7 @@ const Signin = () => {
                       Username
                     </label>
                     <input
-                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      className=" border rounded w-full py-2 px-2"
                       id="username"
                       type="text"
                     />
@@ -114,35 +114,33 @@ const Signin = () => {
                       Password
                     </label>
                     <input
-                      className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                      className=" border rounded w-full py-2 px-2"
                       id="password"
                       type="password"
                     />
                   </div>
-                  <div className="flex items-center justify-between mt-10">
+                  <div className="flex items-center justify-between mt-8">
                     <p>
                       <label
                         className="block tracking-wide text-gray-700 text-xs font-bold mb-2"
                         for="grid-email"
                       >
-                        <input type="checkbox" className="filled-in" />
+                        <input type="checkbox" />
                         <span>Remember me</span>
                       </label>
                     </p>
                     <a
-                      className="inline-block align-baseline font-bold text-md text-blue-300 hover:text-blue-700"
+                      className="font-bold text-md text-blue-300"
                       href="#"
                     >
                       Forgot Password?
                     </a>
                   </div>
-                  <div className={styles.createButtonDiv}>
-                    <Link href="/dashboard/dashboard">
-                      <a className={styles.button}>
-                        Log in
-                      </a>
-                    </Link>
-                  </div>
+                  {/* <div className={styles.createButtonDiv}> */}
+                  <Link href="/dashboard/dashboard">
+                    <a className={styles.registrationButton}>Log in</a>
+                  </Link>
+                  {/* </div> */}
                 </form>
               </div>
               {/* form proper ends */}

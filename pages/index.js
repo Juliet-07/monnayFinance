@@ -20,7 +20,7 @@ const Home = () => {
       {/* Nav section 1 */}
       <div className="navbar-fixed">
         <nav className={styles.addressBar}>
-          <ul id="nav-mobile" className="right hide-on-med-and-down">
+          <ul className="nav">
             <li>
               <i className="material-icons left">
                 <IoLocationOutline />
@@ -112,8 +112,8 @@ const Home = () => {
           <div>
             <Image
               src={Trade}
-              width={450}
-              height={300}
+              width={500}
+              height={350}
               className={styles.tradeImage}
             />
           </div>

@@ -1,7 +1,3 @@
-.card {
-  font-size: 0.875rem;
-}
-
 *,
 *::before,
 *::after {
@@ -9,7 +5,7 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -37,7 +33,7 @@ section {
 
 body {
   margin: 0;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -142,14 +138,14 @@ sup {
 }
 
 a {
-  color: #9c27b0;
+  color: #bcb6bd;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 
 a:hover {
-  color: #0a6ebd;
+  color: blanchedalmond;
   text-decoration: underline;
 }
 
@@ -4822,7 +4818,7 @@ tbody.collapse.show {
   color: #ffffff;
 }
 
-.card {
+/* .card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -4832,8 +4828,62 @@ tbody.collapse.show {
   background-clip: border-box;
   border: 1px solid #eeeeee;
   border-radius: 0.25rem;
+} */
+.cardName {
+  position: relative;
+  left: 30px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #057d99;
 }
-
+.cardTime {
+  position: relative;
+  right: 30px;
+  top: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #057d99;
+}
+.cardPrice {
+  position: relative;
+  right: 100px;
+  top: 70px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #057d99;
+}
+.cardButton {
+  position: relative;
+  top: 70px;
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #057d99;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 10px;
+}
+.cardButton1 {
+  position: relative;
+  top: 70px;
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  color: #057d99;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-right: 50px;
+  padding: 10px;
+  border: 1px solid #057d99;
+}
 .card > hr {
   margin-right: 0;
   margin-left: 0;
@@ -16360,7 +16410,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 }
 
 .sidebar[data-color="azure"] li.active > a {
-  background-color: #057D99;
+  background-color: #057d99;
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14),
     0 7px 10px -5px rgba(0, 188, 212, 0.4);
 }
@@ -18550,8 +18600,9 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 .card.bg-info,
 .card.card-rotate.bg-info .front,
 .card.card-rotate.bg-info .back {
-  background: linear-gradient(60deg, #26c6da, #00acc1);
+  background: linear-gradient(60deg, #04C150, #04C150);
 }
+
 
 .card .card-header-success .card-icon,
 .card .card-header-success .card-text,
@@ -18559,7 +18610,7 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 .card.bg-success,
 .card.card-rotate.bg-success .front,
 .card.card-rotate.bg-success .back {
-  background: linear-gradient(60deg, #66bb6a, #43a047);
+  background: linear-gradient(60deg, #FC5F00, #FC5F00);
 }
 
 .card .card-header-warning .card-icon,
@@ -18568,7 +18619,7 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 .card.bg-warning,
 .card.card-rotate.bg-warning .front,
 .card.card-rotate.bg-warning .back {
-  background: linear-gradient(60deg, #ffa726, #fb8c00);
+  background: linear-gradient(60deg, #057D99, #057D99);
 }
 
 .card .card-header-danger .card-icon,
@@ -18577,7 +18628,7 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 .card.bg-danger,
 .card.card-rotate.bg-danger .front,
 .card.card-rotate.bg-danger .back {
-  background: linear-gradient(60deg, #ef5350, #e53935);
+  background: linear-gradient(60deg, #F1BC19, #F1BC19);
 }
 
 .card .card-header-rose .card-icon,

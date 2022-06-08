@@ -14,6 +14,8 @@ a {
 }
 a :active {
   color: #057d99;
+  font-weight: 700;
+  font-style: bold;
 }
 * {
   box-sizing: border-box;

@@ -128,14 +128,14 @@ const FAQ = () => {
         {/* 22 */}
         <div className="flex justify-center">
           <div className="col-lg-4 col-md-6 mt-3 mr-4">
-            <div className={styles.faqCard}>
+            {/* <div className={styles.faqCard}>
               <div className={styles.faqCardHeader}>
                 <h5 className={styles.faqCardTitle}></h5>
               </div>
               <div className="card-body">
                 <p className="card-text"></p>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="col-lg-4 col-md-6 mt-3 mr-4">
             <div className={styles.faqCard}>
@@ -210,8 +210,8 @@ const FAQ = () => {
                   What minimum amount can I withdraw from my account balance?
                 </h5>
               </div>
-              <div class="card-body">
-                <p class="card-text">$15</p>
+              <div className="card-body">
+                <p className="card-text">$15</p>
               </div>
             </div>
           </div>

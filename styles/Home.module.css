@@ -3,35 +3,34 @@
   height: 100%;
 }
 .addressBar {
-  display: inline;
+  display: flex;
   height: 60px;
+  justify-content: flex-end;
+  align-items: center;
   background-color: #057d99;
+  padding: 20;
 }
 .topBar {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 80px;
   padding-left: 20px;
   padding-right: 30px;
   background-color: #ffffff;
 }
-/* .topBar {
-  display: inline;
-  height: 80px;
-  padding-left: 20px;
-  padding-right: 30px;
-  background-color: #ffffff;
-} */
 .navLink {
   color: #057d99;
   font-size: 13px;
 }
-.navLink a:hover,
-.navLink a:focus,
-.navLink a:active {
+.navLink:hover,
+.navLink:focus {
   font-style: bold;
   color: #057d99;
+}
+.navLink:active {
+  font-style: bold;
+  font-weight: 700;
 }
 .button {
   display: inline-block;
@@ -104,24 +103,26 @@
 }
 .content {
   color: #ffffff;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 23px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
   text-align: center;
 }
 .jumboButton {
-  position: absolute;
-  font-weight: 400;
+  position: relative;
   text-align: center;
   border: 1px solid transparent;
   border-color: #ffffff;
   padding: 0.5rem 1rem;
-  font-size: 14px;
-  line-height: 19.07px;
+  font-size: 16px;
+  line-height: 20px;
   border-radius: 0.25rem;
   color: #ffffff;
-  margin-left: 620px;
-  margin-top: 46px;
+  margin-left: 600px;
+  margin-top: 50px;
+  height: 30px;
+  left: 300px;
+  top: 30px;
 }
 .trade {
   display: flex;
@@ -133,9 +134,9 @@
 }
 .tradeImage {
   position: absolute;
-  top: 700px;
-  left: 300px;
-  border-radius: 11.04px;
+  /* top: 700px; */
+  /* left: 300px; */
+  border-radius: 12px;
 }
 .tradeText {
   font-weight: 700;
@@ -145,9 +146,8 @@
 }
 .tradeMessage {
   font-weight: 500;
-  font-style: medium;
   font-size: 16px;
-  line-height: 23px;
+  line-height: 30px;
   color: #000000;
 }
 .trustContainer {
@@ -180,7 +180,7 @@
 .box {
   display: block;
   width: 350px;
-  height: 350px;
+  height: 400px;
   border: 2px solid transparent;
   border-color: #057d99;
   border-radius: 10px;
@@ -239,14 +239,14 @@
 .strategyText {
   font-style: bold;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 40px;
   line-height: 57px;
   color: #ffffff;
 }
 .strategyMessage {
   font-weight: 500;
   font-size: 16px;
-  line-height: 23px;
+  line-height: 30px;
   color: #ffffff;
 }
 /* .strategyRectangle {
@@ -284,10 +284,10 @@
   flex-direction: column;
   /* justify-content: center; */
   /* align-items: center; */
-  width: 350px;
-  height: 550px;
+  width: 500px;
+  height: 600px;
   margin: 1rem;
-  padding: 1.5rem;
+  padding: 1rem;
   min-width: 0;
   word-wrap: break-word;
   background-color: #ffffff;
@@ -299,9 +299,12 @@
 
 .card:hover,
 .card:focus,
-.card:active {
-  color: #057d99;
+.card:active,
+.card:active a {
+  color: #ffffff;
   border-color: #057d99;
+  background-color: #057d99;
+  /* background-color: #ffffff; */
 }
 .cardTitle {
   position: relative;
@@ -363,25 +366,26 @@
 }
 /* auth styling */
 .signupContainer {
-  position: relative;
-  width: 500px;
-  height: 100%;
-  top: 10px;
-  left: 500px;
-  bottom: 0px;
+  /* position: relative; */
+  display: block;
+  width: 100%;
+  /* height: 100%; */
+  /* top: 10px; */
+  /* left: 500px; */
+  /* bottom: 0px; */
   background-color: #ffffff;
   border-radius: 20px;
-  padding: 15px;
+  /* padding: 15px; */
 }
 .signinContainer {
   position: relative;
   width: 500px;
+  height: 500px;
+  left: 700px;
   top: 50px;
-  left: 500px;
-  bottom: 0px;
   background-color: #ffffff;
   border-radius: 20px;
-  padding: 15px;
+  /* padding: 15px; */
 }
 .createDiv {
   display: flex;
@@ -401,7 +405,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
+  height: 50px;
   /* background-color: red; */
 }
 .form {
@@ -454,9 +458,9 @@
   position: relative;
   width: 700px;
   height: 500px;
-  right: 280px;
-  padding: 40px;
-  margin: 0%;
+  right: 300px;
+  /* padding: 40px; */
+  /* margin: 0%; */
   /* background-color: rebeccapurple; */
 }
 .ourStrategyHeader {
@@ -476,6 +480,7 @@
   font-weight: 700;
   font-size: 40px;
   line-height: 50px;
+  color: #000000;
 }
 .investorCardDiv {
   display: flex;
@@ -496,7 +501,6 @@
   background-clip: border-box;
   border: 1px solid #eaeaea;
   border-radius: 1rem;
-  box-shadow: 12px 12px 2px 1px white;
 }
 .investorMessage {
   font-size: 16px;
@@ -550,6 +554,28 @@
 }
 /* contact section */
 /* registration successful  */
+.jumbotronReg {
+  position: relative;
+  background: url("../asset/monnayJumbo.png");
+  background-size: cover;
+  height: 700px;
+  width: 100%;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+.jumbotronFluidReg {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(10, 79, 96, 0.72);
+}
+.jumbotronProps {
+  position: relative;
+  top: 140px;
+}
 .tickBorder {
   position: relative;
   display: flex;
@@ -570,10 +596,10 @@
 }
 .registrationContainer {
   position: relative;
-  width: 400px;
+  width: 500px;
   height: 500px;
   top: 80px;
-  left: 500px;
+  left: 700px;
   bottom: 0px;
   background-color: #ffffff;
   border-radius: 30px;
@@ -588,13 +614,13 @@
 }
 .registrationText {
   font-size: 16px;
-  line-height: 22px;
+  line-height: 30px;
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 30px;
+  /* margin-bottom: 30px; */
   color: #000000;
 }
-.registrationButton{
+.registrationButton {
   position: relative;
   display: block;
   font-weight: 400;
@@ -607,6 +633,7 @@
   background-color: #057d99;
   color: #ffffff;
   margin: 50px;
+  top: 50px;
 }
 /* registration successful  */
 .footer {

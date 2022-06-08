@@ -89,15 +89,14 @@ const Contact = () => {
           <div className={styles.jumbotronFluid}>
             <h2 className={styles.about}>Contact Us</h2>
             <p className={styles.content}>
-              We would love to hear from you. Kindly fill the form
-              <br />
-              below and we'll get back to you within 24 hours.
+              We would love to hear from you. Kindly fill the form below and
+              we'll get back to you within 24 hours.
             </p>
           </div>
         </div>
         {/* Jumbotron Ends */}
         {/* Contact form */}
-        <div className="mt-8">
+        <div className="mt-10">
           <div className="card">
             <h4 className={styles.contactHeader}>Contact Form</h4>
             <form className="bg-white shadow-md rounded px-8 pt-2 pb-8 mb-4">
