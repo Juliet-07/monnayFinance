@@ -294,7 +294,36 @@ legend {
   color: inherit;
   white-space: normal;
 }
-
+.refer{
+  position: relative;
+  left: 30px;
+  top: 10px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 35px;
+  color: #057D99;
+  text-transform: uppercase;
+}
+.refer1{
+  position: relative;
+  left: 23px;
+  line-height: 20px;
+  font-size: 16px;
+  color: #636363;
+}
+.footer{
+  /* position: absolute; */
+  height: 50px;
+  display: block;
+  padding: 2rem 0;
+  background-color: #057D99;
+}
+.footer-text{
+  font-weight: 400;
+  text-align: center;
+  font-size: 12px;
+  color: #ffffff;
+}
 progress {
   vertical-align: baseline;
 }
@@ -4884,6 +4913,15 @@ tbody.collapse.show {
   padding: 10px;
   border: 1px solid #057d99;
 }
+.cardLabel{
+  position: relative;
+  left: 40px;
+  top: 20px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 35px;
+  color: #ffffff;
+}
 .card > hr {
   margin-right: 0;
   margin-left: 0;
@@ -6501,7 +6539,7 @@ button.close {
 }
 
 .bg-primary {
-  background-color: #2196f3 !important;
+  background-color: #057D99 !important;
 }
 
 a.bg-primary:hover,
@@ -9425,7 +9463,8 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #2196f3 !important;
+  color: #000000 !important;
+  font-style: bold;
 }
 
 a.text-primary:hover,

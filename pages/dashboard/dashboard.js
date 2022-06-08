@@ -3,7 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Logo from "../../asset/monnayLogo.png";
 import Purse from "../../asset/monnayPurse.jpg";
-import { FaTachometerAlt, FaRegMoneyBillAlt } from "react-icons/fa";
+import Chart from "../../asset/monnayChart.jpg";
+import { FaTachometerAlt } from "react-icons/fa";
 import { BiBarChartSquare } from "react-icons/bi";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
@@ -51,7 +52,7 @@ const Dashboard = () => {
           <div className="sidebar-wrapper">
             <ul className="nav">
               <li className="nav-item active">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/dashboard/dashboard">
                   <i className="material-icons">
                     <FaTachometerAlt />
                   </i>
@@ -59,7 +60,7 @@ const Dashboard = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/dashboard/investments">
                   <i className="material-icons">
                     <BiBarChartSquare />
                   </i>
@@ -67,7 +68,7 @@ const Dashboard = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/dashboard/history">
                   <i className="material-icons">
                     <AiOutlineClockCircle />
                   </i>
@@ -75,7 +76,7 @@ const Dashboard = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/dashboard/referrals">
                   <i className="material-icons">
                     <CgProfile />
                   </i>
@@ -83,7 +84,7 @@ const Dashboard = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/dashboard/settings">
                   <i className="material-icons">
                     <IoSettingsOutline />
                   </i>
@@ -91,7 +92,7 @@ const Dashboard = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/">
                   <i className="material-icons">
                     <AiOutlineLogout />
                   </i>
@@ -310,10 +311,26 @@ const Dashboard = () => {
               </div>
               {/* card row ends */}
               {/* chart section */}
+              <div className="flex justify-between align-center">
+                <div className="card w-50">
+                  <p className="refer">refer and earn</p>
+                  <p className="refer1">Use the link below to invite your friends</p>
+                  <input placeholder="link for referral"/>
+                </div>
+
+                {/* <Image src={Chart} width={300} height={300} /> */}
+              </div>
               {/* chart section ends */}
             </div>
             {/* footer */}
           </div>
+          <footer className="footer">
+            {/* <div className="flex justify-center align-center"> */}
+            <p className="footer-text">
+              COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
+            </p>
+            {/* </div> */}
+          </footer>
         </div>
         {/* Content Ends*/}
       </div>
