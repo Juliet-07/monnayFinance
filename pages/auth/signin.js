@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../../styles/Home.module.css";
@@ -7,7 +8,40 @@ import { FaHandshake } from "react-icons/fa";
 import Logo from "../../asset/monnayLogo.png";
 import Link from "next/link";
 
+const BASE_URI = "https://monnayfinance.herokuapp.com/api";
+
 const Signin = () => {
+  const initialValues = {
+    username: "",
+    password: "",
+  };
+
+  const [profile, setProfile] = useState(initialValues);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setProfile({ ...profile, [name]: value });
+  };
+
+  const login = () => {
+    try {
+      fetch(BASE_URI + "/auth/login", {
+        method: "POST",
+        body: JSON.stringify({
+          username: profile.username,
+          password: profile.password,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((res) => res.json())
+        .then((json) => console.log(json));
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+  useEffect(() => {});
   return (
     <div className={styles.container}>
       <Head>
@@ -129,17 +163,22 @@ const Signin = () => {
                         <span>Remember me</span>
                       </label>
                     </p>
-                    <a
-                      className="font-bold text-md text-blue-300"
-                      href="#"
-                    >
+                    <a className="font-bold text-md text-blue-300" href="#">
                       Forgot Password?
                     </a>
                   </div>
                   {/* <div className={styles.createButtonDiv}> */}
-                  <Link href="/dashboard/dashboard">
-                    <a className={styles.registrationButton}>Log in</a>
-                  </Link>
+                  {/* <Link href="/dashboard/dashboard"> */}
+                    <button
+                      className={styles.registrationButton}
+                      // type="submit"
+                      onClick={() => {
+                        login();
+                      }}
+                    >
+                      Log in
+                    </button>
+                  {/* </Link> */}
                   {/* </div> */}
                 </form>
               </div>
