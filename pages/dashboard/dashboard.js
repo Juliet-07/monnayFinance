@@ -3,10 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Logo from "../../asset/monnayLogo.png";
 import Purse from "../../asset/monnayPurse.jpg";
-import Chart from "../../asset/monnayChart.jpg";
-import { FaTachometerAlt } from "react-icons/fa";
 import { BiBarChartSquare } from "react-icons/bi";
-import { AiOutlineClockCircle } from "react-icons/ai";
+import { AiOutlineClockCircle, AiOutlineHome } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { IoSettingsOutline } from "react-icons/io5";
 import { AiOutlineLogout, AiOutlineDollar } from "react-icons/ai";
@@ -54,7 +52,7 @@ const Dashboard = () => {
               <li className="nav-item active">
                 <a className="nav-link" href="/dashboard/dashboard">
                   <i className="material-icons">
-                    <FaTachometerAlt />
+                    <AiOutlineHome />
                   </i>
                   <p>Dashboard</p>
                 </a>
@@ -131,7 +129,7 @@ const Dashboard = () => {
                   <li className="nav-item">
                     <a className="nav-link" href="javascript:;">
                       <i className="material-icons">
-                        <FaTachometerAlt />
+                        <AiOutlineHome />
                       </i>
                       <p className="d-lg-none d-md-block">Stats</p>
                     </a>
@@ -314,8 +312,10 @@ const Dashboard = () => {
               <div className="flex justify-between align-center">
                 <div className="card w-50">
                   <p className="refer">refer and earn</p>
-                  <p className="refer1">Use the link below to invite your friends</p>
-                  <input placeholder="link for referral"/>
+                  <p className="refer1">
+                    Use the link below to invite your friends
+                  </p>
+                  <input placeholder="link for referral" />
                 </div>
 
                 {/* <Image src={Chart} width={300} height={300} /> */}

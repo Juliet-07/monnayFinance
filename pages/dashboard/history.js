@@ -2,16 +2,15 @@ import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Logo from "../../asset/monnayLogo.png";
-import Purse from "../../asset/monnayPurse.jpg";
-import Chart from "../../asset/monnayChart.jpg";
 import { FaTachometerAlt } from "react-icons/fa";
 import { BiBarChartSquare } from "react-icons/bi";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { IoSettingsOutline } from "react-icons/io5";
-import { AiOutlineLogout, AiOutlineDollar } from "react-icons/ai";
+import { AiOutlineLogout, AiOutlineHome } from "react-icons/ai";
 import { MdOutlineNotificationsNone } from "react-icons/md";
-import { FcMoneyTransfer } from "react-icons/fc";
+
+
 const History = () => {
   return (
     <>
@@ -54,13 +53,13 @@ const History = () => {
               <li className="nav-item">
                 <a className="nav-link" href="/dashboard/dashboard">
                   <i className="material-icons">
-                    <FaTachometerAlt />
+                    <AiOutlineHome />
                   </i>
                   <p>Dashboard</p>
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/dashboard/investments">
                   <i className="material-icons">
                     <BiBarChartSquare />
                   </i>
@@ -84,7 +83,7 @@ const History = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/dashboard/settings">
                   <i className="material-icons">
                     <IoSettingsOutline />
                   </i>
@@ -214,12 +213,12 @@ const History = () => {
                   <h4 className="cardLabel">Transaction History</h4>
                 </div>
               </div>
-              <div class="col-md-12">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="table-responsive">
-                      <table class="table">
-                        <thead class="text-default text-sm">
+              <div className="col-md-12">
+                <div className="card">
+                  <div className="card-body">
+                    <div className="table-responsive">
+                      <table className="table">
+                        <thead className="text-default text-sm">
                           <th>Transaction Type</th>
                           <th>Amount</th>
                           <th>Date</th>

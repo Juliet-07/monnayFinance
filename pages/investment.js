@@ -143,7 +143,7 @@ const Investment = () => {
               </ul>
             </div>
             <div className={styles.buttonDiv}>
-              <a href="#" className={styles.cardButton}>
+              <a href="auth/signin" className={styles.cardButton}>
                 SELECT PLAN
               </a>
             </div>
@@ -195,7 +195,7 @@ const Investment = () => {
               </ul>
             </div>
             <div className={styles.buttonDiv}>
-              <a href="#" className={styles.cardButton}>
+              <a href="/auth/signin" className={styles.cardButton}>
                 SELECT PLAN
               </a>
             </div>
@@ -247,7 +247,7 @@ const Investment = () => {
               </ul>
             </div>
             <div className={styles.buttonDiv}>
-              <a href="#" className={styles.cardButton}>
+              <a href="/auth/signin" className={styles.cardButton}>
                 SELECT PLAN
               </a>
             </div>

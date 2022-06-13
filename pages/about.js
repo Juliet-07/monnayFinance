@@ -97,25 +97,58 @@ const About = () => {
             <h4 className={styles.whoAreWeHeader}>Who Are We?</h4>
             <hr />
             <p className={styles.whoAreWeMessage}>
-              We are an investment company, offering and trading crypto-based
-              assets an other financial instruments for investors.
+              We are an investment company,
+              <br /> offering and trading crypto-based
+              <br />
+              assets and other financial instruments
+              <br /> for investors.
             </p>
           </div>
           <div className={styles.whoAreWe}>
             <h4 className={styles.whoAreWeHeader}>What do we do?</h4>
             <hr />
             <p className={styles.whoAreWeMessage}>
-              We allocate investor's funs to financial instruments intrading and
-              manage these trades to bring profits for investors.
+              We allocate investor's funds to financial,
+              <br /> instruments in trading and manage these
+              <br /> trades to bring profits for investors.
             </p>
           </div>
           <div className={styles.whoAreWe}>
             <h4 className={styles.whoAreWeHeader}>Meet our CEO</h4>
             <hr />
             <p className={styles.whoAreWeMessage}>
-              We allocate investor's funs to financial instruments intrading and
-              manage these trades to bring profits for investors.
+              Pritchard Potts currently sits on the Board
+              <br /> of Monnay Finance Limited as Managing Director/Chief
+              Executive Officer. He holds
+              <br /> an MBA, with distinction, from The Kellogg
+              <br /> School of Management, and a Masters of
+              <br /> Engineering Management from The
+              <br /> McCormick School of Engineering and
+              <br /> Applied Science, at Northwestern
+              <br /> University in the USA. He also holds a<br /> Bachelor of
+              Commerce (Hons) with a major <br />
+              in Accounting and Finance, from the <br />
+              University of Auckland.
+              <br />
+              <br /> Pritchard has over 20 years’ experience in the Crypto and
+              Investment Industry and has received several awards of excellence
+              from diverse Companies and brokers.
             </p>
+            <ul>
+              <li>
+                <a
+                  href="https://app.companiesoffice.govt.nz/co/8372576"
+                  className={styles.ceoButton}
+                >
+                  View Company Certificate
+                </a>
+              </li>
+              <li>
+                <a href="#" className={styles.ceoButton}>
+                  View CEO Awards
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
         {/* Description Ends */}
@@ -149,21 +182,32 @@ const About = () => {
         <div className={styles.investorCardDiv}>
           <div className={styles.investorCard}>
             <p className={styles.investorMessage}>
-              A broad range of excellent investment opportunities and high
-              quality events.
-              <br /> The team at Monnay Finance are highly professional and
-              they've helped build my portfolio.
+              Beautiful performance from this company. I'm glad to be an
+              investor here.
             </p>
-            <p className={styles.investorName}>Tony Angelo</p>
+            <p className={styles.investorName}>Iain Carmichael</p>
           </div>
           <div className={styles.investorCard}>
             <p className={styles.investorMessage}>
-              A broad range of excellent investment opportunities and high
-              quality events.
-              <br /> The team at Monnay Finance are highly professional and
-              they've helped build my portfolio.
+              What a well designed investment structure. It's an easy-to-operate
+              system with automated payments.
             </p>
-            <p className={styles.investorName}>Tony Angelo</p>
+            <p className={styles.investorName}>Paul Littlefair</p>
+          </div>
+          {/* <div className={styles.investorCard}>
+            <p className={styles.investorMessage}>
+              Investing in this company has been a wonderful experience. I love
+              the swift response from the support team and the fast payouts.
+            </p>
+            <p className={styles.investorName}>Karna Luke</p>
+          </div> */}
+          <div className={styles.investorCard}>
+            <p className={styles.investorMessage}>
+              Thank you Monnay Finance for being so efficient in service and
+              proving to be the best investment company. It has always been my
+              wish to encounter a company with such performance. Keep it up
+            </p>
+            <p className={styles.investorName}>Amber Oram</p>
           </div>
           <div></div>
         </div>

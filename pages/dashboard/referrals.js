@@ -2,16 +2,15 @@ import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Logo from "../../asset/monnayLogo.png";
-import Purse from "../../asset/monnayPurse.jpg";
-import Chart from "../../asset/monnayChart.jpg";
 import { FaTachometerAlt } from "react-icons/fa";
 import { BiBarChartSquare } from "react-icons/bi";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { IoSettingsOutline } from "react-icons/io5";
-import { AiOutlineLogout, AiOutlineDollar } from "react-icons/ai";
+import { AiOutlineLogout, AiOutlineHome } from "react-icons/ai";
 import { MdOutlineNotificationsNone } from "react-icons/md";
-import { FcMoneyTransfer } from "react-icons/fc";
+
+
 const History = () => {
   return (
     <>
@@ -54,7 +53,7 @@ const History = () => {
               <li className="nav-item">
                 <a className="nav-link" href="/dashboard/dashboard">
                   <i className="material-icons">
-                    <FaTachometerAlt />
+                    <AiOutlineHome />
                   </i>
                   <p>Dashboard</p>
                 </a>

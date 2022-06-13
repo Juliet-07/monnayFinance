@@ -22,7 +22,7 @@ const Signin = () => {
     const { name, value } = e.target;
     setProfile({ ...profile, [name]: value });
   };
-
+  const { username, password } = profile;
   const login = () => {
     try {
       fetch(BASE_URI + "/auth/login", {
@@ -137,7 +137,10 @@ const Signin = () => {
                     <input
                       className=" border rounded w-full py-2 px-2"
                       id="username"
+                      name="username"
                       type="text"
+                      value={username}
+                      onChange={handleChange}
                     />
                   </div>
                   <div className="mb-4">
@@ -150,7 +153,10 @@ const Signin = () => {
                     <input
                       className=" border rounded w-full py-2 px-2"
                       id="password"
+                      name="password"
                       type="password"
+                      value={password}
+                      onChange={handleChange}
                     />
                   </div>
                   <div className="flex items-center justify-between mt-8">
@@ -169,15 +175,16 @@ const Signin = () => {
                   </div>
                   {/* <div className={styles.createButtonDiv}> */}
                   {/* <Link href="/dashboard/dashboard"> */}
-                    <button
-                      className={styles.registrationButton}
-                      // type="submit"
-                      onClick={() => {
-                        login();
-                      }}
-                    >
-                      Log in
-                    </button>
+                  <button
+                    className={styles.registrationButton}
+                    type="button"
+                    onClick={() => {
+                      login();
+                      console.log(login);
+                    }}
+                  >
+                    Log in
+                  </button>
                   {/* </Link> */}
                   {/* </div> */}
                 </form>

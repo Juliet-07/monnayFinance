@@ -454,6 +454,22 @@
   text-align: left;
   font-style: normal;
 }
+.ceoButton {
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-color: #057d99;
+  padding: 0.46875rem 1rem;
+  font-size: 14px;
+  line-height: 2;
+  border-radius: 0.25rem;
+  color: #057d99;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
 .ourStrategy {
   position: relative;
   width: 700px;
@@ -629,7 +645,7 @@
   font-weight: 500;
   text-align: center;
   border: 1px solid transparent;
-  padding: 0.46875rem 1rem;;
+  padding: 0.46875rem 1rem;
   border-radius: 0.25rem;
   background-color: #057d99;
   color: #ffffff;
@@ -705,7 +721,35 @@
   height: 1em;
   margin-left: 0.5rem;
 }
-
+/* Others, Dashboard and all */
+.investContainer {
+  position: relative;
+  background: url("../asset/monnayJumbo.png");
+  background-size: cover;
+  height: 1000px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.investFluid {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(35, 161, 192, 0.72);
+}
+.invest {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  left: 500px;
+  top: 200px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  /* padding: 15px; */
+}
 @media (max-width: 600px) {
   .investmentContainer {
     width: 100%;

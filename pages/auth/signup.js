@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../../styles/Home.module.css";
@@ -6,8 +7,71 @@ import { AiOutlineClockCircle } from "react-icons/ai";
 import { FaHandshake } from "react-icons/fa";
 import Logo from "../../asset/monnayLogo.png";
 import Link from "next/link";
+const BASE_URI = "https://monnayfinance.herokuapp.com/api";
 
 const Signup = () => {
+  const initialValues = {
+    fullname: "",
+    username: "",
+    email: "",
+    password: "",
+    confirm_password: "",
+    btc: "",
+    doge: "",
+    eth: "",
+    usdt: "",
+    security: "",
+    answer: "",
+  };
+
+  const [register, setRegister] = useState(initialValues);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setRegister({ ...register, [name]: value });
+  };
+  const {
+    fullname,
+    username,
+    email,
+    password,
+    confirm_password,
+    btc,
+    doge,
+    eth,
+    usdt,
+    security,
+    answer,
+  } = register;
+  const signup = () => {
+    try {
+      fetch(BASE_URI + "/auth/register", {
+        method: "POST",
+        body: JSON.stringify({
+          fullname: register.fullname,
+          username: register.username,
+          email: register.email,
+          password: register.password,
+          confirm_password: register.confirm_password,
+          btc: register.btc,
+          doge: register.doge,
+          eth: register.eth,
+          usdt: register.usdt,
+          security: register.security,
+          answer: register.answer,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((res) => res.json())
+        .then((json) => console.log(json));
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+  useEffect(() => {});
+
   return (
     <div className={styles.container}>
       <Head>
@@ -102,7 +166,10 @@ const Signup = () => {
                 <input
                   className=" w-full bg-gray-200 text-gray-700 py-3 px-2"
                   id="grid-full-name"
+                  name="fullname"
                   type="text"
+                  value={fullname}
+                  onChange={handleChange}
                 />
               </div>
               <div className="md:w-1/2 px-3">
@@ -115,7 +182,10 @@ const Signup = () => {
                 <input
                   className="w-full bg-gray-200 text-gray-700 py-3 px-2"
                   id="grid-user-name"
+                  name="username"
                   type="text"
+                  value={username}
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -130,7 +200,10 @@ const Signup = () => {
                 <input
                   className="w-full bg-gray-200 text-gray-700 py-3 px-2"
                   id="grid-email"
+                  name="email"
                   type="email"
+                  value={email}
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -145,7 +218,10 @@ const Signup = () => {
                 <input
                   className="w-full bg-gray-200 text-gray-700 py-3 px-2"
                   id="grid-password"
+                  name="password"
                   type="password"
+                  value={password}
+                  onChange={handleChange}
                 />
               </div>
               <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
@@ -158,50 +234,66 @@ const Signup = () => {
                 <input
                   className="w-full bg-gray-200 text-gray-700 py-3 px-2"
                   id="grid-password"
+                  name="confirm_password"
                   type="password"
+                  value={confirm_password}
+                  onChange={handleChange}
                 />
               </div>
             </div>
-            <div className="flex flex-wrap -mx-3 mb-2">
-              <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="grid-state"
-                >
-                  Type of Coin
-                </label>
-                <div className="relative">
-                  <select
-                    className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    id="grid-state"
-                  >
-                    <option>BTC</option>
-                    <option>DOGE</option>
-                    <option>ETH</option>
-                    <option>USDT</option>
-                  </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                    <svg
-                      className="fill-current h-4 w-4"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                <label
-                  className="text-black text-sm font-bold"
-                  for="grid-email"
-                >
-                  Wallet Address
+            <div className="flex flex-wrap -mx-3 mb-4">
+              <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+                <label className="text-black text-sm font-bold" for="grid-btc">
+                  BTC Wallet Address
                 </label>
                 <input
                   className="w-full bg-gray-200 text-gray-700 py-3 px-2"
-                  id="grid-email"
-                  type="email"
+                  id="grid-btc"
+                  name="btc"
+                  type="text"
+                  value={btc}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+                <label className="text-black text-sm font-bold" for="grid-doge">
+                  DOGE Wallet Address
+                </label>
+                <input
+                  className="w-full bg-gray-200 text-gray-700 py-3 px-2"
+                  id="grid-doge"
+                  name="doge"
+                  type="text"
+                  value={doge}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+            <div className="flex flex-wrap -mx-3 mb-4">
+              <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+                <label className="text-black text-sm font-bold" for="grid-eth">
+                  ETH Wallet Address
+                </label>
+                <input
+                  className="w-full bg-gray-200 text-gray-700 py-3 px-2"
+                  id="grid-eth"
+                  name="eth"
+                  type="text"
+                  value={eth}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+                <label className="text-black text-sm font-bold" for="grid-usdt">
+                  USDT Wallet Address
+                </label>
+                <input
+                  className="w-full bg-gray-200 text-gray-700 py-3 px-2"
+                  id="grid-usdt"
+                  name="usdt"
+                  type="text"
+                  value={usdt}
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -216,7 +308,10 @@ const Signup = () => {
                 <input
                   className="w-full bg-gray-200 text-gray-700 py-3 px-2"
                   id="grid-security"
+                  name="security"
                   type="text"
+                  value={security}
+                  onChange={handleChange}
                 />
               </div>
               <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
@@ -229,7 +324,10 @@ const Signup = () => {
                 <input
                   className="w-full bg-gray-200 text-gray-700 py-3 px-2"
                   id="grid-answer"
+                  name="answer"
                   type="text"
+                  value={answer}
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -248,9 +346,15 @@ const Signup = () => {
               </p>
             </div>
             <div className={styles.createButtonDiv}>
-              <Link href="/auth/reg-successful">
-                <a className={styles.button}>Create account</a>
-              </Link>
+              {/* <Link href="/auth/reg-successful"> */}
+              <button
+                className={styles.button}
+                type="button"
+                onClick={() => signup()}
+              >
+                Create account
+              </button>
+              {/* </Link> */}
             </div>
           </form>
           {/* form proper ends */}
