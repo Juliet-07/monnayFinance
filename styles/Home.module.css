@@ -652,6 +652,21 @@
   margin: 30px;
 }
 /* registration successful  */
+.settingsButton {
+  position: relative;
+  left: 1000px;
+  width: 180px;
+  height: 70px;
+  /* display: block; */
+  font-weight: 700;
+  text-align: center;
+  border: 1px solid transparent;
+  padding: 0.46875rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #057d99;
+  color: #ffffff;
+  margin: 30px;
+}
 .footer {
   display: block;
   position: absolute;

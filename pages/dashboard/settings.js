@@ -2,14 +2,13 @@ import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Logo from "../../asset/monnayLogo.png";
-// import Purse from "../../asset/monnayPurse.jpg";
+import styles from "../../styles/Home.module.css";
 import { BiBarChartSquare } from "react-icons/bi";
 import { AiOutlineClockCircle, AiOutlineHome } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { IoSettingsOutline } from "react-icons/io5";
-import { AiOutlineLogout, AiOutlineDollar } from "react-icons/ai";
+import { AiOutlineLogout } from "react-icons/ai";
 import { MdOutlineNotificationsNone } from "react-icons/md";
-import { FcMoneyTransfer } from "react-icons/fc";
 
 const Settings = () => {
   return (
@@ -208,120 +207,60 @@ const Settings = () => {
           {/* Navbar Ends */}
           <div className="content">
             <div className="container-fluid">
-              <div className="mb-20">
-                <div className="card">
-                  <div className="flex justify-between">
-                    <h4 className="cardName">Welcome John James Doe</h4>
-                    <p className="cardTime">Last Access: 25-02-2022 16.05</p>
-                  </div>
+              <div className="mb-10">
+                <div className="rounded h-20 bg-primary">
+                  <h4 className="cardLabel text-left">Personal Details</h4>
                 </div>
               </div>
-              <div className="mb-20">
-                <div className="card">
-                  <div className="flex justify-between">
-                    {/* <Image src={Purse} width={700} height={200} /> */}
-                    <p className="cardPrice">
-                      Available balance:
-                      <br /> $ 30,000
-                    </p>
-                    <a href="#" className="cardButton">
-                      Withdraw
-                    </a>
-                    <a href="#" className="cardButton1">
-                      Deposit
-                    </a>
+              <form class="w-full max-w-sm">
+                <div class="md:flex md:items-center mb-6">
+                  <div class="md:w-1/3">
+                    <label
+                      class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                      for="inline-full-name"
+                    >
+                      Name:
+                    </label>
                   </div>
+                  <div class="md:w-2/3">
+                    <input
+                      class="bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 focus:outline-none focus:bg-white focus:border-blue-300"
+                      id="inline-full-name"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div class="md:flex md:items-center mb-6">
+                  <div class="md:w-1/3">
+                    <label
+                      class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                      for="inline-password"
+                    >
+                      Email:
+                    </label>
+                  </div>
+                  <div class="md:w-2/3">
+                    <input
+                      class="bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 focus:outline-none focus:bg-white focus:border-blue-300"
+                      id="inline-password"
+                      type="email"
+                    />
+                  </div>
+                </div>
+              </form>
+              <div className="mb-10">
+                <div className="rounded h-20 bg-primary">
+                  <h4 className="cardLabel text-left">Account Details</h4>
                 </div>
               </div>
-              {/* card row */}
-              <div className="row">
-                <div className="col-lg-3 col-md-6 col-sm-6">
-                  <div className="card card-stats">
-                    <div className="card-header card-header-warning card-header-icon">
-                      <div className="card-icon">
-                        <i className="material-icons">
-                          <AiOutlineDollar />
-                        </i>
-                      </div>
-                      <p className="card-category">Active Investment</p>
-                      <h3 className="card-title">$ 2,000.00</h3>
-                    </div>
-                    <div className="card-footer">
-                      <i className="material-icons">
-                        <FcMoneyTransfer />
-                      </i>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-3 col-md-6 col-sm-6">
-                  <div className="card card-stats">
-                    <div className="card-header card-header-success card-header-icon">
-                      <div className="card-icon">
-                        <i className="material-icons">
-                          <AiOutlineDollar />
-                        </i>
-                      </div>
-                      <p className="card-category">Total Withdrawn</p>
-                      <h3 className="card-title">$ 3,000.00</h3>
-                    </div>
-                    <div className="card-footer">
-                      <i className="material-icons">
-                        <FcMoneyTransfer />
-                      </i>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                  <div class="card card-stats">
-                    <div class="card-header card-header-danger card-header-icon">
-                      <div class="card-icon">
-                        <i class="material-icons">
-                          <AiOutlineDollar />
-                        </i>
-                      </div>
-                      <p class="card-category">Pending Withdrawal</p>
-                      <h3 class="card-title">$ 0.00</h3>
-                    </div>
-                    <div class="card-footer">
-                      <i class="material-icons">
-                        <FcMoneyTransfer />
-                      </i>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                  <div class="card card-stats">
-                    <div class="card-header card-header-info card-header-icon">
-                      <div class="card-icon">
-                        <i class="material-icons">
-                          <AiOutlineDollar />
-                        </i>
-                      </div>
-                      <p class="card-category">Total Earning</p>
-                      <h3 class="card-title">$ 6,000.00</h3>
-                    </div>
-                    <div class="card-footer">
-                      <i class="material-icons">
-                        <FcMoneyTransfer />
-                      </i>{" "}
-                    </div>
-                  </div>
+              <div className="mb-10">
+                <div className="rounded h-20 bg-primary">
+                  <h4 className="cardLabel text-left">Account Security</h4>
                 </div>
               </div>
-              {/* card row ends */}
-              {/* chart section */}
-              <div className="flex justify-between align-center">
-                <div className="card w-50">
-                  <p className="refer">refer and earn</p>
-                  <p className="refer1">
-                    Use the link below to invite your friends
-                  </p>
-                  <input placeholder="link for referral" />
-                </div>
-
-                {/* <Image src={Chart} width={300} height={300} /> */}
-              </div>
-              {/* chart section ends */}
+              <button className={styles.settingsButton} type="button">
+                Save changes
+              </button>
             </div>
             {/* footer */}
           </div>
