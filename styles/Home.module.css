@@ -756,6 +756,16 @@
   border-radius: 20px;
   /* padding: 15px; */
 }
+.withdraw {
+  position: relative;
+  width: 550px;
+  height: 750px;
+  left: 500px;
+  top: 100px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  /* padding: 15px; */
+}
 @media (max-width: 600px) {
   .investmentContainer {
     width: 100%;

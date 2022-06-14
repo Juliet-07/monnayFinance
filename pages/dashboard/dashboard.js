@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Logo from "../../asset/monnayLogo.png";
-import Purse from "../../asset/monnayPurse.jpg";
+import Coin from "../../asset/monnayCoin.png";
 import { BiBarChartSquare } from "react-icons/bi";
 import { AiOutlineClockCircle, AiOutlineHome } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
@@ -218,15 +218,15 @@ const Dashboard = () => {
               <div className="mb-20">
                 <div className="card">
                   <div className="flex justify-between">
-                    <Image src={Purse} width={700} height={200} />
+                    <Image src={Coin} width={700} height={200} />
                     <p className="cardPrice">
                       Available balance:
                       <br /> $ 30,000
                     </p>
-                    <a href="#" className="cardButton">
+                    <a href="/dashboard/withdraw" className="cardButton">
                       Withdraw
                     </a>
-                    <a href="#" className="cardButton1">
+                    <a href="/dashboard/deposit" className="cardButton1">
                       Deposit
                     </a>
                   </div>

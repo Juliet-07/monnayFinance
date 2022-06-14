@@ -83,7 +83,7 @@ const Investment = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/dashboard/settings">
                   <i className="material-icons">
                     <IoSettingsOutline />
                   </i>
