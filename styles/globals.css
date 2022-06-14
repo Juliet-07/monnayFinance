@@ -38,3 +38,8 @@ hr {
   font-size: 17px;
   line-height: 29px;
 }
+.addressBarLi{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

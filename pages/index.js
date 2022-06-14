@@ -395,49 +395,39 @@ const Home = () => {
         </div>
         {/* Subscribe Ends */}
       </main>
-
       <footer className={styles.footer}>
-        <div className={styles.footerOne}>
-          <div className={styles.footerOneStyle}>
-            <a>
-              <i className="material-icons">
-                <FaHandshake />
-              </i>
-            </a>
-
-            <p>Support teams across the country</p>
-          </div>
-          <p className={styles.footerOneStyle}>
-            Safe and secure online payment
+        <div className={styles.footerInfo}>
+          <p>Image & Text</p>
+          <ul className={styles.footerBottomText}>
+            <h5>Quick links</h5>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/about">About us</a>
+            </li>
+            <li>
+              <a href="/contact">Contact us</a>
+            </li>
+            <li>
+              <a href="/faq">FAQ</a>
+            </li>
+          </ul>
+          <ul className={styles.footerBottomText}>
+            <h5>Address</h5>
+            <li>Vanha Talvitie 11 C,</li>
+            <li>HELSINKI 00580 Finland</li>
+            <br />
+            <br />
+            <lh>Email:</lh>
+            <li>contact@monnay.finance</li>
+          </ul>
+        </div>
+        <div className={styles.footerBottom}>
+          <p className={styles.footerBottomText}>
+            COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
           </p>
         </div>
-        <div className={styles.footerTwo}>
-          <ul>
-            <li>WHO WE ARE</li>
-            <li>About</li>
-            <li>Team</li>
-            <li>Work With Us</li>
-          </ul>
-          <ul>
-            <li>MONNAY FINANCE</li>
-            <li>Features</li>
-            <li>Payments</li>
-            <li></li>
-          </ul>
-          <ul>
-            <li>SUPPORT</li>
-            <li>Documentation</li>
-            <li>Customizations</li>
-            <li>Support Policy</li>
-            <li>Contact</li>
-          </ul>
-        </div>
-        <a href="/" target="_blank" rel="noopener noreferrer">
-          MONNAYFINANCE{" "}
-          <span className={styles.logo}>
-            <Image src="/icon.png" alt=" Logo" width={25} height={25} />
-          </span>
-        </a>
       </footer>
     </div>
   );

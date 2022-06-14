@@ -18,11 +18,11 @@ const About = () => {
       <div className="navbar-fixed">
         <nav className={styles.addressBar}>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
-            <li>
+            <li className="addressBarLi">
               <i className="material-icons left">
                 <IoLocationOutline />
               </i>
-              Vanha Telhitie 11c{" "}
+              Vanha Talvitie 11c{" "}
             </li>
             <li>
               <i className="material-icons left">
@@ -117,10 +117,10 @@ const About = () => {
             <h4 className={styles.whoAreWeHeader}>Meet our CEO</h4>
             <hr />
             <p className={styles.whoAreWeMessage}>
-              Pritchard Potts currently sits on the Board
-              <br /> of Monnay Finance Limited as Managing Director/Chief
-              Executive Officer. He holds
-              <br /> an MBA, with distinction, from The Kellogg
+              Pritchard Potts currently sits on the Board of
+              <br />Monnay Finance Limited as Managing Director/Chief
+              Executive Officer. 
+              <br />He holds an MBA, with distinction, from The Kellogg
               <br /> School of Management, and a Masters of
               <br /> Engineering Management from The
               <br /> McCormick School of Engineering and
@@ -130,9 +130,10 @@ const About = () => {
               in Accounting and Finance, from the <br />
               University of Auckland.
               <br />
-              <br /> Pritchard has over 20 years’ experience in the Crypto and
-              Investment Industry and has received several awards of excellence
-              from diverse Companies and brokers.
+              <br /> Pritchard has over 20 years experience in
+              <br /> the Crypto and Investment Industry and
+              <br /> has received several awards of excellence
+              <br /> from diverse Companies and brokers.
             </p>
             <ul>
               <li>
@@ -215,47 +216,38 @@ const About = () => {
       </main>
 
       <footer className={styles.footer}>
-        <div className={styles.footerOne}>
-          <div className={styles.footerOneStyle}>
-            <a>
-              <i className="material-icons">
-                <FaHandshake />
-              </i>
-            </a>
-
-            <p>Support teams across the country</p>
-          </div>
-          <p className={styles.footerOneStyle}>
-            Safe and secure online payment
+        <div className={styles.footerInfo}>
+          <p>Image & Text</p>
+          <ul className={styles.footerBottomText}>
+            <h5>Quick links</h5>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/about">About us</a>
+            </li>
+            <li>
+              <a href="/contact">Contact us</a>
+            </li>
+            <li>
+              <a href="/faq">FAQ</a>
+            </li>
+          </ul>
+          <ul className={styles.footerBottomText}>
+            <h5>Address</h5>
+            <li>Vanha Talvitie 11 C,</li>
+            <li>HELSINKI 00580 Finland</li>
+            <br />
+            <br />
+            <lh>Email:</lh>
+            <li>contact@monnay.finance</li>
+          </ul>
+        </div>
+        <div className={styles.footerBottom}>
+          <p className={styles.footerBottomText}>
+            COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
           </p>
         </div>
-        <div className={styles.footerTwo}>
-          <ul>
-            <li>WHO WE ARE</li>
-            <li>About</li>
-            <li>Team</li>
-            <li>Work With Us</li>
-          </ul>
-          <ul>
-            <li>MONNAY FINANCE</li>
-            <li>Features</li>
-            <li>Payments</li>
-            <li></li>
-          </ul>
-          <ul>
-            <li>SUPPORT</li>
-            <li>Documentation</li>
-            <li>Customizations</li>
-            <li>Support Policy</li>
-            <li>Contact</li>
-          </ul>
-        </div>
-        <a href="/" target="_blank" rel="noopener noreferrer">
-          MONNAYFINANCE{" "}
-          <span className={styles.logo}>
-            <Image src="/icon.png" alt=" Logo" width={25} height={25} />
-          </span>
-        </a>
       </footer>
     </div>
   );
