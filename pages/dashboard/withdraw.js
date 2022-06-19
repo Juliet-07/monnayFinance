@@ -56,7 +56,7 @@ const Withdraw = () => {
                   <p>Dashboard</p>
                 </a>
               </li>
-              <li className="nav-item active">
+              <li className="nav-item">
                 <a className="nav-link" href="/dashboard/investments">
                   <i className="material-icons">
                     <BiBarChartSquare />

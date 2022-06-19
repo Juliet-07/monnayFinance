@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../../styles/Home.module.css";
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineClockCircle } from "react-icons/ai";
-import { FaHandshake } from "react-icons/fa";
 import Logo from "../../asset/monnayLogo.png";
-import Link from "next/link";
 
-const BASE_URI = "https://monnayfinance.herokuapp.com/api";
+const BASE_URI = "https://monnayfinance.com/api";
 
 const Signin = () => {
   const initialValues = {
@@ -23,6 +22,7 @@ const Signin = () => {
     setProfile({ ...profile, [name]: value });
   };
   const { username, password } = profile;
+  const router = useRouter();
   const login = () => {
     try {
       fetch(BASE_URI + "/auth/login", {
@@ -37,6 +37,7 @@ const Signin = () => {
       })
         .then((res) => res.json())
         .then((json) => console.log(json));
+      router.push("/dashboard/dashboard");
     } catch (err) {
       console.log(err.message);
     }

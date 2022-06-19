@@ -49,7 +49,7 @@ const Settings = () => {
           {/* Sidebar Brand Ends*/}
           <div className="sidebar-wrapper">
             <ul className="nav">
-              <li className="nav-item active">
+              <li className="nav-item">
                 <a className="nav-link" href="/dashboard/dashboard">
                   <i className="material-icons">
                     <AiOutlineHome />
@@ -81,7 +81,7 @@ const Settings = () => {
                   <p>Referrals</p>
                 </a>
               </li>
-              <li className="nav-item">
+              <li className="nav-item active">
                 <a className="nav-link" href="/dashboard/settings">
                   <i className="material-icons">
                     <IoSettingsOutline />
@@ -251,6 +251,80 @@ const Settings = () => {
               <div className="mb-10">
                 <div className="rounded h-20 bg-primary">
                   <h4 className="cardLabel text-left">Account Details</h4>
+                </div>
+                <div className="flex justify-around align-middle">
+                  <form className="w-full max-w-sm">
+                    <div className="md:flex md:items-center mb-6">
+                      <div className="md:w-1/3">
+                        <label
+                          className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                          for="inline-full-name"
+                        >
+                          BTC wallet:
+                        </label>
+                      </div>
+                      <div className="md:w-2/3">
+                        <input
+                          className="bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 focus:outline-none focus:bg-white focus:border-blue-300"
+                          id="inline-full-name"
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                    <div className="md:flex md:items-center mb-6">
+                      <div className="md:w-1/3">
+                        <label
+                          className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                          for="inline-password"
+                        >
+                          ETH wallet:
+                        </label>
+                      </div>
+                      <div class="md:w-2/3">
+                        <input
+                          className="bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 focus:outline-none focus:bg-white focus:border-blue-300"
+                          id="inline-password"
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                  </form>
+                  <form className="w-full max-w-sm">
+                    <div className="md:flex md:items-center mb-6">
+                      <div className="md:w-1/3">
+                        <label
+                          className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                          for="inline-full-name"
+                        >
+                          BTC wallet:
+                        </label>
+                      </div>
+                      <div className="md:w-2/3">
+                        <input
+                          class="bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 focus:outline-none focus:bg-white focus:border-blue-300"
+                          id="inline-full-name"
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                    <div className="md:flex md:items-center mb-6">
+                      <div className="md:w-1/3">
+                        <label
+                          className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                          for="inline-password"
+                        >
+                          ETH wallet:
+                        </label>
+                      </div>
+                      <div className="md:w-2/3">
+                        <input
+                          className="bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 focus:outline-none focus:bg-white focus:border-blue-300"
+                          id="inline-password"
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
               <div className="mb-10">

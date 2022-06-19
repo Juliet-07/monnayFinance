@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Logo from "../../asset/monnayLogo.png";
@@ -10,7 +10,11 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { AiOutlineLogout, AiOutlineDollar } from "react-icons/ai";
 import { MdOutlineNotificationsNone } from "react-icons/md";
 import { FcMoneyTransfer } from "react-icons/fc";
+
+const BASE_URI = "https://monnayfinance.com/api/investments/6/active";
+
 const Dashboard = () => {
+  const [user, setUser] = useState("Juliet");
   return (
     <>
       <Head>
@@ -210,7 +214,7 @@ const Dashboard = () => {
               <div className="mb-20">
                 <div className="card">
                   <div className="flex justify-between">
-                    <h4 className="cardName">Welcome John James Doe</h4>
+                    <h4 className="cardName">Welcome {user}</h4>
                     <p className="cardTime">Last Access: 25-02-2022 16.05</p>
                   </div>
                 </div>

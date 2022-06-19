@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import styles from "../../styles/Home.module.css";
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineClockCircle } from "react-icons/ai";
-import { FaHandshake } from "react-icons/fa";
 import Logo from "../../asset/monnayLogo.png";
 import Link from "next/link";
-const BASE_URI = "https://monnayfinance.herokuapp.com/api";
+const BASE_URI = "https://monnayfinance.com/api";
 
 const Signup = () => {
   const initialValues = {
@@ -15,7 +15,7 @@ const Signup = () => {
     username: "",
     email: "",
     password: "",
-    confirm_password: "",
+    // confirm_password: "",
     btc: "",
     doge: "",
     eth: "",
@@ -23,7 +23,7 @@ const Signup = () => {
     security_question: "",
     answer: "",
   };
-
+  const router = useRouter();
   const [register, setRegister] = useState(initialValues);
 
   const handleChange = (e) => {
@@ -35,7 +35,7 @@ const Signup = () => {
     username,
     email,
     password,
-    confirm_password,
+    // confirm_password,
     btc,
     doge,
     eth,
@@ -52,7 +52,7 @@ const Signup = () => {
           username: register.username,
           email: register.email,
           password: register.password,
-          confirm_password: register.confirm_password,
+          // confirm_password: register.confirm_password,
           btc: register.btc,
           doge: register.doge,
           eth: register.eth,
@@ -66,6 +66,7 @@ const Signup = () => {
       })
         .then((res) => res.json())
         .then((json) => console.log(json));
+      router.push("/auth/reg-successful");
     } catch (err) {
       console.log(err.message);
     }
@@ -236,8 +237,8 @@ const Signup = () => {
                   id="grid-password"
                   name="confirm_password"
                   type="password"
-                  value={confirm_password}
-                  onChange={handleChange}
+                  // value={confirm_password}
+                  // onChange={handleChange}
                 />
               </div>
             </div>
