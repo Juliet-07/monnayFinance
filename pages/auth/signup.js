@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
+import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import styles from "../../styles/Home.module.css";
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import Logo from "../../asset/monnayLogo.png";
-import Link from "next/link";
 const BASE_URI = "https://monnayfinance.com/api";
 
 const Signup = () => {
@@ -105,44 +105,62 @@ const Signup = () => {
           <div className="nav-wrapper">
             <Image src={Logo} width={100} height={30} />
             <ul id="nav-mobile" className="right hide-on-med-and-down">
-              <li>
-                <a href="/" className={styles.navLink}>
-                  HOME
-                </a>
-              </li>
-              <li>
-                <a href="/about" className={styles.navLink}>
-                  ABOUT US
-                </a>
-              </li>
-              <li>
-                <a href="/investment" className={styles.navLink}>
-                  INVESTMENTS
-                </a>
-              </li>
-              <li>
-                <a href="/faq" className={styles.navLink}>
-                  FAQ
-                </a>
-              </li>
-              <li>
-                <a href="/courses" className={styles.navLink}>
-                  COURSES
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className={styles.navLink}>
-                  CONTACT
-                </a>
-              </li>
-              <li>
-                <button className="btn disabled">REGISTER</button>
-              </li>
-              <li>
-                <a href="/auth/signin" className={styles.buttonOutline}>
-                  LOG IN
-                </a>
-              </li>
+              <Link href="/">
+                <li>
+                  <a href="#" className={styles.navLink}>
+                    HOME
+                  </a>
+                </li>
+              </Link>
+              <Link href="/about">
+                <li>
+                  <a href="#" className={styles.navLink}>
+                    ABOUT US
+                  </a>
+                </li>
+              </Link>
+              <Link href="/investment">
+                <li>
+                  <a href="#" className={styles.navLink}>
+                    INVESTMENTS
+                  </a>
+                </li>
+              </Link>
+              <Link href="/faq">
+                <li>
+                  <a href="#" className={styles.navLink}>
+                    FAQ
+                  </a>
+                </li>
+              </Link>
+              <Link href="/courses">
+                <li>
+                  <a href="#" className={styles.navLink}>
+                    COURSES
+                  </a>
+                </li>
+              </Link>
+              <Link href="/contact">
+                <li>
+                  <a href="#" className={styles.navLink}>
+                    CONTACT
+                  </a>
+                </li>
+              </Link>
+              <Link href="/auth/signup">
+                <li>
+                  <button href="#" className="btn disabled">
+                    REGISTER
+                  </button>
+                </li>
+              </Link>
+              <Link href="/auth/sigin">
+                <li>
+                  <a href="#" className={styles.buttonOutline}>
+                    LOG IN
+                  </a>
+                </li>
+              </Link>
             </ul>
           </div>
         </nav>
@@ -366,18 +384,26 @@ const Signup = () => {
           <p>Image & Text</p>
           <ul className={styles.footerBottomText}>
             <h5>Quick links</h5>
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/about">About us</a>
-            </li>
-            <li>
-              <a href="/contact">Contact us</a>
-            </li>
-            <li>
-              <a href="/faq">FAQ</a>
-            </li>
+            <Link href="/">
+              <li>
+                <a href="#">Home</a>
+              </li>
+            </Link>
+            <Link href="/about">
+              <li>
+                <a href="#">About us</a>
+              </li>
+            </Link>
+            <Link href="/contact">
+              <li>
+                <a href="#">Contact us</a>
+              </li>
+            </Link>
+            <Link href="/faq">
+              <li>
+                <a href="#">FAQ</a>
+              </li>
+            </Link>
           </ul>
           <ul className={styles.footerBottomText}>
             <h5>Address</h5>

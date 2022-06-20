@@ -114,7 +114,7 @@ const Withdraw = () => {
                     <div className="mb-4">
                       <label
                         className="block text-gray-700 text-sm font-bold"
-                        for="password"
+                        htmlFor="password"
                       >
                         Amount
                       </label>
@@ -131,7 +131,7 @@ const Withdraw = () => {
                       <div className="w-full md:w-1/2 px-6 mb-4 md:mb-0">
                         <label
                           className="block text-gray-700 text-xs font-bold mb-2"
-                          for="grid-state"
+                          htmlFor="grid-state"
                         >
                           Wallet Address
                         </label>
@@ -170,7 +170,7 @@ const Withdraw = () => {
                     <div className="mb-4">
                       <label
                         className="block text-gray-700 text-sm font-bold mb-2"
-                        for="password"
+                        htmlFor="password"
                       >
                         Comment:
                       </label>

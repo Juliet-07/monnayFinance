@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { IoLocationOutline } from "react-icons/io5";
@@ -37,48 +38,64 @@ const About = () => {
       <div className="navbar-fixed">
         <nav className={styles.topBar}>
           <div className="nav-wrapper">
-            <Image src={Logo} width={100} height={30} />
+            <Image src={Logo} width={100} height={30} alt="logo" />
             <ul id="nav-mobile" className="right hide-on-med-and-down">
-              <li>
-                <a href="/" className={styles.navLink}>
-                  HOME
-                </a>
-              </li>
-              <li>
-                <a href="/about" className={styles.navLink}>
-                  ABOUT US
-                </a>
-              </li>
-              <li>
-                <a href="/investment" className={styles.navLink}>
-                  INVESTMENTS
-                </a>
-              </li>
-              <li>
-                <a href="/faq" className={styles.navLink}>
-                  FAQ
-                </a>
-              </li>
-              <li>
-                <a href="/courses" className={styles.navLink}>
-                  COURSES
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className={styles.navLink}>
-                  CONTACT
-                </a>
-              </li>
-              <li>
-                <a href="/auth/signup" className={styles.button}>
-                  REGISTER
-                </a>
-              </li>
-              <li>
-                <a href="/auth/sigin" className={styles.buttonOutline}>
-                  LOG IN
-                </a>
-              </li>
+              <Link href="/">
+                <li>
+                  <a href="#" className={styles.navLink}>
+                    HOME
+                  </a>
+                </li>
+              </Link>
+              <Link href="/about">
+                <li>
+                  <a href="#" className={styles.navLink}>
+                    ABOUT US
+                  </a>
+                </li>
+              </Link>
+              <Link href="/investment">
+                <li>
+                  <a href="#" className={styles.navLink}>
+                    INVESTMENTS
+                  </a>
+                </li>
+              </Link>
+              <Link href="/faq">
+                <li>
+                  <a href="#" className={styles.navLink}>
+                    FAQ
+                  </a>
+                </li>
+              </Link>
+              <Link href="/courses">
+                <li>
+                  <a href="#" className={styles.navLink}>
+                    COURSES
+                  </a>
+                </li>
+              </Link>
+              <Link href="/contact">
+                <li>
+                  <a href="#" className={styles.navLink}>
+                    CONTACT
+                  </a>
+                </li>
+              </Link>
+              <Link href="/auth/signup">
+                <li>
+                  <a href="#" className={styles.button}>
+                    REGISTER
+                  </a>
+                </li>
+              </Link>
+              <Link href="/auth/sigin">
+                <li>
+                  <a href="#" className={styles.buttonOutline}>
+                    LOG IN
+                  </a>
+                </li>
+              </Link>
             </ul>
           </div>
         </nav>
@@ -118,9 +135,11 @@ const About = () => {
             <hr />
             <p className={styles.whoAreWeMessage}>
               Pritchard Potts currently sits on the Board of
-              <br />Monnay Finance Limited as Managing Director/Chief
-              Executive Officer. 
-              <br />He holds an MBA, with distinction, from The Kellogg
+              <br />
+              Monnay Finance Limited as Managing Director/Chief Executive
+              Officer.
+              <br />
+              He holds an MBA, with distinction, from The Kellogg
               <br /> School of Management, and a Masters of
               <br /> Engineering Management from The
               <br /> McCormick School of Engineering and
@@ -220,18 +239,26 @@ const About = () => {
           <p>Image & Text</p>
           <ul className={styles.footerBottomText}>
             <h5>Quick links</h5>
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/about">About us</a>
-            </li>
-            <li>
-              <a href="/contact">Contact us</a>
-            </li>
-            <li>
-              <a href="/faq">FAQ</a>
-            </li>
+            <Link href="/">
+              <li>
+                <a href="#">Home</a>
+              </li>
+            </Link>
+            <Link href="/about">
+              <li>
+                <a href="#">About us</a>
+              </li>
+            </Link>
+            <Link href="/contact">
+              <li>
+                <a href="#">Contact us</a>
+              </li>
+            </Link>
+            <Link href="/faq">
+              <li>
+                <a href="#">FAQ</a>
+              </li>
+            </Link>
           </ul>
           <ul className={styles.footerBottomText}>
             <h5>Address</h5>

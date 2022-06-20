@@ -118,13 +118,13 @@ const Deposit = () => {
                       <div className="flex justify-between">
                         <label
                           className="block text-gray-700 text-sm font-bold"
-                          for="password"
+                          htmlFor="password"
                         >
                           Amount
                         </label>
                         <label
                           className="block text-gray-700 text-sm font-bold"
-                          for="password"
+                          htmlFor="password"
                         >
                           Available Bal: $6,000
                         </label>
@@ -143,7 +143,7 @@ const Deposit = () => {
                       <div className="w-full md:w-1/2 px-6 mb-4 md:mb-0">
                         <label
                           className="block text-gray-700 text-xs font-bold mb-2"
-                          for="grid-state"
+                          htmlFor="grid-state"
                         >
                           Wallet Address
                         </label>

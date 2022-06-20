@@ -121,7 +121,7 @@ const Invest = () => {
                     <div className="w-full px-3 mb-6">
                       <label
                         className="block text-gray-700 text-xs font-bold mb-2"
-                        for="grid-state"
+                        htmlFor="grid-state"
                       >
                         Plan
                       </label>
@@ -148,7 +148,7 @@ const Invest = () => {
                     <div className="mb-4">
                       <label
                         className="block text-gray-700 text-sm font-bold mb-2"
-                        for="password"
+                        htmlFor="password"
                       >
                         Amount
                       </label>

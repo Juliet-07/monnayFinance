@@ -294,31 +294,31 @@ legend {
   color: inherit;
   white-space: normal;
 }
-.refer{
+.refer {
   position: relative;
   left: 30px;
   top: 10px;
   font-weight: 500;
   font-size: 24px;
   line-height: 35px;
-  color: #057D99;
+  color: #057d99;
   text-transform: uppercase;
 }
-.refer1{
+.refer1 {
   position: relative;
   left: 23px;
   line-height: 20px;
   font-size: 16px;
   color: #636363;
 }
-.footer{
+.footer {
   /* position: absolute; */
   height: 50px;
   display: block;
   padding: 2rem 0;
-  background-color: #057D99;
+  background-color: #057d99;
 }
-.footer-text{
+.footer-text {
   font-weight: 400;
   text-align: center;
   font-size: 12px;
@@ -4913,7 +4913,7 @@ tbody.collapse.show {
   padding: 10px;
   border: 1px solid #057d99;
 }
-.cardLabel{
+.cardLabel {
   position: relative;
   left: 40px;
   top: 20px;
@@ -6539,7 +6539,7 @@ button.close {
 }
 
 .bg-primary {
-  background-color: #057D99 !important;
+  background-color: #057d99 !important;
 }
 
 a.bg-primary:hover,
@@ -16580,12 +16580,13 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 .main-panel {
   position: relative;
   float: right;
-  width: calc(100% - 260px);
+  width: 100%;
+  height: 100%;
   transition: 0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1);
 }
 
 .main-panel > .content {
-  margin-top: 70px;
+  margin-top: 10px;
   padding: 30px 15px;
   min-height: calc(100vh - 123px);
 }
@@ -18639,9 +18640,8 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 .card.bg-info,
 .card.card-rotate.bg-info .front,
 .card.card-rotate.bg-info .back {
-  background: linear-gradient(60deg, #04C150, #04C150);
+  background: linear-gradient(60deg, #04c150, #04c150);
 }
-
 
 .card .card-header-success .card-icon,
 .card .card-header-success .card-text,
@@ -18649,7 +18649,7 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 .card.bg-success,
 .card.card-rotate.bg-success .front,
 .card.card-rotate.bg-success .back {
-  background: linear-gradient(60deg, #FC5F00, #FC5F00);
+  background: linear-gradient(60deg, #fc5f00, #fc5f00);
 }
 
 .card .card-header-warning .card-icon,
@@ -18658,7 +18658,7 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 .card.bg-warning,
 .card.card-rotate.bg-warning .front,
 .card.card-rotate.bg-warning .back {
-  background: linear-gradient(60deg, #057D99, #057D99);
+  background: linear-gradient(60deg, #057d99, #057d99);
 }
 
 .card .card-header-danger .card-icon,
@@ -18667,7 +18667,7 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 .card.bg-danger,
 .card.card-rotate.bg-danger .front,
 .card.card-rotate.bg-danger .back {
-  background: linear-gradient(60deg, #F1BC19, #F1BC19);
+  background: linear-gradient(60deg, #f1bc19, #f1bc19);
 }
 
 .card .card-header-rose .card-icon,
