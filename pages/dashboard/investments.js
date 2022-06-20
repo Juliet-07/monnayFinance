@@ -5,6 +5,7 @@ import styles from "../../styles/Home.module.css";
 import { CgProfile } from "react-icons/cg";
 import { AiOutlineHome, AiFillCheckCircle } from "react-icons/ai";
 import { MdOutlineNotificationsNone } from "react-icons/md";
+import Link from "next/link";
 
 const Investment = () => {
   return (
@@ -88,7 +89,7 @@ const Investment = () => {
                           You have 5 new tasks
                         </a>
                         <a className="dropdown-item" href="#">
-                          You're now friend with Andrew
+                          You are now friends with Andrew
                         </a>
                         <a className="dropdown-item" href="#">
                           Another Notification
@@ -189,12 +190,11 @@ const Investment = () => {
                         </ul>
                       </div>
                       <div className={styles.buttonDiv}>
-                        <a
-                          href="/dashboard/invest"
-                          className={styles.cardButton}
-                        >
-                          INVEST
-                        </a>
+                        <Link href="/dashboard/invest">
+                          <a href="#" className={styles.cardButton}>
+                            INVEST
+                          </a>
+                        </Link>
                       </div>
                     </div>
                     <div className={styles.card}>
@@ -244,12 +244,11 @@ const Investment = () => {
                         </ul>
                       </div>
                       <div className={styles.buttonDiv}>
-                        <a
-                          href="/dashboard/invest"
-                          className={styles.cardButton}
-                        >
-                          INVEST
-                        </a>
+                        <Link href="/dashboard/invest">
+                          <a href="#" className={styles.cardButton}>
+                            INVEST
+                          </a>
+                        </Link>
                       </div>
                     </div>
                     <div className={styles.card}>
@@ -301,12 +300,11 @@ const Investment = () => {
                         </ul>
                       </div>
                       <div className={styles.buttonDiv}>
-                        <a
-                          href="/dashboard/invest"
-                          className={styles.cardButton}
-                        >
-                          INVEST
-                        </a>
+                        <Link href="/dashboard/invest">
+                          <a href="#" className={styles.cardButton}>
+                            INVEST
+                          </a>
+                        </Link>
                       </div>
                     </div>
                   </div>

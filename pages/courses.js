@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineClockCircle } from "react-icons/ai";
@@ -144,7 +145,7 @@ const Courses = () => {
             Why should you <font color="#057d99">trust us</font>?
           </h3>
           <p className={styles.trustMessage}>
-            We see it as our responsibility to invest for everyone's tomorrow.
+            We see it as our responsibility to invest for everyones tomorrow.
             <br />
             That means doing the right thing for our clients and for others too.
           </p>
@@ -157,7 +158,7 @@ const Courses = () => {
               </div>
               <h4 className={styles.boxText}>COLLABORATION</h4>
               <p className={styles.boxMessage}>
-                It's through responsible entrepreneurship that we achieve the
+                It is through responsible entrepreneurship that we achieve the
                 best results for our clients. Our people are trusted to pursue
                 value. They know when to change course to preserve it too.
               </p>
@@ -172,7 +173,7 @@ const Courses = () => {
               <p className={styles.boxMessage}>
                 Responsibility demands courage. We are not afraid to ask
                 difficult questions or make changes that need to be made. We
-                stand up for what's right, accepting that this can be
+                stand up for what is right, accepting that this can be
                 <br />
                 challenging sometimes.
               </p>

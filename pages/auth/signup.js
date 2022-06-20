@@ -178,7 +178,7 @@ const Signup = () => {
               <div className="md:w-1/2 px-3 mb-4 md:mb-0">
                 <label
                   className="text-black text-sm font-bold"
-                  for="grid-full-name"
+                  htmlFor="grid-full-name"
                 >
                   Full name
                 </label>
@@ -194,7 +194,7 @@ const Signup = () => {
               <div className="md:w-1/2 px-3">
                 <label
                   className="text-black text-sm font-bold"
-                  for="grid-user-name"
+                  htmlFor="grid-user-name"
                 >
                   Username
                 </label>
@@ -212,7 +212,7 @@ const Signup = () => {
               <div className="w-full px-2 py-2">
                 <label
                   className="text-black text-sm font-bold"
-                  for="grid-email"
+                  htmlFor="grid-email"
                 >
                   Email
                 </label>
@@ -230,7 +230,7 @@ const Signup = () => {
               <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
                 <label
                   className="text-black text-sm font-bold"
-                  for="grid-password"
+                  htmlFor="grid-password"
                 >
                   Password
                 </label>
@@ -246,7 +246,7 @@ const Signup = () => {
               <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
                 <label
                   className="text-black text-sm font-bold"
-                  for="grid-confirm"
+                  htmlFor="grid-confirm"
                 >
                   Confirm Password
                 </label>
@@ -262,7 +262,7 @@ const Signup = () => {
             </div>
             <div className="flex flex-wrap -mx-3 mb-4">
               <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-                <label className="text-black text-sm font-bold" for="grid-btc">
+                <label className="text-black text-sm font-bold" htmlFor="grid-btc">
                   BTC Wallet Address
                 </label>
                 <input
@@ -275,7 +275,7 @@ const Signup = () => {
                 />
               </div>
               <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-                <label className="text-black text-sm font-bold" for="grid-doge">
+                <label className="text-black text-sm font-bold" htmlFor="grid-doge">
                   ETH Wallet Address
                 </label>
                 <input
@@ -290,7 +290,7 @@ const Signup = () => {
             </div>
             <div className="flex flex-wrap -mx-3 mb-4">
               <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-                <label className="text-black text-sm font-bold" for="grid-eth">
+                <label className="text-black text-sm font-bold" htmlFor="grid-eth">
                   DOGE Wallet Address
                 </label>
                 <input
@@ -303,7 +303,7 @@ const Signup = () => {
                 />
               </div>
               <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-                <label className="text-black text-sm font-bold" for="grid-usdt">
+                <label className="text-black text-sm font-bold" htmlFor="grid-usdt">
                   USDT Wallet Address
                 </label>
                 <input
@@ -320,7 +320,7 @@ const Signup = () => {
               <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
                 <label
                   className="text-black text-sm font-bold"
-                  for="grid-security"
+                  htmlFor="grid-security"
                 >
                   Security Question
                 </label>
@@ -336,7 +336,7 @@ const Signup = () => {
               <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
                 <label
                   className="text-black text-sm font-bold"
-                  for="grid-answer"
+                  htmlFor="grid-answer"
                 >
                   Answer
                 </label>
@@ -354,7 +354,7 @@ const Signup = () => {
               <p>
                 <label
                   className="block tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="grid-email"
+                  htmlFor="grid-email"
                 >
                   <input type="checkbox" className="filled-in" />
                   <span>

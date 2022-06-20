@@ -119,12 +119,14 @@ const Signup = () => {
                   <br />
                   Click on the login button to access your account.{" "}
                 </p>
-                <a
-                  href="/auth/signin"
-                  className={styles.registrationSuccessfulButton}
-                >
-                  Log in
-                </a>
+                <Link href="/auth/signin">
+                  <a
+                    href="#"
+                    className={styles.registrationSuccessfulButton}
+                  >
+                    Log in
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { IoLocationOutline } from "react-icons/io5";
@@ -119,7 +120,7 @@ const Contact = () => {
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  for="fullname"
+                  htmlFor="fullname"
                 >
                   Full name
                 </label>
@@ -132,7 +133,7 @@ const Contact = () => {
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  for="email"
+                  htmlFor="email"
                 >
                   E-mail
                 </label>
@@ -145,7 +146,7 @@ const Contact = () => {
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  for="email"
+                  htmlFor="email"
                 >
                   Message
                 </label>

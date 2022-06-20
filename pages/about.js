@@ -125,7 +125,7 @@ const About = () => {
             <h4 className={styles.whoAreWeHeader}>What do we do?</h4>
             <hr />
             <p className={styles.whoAreWeMessage}>
-              We allocate investor's funds to financial,
+              We allocate investors funds to financial,
               <br /> instruments in trading and manage these
               <br /> trades to bring profits for investors.
             </p>
@@ -202,14 +202,14 @@ const About = () => {
         <div className={styles.investorCardDiv}>
           <div className={styles.investorCard}>
             <p className={styles.investorMessage}>
-              Beautiful performance from this company. I'm glad to be an
+              Beautiful performance from this company. I am glad to be an
               investor here.
             </p>
             <p className={styles.investorName}>Iain Carmichael</p>
           </div>
           <div className={styles.investorCard}>
             <p className={styles.investorMessage}>
-              What a well designed investment structure. It's an easy-to-operate
+              What a well designed investment structure. It is an easy-to-operate
               system with automated payments.
             </p>
             <p className={styles.investorName}>Paul Littlefair</p>

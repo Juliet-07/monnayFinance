@@ -61,7 +61,7 @@ const History = () => {
                         <p className="d-lg-none d-md-block">Stats</p>
                       </a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li className="nav-item dropdown">
                       <a
                         className="nav-link"
                         href="#"
@@ -87,7 +87,7 @@ const History = () => {
                           You have 5 new tasks
                         </a>
                         <a className="dropdown-item" href="#">
-                          You're now friend with Andrew
+                          You are now friends with Andrew
                         </a>
                         <a className="dropdown-item" href="#">
                           Another Notification

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
+import Link from "next/link";
 import Image from "next/image";
 import Layout from "../../components/layout";
 import Coin from "../../asset/monnayCoin.png";
@@ -56,7 +57,7 @@ const Dashboard = () => {
                         <p className="d-lg-none d-md-block">Stats</p>
                       </a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li className="nav-item dropdown">
                       <a
                         className="nav-link"
                         href="#"
@@ -82,7 +83,7 @@ const Dashboard = () => {
                           You have 5 new tasks
                         </a>
                         <a className="dropdown-item" href="#">
-                          You're now friend with Andrew
+                          You are now friends with Andrew
                         </a>
                         <a className="dropdown-item" href="#">
                           Another Notification
@@ -145,12 +146,16 @@ const Dashboard = () => {
                         Available balance:
                         <br /> $ 30,000
                       </p>
-                      <a href="/dashboard/withdraw" className="cardButton">
-                        Withdraw
-                      </a>
-                      <a href="/dashboard/deposit" className="cardButton1">
-                        Deposit
-                      </a>
+                      <Link href="/dashboard/withdraw">
+                        <a href="#" className="cardButton">
+                          Withdraw
+                        </a>
+                      </Link>
+                      <Link href="/dashboard/deposit">
+                        <a href="#" className="cardButton1">
+                          Deposit
+                        </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

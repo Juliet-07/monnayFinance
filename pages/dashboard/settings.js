@@ -62,7 +62,7 @@ const Settings = () => {
                         <p className="d-lg-none d-md-block">Stats</p>
                       </a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li className="nav-item dropdown">
                       <a
                         className="nav-link"
                         href="#"
@@ -88,7 +88,7 @@ const Settings = () => {
                           You have 5 new tasks
                         </a>
                         <a className="dropdown-item" href="#">
-                          You're now friend with Andrew
+                          You are now friends with Andrew
                         </a>
                         <a className="dropdown-item" href="#">
                           Another Notification
@@ -169,7 +169,7 @@ const Settings = () => {
                     </div>
                     <div className="md:w-2/3">
                       <input
-                        class="bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 focus:outline-none focus:bg-white focus:border-blue-300"
+                        className="bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 focus:outline-none focus:bg-white focus:border-blue-300"
                         id="inline-password"
                         type="email"
                       />

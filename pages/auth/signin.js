@@ -150,7 +150,7 @@ const Signin = () => {
                   <div className="mb-4">
                     <label
                       className="block text-gray-700 text-sm font-bold mb-2"
-                      for="username"
+                      htmlFor="username"
                     >
                       Username
                     </label>
@@ -166,7 +166,7 @@ const Signin = () => {
                   <div className="mb-4">
                     <label
                       className="block text-gray-700 text-sm font-bold mb-2"
-                      for="password"
+                      htmlFor="password"
                     >
                       Password
                     </label>
@@ -183,7 +183,7 @@ const Signin = () => {
                     <p>
                       <label
                         className="block tracking-wide text-gray-700 text-xs font-bold mb-2"
-                        for="grid-email"
+                        htmlFor="grid-email"
                       >
                         <input className="mr-2 leading-tight" type="checkbox" />
                         <span>Remember me</span>

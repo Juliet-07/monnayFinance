@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 import Image from "next/image";
 import styles from "../../styles/Home.module.css";
 import Logo from "../../asset/monnayLogo.png";
@@ -41,7 +42,7 @@ const Withdraw = () => {
         >
           {/* Sidebar Brand */}
           <div className="logo">
-            <a href="/" className="simple-text logo-normal">
+            <a href="#" className="simple-text logo-normal">
               <Image src={Logo} width={200} height={50} />
             </a>
           </div>
@@ -49,52 +50,64 @@ const Withdraw = () => {
           <div className="sidebar-wrapper">
             <ul className="nav">
               <li className="nav-item">
-                <a className="nav-link" href="/dashboard/dashboard">
-                  <i className="material-icons">
-                    <AiOutlineHome />
-                  </i>
-                  <p>Dashboard</p>
-                </a>
+                <Link href="/dashboard/dashboard">
+                  <a className="nav-link" href="#">
+                    <i className="material-icons">
+                      <AiOutlineHome />
+                    </i>
+                    <p>Dashboard</p>
+                  </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/dashboard/investments">
-                  <i className="material-icons">
-                    <BiBarChartSquare />
-                  </i>
-                  <p>Investment</p>
-                </a>
+                <Link href="/dashboard/investments">
+                  <a className="nav-link" href="#">
+                    <i className="material-icons">
+                      <BiBarChartSquare />
+                    </i>
+                    <p>Investment</p>
+                  </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/dashboard/history">
-                  <i className="material-icons">
-                    <AiOutlineClockCircle />
-                  </i>
-                  <p>Transaction History</p>
-                </a>
+                <Link href="/dashboard/history">
+                  <a className="nav-link" href="#">
+                    <i className="material-icons">
+                      <AiOutlineClockCircle />
+                    </i>
+                    <p>Transaction History</p>
+                  </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/dashboard/referrals">
-                  <i className="material-icons">
-                    <CgProfile />
-                  </i>
-                  <p>Referrals</p>
-                </a>
+                <Link href="/dashboard/referrals">
+                  <a className="nav-link" href="#">
+                    <i className="material-icons">
+                      <CgProfile />
+                    </i>
+                    <p>Referrals</p>
+                  </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  <i className="material-icons">
-                    <IoSettingsOutline />
-                  </i>
-                  <p>Settings</p>
-                </a>
+                <Link href="/dashboard/settings">
+                  <a className="nav-link" href="#">
+                    <i className="material-icons">
+                      <IoSettingsOutline />
+                    </i>
+                    <p>Settings</p>
+                  </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
-                  <i className="material-icons">
-                    <AiOutlineLogout />
-                  </i>
-                  <p>Logout</p>
-                </a>
+                <Link href="/">
+                  <a className="nav-link" href="#">
+                    <i className="material-icons">
+                      <AiOutlineLogout />
+                    </i>
+                    <p>Logout</p>
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>

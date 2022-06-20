@@ -61,7 +61,7 @@ const History = () => {
                         <p className="d-lg-none d-md-block">Stats</p>
                       </a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li className="nav-item dropdown">
                       <a
                         className="nav-link"
                         href="#"
@@ -87,7 +87,7 @@ const History = () => {
                           You have 5 new tasks
                         </a>
                         <a className="dropdown-item" href="#">
-                          You're now friend with Andrew
+                          You are now friends with Andrew
                         </a>
                         <a className="dropdown-item" href="#">
                           Another Notification
@@ -155,19 +155,19 @@ const History = () => {
                               <td>Withdrawal</td>
                               <td>$3,000 (USDT)</td>
                               <td>15-05-2022</td>
-                              <td class="text-success">Approved</td>
+                              <td className="text-success">Approved</td>
                             </tr>
                             <tr>
                               <td>Deposit</td>
                               <td>$5,000 (BTC)</td>
                               <td>15-05-2022</td>
-                              <td class="text-success">Approved</td>
+                              <td className="text-success">Approved</td>
                             </tr>
                             <tr>
                               <td>Withdrawal</td>
                               <td>$3,000 (USDT)</td>
                               <td>15-05-2022</td>
-                              <td class="text-warning">Pending</td>
+                              <td className="text-warning">Pending</td>
                             </tr>
                           </tbody>
                         </table>
