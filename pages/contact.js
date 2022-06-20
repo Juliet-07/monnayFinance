@@ -107,7 +107,7 @@ const Contact = () => {
             <h2 className={styles.about}>Contact Us</h2>
             <p className={styles.content}>
               We would love to hear from you. Kindly fill the form below and
-              we'll get back to you within 24 hours.
+              we will get back to you within 24 hours.
             </p>
           </div>
         </div>

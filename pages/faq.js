@@ -136,7 +136,7 @@ const FAQ = () => {
                 <p className="card-text">
                   Registration process is very easy and will take a few moments
                   to complete. Simply click the REGISTER button and fill in all
-                  the required fields. That's all.
+                  the required fields. That is all.
                 </p>
               </div>
             </div>

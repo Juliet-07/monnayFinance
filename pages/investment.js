@@ -212,9 +212,11 @@ const Investment = () => {
               </ul>
             </div>
             <div className={styles.buttonDiv}>
-              <a href="/auth/signin" className={styles.cardButton}>
-                SELECT PLAN
-              </a>
+              <Link href="/auth/signin">
+                <a href="#" className={styles.cardButton}>
+                  SELECT PLAN
+                </a>
+              </Link>
             </div>
           </div>
           <div className={styles.card}>
@@ -264,9 +266,11 @@ const Investment = () => {
               </ul>
             </div>
             <div className={styles.buttonDiv}>
-              <a href="/auth/signin" className={styles.cardButton}>
-                SELECT PLAN
-              </a>
+              <Link href="/auth/signin">
+                <a href="#" className={styles.cardButton}>
+                  SELECT PLAN
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -278,18 +282,26 @@ const Investment = () => {
           <p>Image & Text</p>
           <ul className={styles.footerBottomText}>
             <h5>Quick links</h5>
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/about">About us</a>
-            </li>
-            <li>
-              <a href="/contact">Contact us</a>
-            </li>
-            <li>
-              <a href="/faq">FAQ</a>
-            </li>
+            <Link href="/">
+              <li>
+                <a href="#">Home</a>
+              </li>
+            </Link>
+            <Link href="/about">
+              <li>
+                <a href="#">About us</a>
+              </li>
+            </Link>
+            <Link href="/contact">
+              <li>
+                <a href="#">Contact us</a>
+              </li>
+            </Link>
+            <Link href="/faq">
+              <li>
+                <a href="#">FAQ</a>
+              </li>
+            </Link>
           </ul>
           <ul className={styles.footerBottomText}>
             <h5>Address</h5>
