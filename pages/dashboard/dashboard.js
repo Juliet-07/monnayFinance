@@ -3,7 +3,6 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Layout from "../../components/layout";
-import Coin from "../../asset/monnayCoin.png";
 import { AiOutlineDollar, AiOutlineHome } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { MdOutlineNotificationsNone } from "react-icons/md";
@@ -141,7 +140,12 @@ const Dashboard = () => {
                 <div className="mb-20">
                   <div className="card">
                     <div className="flex justify-between">
-                      <Image src={Coin} width={700} height={200} />
+                      <Image
+                        src="/monnayCoin.png"
+                        width={700}
+                        height={200}
+                        alt="coin"
+                      />
                       <p className="cardPrice">
                         Available balance:
                         <br /> $ 30,000

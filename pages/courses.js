@@ -41,7 +41,7 @@ const Courses = () => {
       <div className="navbar-fixed">
         <nav className={styles.topBar}>
           <div className="nav-wrapper">
-            <Image src={Logo} width={100} height={30} />
+            <Image src="/monnayLogo.png" width={100} height={30} alt="logo" />
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               <Link href="/">
                 <li>
@@ -114,12 +114,13 @@ const Courses = () => {
         {/* Trade */}
         <div className={styles.trade}>
           <div>
-            <Image
+            {/* <Image
               src={Trade}
               width={450}
               height={300}
               className={styles.tradeImage}
-            />
+            /> */}
+            <p>IMAGE HERE</p>
           </div>
           <div style={{ margin: 50 }}>
             <h3 className={styles.tradeText}>

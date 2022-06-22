@@ -43,7 +43,7 @@ const Withdraw = () => {
           {/* Sidebar Brand */}
           <div className="logo">
             <a href="#" className="simple-text logo-normal">
-              <Image src={Logo} width={200} height={50} />
+              <Image src="/monnayLogo.png" width={200} height={50} alt="logo" />
             </a>
           </div>
           {/* Sidebar Brand Ends*/}

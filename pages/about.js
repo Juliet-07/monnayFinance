@@ -4,8 +4,6 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineClockCircle } from "react-icons/ai";
-import { FaHandshake } from "react-icons/fa";
-import Logo from "../asset/monnayLogo.png";
 
 const About = () => {
   return (
@@ -38,7 +36,7 @@ const About = () => {
       <div className="navbar-fixed">
         <nav className={styles.topBar}>
           <div className="nav-wrapper">
-            <Image src={Logo} width={100} height={30} alt="logo" />
+            <Image src="/monnayLogo.png" width={100} height={30} alt="logo" />
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               <Link href="/">
                 <li>
@@ -209,8 +207,8 @@ const About = () => {
           </div>
           <div className={styles.investorCard}>
             <p className={styles.investorMessage}>
-              What a well designed investment structure. It is an easy-to-operate
-              system with automated payments.
+              What a well designed investment structure. It is an
+              easy-to-operate system with automated payments.
             </p>
             <p className={styles.investorName}>Paul Littlefair</p>
           </div>

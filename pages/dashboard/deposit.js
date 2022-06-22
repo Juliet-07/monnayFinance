@@ -3,7 +3,6 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../../styles/Home.module.css";
-import Logo from "../../asset/monnayLogo.png";
 import { BiBarChartSquare } from "react-icons/bi";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
@@ -43,7 +42,7 @@ const Deposit = () => {
           {/* Sidebar Brand */}
           <div className="logo">
             <a href="#" className="simple-text logo-normal">
-              <Image src={Logo} width={200} height={50} />
+              <Image src="/monnayLogo.png" width={200} height={50} alt="logo" />
             </a>
           </div>
           {/* Sidebar Brand Ends*/}

@@ -7,8 +7,6 @@ import { AiOutlineClockCircle } from "react-icons/ai";
 import { FaHandshake } from "react-icons/fa";
 import { BiBarChartSquare } from "react-icons/bi";
 import { AiFillCheckCircle } from "react-icons/ai";
-import Logo from "../asset/monnayLogo.png";
-import Trade from "../asset/monnayHome.jpg";
 
 const Home = () => {
   return (
@@ -41,7 +39,7 @@ const Home = () => {
       <div className="navbar-fixed">
         <nav className={styles.topBar}>
           <div className="nav-wrapper">
-            <Image src={Logo} width={100} height={30} />
+            <Image src="/monnayLogo.png" width={100} height={30} alt="logo" />
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               <Link href="/">
                 <li>
@@ -128,10 +126,11 @@ const Home = () => {
         <div className={styles.trade}>
           <div>
             <Image
-              src={Trade}
+              src="/monnayHome.jpg"
               width={500}
               height={350}
               className={styles.tradeImage}
+              alt="trade"
             />
           </div>
           <div style={{ margin: 50 }}>
