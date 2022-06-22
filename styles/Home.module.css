@@ -74,7 +74,7 @@
 /* Jumbotron */
 .jumbotron {
   position: relative;
-  background: url("../asset/monnayJumbo.png");
+  background: url("/public/monnayJumbo.png");
   background-size: cover;
   height: 650px;
   width: 100%;
@@ -260,7 +260,7 @@
 } */
 .strategyImageContainer {
   width: 50%;
-  background: url("../asset/monnayStrategy.png");
+  background: url("/public/monnayStrategy.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -414,7 +414,7 @@
 /* about page */
 .jumbotronAbout {
   position: relative;
-  background: url("../asset/monnayJumbo.png");
+  background: url("/public/monnayJumbo.png");
   background-size: cover;
   height: 200px;
   width: 100%;
@@ -572,7 +572,7 @@
 /* registration successful  */
 .jumbotronReg {
   position: relative;
-  background: url("../asset/monnayJumbo.png");
+  background: url("/public/monnayJumbo.png");
   background-size: cover;
   height: 700px;
   width: 100%;
@@ -761,7 +761,7 @@
 /* Others, Dashboard and all */
 .investContainer {
   position: relative;
-  background: url("../asset/monnayJumbo.png");
+  background: url("/public/monnayJumbo.png");
   background-size: cover;
   height: 1000px;
   width: 100%;
