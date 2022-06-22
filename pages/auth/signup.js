@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import styles from "../../styles/Home.module.css";
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineClockCircle } from "react-icons/ai";
-import Logo from "../../asset/monnayLogo.png";
+
 const BASE_URI = "https://monnayfinance.com/api";
 
 const Signup = () => {
@@ -103,7 +103,7 @@ const Signup = () => {
       <div className="navbar-fixed">
         <nav className={styles.topBar}>
           <div className="nav-wrapper">
-            <Image src={Logo} width={100} height={30} />
+            <Image src="/monnayLogo.png" width={100} height={30} alt="logo" />
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               <Link href="/">
                 <li>
@@ -262,7 +262,10 @@ const Signup = () => {
             </div>
             <div className="flex flex-wrap -mx-3 mb-4">
               <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-                <label className="text-black text-sm font-bold" htmlFor="grid-btc">
+                <label
+                  className="text-black text-sm font-bold"
+                  htmlFor="grid-btc"
+                >
                   BTC Wallet Address
                 </label>
                 <input
@@ -275,7 +278,10 @@ const Signup = () => {
                 />
               </div>
               <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-                <label className="text-black text-sm font-bold" htmlFor="grid-doge">
+                <label
+                  className="text-black text-sm font-bold"
+                  htmlFor="grid-doge"
+                >
                   ETH Wallet Address
                 </label>
                 <input
@@ -290,7 +296,10 @@ const Signup = () => {
             </div>
             <div className="flex flex-wrap -mx-3 mb-4">
               <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-                <label className="text-black text-sm font-bold" htmlFor="grid-eth">
+                <label
+                  className="text-black text-sm font-bold"
+                  htmlFor="grid-eth"
+                >
                   DOGE Wallet Address
                 </label>
                 <input
@@ -303,7 +312,10 @@ const Signup = () => {
                 />
               </div>
               <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-                <label className="text-black text-sm font-bold" htmlFor="grid-usdt">
+                <label
+                  className="text-black text-sm font-bold"
+                  htmlFor="grid-usdt"
+                >
                   USDT Wallet Address
                 </label>
                 <input
