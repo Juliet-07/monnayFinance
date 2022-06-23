@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Jumbo from "../public/monnayJumbo.png";
+import Strategy from "../public/monnayStrategy.png";
 import styles from "../styles/Home.module.css";
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineClockCircle } from "react-icons/ai";
@@ -231,7 +232,13 @@ const Home = () => {
             </text>
           </div>
           {/* <div className={styles.strategyRectangle}></div> */}
-          <div className={styles.strategyImageContainer}></div>
+          <div
+            className={styles.strategyImageContainer}
+            style={{
+              backgroundImage: `url(${Strategy})`,
+              width: "50%",
+            }}
+          ></div>
         </div>
         {/* Strategy Ends */}
         {/* Investment Plans */}
