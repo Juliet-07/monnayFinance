@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import Jumbo from "../../public/monnayJumbo.png";
 import styles from "../../styles/Home.module.css";
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineClockCircle } from "react-icons/ai";
@@ -100,7 +101,14 @@ const Signup = () => {
         </nav>
       </div>
       <main className={styles.main}>
-        <div className={styles.jumbotronReg}>
+        <div
+          className={styles.jumbotronReg}
+          style={{
+            backgroundImage: `url(${Jumbo})`,
+            width: "100%",
+            height: "650px",
+          }}
+        >
           <div className={styles.jumbotronFluidReg}>
             <div className={styles.registrationContainer}>
               <div className={styles.createDiv}>

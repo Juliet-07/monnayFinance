@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import Jumbo from "../../public/monnayJumbo.png";
 import styles from "../../styles/Home.module.css";
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineClockCircle } from "react-icons/ai";
@@ -136,7 +137,14 @@ const Signin = () => {
         </nav>
       </div>
       <main className={styles.main}>
-        <div className={styles.jumbotron}>
+        <div
+          className={styles.jumbotron}
+          style={{
+            backgroundImage: `url(${Jumbo})`,
+            width: "100%",
+            height: "650px",
+          }}
+        >
           <div className={styles.jumbotronFluid}>
             <div className={styles.signinContainer}>
               <div className={styles.createDiv}>

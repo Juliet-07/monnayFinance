@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import Jumbo from "../public/monnayJumbo.png";
 import styles from "../styles/Home.module.css";
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineClockCircle } from "react-icons/ai";
@@ -100,7 +101,14 @@ const About = () => {
       </div>
       <main className={styles.main}>
         {/* Jumbotron */}
-        <div className={styles.jumbotronAbout}>
+        <div
+          className={styles.jumbotronAbout}
+          style={{
+            backgroundImage: `url(${Jumbo})`,
+            width: "100%",
+            height: "200px",
+          }}
+        >
           <div className={styles.jumbotronFluid}>
             <h2 className={styles.about}>About Us</h2>
           </div>

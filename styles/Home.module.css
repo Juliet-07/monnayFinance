@@ -74,13 +74,14 @@
 /* Jumbotron */
 .jumbotron {
   position: relative;
-  background-image: url("/public/monnayJumbo.png");
+  /* background-image: url("/public/monnayJumbo.png"); */
   background-size: cover;
-  height: 650px;
+  height: 700px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 .jumbotronFluid {
   position: absolute;
@@ -439,7 +440,7 @@
 .whoAreWe {
   /* background-color: red; */
   padding: 50px;
-  margin: 10px;
+  margin: 5px;
 }
 .whoAreWeHeader {
   color: #057d99;

@@ -143,20 +143,21 @@ const Sidebar = () => {
           })}
         </div>
       </div>
-
-      <div className={`${getNavItemClasses({})} px-3 py-4`}>
-        <div style={{ width: "2.5rem" }}>
-          <AiOutlineLogout />
+      <Link href="/">
+        <div className={`${getNavItemClasses({})} px-3 py-4`}>
+          <div style={{ width: "2.5rem" }}>
+            <AiOutlineLogout />
+          </div>
+          {!toggleCollapse && (
+            <span
+              className={classNames("text-lg font-medium text-default")}
+              href="#"
+            >
+              Logout
+            </span>
+          )}
         </div>
-        {!toggleCollapse && (
-          <span
-            className={classNames("text-lg font-medium text-default")}
-            href="/"
-          >
-            Logout
-          </span>
-        )}
-      </div>
+      </Link>
     </div>
   );
 };
