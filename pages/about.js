@@ -87,7 +87,7 @@ const About = () => {
                   </a>
                 </li>
               </Link>
-              <Link href="/auth/sigin">
+              <Link href="/auth/signin">
                 <li>
                   <a href="#" className={styles.buttonOutline}>
                     LOG IN

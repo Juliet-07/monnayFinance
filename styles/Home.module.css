@@ -74,7 +74,7 @@
 /* Jumbotron */
 .jumbotron {
   position: relative;
-  background: url("/public/monnayJumbo.png");
+  background-image: url("/public/monnayJumbo.png");
   background-size: cover;
   height: 650px;
   width: 100%;
