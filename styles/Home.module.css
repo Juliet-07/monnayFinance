@@ -8,7 +8,6 @@
   justify-content: flex-end;
   align-items: center;
   background-color: #057d99;
-  padding: 20;
 }
 .topBar {
   display: flex;
@@ -92,8 +91,10 @@
   background-color: rgba(10, 79, 96, 0.72);
 }
 .jumbotronProps {
-  position: relative;
-  top: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .properties {
   color: #ffffff;
@@ -116,14 +117,10 @@
   border-color: #ffffff;
   padding: 0.5rem 1rem;
   font-size: 16px;
-  line-height: 20px;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   color: #ffffff;
-  margin-left: 600px;
   margin-top: 50px;
-  height: 30px;
-  left: 300px;
-  top: 30px;
+  height: 50px;
 }
 .trade {
   display: flex;
@@ -356,12 +353,18 @@
   margin-left: 30%;
 }
 .subscribecontainer {
-  display: block;
-  /* background-color: rebeccapurple; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  fill: solid;
+  background-color: #f6fdff;
 }
 .subscribeInput {
   display: flex;
-  justify-content: baseline;
+  justify-content: space-around;
   align-items: center;
   /* background-color: coral; */
 }
@@ -798,9 +801,218 @@
   border-radius: 20px;
   /* padding: 15px; */
 }
+/* RESPONSIVENESS */
 @media (max-width: 600px) {
   .investmentContainer {
     width: 100%;
     flex-direction: column;
+  }
+  .footer {
+    width: 100%;
+    height: 400px;
+    padding: 2rem 0;
+    background-color: #0a4f60;
+  }
+  .footerInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footerBottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 80px;
+    top: 100px;
+    background-color: #0a4f60;
+  }
+  .subscribecontainer {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    fill: solid;
+    background-color: #f6fdff;
+  }
+  .subscribeInput {
+    display: flex;
+    flex-direction: column;
+  }
+  .investmentHeader {
+    margin-top: 50px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .investorHeader {
+    font-weight: 700;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 35px;
+    color: #000000;
+  }
+  .investorCardDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .investorMessage {
+    font-size: 16px;
+    line-height: 32px;
+    text-align: left;
+  }
+  .investorName {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+  }
+  .strategyContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 700px;
+  }
+  .strategyTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    width: 50%;
+    background-color: #0a4f60;
+  }
+  .strategyText {
+    font-style: bold;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 57px;
+    color: #ffffff;
+  }
+  .strategyMessage {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: #ffffff;
+  }
+  .strategyImageContainer {
+    width: 50%;
+    background: url("/public/monnayStrategy.png");
+    background-size: cover;
+  }
+  .trustContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* height: 650px; */
+    background-color: #000000;
+  }
+  .trustText {
+    font-style: bold;
+    font-weight: 700;
+    font-size: 45px;
+    text-align: center;
+    color: #000000;
+  }
+  .trustMessage {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+    color: #000000;
+  }
+  .trustShowBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+  }
+  .trade {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .tradeImage {
+    position: absolute;
+    /* top: 700px; */
+    /* left: 300px; */
+    border-radius: 12px;
+  }
+  .tradeText {
+    font-weight: 700;
+    font-style: bold;
+    font-size: 30px;
+    color: #000000;
+  }
+  .tradeMessage {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+  }
+  .jumbotronProps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .properties {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 86px;
+    text-align: center;
+  }
+  .content {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+  }
+  .jumboButton {
+    position: relative;
+    text-align: center;
+    border: 1px solid transparent;
+    border-color: #ffffff;
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    margin-top: 50px;
+    height: 50px;
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .ourStrategy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    left: 10px;
+    padding: 40px;
+  }
+  .ourStrategyHeader {
+    color: #057d99;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 30px;
+  }
+  .ourStrategyMessage {
+    color: #000000;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: left;
   }
 }

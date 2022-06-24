@@ -115,7 +115,7 @@ const FAQ = () => {
         </div>
         {/* Jumbotron Ends */}
         {/* Card */}
-        <div className="flex justify-center">
+        <div className="flex justify-center faq">
           <div className="col-lg-4 col-md-6 mt-3 mr-4">
             <div className={styles.faqCard}>
               <div className={styles.faqCardHeader}>
@@ -147,9 +147,11 @@ const FAQ = () => {
               </div>
             </div>
           </div>
+
+
         </div>
         {/* 22 */}
-        <div className="flex justify-center">
+        <div className="flex justify-center faq">
           <div className="col-lg-4 col-md-6 mt-3 mr-4">
             {/* <div className={styles.faqCard}>
               <div className={styles.faqCardHeader}>
@@ -179,7 +181,7 @@ const FAQ = () => {
         </div>
         {/* 22 */}
         {/* 2 */}
-        <div className="flex justify-center">
+        <div className="flex justify-center faq">
           <div className="col-lg-4 col-md-6 mt-3 mr-4">
             <div className={styles.faqCard}>
               <div className={styles.faqCardHeader}>
@@ -225,7 +227,7 @@ const FAQ = () => {
         </div>
         {/* 2 */}
         {/* 3 */}
-        <div className="flex justify-center">
+        <div className="flex justify-center faq">
           <div className="col-lg-4 col-md-6 mt-3 mr-4">
             <div className={styles.faqCard}>
               <div className={styles.faqCardHeader}>
