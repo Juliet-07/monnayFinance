@@ -37,7 +37,11 @@ const Signin = () => {
         },
       })
         .then((res) => res.json())
-        .then((json) => console.log(json));
+        .then((user) => {
+          console.log(user);
+          let userDetail = JSON.stringify(user.data);
+          localStorage.setItem("Chukwunwike", userDetail);
+        });
       router.push("/dashboard/dashboard");
     } catch (err) {
       console.log(err.message);

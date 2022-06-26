@@ -806,6 +806,7 @@
   .investmentContainer {
     width: 100%;
     flex-direction: column;
+    /* background-color: rebeccapurple; */
   }
   .footer {
     width: 100%;
