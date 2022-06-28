@@ -1,12 +1,14 @@
 {
   "name": "monnay",
+  "homepage": "https://monnayfinance.com",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.4",
