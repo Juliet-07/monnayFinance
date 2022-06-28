@@ -147,40 +147,8 @@ const FAQ = () => {
               </div>
             </div>
           </div>
-
-
         </div>
         {/* 22 */}
-        <div className="flex justify-center faq">
-          <div className="col-lg-4 col-md-6 mt-3 mr-4">
-            {/* <div className={styles.faqCard}>
-              <div className={styles.faqCardHeader}>
-                <h5 className={styles.faqCardTitle}></h5>
-              </div>
-              <div className="card-body">
-                <p className="card-text"></p>
-              </div>
-            </div> */}
-          </div>
-          <div className="col-lg-4 col-md-6 mt-3 mr-4">
-            <div className={styles.faqCard}>
-              <div className={styles.faqCardHeader}>
-                <h5 className={styles.faqCardTitle}>
-                  How do I make withdrawal?
-                </h5>
-              </div>
-              <div className="card-body">
-                <p className="card-text">
-                  To make a withdrawal request click the WITHDRAW button at the
-                  top center of your spectraxfinance.com account dashboard and
-                  input the required details to withdraw.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* 22 */}
-        {/* 2 */}
         <div className="flex justify-center faq">
           <div className="col-lg-4 col-md-6 mt-3 mr-4">
             <div className={styles.faqCard}>
@@ -213,20 +181,21 @@ const FAQ = () => {
             <div className={styles.faqCard}>
               <div className={styles.faqCardHeader}>
                 <h5 className={styles.faqCardTitle}>
-                  How long does it take to process my withdrawal?
+                  How do I make withdrawal?
                 </h5>
               </div>
               <div className="card-body">
                 <p className="card-text">
-                  Once we receieve your withdrawal request we process
-                  immediately and send to your wallet.
+                  To make a withdrawal request click the WITHDRAW button at the
+                  top center of your spectraxfinance.com account dashboard and
+                  input the required details to withdraw.
                 </p>
               </div>
             </div>
           </div>
         </div>
+        {/* 22 */}
         {/* 2 */}
-        {/* 3 */}
         <div className="flex justify-center faq">
           <div className="col-lg-4 col-md-6 mt-3 mr-4">
             <div className={styles.faqCard}>
@@ -244,20 +213,19 @@ const FAQ = () => {
             <div className={styles.faqCard}>
               <div className={styles.faqCardHeader}>
                 <h5 className={styles.faqCardTitle}>
-                  Is the company legally registered?
+                  How long does it take to process my withdrawal?
                 </h5>
               </div>
               <div className="card-body">
                 <p className="card-text">
-                  Yes, Monnay Finance is fully registered. You can click{" "}
-                  <font color="#057d99">here</font> to view the the registration
-                  certificate.
+                  Once we receieve your withdrawal request we process
+                  immediately and send to your wallet.
                 </p>
               </div>
             </div>
           </div>
         </div>
-        {/* 3 */}
+        {/* 2 */}
         {/* Card ends */}
       </main>
 

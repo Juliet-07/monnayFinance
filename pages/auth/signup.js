@@ -167,7 +167,7 @@ const Signup = () => {
       </div>
       <main className={styles.main}>
         {/* <div className={styles.signupContainer}> */}
-        <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2 w-50">
+        <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2 w-50 columns-md">
           <div className={styles.createDiv}>
             <Image src="/icon.png" alt=" Logo" width={20} height={20} />
             <p className={styles.create}>Create Account</p>

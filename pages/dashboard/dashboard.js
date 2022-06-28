@@ -11,13 +11,13 @@ import { FcMoneyTransfer } from "react-icons/fc";
 const BASE_URI = "https://monnayfinance.com/api/investments/6/active";
 
 const Dashboard = () => {
-  let userDetails;
-  let user = localStorage.getItem("Chukwunwike");
-  if (user !== null || user !== undefined) {
-    console.table(user)
-    userDetails = JSON.parse(user);
-  }
-  useEffect(() => {});
+  const [user, setUser] = useState("");
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("Chukwunwike"));
+    if (user !== null || user !== undefined) {
+      setUser(user);
+    }
+  }, []);
   return (
     <>
       <Head>
@@ -138,7 +138,7 @@ const Dashboard = () => {
                 <div className="mb-20 pt-6 mt-3">
                   <div className="card">
                     <div className="flex justify-between">
-                      <h4 className="cardName">Welcome {user.name}</h4>
+                      <h4 className="cardName">Welcome {user.username}</h4>
                       <p className="cardTime">Last Access: 25-02-2022 16.05</p>
                     </div>
                   </div>
