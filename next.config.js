@@ -10,8 +10,9 @@ module.exports = withImages({
   staticPageGenerationTimeout: 900,
   reactStrictMode: true,
   images: {
-    loader: "imgix",
-    path: "/",
+    disableStaticImages: true,
+    // loader: "imgix",
+    // path: "/",
     domains: [
       "th.bing.com",
       "pmt-blog.s3.eu-west-1.amazonaws.com",
