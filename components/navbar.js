@@ -67,14 +67,14 @@ function MobileNav({ open, setOpen }) {
       <div className="flex items-center justify-center filter drop-shadow-md bg-white h-20">
         {" "}
         {/*logo container*/}
-        <a className="text-xl font-semibold text-black" href="/">
+        <a className="text-xl font-semibold text-black" href="#">
           LOGO
         </a>
       </div>
       <div className="flex flex-col ml-4">
         <a
           className="text-xl font-medium my-4 text-black"
-          href="/about"
+          href="#"
           onClick={() =>
             setTimeout(() => {
               setOpen(!open);
@@ -85,7 +85,7 @@ function MobileNav({ open, setOpen }) {
         </a>
         <a
           className="text-xl font-normal my-4 text-black"
-          href="/contact"
+          href="#"
           onClick={() =>
             setTimeout(() => {
               setOpen(!open);
@@ -105,7 +105,7 @@ export default function Navbar() {
     <nav className="flex filter drop-shadow-md bg-white px-4 py-4 h-20 items-center">
       <MobileNav open={open} setOpen={setOpen} />`
       <div className="w-3/12 flex items-center">
-        <a className="text-2xl font-semibold" href="/">
+        <a className="text-2xl font-semibold" href="#">
           LOGO
         </a>
       </div>
