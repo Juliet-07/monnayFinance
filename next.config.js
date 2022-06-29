@@ -11,8 +11,8 @@ module.exports = withImages({
   reactStrictMode: true,
   images: {
     disableStaticImages: true,
-    // loader: "imgix",
-    // path: "/",
+    loader: "akamai",
+    path: "",
     domains: [
       "th.bing.com",
       "pmt-blog.s3.eu-west-1.amazonaws.com",
