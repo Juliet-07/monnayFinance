@@ -3,11 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 import Jumbo from "../../public/monnayJumbo.png";
 import styles from "../../styles/Home.module.css";
-import { IoLocationOutline } from "react-icons/io5";
-import { AiOutlineClockCircle } from "react-icons/ai";
 import { TiTick } from "react-icons/ti";
 
-const Signup = () => {
+const RegSuccessful = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -15,91 +13,6 @@ const Signup = () => {
         <meta name="description" content="Generated monnay finance" />
         <link rel="icon" href="/icon.png" />
       </Head>
-      {/* Nav section 1 */}
-      <div className="navbar-fixed">
-        <nav className={styles.addressBar}>
-          <ul id="nav-mobile" className="right hide-on-med-and-down">
-            <li>
-              <i className="material-icons left">
-                <IoLocationOutline />
-              </i>
-              Vanha Telhitie 11c{" "}
-            </li>
-            <li>
-              <i className="material-icons left">
-                <AiOutlineClockCircle />
-              </i>
-              Mon - Fri 8am-6pm
-            </li>
-          </ul>
-        </nav>
-      </div>
-      {/* Nav section 2 */}
-      <div className="navbar-fixed">
-        <nav className={styles.topBar}>
-          <div className="nav-wrapper">
-            <Image src="/monnayLogo.png" width={100} height={30} alt="logo" />
-            <ul id="nav-mobile" className="right hide-on-med-and-down">
-              <Link href="/">
-                <li>
-                  <a href="#" className={styles.navLink}>
-                    HOME
-                  </a>
-                </li>
-              </Link>
-              <Link href="/about">
-                <li>
-                  <a href="#" className={styles.navLink}>
-                    ABOUT US
-                  </a>
-                </li>
-              </Link>
-              <Link href="/investment">
-                <li>
-                  <a href="#" className={styles.navLink}>
-                    INVESTMENTS
-                  </a>
-                </li>
-              </Link>
-              <Link href="/faq">
-                <li>
-                  <a href="#" className={styles.navLink}>
-                    FAQ
-                  </a>
-                </li>
-              </Link>
-              <Link href="/courses">
-                <li>
-                  <a href="#" className={styles.navLink}>
-                    COURSES
-                  </a>
-                </li>
-              </Link>
-              <Link href="/contact">
-                <li>
-                  <a href="#" className={styles.navLink}>
-                    CONTACT
-                  </a>
-                </li>
-              </Link>
-              <Link href="/auth/signup">
-                <li>
-                  <button href="#" className="btn disabled">
-                    REGISTER
-                  </button>
-                </li>
-              </Link>
-              <Link href="/auth/signin">
-                <li>
-                  <a href="#" className={styles.buttonOutline}>
-                    LOG IN
-                  </a>
-                </li>
-              </Link>
-            </ul>
-          </div>
-        </nav>
-      </div>
       <main className={styles.main}>
         <div
           className={styles.jumbotronReg}
@@ -127,6 +40,7 @@ const Signup = () => {
                   Click on the login button to access your account.{" "}
                 </p>
                 <Link href="/auth/signin">
+                  RegSuccessful{" "}
                   <a href="#" className={styles.registrationSuccessfulButton}>
                     Log in
                   </a>
@@ -181,4 +95,4 @@ const Signup = () => {
     </div>
   );
 };
-export default Signup;
+export default RegSuccessful;
