@@ -1,57 +1,11 @@
-// import React, { useState } from "react";
-// import Link from "next/link";
-// // import Image from "next/image";
-// // import { Logo, NavItem } from ".";
-// import NavItem from "./navitem";
-// const MENU_LIST = [
-//   { text: "Home", href: "/" },
-//   { text: "About", href: "/about" },
-//   { text: "Faq", href: "/faq" },
-//   { text: "Contact", href: "/contact" },
-// ];
-// const Navbar = () => {
-//   const [navActive, setNavActive] = useState(null);
-//   const [activeIdx, setActiveIdx] = useState(-1);
-//   return (
-//     <header className="sticky z-30 top-0 bg-white">
-//       <nav className={`nav${navActive ? "active" : ""}`}>
-//         <Link href={"/"}>
-//           <a onClick={() => setActiveIdx(-1)}>
-//             <h1 className="text-xl font-semibold">MonnayFinance</h1>
-//           </a>
-//         </Link>
-//         <div
-//           className={`menu_icon${navActive ? "active" : "inactive"}`}
-//           onClick={() => setNavActive(!navActive)}
-//         >
-//           <div></div>
-//           <div></div>
-//           <div></div>
-//         </div>
-//         <div className={`nav_menu${navActive ? "active" : ""} `}>
-//           {MENU_LIST.map((menu, idx) => (
-//             <div
-//               onClick={() => {
-//                 setActiveIdx(idx);
-//                 setNavActive(false);
-//               }}
-//               key={menu.href}
-//             >
-//               <NavItem {...menu} active={idx === activeIdx} />
-//             </div>
-//           ))}
-//         </div>
-//       </nav>
-//     </header>
-//   );
-// };
-// export default Navbar;
-
 import React, { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import styles from "../styles/Home.module.css";
 
 function NavLink({ to, children }) {
   return (
-    <a href={to} className={`mx-4`}>
+    <a href={to} className={`mx-4 my-2 hover:font-bold`}>
       {children}
     </a>
   );
@@ -60,40 +14,92 @@ function NavLink({ to, children }) {
 function MobileNav({ open, setOpen }) {
   return (
     <div
-      className={`absolute top-0 left-0 h-screen w-screen bg-white transform ${
+      className={`absolute top-0 left-0 w-screen bg-white transform ${
         open ? "-translate-x-0" : "-translate-x-full"
       } transition-transform duration-300 ease-in-out filter drop-shadow-md `}
     >
       <div className="flex items-center justify-center filter drop-shadow-md bg-white h-20">
         {" "}
         {/*logo container*/}
-        <a className="text-xl font-semibold text-black" href="#">
-          LOGO
-        </a>
+        <Image src="/monnayLogo.png" width={150} height={40} alt="logo" />
       </div>
       <div className="flex flex-col ml-4">
-        <a
-          className="text-xl font-medium my-4 text-black"
-          href="#"
-          onClick={() =>
-            setTimeout(() => {
-              setOpen(!open);
-            }, 100)
-          }
-        >
-          About
-        </a>
-        <a
-          className="text-xl font-normal my-4 text-black"
-          href="#"
-          onClick={() =>
-            setTimeout(() => {
-              setOpen(!open);
-            }, 100)
-          }
-        >
-          Contact
-        </a>
+        <Link href="/">
+          <p
+            className="uppercase text-xl font-medium my-4 px-4 mx-4 text-black"
+            onClick={() =>
+              setTimeout(() => {
+                setOpen(!open);
+              }, 100)
+            }
+          >
+            Home
+          </p>
+        </Link>
+        <Link href="/about">
+          <p
+            className="uppercase text-xl font-medium my-4 px-4 mx-4 text-black"
+            onClick={() =>
+              setTimeout(() => {
+                setOpen(!open);
+              }, 100)
+            }
+          >
+            About Us
+          </p>
+        </Link>
+        <Link href="/investment">
+          <p
+            className="uppercase text-xl font-medium my-4 px-4 mx-4 text-black"
+            href="#"
+            onClick={() =>
+              setTimeout(() => {
+                setOpen(!open);
+              }, 100)
+            }
+          >
+            Investments
+          </p>
+        </Link>
+        <Link href="/faq">
+          <p
+            className="uppercase text-xl font-medium my-4 px-4 mx-4 text-black"
+            href="#"
+            onClick={() =>
+              setTimeout(() => {
+                setOpen(!open);
+              }, 100)
+            }
+          >
+            Faq
+          </p>
+        </Link>
+        <Link href="/courses">
+          <p
+            className="uppercase text-xl font-medium my-4 px-4 mx-4 text-black"
+            href="#"
+            onClick={() =>
+              setTimeout(() => {
+                setOpen(!open);
+              }, 100)
+            }
+          >
+            Courses
+          </p>
+        </Link>
+        <Link href="/contact">
+          <p
+            className="uppercase text-xl font-medium my-4 px-4 mx-4 text-black"
+            href="#"
+            onClick={() =>
+              setTimeout(() => {
+                setOpen(!open);
+              }, 100)
+            }
+          >
+            Contact
+          </p>
+        </Link>
       </div>
     </div>
   );
@@ -103,11 +109,9 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <nav className="flex filter drop-shadow-md bg-white px-4 py-4 h-20 items-center">
-      <MobileNav open={open} setOpen={setOpen} />`
-      <div className="w-3/12 flex items-center">
-        <a className="text-2xl font-semibold" href="#">
-          LOGO
-        </a>
+      <MobileNav open={open} setOpen={setOpen} />
+      <div className="w-3/12 flex items-center justify-center">
+        <Image src="/monnayLogo.png" width={150} height={40} alt="logo" />
       </div>
       <div className="w-9/12 flex justify-end items-center">
         <div
@@ -135,8 +139,22 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex">
+          <NavLink to="/">HOME</NavLink>
+          <NavLink to="/about">ABOUT US</NavLink>
+          <NavLink to="/investment">INVESTMENTS</NavLink>
+          <NavLink to="/faq">FAQ</NavLink>
+          <NavLink to="/courses">COURSES</NavLink>
           <NavLink to="/contact">CONTACT</NavLink>
-          <NavLink to="/about">ABOUT</NavLink>
+          <Link href="/auth/signup">
+            <button type="button" className={styles.buttonNav}>
+              REGISTER
+            </button>
+          </Link>
+          <Link href="/auth/signin">
+            <button type="button" className={styles.buttonOutlineNav}>
+              LOG IN
+            </button>
+          </Link>
         </div>
       </div>
     </nav>

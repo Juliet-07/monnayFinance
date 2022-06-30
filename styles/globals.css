@@ -9,13 +9,18 @@ body {
 }
 
 a {
-  color: inherit;
+  color: #057d99 !important;
   text-decoration: none;
 }
 a :active {
   color: #057d99;
   font-weight: 700;
-  font-style: bold;
+  font-style: bold !important;
+}
+a :hover {
+  color: #057d99;
+  font-weight: 700;
+  font-style: bold !important;
 }
 * {
   box-sizing: border-box;
@@ -38,13 +43,13 @@ hr {
   font-size: 17px;
   line-height: 29px;
 }
-.addressBarLi{
+.addressBarLi {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-@media (max-width:600px) {
-  .faq{
+@media (max-width: 600px) {
+  .faq {
     display: flex;
     flex-direction: column;
     padding: 20px;
