@@ -38,7 +38,7 @@ const Home = () => {
                   We create equal opportunities for all investors to
                   <br /> thrive in the crypto and forex markets
                 </p>
-                <Link href="/auth/signup">
+                <Link href="/signup">
                   <button type="button" className={styles.jumboButton}>
                     GET STARTED
                   </button>
