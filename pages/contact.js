@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import Jumbo from "../public/monnayJumbo.png";
 import styles from "../styles/Home.module.css";
 
@@ -107,7 +108,25 @@ const Contact = () => {
 
       <footer className={styles.footer}>
         <div className={styles.footerInfo}>
-          <p>Image & Text</p>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Image
+              src="/monnayFooter.png"
+              width={150}
+              height={50}
+              alt="footer image"
+            />
+            <p style={{ color: "#ffffff", marginTop: 10, textAlign: "center" }}>
+              Investment opportunities in multiple
+              <br /> markets, one account.
+            </p>
+          </div>
           <ul className={styles.footerBottomText}>
             <h5>Quick links</h5>
             <Link href="/">

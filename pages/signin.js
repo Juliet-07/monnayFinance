@@ -115,7 +115,10 @@ const Signin = () => {
                         <span>Remember me</span>
                       </label>
                     </p>
-                    <a className="font-bold text-xm text-blue-300 mb-6" href="#">
+                    <a
+                      className="font-bold text-xm text-blue-300 mb-6"
+                      href="#"
+                    >
                       Forgot Password?
                     </a>
                   </div>
@@ -142,7 +145,25 @@ const Signin = () => {
       </main>
       <footer className={styles.footer}>
         <div className={styles.footerInfo}>
-          <p>Image & Text</p>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Image
+              src="/monnayFooter.png"
+              width={150}
+              height={50}
+              alt="footer image"
+            />
+            <p style={{ color: "#ffffff", marginTop: 10, textAlign: "center" }}>
+              Investment opportunities in multiple
+              <br /> markets, one account.
+            </p>
+          </div>
           <ul className={styles.footerBottomText}>
             <h5>Quick links</h5>
             <Link href="/">

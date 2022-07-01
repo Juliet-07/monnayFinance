@@ -263,36 +263,30 @@
 .investmentContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 3%;
 }
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
-  width: 500px;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
   height: 600px;
-  margin: 1rem;
-  padding: 1rem;
-  min-width: 0;
-  word-wrap: break-word;
+  margin: 2rem;
   background-color: #ffffff;
-  background-clip: border-box;
   border: 1px solid #eaeaea;
   border-radius: 1rem;
-  max-width: 300px;
 }
 .cardTitle {
   position: relative;
+  width: 70%;
   top: 100;
   left: 50;
   text-decoration: none;
   margin-bottom: 0.75rem;
-  margin-top: 0.625rem;
 }
 .basic {
   font-weight: 700;
@@ -311,7 +305,7 @@
 }
 .cardList {
   font-size: 16px;
-  line-height: 30px;
+  line-height: 25px;
 }
 .listContainer {
   display: flex;
@@ -326,8 +320,6 @@
   width: 150px;
   height: 50px;
   top: 15px;
-  left: 50px;
-  margin-top: 3%;
   color: #ffffff;
   font-weight: 400;
   font-size: 14px;
