@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import Jumbo from "../../public/monnayJumbo.png";
-import styles from "../../styles/Home.module.css";
+import Jumbo from "../public/monnayJumbo.png";
+import styles from "../styles/Home.module.css";
 import { TiTick } from "react-icons/ti";
 
 const RegSuccessful = () => {
@@ -17,9 +17,11 @@ const RegSuccessful = () => {
         <div
           className={styles.jumbotronReg}
           style={{
+            position: "relative",
             backgroundImage: `url(${Jumbo})`,
             width: "100%",
-            height: "650px",
+            height: "1000px",
+            backgroundSize: "cover",
           }}
         >
           <div className={styles.jumbotronFluidReg}>
@@ -39,11 +41,13 @@ const RegSuccessful = () => {
                   <br />
                   Click on the login button to access your account.{" "}
                 </p>
-                <Link href="/auth/signin">
-                  RegSuccessful{" "}
-                  <a href="#" className={styles.registrationSuccessfulButton}>
+                <Link href="/signin">
+                  <button
+                    type="button"
+                    className={styles.registrationSuccessfulButton}
+                  >
                     Log in
-                  </a>
+                  </button>
                 </Link>
               </div>
             </div>

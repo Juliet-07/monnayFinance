@@ -3,10 +3,8 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import Jumbo from "../../public/monnayJumbo.png";
-import styles from "../../styles/Home.module.css";
-import { IoLocationOutline } from "react-icons/io5";
-import { AiOutlineClockCircle } from "react-icons/ai";
+import Jumbo from "../public/monnayJumbo.png";
+import styles from "../styles/Home.module.css";
 
 const BASE_URI = "https://monnayfinance.com/api";
 
@@ -55,98 +53,15 @@ const Signin = () => {
         <meta name="description" content="Generated monnay finance" />
         <link rel="icon" href="/icon.png" />
       </Head>
-      {/* Nav section 1 */}
-      <div className="navbar-fixed">
-        <nav className={styles.addressBar}>
-          <ul id="nav-mobile" className="right hide-on-med-and-down">
-            <li>
-              <i className="material-icons left">
-                <IoLocationOutline />
-              </i>
-              Vanha Telhitie 11c{" "}
-            </li>
-            <li>
-              <i className="material-icons left">
-                <AiOutlineClockCircle />
-              </i>
-              Mon - Fri 8am-6pm
-            </li>
-          </ul>
-        </nav>
-      </div>
-      {/* Nav section 2 */}
-      <div className="navbar-fixed">
-        <nav className={styles.topBar}>
-          <div className="nav-wrapper">
-            <Image src="/monnayLogo.png" width={100} height={30} alt="logo" />
-            <ul id="nav-mobile" className="right hide-on-med-and-down">
-              <Link href="/">
-                <li>
-                  <a href="#" className={styles.navLink}>
-                    HOME
-                  </a>
-                </li>
-              </Link>
-              <Link href="/about">
-                <li>
-                  <a href="#" className={styles.navLink}>
-                    ABOUT US
-                  </a>
-                </li>
-              </Link>
-              <Link href="/investment">
-                <li>
-                  <a href="#" className={styles.navLink}>
-                    INVESTMENTS
-                  </a>
-                </li>
-              </Link>
-              <Link href="/faq">
-                <li>
-                  <a href="#" className={styles.navLink}>
-                    FAQ
-                  </a>
-                </li>
-              </Link>
-              <Link href="/courses">
-                <li>
-                  <a href="#" className={styles.navLink}>
-                    COURSES
-                  </a>
-                </li>
-              </Link>
-              <Link href="/contact">
-                <li>
-                  <a href="#" className={styles.navLink}>
-                    CONTACT
-                  </a>
-                </li>
-              </Link>
-              <Link href="/auth/signup">
-                <li>
-                  <a href="#" className={styles.button}>
-                    REGISTER
-                  </a>
-                </li>
-              </Link>
-              <Link href="/auth/sigin">
-                <li>
-                  <button href="#" className="btn disabled">
-                    LOG IN
-                  </button>
-                </li>
-              </Link>
-            </ul>
-          </div>
-        </nav>
-      </div>
       <main className={styles.main}>
         <div
-          className={styles.jumbotron}
+          className={styles.jumbotronReg}
           style={{
+            position: "relative",
             backgroundImage: `url(${Jumbo})`,
             width: "100%",
-            height: "650px",
+            height: "1000px",
+            backgroundSize: "cover",
           }}
         >
           <div className={styles.jumbotronFluid}>
@@ -157,7 +72,7 @@ const Signin = () => {
               </div>
               {/* form proper */}
               <div className="w-full">
-                <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-10">
+                <form className="rounded px-10 pt-6 pb-8 mb-10">
                   <div className="mb-4">
                     <label
                       className="block text-gray-700 text-sm font-bold mb-2"
@@ -190,24 +105,24 @@ const Signin = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  <div className="flex items-center justify-between mt-8">
+                  <div className="flex items-center justify-between mt-8 align-middle">
                     <p>
                       <label
-                        className="block tracking-wide text-gray-700 text-xs font-bold mb-2"
+                        className="block tracking-wide text-black text-xm"
                         htmlFor="grid-email"
                       >
-                        <input className="mr-2 leading-tight" type="checkbox" />
+                        <input type="checkbox" />
                         <span>Remember me</span>
                       </label>
                     </p>
-                    <a className="font-bold text-md text-blue-300" href="#">
+                    <a className="font-bold text-xm text-blue-300 mb-6" href="#">
                       Forgot Password?
                     </a>
                   </div>
                   {/* <div className={styles.createButtonDiv}> */}
                   {/* <Link href="/dashboard/dashboard"> */}
                   <button
-                    className={styles.registrationButton}
+                    className={styles.signinButton}
                     type="button"
                     onClick={() => {
                       login();

@@ -145,12 +145,12 @@ export default function Navbar() {
           <NavLink to="/faq">FAQ</NavLink>
           <NavLink to="/courses">COURSES</NavLink>
           <NavLink to="/contact">CONTACT</NavLink>
-          <Link href="/auth/signup">
+          <Link href="/signup">
             <button type="button" className={styles.buttonNav}>
               REGISTER
             </button>
           </Link>
-          <Link href="/auth/signin">
+          <Link href="/signin">
             <button type="button" className={styles.buttonOutlineNav}>
               LOG IN
             </button>

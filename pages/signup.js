@@ -3,9 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import styles from "../../styles/Home.module.css";
-import { IoLocationOutline } from "react-icons/io5";
-import { AiOutlineClockCircle } from "react-icons/ai";
+import styles from "../styles/Home.module.css";
 
 const BASE_URI = "https://monnayfinance.com/api";
 
@@ -66,7 +64,7 @@ const Signup = () => {
       })
         .then((res) => res.json())
         .then((json) => console.log(json));
-      router.push("/auth/reg-successful");
+      router.push("/reg-successful");
     } catch (err) {
       console.log(err.message);
     }
@@ -292,15 +290,13 @@ const Signup = () => {
               </p>
             </div>
             <div className={styles.createButtonDiv}>
-              {/* <Link href="/auth/reg-successful"> */}
               <button
-                className={styles.button}
+                className={styles.signupButton}
                 type="button"
                 onClick={() => signup()}
               >
                 Create account
               </button>
-              {/* </Link> */}
             </div>
           </form>
           {/* form proper ends */}
