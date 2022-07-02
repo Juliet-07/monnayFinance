@@ -8,7 +8,8 @@ import { CgProfile } from "react-icons/cg";
 import { MdOutlineNotificationsNone } from "react-icons/md";
 import { FcMoneyTransfer } from "react-icons/fc";
 
-const BASE_URI = "https://monnayfinance.com/api/investments/6/active";
+const user = JSON.stringify(localStorage.getItem("Chukwunwike"))
+const BASE_URI = `https://monnayfinance.com/api/user/profile/${user.id}`;
 
 const Dashboard = () => {
   const [user, setUser] = useState("");
