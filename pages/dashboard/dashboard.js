@@ -8,10 +8,10 @@ import { CgProfile } from "react-icons/cg";
 import { MdOutlineNotificationsNone } from "react-icons/md";
 import { FcMoneyTransfer } from "react-icons/fc";
 
-const user = JSON.stringify(localStorage.getItem("Chukwunwike"))
-const BASE_URI = `https://monnayfinance.com/api/user/profile/${user.id}`;
-
 const Dashboard = () => {
+  const User = JSON.stringify(localStorage.getItem("Chukwunwike"));
+  const BASE_URI = `https://monnayfinance.com/api/user/profile/${User.id}`;
+
   const [user, setUser] = useState("");
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("Chukwunwike"));
