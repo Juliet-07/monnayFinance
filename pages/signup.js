@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import axios from "axios";
 import styles from "../styles/Home.module.css";
 
 const BASE_URI = "https://monnayfinance.com/api";
@@ -78,230 +79,229 @@ const Signup = () => {
         <meta name="description" content="Generated monnay finance" />
         <link rel="icon" href="/icon.png" />
       </Head>
-      <main className={styles.main}>
-        {/* <div className={styles.signupContainer}> */}
-        <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2 w-50 columns-md">
-          <div className={styles.createDiv}>
-            <Image src="/icon.png" alt=" Logo" width={20} height={20} />
-            <p className={styles.create}>Create Account</p>
-          </div>
-          {/* form proper */}
-          <form className="w-full mt-3">
-            <div className="flex flex-wrap -mx-3 mb-4">
-              <div className="md:w-1/2 px-3 mb-4 md:mb-0">
-                <label
-                  className="text-black text-sm font-bold"
-                  htmlFor="grid-full-name"
-                >
-                  Full name
-                </label>
-                <input
-                  className=" w-full bg-gray-200 text-gray-700 py-3 px-2"
-                  id="grid-full-name"
-                  name="fullname"
-                  type="text"
-                  value={fullname}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="md:w-1/2 px-3">
-                <label
-                  className="text-black text-sm font-bold"
-                  htmlFor="grid-user-name"
-                >
-                  Username
-                </label>
-                <input
-                  className="w-full bg-gray-200 text-gray-700 py-3 px-2"
-                  id="grid-user-name"
-                  name="username"
-                  type="text"
-                  value={username}
-                  onChange={handleChange}
-                />
-              </div>
-            </div>
-            <div className="flex flex-wrap -mx-3 mb-4">
-              <div className="w-full px-2 py-2">
-                <label
-                  className="text-black text-sm font-bold"
-                  htmlFor="grid-email"
-                >
-                  Email
-                </label>
-                <input
-                  className="w-full bg-gray-200 text-gray-700 py-3 px-2"
-                  id="grid-email"
-                  name="email"
-                  type="email"
-                  value={email}
-                  onChange={handleChange}
-                />
-              </div>
-            </div>
-            <div className="flex flex-wrap -mx-3 mb-4">
-              <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-                <label
-                  className="text-black text-sm font-bold"
-                  htmlFor="grid-password"
-                >
-                  Password
-                </label>
-                <input
-                  className="w-full bg-gray-200 text-gray-700 py-3 px-2"
-                  id="grid-password"
-                  name="password"
-                  type="password"
-                  value={password}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-                <label
-                  className="text-black text-sm font-bold"
-                  htmlFor="grid-confirm"
-                >
-                  Confirm Password
-                </label>
-                <input
-                  className="w-full bg-gray-200 text-gray-700 py-3 px-2"
-                  id="grid-password"
-                  name="confirm_password"
-                  type="password"
-                  // value={confirm_password}
-                  // onChange={handleChange}
-                />
-              </div>
-            </div>
-            <div className="flex flex-wrap -mx-3 mb-4">
-              <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-                <label
-                  className="text-black text-sm font-bold"
-                  htmlFor="grid-btc"
-                >
-                  BTC Wallet Address
-                </label>
-                <input
-                  className="w-full bg-gray-200 text-gray-700 py-3 px-2"
-                  id="grid-btc"
-                  name="btc"
-                  type="text"
-                  value={btc}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-                <label
-                  className="text-black text-sm font-bold"
-                  htmlFor="grid-doge"
-                >
-                  ETH Wallet Address
-                </label>
-                <input
-                  className="w-full bg-gray-200 text-gray-700 py-3 px-2"
-                  id="grid-eth"
-                  name="eth"
-                  type="text"
-                  value={eth}
-                  onChange={handleChange}
-                />
-              </div>
-            </div>
-            <div className="flex flex-wrap -mx-3 mb-4">
-              <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-                <label
-                  className="text-black text-sm font-bold"
-                  htmlFor="grid-eth"
-                >
-                  DOGE Wallet Address
-                </label>
-                <input
-                  className="w-full bg-gray-200 text-gray-700 py-3 px-2"
-                  id="grid-doge"
-                  name="doge"
-                  type="text"
-                  value={doge}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-                <label
-                  className="text-black text-sm font-bold"
-                  htmlFor="grid-usdt"
-                >
-                  USDT Wallet Address
-                </label>
-                <input
-                  className="w-full bg-gray-200 text-gray-700 py-3 px-2"
-                  id="grid-usdt"
-                  name="usdt"
-                  type="text"
-                  value={usdt}
-                  onChange={handleChange}
-                />
-              </div>
-            </div>
-            <div className="flex flex-wrap -mx-3 mb-4">
-              <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-                <label
-                  className="text-black text-sm font-bold"
-                  htmlFor="grid-security"
-                >
-                  Security Question
-                </label>
-                <input
-                  className="w-full bg-gray-200 text-gray-700 py-3 px-2"
-                  id="grid-security"
-                  name="security_question"
-                  type="text"
-                  value={security_question}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-                <label
-                  className="text-black text-sm font-bold"
-                  htmlFor="grid-answer"
-                >
-                  Answer
-                </label>
-                <input
-                  className="w-full bg-gray-200 text-gray-700 py-3 px-2"
-                  id="grid-answer"
-                  name="answer"
-                  type="text"
-                  value={answer}
-                  onChange={handleChange}
-                />
-              </div>
-            </div>
-            <div className="w-full px-3 mb-6 md:mb-0 mt-7">
-              <p>
-                <label
-                  className="block tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  htmlFor="grid-email"
-                >
-                  <input type="checkbox" className="filled-in" />
-                  <span>
-                    I agree to all the <font color="#057d99">Terms</font> and{" "}
-                    <font color="#057d99">Privacy Policy</font>
-                  </span>
-                </label>
-              </p>
-            </div>
-            <div className={styles.createButtonDiv}>
-              <button
-                className={styles.signupButton}
-                type="button"
-                onClick={() => signup()}
-              >
-                Create account
-              </button>
-            </div>
-          </form>
-          {/* form proper ends */}
+      {/* <div className={styles.signupContainer}> */}
+      <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2  columns-md">
+        <div className={styles.createDiv}>
+          <Image src="/icon.png" alt=" Logo" width={20} height={20} />
+          <p className={styles.create}>Create Account</p>
         </div>
-      </main>
+        {/* form proper */}
+        <form className="w-full mt-3">
+          <div className="flex flex-wrap -mx-3 mb-4">
+            <div className="md:w-1/2 px-3 mb-4 md:mb-0">
+              <label
+                className="text-black text-sm font-bold"
+                htmlFor="grid-full-name"
+              >
+                Full name
+              </label>
+              <input
+                className=" w-full bg-gray-200 text-gray-700 py-3 px-2"
+                id="grid-full-name"
+                name="fullname"
+                type="text"
+                value={fullname}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="md:w-1/2 px-3">
+              <label
+                className="text-black text-sm font-bold"
+                htmlFor="grid-user-name"
+              >
+                Username
+              </label>
+              <input
+                className="w-full bg-gray-200 text-gray-700 py-3 px-2"
+                id="grid-user-name"
+                name="username"
+                type="text"
+                value={username}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+          <div className="flex flex-wrap -mx-3 mb-4">
+            <div className="w-full px-2 py-2">
+              <label
+                className="text-black text-sm font-bold"
+                htmlFor="grid-email"
+              >
+                Email
+              </label>
+              <input
+                className="w-full bg-gray-200 text-gray-700 py-3 px-2"
+                id="grid-email"
+                name="email"
+                type="email"
+                value={email}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+          <div className="flex flex-wrap -mx-3 mb-4">
+            <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+              <label
+                className="text-black text-sm font-bold"
+                htmlFor="grid-password"
+              >
+                Password
+              </label>
+              <input
+                className="w-full bg-gray-200 text-gray-700 py-3 px-2"
+                id="grid-password"
+                name="password"
+                type="password"
+                value={password}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+              <label
+                className="text-black text-sm font-bold"
+                htmlFor="grid-confirm"
+              >
+                Confirm Password
+              </label>
+              <input
+                className="w-full bg-gray-200 text-gray-700 py-3 px-2"
+                id="grid-password"
+                name="confirm_password"
+                type="password"
+                // value={confirm_password}
+                // onChange={handleChange}
+              />
+            </div>
+          </div>
+          <div className="flex flex-wrap -mx-3 mb-4">
+            <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+              <label
+                className="text-black text-sm font-bold"
+                htmlFor="grid-btc"
+              >
+                BTC Wallet Address
+              </label>
+              <input
+                className="w-full bg-gray-200 text-gray-700 py-3 px-2"
+                id="grid-btc"
+                name="btc"
+                type="text"
+                value={btc}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+              <label
+                className="text-black text-sm font-bold"
+                htmlFor="grid-doge"
+              >
+                ETH Wallet Address
+              </label>
+              <input
+                className="w-full bg-gray-200 text-gray-700 py-3 px-2"
+                id="grid-eth"
+                name="eth"
+                type="text"
+                value={eth}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+          <div className="flex flex-wrap -mx-3 mb-4">
+            <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+              <label
+                className="text-black text-sm font-bold"
+                htmlFor="grid-eth"
+              >
+                DOGE Wallet Address
+              </label>
+              <input
+                className="w-full bg-gray-200 text-gray-700 py-3 px-2"
+                id="grid-doge"
+                name="doge"
+                type="text"
+                value={doge}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+              <label
+                className="text-black text-sm font-bold"
+                htmlFor="grid-usdt"
+              >
+                USDT Wallet Address
+              </label>
+              <input
+                className="w-full bg-gray-200 text-gray-700 py-3 px-2"
+                id="grid-usdt"
+                name="usdt"
+                type="text"
+                value={usdt}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+          <div className="flex flex-wrap -mx-3 mb-4">
+            <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+              <label
+                className="text-black text-sm font-bold"
+                htmlFor="grid-security"
+              >
+                Security Question
+              </label>
+              <input
+                className="w-full bg-gray-200 text-gray-700 py-3 px-2"
+                id="grid-security"
+                name="security_question"
+                type="text"
+                value={security_question}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+              <label
+                className="text-black text-sm font-bold"
+                htmlFor="grid-answer"
+              >
+                Answer
+              </label>
+              <input
+                className="w-full bg-gray-200 text-gray-700 py-3 px-2"
+                id="grid-answer"
+                name="answer"
+                type="text"
+                value={answer}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+          <div className="w-full px-3 mb-6 md:mb-0 mt-7">
+            <p>
+              <label
+                className="block tracking-wide text-gray-700 text-xs font-bold mb-2"
+                htmlFor="grid-email"
+              >
+                <input type="checkbox" className="filled-in" />
+                <span>
+                  I agree to all the <font color="#057d99">Terms</font> and{" "}
+                  <font color="#057d99">Privacy Policy</font>
+                </span>
+              </label>
+            </p>
+          </div>
+          <div className={styles.createButtonDiv}>
+            <button
+              className={styles.signupButton}
+              type="button"
+              onClick={() => signup()}
+            >
+              Create account
+            </button>
+          </div>
+        </form>
+        {/* form proper ends */}
+      </div>
+      {/* </div> */}
       <footer className={styles.footer}>
         <div className={styles.footerInfo}>
           <div

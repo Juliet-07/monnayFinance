@@ -13,47 +13,45 @@ const RegSuccessful = () => {
         <meta name="description" content="Generated monnay finance" />
         <link rel="icon" href="/icon.png" />
       </Head>
-      <main className={styles.main}>
-        <div
-          className={styles.jumbotronReg}
-          style={{
-            position: "relative",
-            backgroundImage: `url(${Jumbo})`,
-            width: "100%",
-            height: "1000px",
-            backgroundSize: "cover",
-          }}
-        >
-          <div className={styles.jumbotronFluidReg}>
-            <div className={styles.registrationContainer}>
-              <div className={styles.createDiv}>
-                <Image src="/icon.png" alt=" Logo" width={30} height={30} />
-              </div>
-              <div className={styles.tickBorder}>
-                <TiTick className={styles.tick} />
-              </div>
-              <div>
-                <h5 className={styles.registrationHeader}>
-                  Registration Successful
-                </h5>
-                <p className={styles.registrationText}>
-                  Welcome! Your account has been created successfully.
-                  <br />
-                  Click on the login button to access your account.{" "}
-                </p>
-                <Link href="/signin">
-                  <button
-                    type="button"
-                    className={styles.registrationSuccessfulButton}
-                  >
-                    Log in
-                  </button>
-                </Link>
-              </div>
+      <div
+        className={styles.jumbotronReg}
+        style={{
+          position: "relative",
+          backgroundImage: `url(${Jumbo})`,
+          width: "100%",
+          height: "700px",
+          backgroundSize: "cover",
+        }}
+      >
+        <div className={styles.jumbotronFluidReg}>
+          <div className={styles.registrationContainer}>
+            <div className={styles.createDiv}>
+              <Image src="/icon.png" alt=" Logo" width={30} height={30} />
+            </div>
+            <div className={styles.tickBorder}>
+              <TiTick className={styles.tick} />
+            </div>
+            <div>
+              <h5 className={styles.registrationHeader}>
+                Registration Successful
+              </h5>
+              <p className={styles.registrationText}>
+                Welcome! Your account has been created successfully.
+                <br />
+                Click on the login button to access your account.{" "}
+              </p>
+              <Link href="/signin">
+                <button
+                  type="submit"
+                  className={styles.registrationSuccessfulButton}
+                >
+                  Log in
+                </button>
+              </Link>
             </div>
           </div>
         </div>
-      </main>
+      </div>
       <footer className={styles.footer}>
         <div className={styles.footerInfo}>
           <div

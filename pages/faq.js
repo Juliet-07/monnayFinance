@@ -23,7 +23,7 @@ const FAQ = () => {
           }}
         >
           <div className={styles.jumbotronFluid}>
-            <h2 className={styles.about}>Frequently Asked Questions</h2>
+            <h2 className={styles.planJumbo}>Frequently Asked Questions</h2>
           </div>
         </div>
         {/* Jumbotron Ends */}

@@ -53,96 +53,91 @@ const Signin = () => {
         <meta name="description" content="Generated monnay finance" />
         <link rel="icon" href="/icon.png" />
       </Head>
-      <main className={styles.main}>
-        <div
-          className={styles.jumbotronReg}
-          style={{
-            position: "relative",
-            backgroundImage: `url(${Jumbo})`,
-            width: "100%",
-            height: "1000px",
-            backgroundSize: "cover",
-          }}
-        >
-          <div className={styles.jumbotronFluid}>
-            <div className={styles.signinContainer}>
-              <div className={styles.createDiv}>
-                <Image src="/icon.png" alt=" Logo" width={20} height={20} />
-                <p className={styles.create}>Log in</p>
-              </div>
-              {/* form proper */}
-              <div className="w-full">
-                <form className="rounded px-10 pt-6 pb-8 mb-10">
-                  <div className="mb-4">
-                    <label
-                      className="block text-gray-700 text-sm font-bold mb-2"
-                      htmlFor="username"
-                    >
-                      Username
-                    </label>
-                    <input
-                      className=" border rounded w-full py-2 px-2"
-                      id="username"
-                      name="username"
-                      type="text"
-                      value={username}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="mb-4">
-                    <label
-                      className="block text-gray-700 text-sm font-bold mb-2"
-                      htmlFor="password"
-                    >
-                      Password
-                    </label>
-                    <input
-                      className=" border rounded w-full py-2 px-2"
-                      id="password"
-                      name="password"
-                      type="password"
-                      value={password}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="flex items-center justify-between mt-8 align-middle">
-                    <p>
-                      <label
-                        className="block tracking-wide text-black text-xm"
-                        htmlFor="grid-email"
-                      >
-                        <input type="checkbox" />
-                        <span>Remember me</span>
-                      </label>
-                    </p>
-                    <a
-                      className="font-bold text-xm text-blue-300 mb-6"
-                      href="#"
-                    >
-                      Forgot Password?
-                    </a>
-                  </div>
-                  {/* <div className={styles.createButtonDiv}> */}
-                  {/* <Link href="/dashboard/dashboard"> */}
-                  <button
-                    className={styles.signinButton}
-                    type="button"
-                    onClick={() => {
-                      login();
-                      console.log(login);
-                    }}
-                  >
-                    Log in
-                  </button>
-                  {/* </Link> */}
-                  {/* </div> */}
-                </form>
-              </div>
-              {/* form proper ends */}
+      <div
+        className={styles.jumbotronReg}
+        style={{
+          position: "relative",
+          backgroundImage: `url(${Jumbo})`,
+          width: "100%",
+          height: "750px",
+          backgroundSize: "cover",
+        }}
+      >
+        <div className={styles.jumbotronFluidReg}>
+          <div className={styles.signinContainer}>
+            <div className={styles.createDiv}>
+              <Image src="/icon.png" alt=" Logo" width={20} height={20} />
+              <p className={styles.create}>Log in</p>
             </div>
+            {/* form proper */}
+            <div className="w-full">
+              <form className="rounded px-4 pt-6 pb-8 mb-10">
+                <div className="mb-4">
+                  <label
+                    className="block text-gray-700 text-sm font-bold mb-2"
+                    htmlFor="username"
+                  >
+                    Username
+                  </label>
+                  <input
+                    className=" border rounded w-full py-2 px-2"
+                    id="username"
+                    name="username"
+                    type="text"
+                    value={username}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="mb-4">
+                  <label
+                    className="block text-gray-700 text-sm font-bold mb-2"
+                    htmlFor="password"
+                  >
+                    Password
+                  </label>
+                  <input
+                    className=" border rounded w-full py-2 px-2"
+                    id="password"
+                    name="password"
+                    type="password"
+                    value={password}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="flex items-center justify-between mt-8 align-middle">
+                  <p>
+                    <label
+                      className="block tracking-wide text-black text-xm"
+                      htmlFor="grid-email"
+                    >
+                      <input type="checkbox" />
+                      <span>Remember me</span>
+                    </label>
+                  </p>
+                  <a className="font-bold text-xm text-blue-300 mb-6" href="#">
+                    Forgot Password?
+                  </a>
+                </div>
+                {/* <div className={styles.createButtonDiv}> */}
+                {/* <Link href="/dashboard/dashboard"> */}
+                <button
+                  className={styles.signinButton}
+                  type="button"
+                  onClick={() => {
+                    login();
+                    console.log(login);
+                  }}
+                >
+                  Log in
+                </button>
+                {/* </Link> */}
+                {/* </div> */}
+              </form>
+            </div>
+            {/* form proper ends */}
           </div>
         </div>
-      </main>
+      </div>
       <footer className={styles.footer}>
         <div className={styles.footerInfo}>
           <div

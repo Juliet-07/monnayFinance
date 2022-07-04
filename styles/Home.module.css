@@ -37,9 +37,68 @@
   border-radius: 5px;
   background-color: #ffffff;
 }
+.buttonNavSlide {
+  display: block;
+  position: relative;
+  width: 300px;
+  height: 60px;
+  top: 15px;
+  left: 25px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  border: 1px solid transparent;
+  padding: 0.46875rem 1rem;
+  border-radius: 5px;
+  background-color: #057d99;
+}
+.buttonOutlineNavSlide {
+  display: block;
+  position: relative;
+  width: 300px;
+  height: 60px;
+  top: 15px;
+  left: 25px;
+  margin-top: 10px;
+  color: #057d99;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  border: 1px solid transparent;
+  border-color: #057d99;
+  padding: 0.46875rem 1rem;
+  border-radius: 5px;
+}
+.button {
+  display: block;
+  position: relative;
+  width: 350px;
+  height: 50px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  border: 1px solid transparent;
+  padding: 0.46875rem 1rem;
+  border-radius: 5px;
+  background-color: #057d99;
+}
 .container {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -329,26 +388,26 @@
   background-color: #057d99;
 }
 /* auth styling */
-.signupContainer {
+/* .signupContainer {
   display: block;
   width: 100%;
   background-color: #ffffff;
   border-radius: 20px;
-}
+} */
 .signinContainer {
   position: relative;
   width: 500px;
   height: 600px;
   left: 700px;
-  top: 200px;
+  top: 100px;
   background-color: #ffffff;
   border-radius: 20px;
   padding: 15px;
 }
 .signinButton {
   position: relative;
-  left: 100px;
-  width: 150px;
+  left: 10px;
+  width: 358px;
   height: 50px;
   font-weight: 500;
   text-align: center;
@@ -411,22 +470,29 @@
   line-height: 86px;
   text-align: center;
 }
+.planJumbo {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 86px;
+  text-align: center;
+}
 .description {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  /* background-color: rebeccapurple; */
 }
 .whoAreWe {
-  /* background-color: red; */
-  padding: 50px;
-  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .whoAreWeHeader {
   color: #057d99;
   font-size: 32px;
-  line-height: 57px;
+  line-height: 50px;
   font-style: bold;
 }
 .whoAreWeMessage {
@@ -437,41 +503,41 @@
   font-style: normal;
 }
 .ceoButton {
-  display: inline-block;
+  display: block;
+  width: 300px;
   font-weight: 500;
   text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
   border: 1px solid transparent;
   border-color: #057d99;
   padding: 0.46875rem 1rem;
   font-size: 14px;
-  line-height: 2;
+  line-height: 2.5;
   border-radius: 0.25rem;
   color: #057d99;
   margin-left: 10px;
   margin-bottom: 15px;
 }
 .ourStrategy {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 50px;
+  margin: 50px;
   width: 700px;
-  height: 500px;
-  right: 300px;
-  /* padding: 40px; */
-  /* margin: 0%; */
-  /* background-color: rebeccapurple; */
+  background-color: #ffffff;
 }
 .ourStrategyHeader {
   color: #057d99;
   font-weight: 700;
   font-size: 32px;
-  line-height: 57px;
+  line-height: 40px;
 }
 .ourStrategyMessage {
   color: #000000;
   font-weight: 500;
   font-size: 16px;
-  line-height: 23px;
+  line-height: 26px;
   text-align: left;
 }
 .investorHeader {
@@ -523,6 +589,7 @@
   background-clip: border-box;
   border: 2px solid #eeeeee;
   border-radius: 0.25rem;
+  z-index: -1;
 }
 .faqCardHeader {
   padding: 0.75rem 1.25rem;
@@ -552,13 +619,17 @@
 }
 /* contact section */
 /* registration successful  */
+.jumbotronReg {
+  position: relative;
+  z-index: -1;
+}
 .jumbotronFluidReg {
   position: absolute;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  background-color: rgba(10, 79, 96, 0.72);
+  background-color: rgba(37, 139, 165, 0.72);
 }
 .jumbotronProps {
   position: relative;
@@ -586,7 +657,7 @@
   position: relative;
   width: 500px;
   height: 500px;
-  top: 250px;
+  top: 100px;
   left: 700px;
   bottom: 0px;
   background-color: #ffffff;
@@ -608,31 +679,17 @@
   /* margin-bottom: 30px; */
   color: #000000;
 }
-.registrationButton {
-  position: relative;
-  left: 120px;
-  width: 150px;
-  height: 50px;
-  /* display: block; */
-  font-weight: 500;
-  text-align: center;
-  border: 1px solid transparent;
-  padding: 0.46875rem 1rem;
-  border-radius: 0.25rem;
-  background-color: #057d99;
-  color: #ffffff;
-  margin: 30px;
-}
+
 .registrationSuccessfulButton {
   display: block;
   position: relative;
-  width: 150px;
+  width: 358px;
   height: 50px;
   top: 15px;
   margin-right: 5rem;
-  margin-left: 10rem;
+  margin-left: 4rem;
   color: #ffffff;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 14px;
   text-align: center;
   line-height: 20px;
@@ -861,6 +918,7 @@
     background-color: #ffffff;
     border: 1px solid #eaeaea;
     border-radius: 1rem;
+    z-index: -1;
   }
   .investorHeader {
     font-size: 40px;
@@ -883,6 +941,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .subscribeButton {
+    width: 300px;
+    height: 60px;
+    font-weight: 700;
   }
   /* .footer {
     height: 600px;
@@ -907,7 +970,53 @@
     font-size: 9px;
     color: #ffffff;
   }
-  .footerImageText{
+  .footerImageText {
     font-size: 10px;
+  }
+  .description {
+    flex-direction: column;
+  }
+  .ourStrategy {
+    width: 400px;
+    height: 800px;
+  }
+  .planJumbo {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+  }
+  .content {
+    display: none;
+  }
+  .registrationContainer {
+    width: 350px;
+    top: 50px;
+    left: 10px;
+  }
+  .registrationHeader {
+    font-size: 23px;
+    line-height: 30px;
+  }
+  .registrationText {
+    font-size: 14px;
+    line-height: 23px;
+  }
+  .registrationSuccessfulButton {
+    width: 250px;
+    right: 1rem;
+  }
+  .signinContainer {
+    position: relative;
+    width: 350px;
+    height: 550px;
+    left: 10px;
+    top: 50px;
+    padding: 20px;
+  }
+  .signinButton {
+    width: 250px;
+    margin-left: 5px;
   }
 }

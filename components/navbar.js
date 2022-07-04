@@ -14,7 +14,7 @@ function NavLink({ to, children }) {
 function MobileNav({ open, setOpen }) {
   return (
     <div
-      className={`absolute top-0 left-0 w-screen bg-white transform ${
+      className={`absolute top-0 left-0 w-screen h-screen bg-white transform ${
         open ? "-translate-x-0" : "-translate-x-full"
       } transition-transform duration-300 ease-in-out filter drop-shadow-md `}
     >
@@ -99,6 +99,32 @@ function MobileNav({ open, setOpen }) {
           >
             Contact
           </p>
+        </Link>
+        <Link href="/signup">
+          <button
+            type="button"
+            className={styles.buttonNavSlide}
+            onClick={() =>
+              setTimeout(() => {
+                setOpen(!open);
+              }, 100)
+            }
+          >
+            REGISTER
+          </button>
+        </Link>
+        <Link href="/signin">
+          <button
+            type="button"
+            className={styles.buttonOutlineNavSlide}
+            onClick={() =>
+              setTimeout(() => {
+                setOpen(!open);
+              }, 100)
+            }
+          >
+            LOG IN
+          </button>
         </Link>
       </div>
     </div>
