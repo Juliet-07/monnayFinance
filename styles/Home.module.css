@@ -107,7 +107,7 @@
 /* Jumbotron */
 .jumbotron {
   position: relative;
-  height: 600px;
+  height: 560px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -502,6 +502,13 @@
   text-align: center;
   font-style: normal;
 }
+.ceoMessage {
+  color: #000000;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  font-style: normal;
+}
 .ceoButton {
   display: block;
   width: 300px;
@@ -794,6 +801,9 @@
 }
 /* RESPONSIVENESS */
 @media only screen and (min-width: 360px) and (max-width: 768px) {
+  .jumbotron {
+    height: 100px;
+  }
   .jumbotron h2 {
     font-size: 32px;
     line-height: 40px;
@@ -828,8 +838,11 @@
     font-size: 23px;
     line-height: 30px;
   }
+  .trustContainer {
+    height: 976px;
+  }
   .trustText {
-    font-size: 40px;
+    font-size: 38px;
   }
   #message {
     display: none;
@@ -879,7 +892,6 @@
     width: 414px;
     height: 300px;
     scale: fill;
-    background-color: tomato;
   }
   .strategyTextContainer {
     width: 414px;
@@ -895,7 +907,7 @@
     line-height: 23px;
   }
   .investmentHeader {
-    font-size: 40px;
+    font-size: 38px;
     line-height: 39px;
   }
   .investmentContainer {
@@ -921,9 +933,10 @@
     z-index: -1;
   }
   .investorHeader {
-    font-size: 40px;
+    font-size: 38px;
     line-height: 38px;
     text-align: center;
+    margin-top: 100px;
   }
   .investorCardDiv {
     display: flex;
@@ -979,6 +992,9 @@
   .ourStrategy {
     width: 400px;
     height: 800px;
+  }
+  .whoAreWeMessage {
+    text-align: left;
   }
   .planJumbo {
     color: #ffffff;

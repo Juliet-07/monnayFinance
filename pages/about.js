@@ -52,7 +52,7 @@ const About = () => {
           <div className={styles.whoAreWe}>
             <h4 className={styles.whoAreWeHeader}>Meet our CEO</h4>
             <hr />
-            <p className={styles.whoAreWeMessage}>
+            <p className={styles.ceoMessage}>
               Pritchard Potts currently sits on the Board of
               <br />
               Monnay Finance Limited as Managing Director/Chief Executive
@@ -116,7 +116,7 @@ const About = () => {
         {/* ourStrategy Ends */}
         {/* Investors */}
         <h3 className={styles.investorHeader}>
-          What our <font color="#057d99"> investors</font> have to say
+          What our <font color="#057d99"> investors</font> have to say.
         </h3>
         <div className={styles.investorCardDiv}>
           <div className={styles.investorCard}>

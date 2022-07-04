@@ -23,7 +23,9 @@ const Home = () => {
           style={{
             backgroundImage: `url(${Jumbo})`,
             width: "100%",
-            height: "650px",
+            height: "600px",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
           }}
         >
           <div className={styles.jumbotronFluid}>
@@ -147,16 +149,7 @@ const Home = () => {
             </p>
           </div>
           {/* <div className={styles.strategyRectangle}></div> */}
-          <div
-            className={styles.strategyImageContainer}
-            // style={{
-            //   backgroundImage: `url(${Strategy})`,
-            //   width: "50%",
-            //   backgroundRepeat: "no-repeat",
-            //   backgroundSize: "cover",
-            //   backgroundPosition: "center",
-            // }}
-          >
+          <div className={styles.strategyImageContainer}>
             <Image src={Strategy} width={1000} height={740} alt="strategy" />
           </div>
         </div>
@@ -398,8 +391,7 @@ const Home = () => {
                 alt="footer image"
               />
               <p className={styles.footerImageText}>
-                Investment opportunities in multiple
-                 markets, one account.
+                Investment opportunities in multiple markets, one account.
               </p>
             </div>
             <ul className={styles.footerBottomText}>
