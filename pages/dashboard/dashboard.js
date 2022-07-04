@@ -10,7 +10,7 @@ import { FcMoneyTransfer } from "react-icons/fc";
 
 const Dashboard = () => {
   const User = JSON.stringify(localStorage.getItem("Chukwunwike"));
-  const BASE_URI = `https://monnayfinance.com/api/user/profile/${User.id}`;
+  // const BASE_URI = `https://monnayfinance.com/api/user/profile/${User.id}`;
 
   const [user, setUser] = useState("");
   useEffect(() => {
