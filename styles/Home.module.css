@@ -403,10 +403,12 @@
   background-color: #ffffff;
   border-radius: 20px;
   padding: 15px;
+  /* z-index: -2; */
 }
 .signinButton {
   position: relative;
-  left: 10px;
+  left: 30px;
+  top: 50px;
   width: 358px;
   height: 50px;
   font-weight: 500;
@@ -416,7 +418,6 @@
   border-radius: 0.25rem;
   background-color: #057d99;
   color: #ffffff;
-  margin: 30px;
 }
 .signupButton {
   position: relative;
@@ -1028,11 +1029,11 @@
     width: 350px;
     height: 550px;
     left: 10px;
-    top: 50px;
+    top: 30px;
     padding: 20px;
   }
   .signinButton {
     width: 250px;
-    margin-left: 5px;
+    left: 10px;
   }
 }

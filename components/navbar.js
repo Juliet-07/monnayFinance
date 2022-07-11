@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
@@ -20,8 +21,6 @@ function MobileNav({ open, setOpen }) {
     >
       <div className="flex items-center justify-center filter drop-shadow-md bg-white h-20">
         {" "}
-        {/*logo container*/}
-        <Image src="/monnayLogo.png" width={150} height={40} alt="logo" />
       </div>
       <div className="flex flex-col ml-4">
         <Link href="/">
@@ -133,11 +132,14 @@ function MobileNav({ open, setOpen }) {
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const { status } = useSession();
   return (
     <nav className="flex filter drop-shadow-md bg-white px-4 py-4 h-20 items-center">
       <MobileNav open={open} setOpen={setOpen} />
       <div className="w-3/12 flex items-center justify-center">
-        <Image src="/monnayLogo.png" width={150} height={40} alt="logo" />
+        <Link href="/">
+          <Image src="/monnayLogo.png" width={150} height={40} alt="logo" />
+        </Link>
       </div>
       <div className="w-9/12 flex justify-end items-center">
         <div

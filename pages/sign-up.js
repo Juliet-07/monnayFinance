@@ -9,42 +9,61 @@ import styles from "../styles/Home.module.css";
 
 const BASE_URI = "https://monnayfinance.com/api";
 
-// export async function getServerSideProps() {
-//   const res = await fetch(BASE_URI + "/auth/register");
-// }
-
 const Signup = () => {
   const initialValues = {
     fullname: "",
     username: "",
     email: "",
     password: "",
+    // confirm_password: "",
+    btc: "",
+    doge: "",
+    eth: "",
+    usdt: "",
+    security_question: "",
+    answer: "",
   };
   const {
-    register,
     handleSubmit,
+    control,
     formState: { errors },
   } = useForm();
   const router = useRouter();
-  const [details, setDetails] = useState(initialValues);
+  const [register, setRegister] = useState(initialValues);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setDetails({ ...details, [name]: value });
+    setRegister({ ...register, [name]: value });
   };
-  const { fullname, username, email, password } = details;
+  const {
+    fullname,
+    username,
+    email,
+    password,
+    // confirm_password,
+    btc,
+    doge,
+    eth,
+    usdt,
+    security_question,
+    answer,
+  } = register;
   const signup = () => {
-    // alert("testing signup");
-    // router.push("/reg-successful");
     try {
       fetch(BASE_URI + "/auth/register", {
         method: "POST",
         body: JSON.stringify({
-          fullname: details.fullname,
-          username: details.username,
-          email: details.email,
-          password: details.password,
-          // confirm_password: details.confirm_password,
+          fullname: register.fullname,
+          username: register.username,
+          email: register.email,
+          password: register.password,
+          // confirm_password: register.confirm_password,
+          btc: register.btc,
+          doge: register.doge,
+          eth: register.eth,
+          usdt: register.usdt,
+          security: register.security,
+          answer: register.answer,
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
@@ -52,7 +71,7 @@ const Signup = () => {
       })
         .then((res) => res.json())
         .then((json) => console.log(json));
-      // router.push("/reg-successful");
+      router.push("/reg-successful");
     } catch (err) {
       console.log(err.message);
     }
@@ -73,95 +92,75 @@ const Signup = () => {
           <p className={styles.create}>Create Account</p>
         </div>
         {/* form proper */}
-        <form onSubmit={handleSubmit(signup)} className="w-full mt-3">
+        <form onSubmit={signup} className="w-full mt-3">
           <div className="flex flex-wrap -mx-3 mb-4">
             <div className="md:w-1/2 px-3 mb-4 md:mb-0">
               <label
                 className="text-black text-sm font-bold"
-                htmlFor="fullname"
+                htmlFor="grid-full-name"
               >
                 Full name
               </label>
               <input
                 className=" w-full bg-gray-200 text-gray-700 py-3 px-2"
-                id="fullname"
+                id="grid-full-name"
                 name="fullname"
                 type="text"
                 value={fullname}
                 onChange={handleChange}
-                required
-                // {...register("fullname", { required: true })}
               />
-              {errors.fullname && errors.fullname.type === "required" && (
-                <p className="text-red-700">Please enter your fullname</p>
-              )}
             </div>
             <div className="md:w-1/2 px-3">
               <label
                 className="text-black text-sm font-bold"
-                htmlFor="username"
+                htmlFor="grid-user-name"
               >
                 Username
               </label>
               <input
                 className="w-full bg-gray-200 text-gray-700 py-3 px-2"
-                id="username"
+                id="grid-user-name"
                 name="username"
                 type="text"
                 value={username}
                 onChange={handleChange}
-                required
-                // {...register("username", { required: true })}
               />
-              {errors.username && errors.username.type === "required" && (
-                <p className="text-red-700">Please enter your username</p>
-              )}
             </div>
           </div>
           <div className="flex flex-wrap -mx-3 mb-4">
             <div className="w-full px-2 py-2">
-              <label className="text-black text-sm font-bold" htmlFor="email">
+              <label
+                className="text-black text-sm font-bold"
+                htmlFor="grid-email"
+              >
                 Email
               </label>
               <input
                 className="w-full bg-gray-200 text-gray-700 py-3 px-2"
-                id="email"
+                id="grid-email"
                 name="email"
                 type="email"
                 value={email}
                 onChange={handleChange}
-                // {...register("email", { required: true })}
               />
-              {errors.email && errors.email.type === "required" && (
-                <p className="text-red-700">Please enter a valid email</p>
-              )}
             </div>
           </div>
           <div className="flex flex-wrap -mx-3 mb-4">
             <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
               <label
                 className="text-black text-sm font-bold"
-                htmlFor="password"
+                htmlFor="grid-password"
               >
                 Password
               </label>
               <input
                 className="w-full bg-gray-200 text-gray-700 py-3 px-2"
-                id="password"
+                id="grid-password"
                 name="password"
                 type="password"
                 value={password}
                 onChange={handleChange}
-                // {...register("password", { required: true })}
               />
-              {errors.password && errors.password.type === "required" && (
-                <p className="text-red-700">Field Required</p>
-              )}
-              {errors.password && errors.password.type === "minLength" && (
-                <p className="text-red-700">
-                  Please enter a minimum of 6 characters
-                </p>
-              )}
             </div>
             <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
               <label
@@ -180,7 +179,7 @@ const Signup = () => {
               />
             </div>
           </div>
-          {/* <div className="flex flex-wrap -mx-3 mb-4">
+          <div className="flex flex-wrap -mx-3 mb-4">
             <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
               <label
                 className="text-black text-sm font-bold"
@@ -281,7 +280,7 @@ const Signup = () => {
                 onChange={handleChange}
               />
             </div>
-          </div> */}
+          </div>
           <div className="md:flex md:items-center mb-6">
             <label className="block tracking-wide text-gray-700 text-xs font-bold mb-2">
               <input type="checkbox" className="mr-2 leading-tight" />

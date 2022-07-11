@@ -80,7 +80,7 @@ const Signin = () => {
                     Username
                   </label>
                   <input
-                    className=" border rounded w-full py-2 px-2"
+                    className=" border rounded w-full py-2 px-2 text-gray-700"
                     id="username"
                     name="username"
                     type="text"

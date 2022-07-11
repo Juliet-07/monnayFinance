@@ -1,25 +1,49 @@
-import React, { useState, useEffect } from "react";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/router";
+import { useQuery } from "react-query";
+import { getCurrentUser } from "../../queries/Users";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Layout from "../../components/layout";
-import styles from "../../styles/Home.module.css";
 import { AiOutlineDollar, AiOutlineHome } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { MdOutlineNotificationsNone } from "react-icons/md";
 import { FcMoneyTransfer } from "react-icons/fc";
 
+const fetchData = async (query, token, { variables = {} }) => {
+  const headers = {
+    "Content-Type": "application/json",
+    Authorization: `Bearer${token}`,
+  };
+  const res = await fetch(`https://monnayfinance.com/api/user/profile`, {
+    method: "POST",
+    headers,
+    body: JSON.stringify({ query, variables }),
+  });
+  const json = await res.json();
+  if (json.errors) {
+    throw new Error(json.errors);
+  }
+  return json.data.users_me;
+};
 const Dashboard = () => {
-  // const User = JSON.stringify(localStorage.getItem("Chukwunwike"));
-  // const BASE_URI = `https://monnayfinance.com/api/user/profile/${User.id}`;
-
-  const [user, setUser] = useState("");
-  useEffect(() => {
-    const user = JSON.parse(localStorage.getItem("Chukwunwike"));
-    if (user !== null || user !== undefined) {
-      setUser(user);
+  const router = useRouter();
+  const { data: session, status } = useSession({
+    required: true,
+    onUnauthenticated() {
+      router.push("/signin");
+    },
+  });
+  console.log(session);
+  const { data: user, isSuccess } = useQuery(
+    "currentUser",
+    async () => await fetchData(getCurrentUser, session.user.accessToken, {}),
+    {
+      enabled: status === "authenticated",
     }
-  }, []);
+  );
+  if (status !== "authenticated") return null;
   return (
     <>
       <Head>
@@ -140,8 +164,9 @@ const Dashboard = () => {
                 <div className="mb-20 pt-6 mt-3">
                   <div className="card">
                     <div className="flex justify-between">
-                      {/* <h4 className="cardName">Welcome {user.username}</h4> */}
-                      <h4 className="cardName">Welcome Juliet</h4>
+                      <h4 className="cardName">
+                        Welcome {isSuccess && user.username}
+                      </h4>
                       <p className="cardTime">Last Access: 25-02-2022 16.05</p>
                     </div>
                   </div>

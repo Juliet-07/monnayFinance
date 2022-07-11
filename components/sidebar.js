@@ -1,11 +1,12 @@
 import React, { useState, useMemo } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Image from "next/image";
 import classNames from "classnames";
 import {
   AiOutlineClockCircle,
   AiOutlineHome,
-  AiFillForward,
+  AiOutlineMenu,
   AiOutlineLogout,
 } from "react-icons/ai";
 import { BiBarChartSquare } from "react-icons/bi";
@@ -60,12 +61,12 @@ const Sidebar = () => {
     "h-screen px-4 pt-8 pb-4 bg-light flex justify-between flex-col",
     {
       ["w-80"]: !toggleCollapse,
-      ["w-20"]: toggleCollapse,
+      ["w-30"]: toggleCollapse,
     }
   );
 
   const collapseIconClasses = classNames(
-    "p-4 rounded-full bg-primary absolute right-0",
+    "p-3 bg-primary absolute right-0",
     {
       "rotate-180": toggleCollapse,
     }
@@ -73,7 +74,7 @@ const Sidebar = () => {
 
   const getNavItemClasses = (menu) => {
     return classNames(
-      "flex items-center cursor-pointer hover:bg-light-lighter rounded w-full overflow-hidden whitespace-nowrap",
+      "flex items-center cursor-pointer, hover:bg-light-lighter rounded w-full overflow-hidden whitespace-nowrap",
       {
         ["bg-primary"]: activeMenu.id === menu.id,
       }
@@ -95,6 +96,7 @@ const Sidebar = () => {
       onMouseLeave={onMouseOver}
       style={{ transition: "width 300ms cubic-bezier(0.2, 0, 0, 1) 0s" }}
     >
+      
       <div className="flex flex-col">
         <div className="flex items-center justify-between relative">
           <div className="flex items-center pl-1 gap-4">
@@ -104,7 +106,7 @@ const Sidebar = () => {
                 hidden: toggleCollapse,
               })}
             >
-              Logo
+              {/* <Image src="/icon.png" width={100} height={100} /> */}
             </span>
           </div>
           {isCollapsible && (
@@ -112,7 +114,7 @@ const Sidebar = () => {
               className={collapseIconClasses}
               onClick={handleSidebarToggle}
             >
-              <AiFillForward size={25} />
+              <AiOutlineMenu size={30} />
             </button>
           )}
         </div>
@@ -124,14 +126,12 @@ const Sidebar = () => {
               <div className={classes} key={menu.id}>
                 <Link href={menu.link}>
                   <a className="flex py-4 px-3 items-center w-full h-full">
-                    <div style={{ width: "2.5rem" }}>
-                      <Icon />
+                    <div style={{ width: "2.5rem", color: "black" }}>
+                      <Icon size={20} />
                     </div>
                     {!toggleCollapse && (
                       <span
-                        className={classNames(
-                          "text-lg font-medium text-default"
-                        )}
+                        className={classNames("text-lg font-medium text-black")}
                       >
                         {menu.label}
                       </span>
@@ -146,15 +146,15 @@ const Sidebar = () => {
       <Link href="/">
         <div className={`${getNavItemClasses({})} px-3 py-4`}>
           <div style={{ width: "2.5rem" }}>
-            <AiOutlineLogout />
+            <AiOutlineLogout size={20} />
           </div>
           {!toggleCollapse && (
-            <span
-              className={classNames("text-lg font-medium text-default")}
+            <a
+              className={classNames("text-lg font-medium text-black")}
               href="#"
             >
               Logout
-            </span>
+            </a>
           )}
         </div>
       </Link>
