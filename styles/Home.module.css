@@ -158,7 +158,10 @@
 .trade {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
+  margin-top: 30px;
+  margin-bottom: 60px;
 }
 .tradeImage {
   border-radius: 12px;
@@ -166,7 +169,7 @@
 .tradeText {
   font-weight: 700;
   font-style: bold;
-  font-size: 45px;
+  font-size: 48px;
   line-height: 57px;
   color: #000000;
 }
@@ -177,14 +180,19 @@
   color: #000000;
 }
 .trustContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 650px;
+  height: 840px;
   background-color: #f6fdff;
 }
 .trustText {
   font-style: bold;
   font-weight: 700;
-  font-size: 45px;
+  font-size: 48px;
+  line-height: 57px;
   text-align: center;
   color: #000000;
 }
@@ -217,7 +225,7 @@
   width: 100px;
   height: 100px;
   top: 40px;
-  left: 70px;
+  left: 50px;
   border-radius: 63px;
   background-color: rgba(5, 125, 153, 1);
 }
@@ -231,7 +239,7 @@
 .boxText {
   position: relative;
   top: 70px;
-  left: 70px;
+  left: 50px;
   font-weight: 700;
   font-style: bold;
   font-size: 32px;
@@ -241,12 +249,13 @@
 }
 .boxMessage {
   position: relative;
-  top: 80px;
+  top: 75px;
   font-weight: 500;
   font-size: 14px;
   line-height: 23px;
   color: #000000;
-  padding: 15px;
+  text-align: start;
+  padding: 20px;
 }
 .strategyContainer {
   display: flex;
@@ -258,7 +267,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px;
   width: 50%;
   height: 704px;
   background-color: #0a4f60;
@@ -465,6 +473,8 @@
   z-index: -1;
 }
 .about {
+  position: relative;
+  top: 20px;
   color: #ffffff;
   font-weight: 700;
   font-size: 40px;
@@ -489,6 +499,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* background-color: #ffffff; */
 }
 .whoAreWeHeader {
   color: #057d99;
@@ -553,6 +564,7 @@
   font-size: 40px;
   line-height: 50px;
   color: #000000;
+  margin-top: 100px;
 }
 .investorCardDiv {
   display: flex;
@@ -803,7 +815,7 @@
 /* RESPONSIVENESS */
 @media only screen and (min-width: 360px) and (max-width: 768px) {
   .jumbotron {
-    height: 100px;
+    height: 370px !important;
   }
   .jumbotron h2 {
     font-size: 32px;
@@ -812,6 +824,10 @@
   .jumbotron p {
     font-size: 14px;
     line-height: 20px;
+  }
+  .jumbotronProps {
+    position: relative;
+    top: 50px;
   }
   .jumboButton {
     position: relative;
@@ -827,23 +843,28 @@
     margin-top: 10px;
   }
   .trade {
-    display: flex;
     flex-direction: column-reverse;
-    align-items: center;
+    margin-top: 0px;
   }
   .tradeImageDiv {
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-top: 0px;
   }
   .tradeText {
-    font-size: 23px;
+    font-size: 32px;
     line-height: 30px;
+  }
+  .tradeMessage{
+    font-size: 14px;
+    line-height: 20px;
   }
   .trustContainer {
     height: 976px;
   }
   .trustText {
     font-size: 38px;
+    line-height: 39px;
   }
   #message {
     display: none;
@@ -876,13 +897,15 @@
     left: 50px;
   }
   .boxText {
-    position: relative;
     top: 45px;
     left: 45px;
+    font-size: 24px;
+    line-height: 17px;
   }
   .boxMessage {
-    top: 55px;
-    padding: 15px;
+    line-height: 20px;
+    top: 45px;
+    /* padding: 15px; */
   }
   .strategyContainer {
     display: flex;
@@ -896,19 +919,25 @@
   }
   .strategyTextContainer {
     width: 414px;
-    height: 800px;
+    height: 700px;
+    padding: 10px;
   }
   .strategyText {
+    position: relative;
+    right: 60px;
     font-size: 32px;
     line-height: 39px;
-    text-align: left;
   }
   .strategyMessage {
+    /* position: relative;
+    left: 60px; */
+    padding-left: 25px;
+    padding-right: 35px;
     font-size: 15px;
     line-height: 23px;
   }
   .investmentHeader {
-    font-size: 38px;
+    font-size: 32px;
     line-height: 39px;
   }
   .investmentContainer {
@@ -935,9 +964,8 @@
   }
   .investorHeader {
     font-size: 38px;
-    line-height: 38px;
+    line-height: 39px;
     text-align: center;
-    margin-top: 100px;
   }
   .investorCardDiv {
     display: flex;
@@ -948,7 +976,7 @@
     height: 250px;
   }
   .subscribeContainer {
-    height: 400px;
+    height: 380px;
   }
   .subscribeInput {
     display: flex;
@@ -996,6 +1024,13 @@
   }
   .whoAreWeMessage {
     text-align: left;
+    padding: 10px;
+  }
+  .ceoMessage {
+    font-size: 14px;
+    line-height: 23px;
+    text-align: left;
+    padding: 15px;
   }
   .planJumbo {
     color: #ffffff;
@@ -1005,7 +1040,8 @@
     text-align: center;
   }
   .content {
-    display: none;
+    font-size: 14px;
+    line-height: 20px;
   }
   .registrationContainer {
     width: 350px;

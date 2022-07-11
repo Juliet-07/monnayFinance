@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import axios from "axios";
 import styles from "../styles/Home.module.css";
+import Navbar from "../components/navbar";
 
 const BASE_URI = "https://monnayfinance.com/api";
 
@@ -66,6 +67,7 @@ const Signup = () => {
         <meta name="description" content="Generated monnay finance" />
         <link rel="icon" href="/icon.png" />
       </Head>
+      <Navbar />
       {/* <div className={styles.signupContainer}> */}
       <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2  columns-md">
         <div className={styles.createDiv}>
@@ -316,8 +318,8 @@ const Signup = () => {
           >
             <Image
               src="/monnayFooter.png"
-              width={150}
-              height={50}
+              width={100}
+              height={30}
               alt="footer image"
             />
             <p style={{ color: "#ffffff", marginTop: 10, textAlign: "center" }}>

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Jumbo from "../public/monnayJumbo.png";
 import styles from "../styles/Home.module.css";
 import { AiFillCheckCircle } from "react-icons/ai";
+import Navbar from "../components/navbar";
 
 const Investment = () => {
   return (
@@ -13,6 +14,7 @@ const Investment = () => {
         <meta name="description" content="Generated monnay finance" />
         <link rel="icon" href="/icon.png" />
       </Head>
+      <Navbar />
       <div className={styles.container}>
         {/* Jumbotron */}
         <div
@@ -207,8 +209,8 @@ const Investment = () => {
           >
             <Image
               src="/monnayFooter.png"
-              width={150}
-              height={50}
+              width={100}
+              height={30}
               alt="footer image"
             />
             <p style={{ color: "#ffffff", marginTop: 10, textAlign: "center" }}>

@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import Navbar from "../components/navbar";
 
 const Courses = () => {
   return (
@@ -11,6 +12,7 @@ const Courses = () => {
         <meta name="description" content="Generated monnay finance" />
         <link rel="icon" href="/icon.png" />
       </Head>
+      <Navbar />
       <h1>COURSES RENDERED HERE</h1>
 
       <footer className={styles.footer}>
@@ -25,8 +27,8 @@ const Courses = () => {
           >
             <Image
               src="/monnayFooter.png"
-              width={150}
-              height={50}
+              width={100}
+              height={30}
               alt="footer image"
             />
             <p style={{ color: "#ffffff", marginTop: 10, textAlign: "center" }}>

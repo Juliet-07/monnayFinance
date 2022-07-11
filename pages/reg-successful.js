@@ -4,6 +4,7 @@ import Image from "next/image";
 import Jumbo from "../public/monnayJumbo.png";
 import styles from "../styles/Home.module.css";
 import { TiTick } from "react-icons/ti";
+import Navbar from "../components/navbar";
 
 const RegSuccessful = () => {
   return (
@@ -13,6 +14,7 @@ const RegSuccessful = () => {
         <meta name="description" content="Generated monnay finance" />
         <link rel="icon" href="/icon.png" />
       </Head>
+      <Navbar />
       <div
         className={styles.jumbotronReg}
         style={{
@@ -64,8 +66,8 @@ const RegSuccessful = () => {
           >
             <Image
               src="/monnayFooter.png"
-              width={150}
-              height={50}
+              width={100}
+              height={30}
               alt="footer image"
             />
             <p style={{ color: "#ffffff", marginTop: 10, textAlign: "center" }}>

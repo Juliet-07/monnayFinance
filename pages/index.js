@@ -4,6 +4,7 @@ import Image from "next/image";
 import Jumbo from "../public/monnayJumbo.png";
 import Strategy from "../public/monnayStrategy.png";
 import styles from "../styles/Home.module.css";
+import Navbar from "../components/navbar";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { FaHandshake } from "react-icons/fa";
 import { BiBarChartSquare } from "react-icons/bi";
@@ -16,6 +17,7 @@ const Home = () => {
         <meta name="description" content="Generated monnay finance" />
         <link rel="icon" href="/icon.png" />
       </Head>
+      <Navbar />
       <div className={styles.container}>
         {/* Jumbotron */}
         <div
@@ -61,14 +63,16 @@ const Home = () => {
           </div>
           <div style={{ margin: 50 }}>
             <h3 className={styles.tradeText}>
-              You have the <font color="#057d99">best hands</font>
-              <br />
+              You have the{" "}
+              <font color="#057d99">
+                best hands
+                <br />
+              </font>
               handling your funds.
             </h3>
             <p className={styles.tradeMessage}>
-              We are dedicated in the cryptocurrency industry,
-              <br /> with outstanding technology of bitcoin trading and bitcoin
-              mining. <br />
+              We are dedicated in the cryptocurrency industry, with outstanding
+              technology of bitcoin trading and bitcoin mining. <br />
               Since we came into existence, our role is to offer <br />
               each person the chance to attend the bitcoin related business{" "}
               <br />
@@ -112,7 +116,6 @@ const Home = () => {
                 Responsibility demands courage. We are not afraid to ask
                 difficult questions or make changes that need to be made. We
                 stand up for what is right, accepting that this can be
-                <br />
                 challenging sometimes.
               </p>
             </div>
@@ -386,8 +389,8 @@ const Home = () => {
             >
               <Image
                 src="/monnayFooter.png"
-                width={150}
-                height={50}
+                width={100}
+                height={30}
                 alt="footer image"
               />
               <p className={styles.footerImageText}>

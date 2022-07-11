@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Jumbo from "../public/monnayJumbo.png";
 import styles from "../styles/Home.module.css";
+import Navbar from "../components/navbar";
 
 const Contact = () => {
   return (
@@ -12,6 +13,7 @@ const Contact = () => {
         <meta name="description" content="Generated monnay finance" />
         <link rel="icon" href="/icon.png" />
       </Head>
+      <Navbar />
       {/* Jumbotron */}
       <div
         className={styles.jumbotronAbout}
@@ -116,8 +118,8 @@ const Contact = () => {
           >
             <Image
               src="/monnayFooter.png"
-              width={150}
-              height={50}
+              width={100}
+              height={30}
               alt="footer image"
             />
             <p style={{ color: "#ffffff", marginTop: 10, textAlign: "center" }}>
