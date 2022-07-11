@@ -18,31 +18,31 @@ const menuItems = [
     id: 1,
     label: "Dashboard",
     icon: AiOutlineHome,
-    link: "/dashboard/dashboard",
+    link: "/dashboard",
   },
   {
     id: 2,
     label: "Investments",
     icon: BiBarChartSquare,
-    link: "/dashboard/investments",
+    link: "/investments",
   },
   {
     id: 3,
     label: "Transaction History",
     icon: AiOutlineClockCircle,
-    link: "/dashboard/history",
+    link: "/history",
   },
   {
     id: 4,
     label: "Referrals",
     icon: CgProfile,
-    link: "/dashboard/referrals",
+    link: "/referrals",
   },
   {
     id: 5,
     label: "Settings",
     icon: IoSettingsOutline,
-    link: "/dashboard/settings",
+    link: "/settings",
   },
 ];
 

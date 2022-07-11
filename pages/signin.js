@@ -40,7 +40,7 @@ const Signin = () => {
           let userDetail = JSON.stringify(user.data);
           localStorage.setItem("Chukwunwike", userDetail);
         });
-      router.push("/dashboard/dashboard");
+      router.push("/dashboard");
     } catch (err) {
       console.log(err.message);
     }

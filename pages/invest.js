@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "../../styles/Home.module.css";
+import styles from "../styles/Home.module.css";
 import { BiBarChartSquare } from "react-icons/bi";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";

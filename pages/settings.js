@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import Layout from "../../components/layout";
-import styles from "../../styles/Home.module.css";
+import Layout from "../components/layout";
+import styles from "../styles/Home.module.css";
 import { AiOutlineHome } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { MdOutlineNotificationsNone } from "react-icons/md";

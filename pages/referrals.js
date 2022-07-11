@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import Layout from "../../components/layout";
+import Layout from "../components/layout";
 import { CgProfile } from "react-icons/cg";
 import { AiOutlineHome } from "react-icons/ai";
 import { MdOutlineNotificationsNone } from "react-icons/md";

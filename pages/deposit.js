@@ -2,14 +2,14 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "../../styles/Home.module.css";
+import styles from "../styles/Home.module.css";
 import { BiBarChartSquare } from "react-icons/bi";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { IoSettingsOutline } from "react-icons/io5";
 import { AiOutlineLogout, AiOutlineHome } from "react-icons/ai";
 
-const Withdraw = () => {
+const Deposit = () => {
   return (
     <>
       <Head>
@@ -112,24 +112,36 @@ const Withdraw = () => {
           </div>
         </div>
         {/* Side bar */}
+        {/* Content */}
         <div className="main-panel">
+          {/* <div className="content"> */}
+          {/* <div className="container-fluid"> */}
           <div className={styles.investContainer}>
             <div className={styles.investFluid}>
               <div className={styles.withdraw}>
                 <div className={styles.createDiv}>
-                  <h6 className={styles.create}>Withdraw</h6>
-                  <p>Choose the account to make your withdrawal.</p>
+                  <h6 className={styles.create}>Deposit</h6>
+                  <p>Choose the method you want to deposit with below.</p>
                 </div>
                 {/* form proper */}
                 <div className="w-full">
-                  <form className=" rounded px-8 pt-6 pb-8 mb-10">
+                  <form className=" rounded px-8 pt-6 pb-8 mb-6 mt-10">
                     <div className="mb-4">
-                      <label
-                        className="block text-gray-700 text-sm font-bold"
-                        htmlFor="password"
-                      >
-                        Amount
-                      </label>
+                      <div className="flex justify-between">
+                        <label
+                          className="block text-gray-700 text-sm font-bold"
+                          htmlFor="password"
+                        >
+                          Amount
+                        </label>
+                        <label
+                          className="block text-gray-700 text-sm font-bold"
+                          htmlFor="password"
+                        >
+                          Available Bal: $6,000
+                        </label>
+                      </div>
+
                       <input
                         className=" border w-full py-2 px-2 mt-2"
                         id="password"
@@ -168,7 +180,7 @@ const Withdraw = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+                      <div className="w-full px-3 mb-4 md:mb-0">
                         <input
                           className="border w-full py-2 px-2 mt-4"
                           id="grid-password"
@@ -179,10 +191,10 @@ const Withdraw = () => {
                         />
                       </div>
                     </div>
-                    <div className="mb-4">
+                    {/* <div className="mb-4">
                       <label
                         className="block text-gray-700 text-sm font-bold mb-2"
-                        htmlFor="password"
+                        for="password"
                       >
                         Comment:
                       </label>
@@ -191,14 +203,14 @@ const Withdraw = () => {
                         id="password"
                         name="password"
                         rows={7}
-                        // value={password}
-                        // onChange={handleChange}
+                        value={password}
+                        onChange={handleChange}
                       ></textarea>
-                    </div>
+                    </div> */}
                     {/* <div className={styles.createButtonDiv}> */}
                     {/* <Link href="/dashboard/dashboard"> */}
                     <button className={styles.registrationButton} type="button">
-                      Withdraw
+                      Submit
                     </button>
                     {/* </Link> */}
                     {/* </div> */}
@@ -208,9 +220,11 @@ const Withdraw = () => {
               </div>
             </div>
           </div>
+          {/* </div> */}
         </div>
+        {/* Content Ends*/}
       </div>
     </>
   );
 };
-export default Withdraw;
+export default Deposit;
