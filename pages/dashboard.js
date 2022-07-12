@@ -9,17 +9,50 @@ import { CgProfile } from "react-icons/cg";
 import { MdOutlineNotificationsNone } from "react-icons/md";
 import { FcMoneyTransfer } from "react-icons/fc";
 
-const Dashboard = () => {
-  // const User = JSON.stringify(localStorage.getItem("Chukwunwike"));
-  // const BASE_URI = `https://monnayfinance.com/api/user/profile/${User.id}`;
+// const User = JSON.stringify(localStorage.getItem("Juliet"));
+// const BASE_URI = `https://monnayfinance.com/api/user/profile/${User.id}`;
+const BASE_URI = "https://monnayfinance.com/api/user/profile";
+
+export async function getServerSideProps() {
+  const res = await fetch(BASE_URI);
+  const data = await res.json();
+  return {
+    props: {
+      data,
+    },
+  };
+}
+
+const Dashboard = ({ data }) => {
+  console.log(data);
 
   const [user, setUser] = useState("");
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem("Chukwunwike"));
+    const user = JSON.parse(localStorage.getItem("Juliet"));
     if (user !== null || user !== undefined) {
       setUser(user);
     }
   }, []);
+  // const profile = () => {
+  //   try {
+  //     fetch("https://monnayfinance.com/api/user/profile", {
+  //       method: "GET",
+  //       headers: new Headers({
+  //         Authorization: "Bearer{token}",
+  //         "Content-type": "application/json; charset=UTF-8",
+  //       }),
+  //     })
+  //       .then((res) => res.json)
+  //       .then((person) => {
+  //         console.log(person);
+  //         let personProfile = JSON.stringify(person.data);
+  //         localStorage.getItem("Juliet", personProfile);
+  //       });
+  //   } catch (err) {
+  //     console.log(err.message);
+  //   }
+  // };
+  // console.log(profile)
   return (
     <>
       <Head>
@@ -140,8 +173,8 @@ const Dashboard = () => {
                 <div className="mb-20 pt-6 mt-3">
                   <div className="card">
                     <div className="flex justify-between">
-                      {/* <h4 className="cardName">Welcome {user.username}</h4> */}
-                      <h4 className="cardName">Welcome Juliet</h4>
+                      <h4 className="cardName">Welcome {user.username}</h4>
+                      {/* <h4 className="cardName">Welcome {user.name}</h4> */}
                       <p className="cardTime">Last Access: 25-02-2022 16.05</p>
                     </div>
                   </div>

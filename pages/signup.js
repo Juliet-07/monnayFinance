@@ -35,7 +35,7 @@ const Signup = () => {
   };
   const { fullname, username, email, password } = details;
   const signup = () => {
-    // alert("testing signup");
+    // alert("Registration Complete");
     // router.push("/reg-successful");
     try {
       fetch(BASE_URI + "/auth/register", {
@@ -53,7 +53,8 @@ const Signup = () => {
       })
         .then((res) => res.json())
         .then((json) => console.log(json));
-      // router.push("/reg-successful");
+      alert("Registration Complete");
+      router.push("/reg-successful");
     } catch (err) {
       console.log(err.message);
     }
