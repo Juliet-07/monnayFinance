@@ -117,40 +117,40 @@ const About = () => {
         </div>
         {/* ourStrategy Ends */}
         {/* Investors */}
-        <h3 className={styles.investorHeader}>
-          What our <font color="#057d99"> investors</font> have to say.
-        </h3>
-        <div className={styles.investorCardDiv}>
-          <div className={styles.investorCard}>
-            <p className={styles.investorMessage}>
-              Beautiful performance from this company. I am glad to be an
-              investor here.
-            </p>
-            <p className={styles.investorName}>Iain Carmichael</p>
+        <div className={styles.investorDiv}>
+          <div className={styles.investorHeaderDiv}>
+            <hr className={styles.investorHr} />
+            <h3 className={styles.investorHeader}>
+              What our <font color="#057d99"> investors</font> have to say.
+            </h3>
+            <hr className={styles.investorHr} />
           </div>
-          <div className={styles.investorCard}>
-            <p className={styles.investorMessage}>
-              What a well designed investment structure. It is an
-              easy-to-operate system with automated payments.
-            </p>
-            <p className={styles.investorName}>Paul Littlefair</p>
+
+          <div className={styles.investorCardDiv}>
+            <div className={styles.investorCard}>
+              <p className={styles.investorMessage}>
+                Beautiful performance from this company. I am glad to be an
+                investor here.
+              </p>
+              <p className={styles.investorName}>Iain Carmichael</p>
+            </div>
+            <div className={styles.investorCard}>
+              <p className={styles.investorMessage}>
+                What a well designed investment structure. It is an
+                easy-to-operate system with automated payments.
+              </p>
+              <p className={styles.investorName}>Paul Littlefair</p>
+            </div>
+            <div className={styles.investorCard}>
+              <p className={styles.investorMessage}>
+                Thank you Monnay Finance for being so efficient in service and
+                proving to be the best investment company. It has always been my
+                wish to encounter a company with such performance. Keep it up
+              </p>
+              <p className={styles.investorName}>Amber Oram</p>
+            </div>
+            <div></div>
           </div>
-          {/* <div className={styles.investorCard}>
-            <p className={styles.investorMessage}>
-              Investing in this company has been a wonderful experience. I love
-              the swift response from the support team and the fast payouts.
-            </p>
-            <p className={styles.investorName}>Karna Luke</p>
-          </div> */}
-          <div className={styles.investorCard}>
-            <p className={styles.investorMessage}>
-              Thank you Monnay Finance for being so efficient in service and
-              proving to be the best investment company. It has always been my
-              wish to encounter a company with such performance. Keep it up
-            </p>
-            <p className={styles.investorName}>Amber Oram</p>
-          </div>
-          <div></div>
         </div>
         {/* Investors Ends */}
       </div>

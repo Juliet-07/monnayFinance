@@ -59,6 +59,9 @@ const Signup = () => {
       setPasswordError(true);
     }
   };
+  const passwordErrorMessage = (
+    <p className="text-red-700 font-sans font-700">Passwords don't match!</p>
+  );
   useEffect(() => {});
 
   return (
@@ -70,7 +73,7 @@ const Signup = () => {
       </Head>
       <Navbar />
       {/* <div className={styles.signupContainer}> */}
-      <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2  columns-md">
+      <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2  columns-md -z-10">
         <div className={styles.createDiv}>
           <Image src="/icon.png" alt=" Logo" width={20} height={20} />
           <p className={styles.create}>Create Account</p>
@@ -164,11 +167,7 @@ const Signup = () => {
                 onChange={handleChange}
                 onError={passwordError ? true : false}
               />
-              {passwordError && (
-                <p className="text-red-700 font-sans">
-                  Passwords don't match!
-                </p>
-              )}
+              {passwordError && passwordErrorMessage}
             </div>
           </div>
           <div className="md:flex md:items-center mb-6">

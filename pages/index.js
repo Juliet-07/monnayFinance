@@ -34,12 +34,13 @@ const Home = () => {
             <div className={styles.jumbotronProps}>
               <h2 className={styles.properties}>
                 Dedicated to your
-                <br />
+                <br className={styles.brTag} />
                 financial growth
               </h2>
               <p className={styles.content}>
                 We create equal opportunities for all investors to
-                <br /> thrive in the crypto and forex markets
+                <br className={styles.brTag} /> thrive in the crypto and forex
+                markets
               </p>
               <Link href="/signup">
                 <button type="button" className={styles.jumboButton}>
@@ -63,16 +64,17 @@ const Home = () => {
           </div>
           <div style={{ margin: 50 }}>
             <h3 className={styles.tradeText}>
-              You have the <font color="#057d99">best hands</font>
-              <br />
+              You have the <font color="#057d99"> best hands </font>
+              <br className={styles.brTag} />
               handling your funds.
             </h3>
             <p className={styles.tradeMessage}>
               We are dedicated in the cryptocurrency industry, with outstanding
-              technology of bitcoin trading and bitcoin mining. <br />
-              Since we came into existence, our role is to offer <br />
-              each person the chance to attend the bitcoin related business{" "}
-              <br />
+              technology of bitcoin trading and bitcoin mining.{" "}
+              <br className={styles.brTag} />
+              Since we came into existence, our role is to offer each person the
+              chance to attend the bitcoin related business{" "}
+              <br className={styles.brTag} />
               and earn profit easily with our powerful investment sytem.
             </p>
           </div>
@@ -85,7 +87,7 @@ const Home = () => {
           </h3>
           <p className={styles.trustMessage} id={styles.message}>
             We see it as our responsibility to invest for everyones tomorrow.
-            <br />
+            <br className={styles.brTag} />
             That means doing the right thing for our clients and for others too.
           </p>
           <div className={styles.trustShowBox}>
@@ -125,39 +127,43 @@ const Home = () => {
             <h4 className={styles.strategyText}>Our Strategy</h4>
             <p className={styles.strategyMessage}>
               Our commitment to be a leader in responsible business (RB) stems
-              from our <br />
+              from our <br className={styles.brTag} />
               purpose in society. It is core to our business. Thinking, acting
-              and investing <br />
+              and investing <br className={styles.brTag} />
               responsibly not only shapes what we do but how we do it. We will
               actively
-              <br /> manage your portfolio to ensure it remains appropriate for
-              the ever-changing <br />
+              <br className={styles.brTag} /> manage your portfolio to ensure it
+              remains appropriate for the ever-changing{" "}
+              <br className={styles.brTag} />
               conditions in the global economy and financial markets. We will
-              also be <br />
+              also be <br className={styles.brTag} />
               responsible for making any adjustments if your personal situation
               or objectives change.
               <br />
               <br /> A diversified investment strategy (sometimes called a
-              “balanced portfolio” or <br />
+              “balanced portfolio” or <br className={styles.brTag} />
               “multi-asset portfolio”) that combines different assets can be one
-              of the best <br />
+              of the best <br className={styles.brTag} />
               ways to preserve and enhance wealth over the long term. This
-              approach can <br />
+              approach can <br className={styles.brTag} />
               provide exposure to a wide set of investment opportunities and
               reduce losses
-              <br /> when market conditions are challenging.
+              <br className={styles.brTag} /> when market conditions are
+              challenging.
             </p>
           </div>
-          {/* <div className={styles.strategyRectangle}></div> */}
           <div className={styles.strategyImageContainer}>
             <Image src={Strategy} width={1000} height={740} alt="strategy" />
           </div>
         </div>
         {/* Strategy Ends */}
         {/* Investment Plans */}
-        <h3 className={styles.investmentHeader}>
-          Our <font color="#057d99">Investment Plans</font>
-        </h3>
+        <div style={{ marginTop: "50px" }}>
+          <h3 className={styles.investmentHeader}>
+            Our <font color="#057d99">Investment Plans</font>
+          </h3>
+        </div>
+
         <div className={styles.investmentContainer}>
           <div className={styles.card}>
             <div className={styles.cardTitle}>
@@ -324,38 +330,45 @@ const Home = () => {
         </div>
         {/* Investment Plans End */}
         {/* Investors */}
-        <h3 className={styles.investorHeader}>
-          What our <font color="#057d99"> investors</font> have to say.
-        </h3>
-        <div className={styles.investorCardDiv}>
-          <div className={styles.investorCard}>
-            <p className={styles.investorMessage}>
-              Beautiful performance from this company. I am glad to be an
-              investor here.
-            </p>
-            <p className={styles.investorName}>Iain Carmichael</p>
+        <div className={styles.investorDiv}>
+          <div className={styles.investorHeaderDiv}>
+            <hr className={styles.investorHr} />
+            <h3 className={styles.investorHeader}>
+              What our <font color="#057d99"> investors</font> have to say.
+            </h3>
+            <hr className={styles.investorHr} />
           </div>
-          <div className={styles.investorCard}>
-            <p className={styles.investorMessage}>
-              What a well designed investment structure. It is an
-              easy-to-operate system with automated payments.
-            </p>
-            <p className={styles.investorName}>Paul Littlefair</p>
+
+          <div className={styles.investorCardDiv}>
+            <div className={styles.investorCard}>
+              <p className={styles.investorMessage}>
+                Beautiful performance from this company. I am glad to be an
+                investor here.
+              </p>
+              <p className={styles.investorName}>Iain Carmichael</p>
+            </div>
+            <div className={styles.investorCard}>
+              <p className={styles.investorMessage}>
+                What a well designed investment structure. It is an
+                easy-to-operate system with automated payments.
+              </p>
+              <p className={styles.investorName}>Paul Littlefair</p>
+            </div>
+            <div className={styles.investorCard}>
+              <p className={styles.investorMessage}>
+                Thank you Monnay Finance for being so efficient in service and
+                proving to be the best investment company. It has always been my
+                wish to encounter a company with such performance. Keep it up
+              </p>
+              <p className={styles.investorName}>Amber Oram</p>
+            </div>
+            <div></div>
           </div>
-          <div className={styles.investorCard}>
-            <p className={styles.investorMessage}>
-              Thank you Monnay Finance for being so efficient in service and
-              proving to be the best investment company. It has always been my
-              wish to encounter a company with such performance. Keep it up
-            </p>
-            <p className={styles.investorName}>Amber Oram</p>
-          </div>
-          <div></div>
         </div>
         {/* Investors Ends */}
         {/* Subscribe */}
         <div className={styles.subscribeContainer}>
-          <h3 className={styles.investmentHeader}>
+          <h3 className={styles.subscribeHeader}>
             Subscribe to our <font color="#057d99">Newsletter</font>.
           </h3>
           <p className={styles.trustMessage}>
@@ -421,8 +434,8 @@ const Home = () => {
               <h5>Address</h5>
               <li>Vanha Talvitie 11 C,</li>
               <li>HELSINKI 00580 Finland</li>
-              <br />
-              <br />
+              <br className={styles.brTag} />
+              <br className={styles.brTag} />
               <lh>Email:</lh>
               <li>contact@monnay.finance</li>
             </ul>
