@@ -59,9 +59,6 @@ const Signup = () => {
       setPasswordError(true);
     }
   };
-  let passwordErrorMessage = (
-    <p className="text-red-700 font-sans font-700">Passwords don't match!</p>
-  );
   useEffect(() => {});
 
   return (
@@ -167,7 +164,11 @@ const Signup = () => {
                 onChange={handleChange}
                 onError={passwordError ? true : false}
               />
-              {passwordError && passwordErrorMessage}
+              {passwordError && (
+                <p className="text-red-700 font-sans font-700">
+                  Passwords don't match!
+                </p>
+              )}
             </div>
           </div>
           <div className="md:flex md:items-center mb-6">
