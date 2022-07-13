@@ -59,7 +59,7 @@ const Signup = () => {
       setPasswordError(true);
     }
   };
-  const passwordErrorMessage = (
+  let passwordErrorMessage = (
     <p className="text-red-700 font-sans font-700">Passwords don't match!</p>
   );
   useEffect(() => {});
