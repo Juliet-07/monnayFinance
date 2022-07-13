@@ -165,7 +165,7 @@ const Signup = () => {
                 onError={passwordError ? true : false}
               />
               {passwordError && (
-                <p className="text-red-700 font-sans font-700">
+                <p className="text-red-700 font-sans">
                   Passwords don't match!
                 </p>
               )}
