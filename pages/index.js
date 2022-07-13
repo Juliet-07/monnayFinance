@@ -63,11 +63,8 @@ const Home = () => {
           </div>
           <div style={{ margin: 50 }}>
             <h3 className={styles.tradeText}>
-              You have the{" "}
-              <font color="#057d99">
-                best hands
-                <br />
-              </font>
+              You have the <font color="#057d99">best hands</font>
+              <br />
               handling your funds.
             </h3>
             <p className={styles.tradeMessage}>

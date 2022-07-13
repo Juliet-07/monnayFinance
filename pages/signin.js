@@ -26,7 +26,16 @@ const Signin = () => {
   } = useForm();
   const router = useRouter();
   const [profile, setProfile] = useState(initialValues);
+  if (
+    typeof input["password"] !== "undefined" &&
+    typeof input["confirm_password"] !== "undefined"
+  ) {
+    if (input["password"] != input["confirm_password"]) {
+      isValid = false;
 
+      errors["password"] = "Passwords don't match.";
+    }
+  }
   const handleChange = (e) => {
     const { name, value } = e.target;
     setProfile({ ...profile, [name]: value });

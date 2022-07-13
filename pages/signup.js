@@ -10,16 +10,13 @@ import Navbar from "../components/navbar";
 
 const BASE_URI = "https://monnayfinance.com/api";
 
-// export async function getServerSideProps() {
-//   const res = await fetch(BASE_URI + "/auth/register");
-// }
-
 const Signup = () => {
   const initialValues = {
     fullname: "",
     username: "",
     email: "",
     password: "",
+    confirmPassword: "",
   };
   const {
     register,
@@ -28,37 +25,43 @@ const Signup = () => {
   } = useForm();
   const router = useRouter();
   const [details, setDetails] = useState(initialValues);
-
+  const [passwordError, setPasswordError] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setDetails({ ...details, [name]: value });
   };
-  const { fullname, username, email, password } = details;
+  const { fullname, username, email, password, confirmPassword } = details;
   const signup = () => {
-    // alert("Registration Complete");
-    // router.push("/reg-successful");
-    try {
-      fetch(BASE_URI + "/auth/register", {
-        method: "POST",
-        body: JSON.stringify({
-          fullname: details.fullname,
-          username: details.username,
-          email: details.email,
-          password: details.password,
-          // confirm_password: details.confirm_password,
-        }),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      })
-        .then((res) => res.json())
-        .then((json) => console.log(json));
-      alert("Registration Complete");
-      router.push("/reg-successful");
-    } catch (err) {
-      console.log(err.message);
+    if (password === confirmPassword) {
+      try {
+        fetch(BASE_URI + "/auth/register", {
+          method: "POST",
+          body: JSON.stringify({
+            fullname: details.fullname,
+            username: details.username,
+            email: details.email,
+            password: details.password,
+            confirmPassword: details.confirmPassword,
+          }),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        })
+          .then((res) => res.json())
+          .then((json) => console.log(json));
+        alert("Registration Complete");
+        router.push("/reg-successful");
+      } catch (err) {
+        console.log(err.message);
+        setPasswordError(false);
+      }
+    } else {
+      setPasswordError(true);
     }
   };
+  const passwordErrorMessage = (
+    <p className="text-red-700 font-sans font-700">Passwords don't match!</p>
+  );
   useEffect(() => {});
 
   return (
@@ -93,11 +96,7 @@ const Signup = () => {
                 value={fullname}
                 onChange={handleChange}
                 required
-                // {...register("fullname", { required: true })}
               />
-              {errors.fullname && errors.fullname.type === "required" && (
-                <p className="text-red-700">Please enter your fullname</p>
-              )}
             </div>
             <div className="md:w-1/2 px-3">
               <label
@@ -114,11 +113,7 @@ const Signup = () => {
                 value={username}
                 onChange={handleChange}
                 required
-                // {...register("username", { required: true })}
               />
-              {errors.username && errors.username.type === "required" && (
-                <p className="text-red-700">Please enter your username</p>
-              )}
             </div>
           </div>
           <div className="flex flex-wrap -mx-3 mb-4">
@@ -133,11 +128,8 @@ const Signup = () => {
                 type="email"
                 value={email}
                 onChange={handleChange}
-                // {...register("email", { required: true })}
+                required
               />
-              {errors.email && errors.email.type === "required" && (
-                <p className="text-red-700">Please enter a valid email</p>
-              )}
             </div>
           </div>
           <div className="flex flex-wrap -mx-3 mb-4">
@@ -155,16 +147,8 @@ const Signup = () => {
                 type="password"
                 value={password}
                 onChange={handleChange}
-                // {...register("password", { required: true })}
+                required
               />
-              {errors.password && errors.password.type === "required" && (
-                <p className="text-red-700">Field Required</p>
-              )}
-              {errors.password && errors.password.type === "minLength" && (
-                <p className="text-red-700">
-                  Please enter a minimum of 6 characters
-                </p>
-              )}
             </div>
             <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
               <label
@@ -176,115 +160,16 @@ const Signup = () => {
               <input
                 className="w-full bg-gray-200 text-gray-700 py-3 px-2"
                 id="grid-password"
-                name="confirm_password"
+                name="confirmPassword"
                 type="password"
-                // value={confirm_password}
-                // onChange={handleChange}
+                required
+                value={confirmPassword}
+                onChange={handleChange}
+                onError={passwordError ? true : false}
               />
+              {passwordError && passwordErrorMessage}
             </div>
           </div>
-          {/* <div className="flex flex-wrap -mx-3 mb-4">
-            <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-              <label
-                className="text-black text-sm font-bold"
-                htmlFor="grid-btc"
-              >
-                BTC Wallet Address
-              </label>
-              <input
-                className="w-full bg-gray-200 text-gray-700 py-3 px-2"
-                id="grid-btc"
-                name="btc"
-                type="text"
-                value={btc}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-              <label
-                className="text-black text-sm font-bold"
-                htmlFor="grid-doge"
-              >
-                ETH Wallet Address
-              </label>
-              <input
-                className="w-full bg-gray-200 text-gray-700 py-3 px-2"
-                id="grid-eth"
-                name="eth"
-                type="text"
-                value={eth}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-          <div className="flex flex-wrap -mx-3 mb-4">
-            <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-              <label
-                className="text-black text-sm font-bold"
-                htmlFor="grid-eth"
-              >
-                DOGE Wallet Address
-              </label>
-              <input
-                className="w-full bg-gray-200 text-gray-700 py-3 px-2"
-                id="grid-doge"
-                name="doge"
-                type="text"
-                value={doge}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-              <label
-                className="text-black text-sm font-bold"
-                htmlFor="grid-usdt"
-              >
-                USDT Wallet Address
-              </label>
-              <input
-                className="w-full bg-gray-200 text-gray-700 py-3 px-2"
-                id="grid-usdt"
-                name="usdt"
-                type="text"
-                value={usdt}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-          <div className="flex flex-wrap -mx-3 mb-4">
-            <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-              <label
-                className="text-black text-sm font-bold"
-                htmlFor="grid-security"
-              >
-                Security Question
-              </label>
-              <input
-                className="w-full bg-gray-200 text-gray-700 py-3 px-2"
-                id="grid-security"
-                name="security_question"
-                type="text"
-                value={security_question}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-              <label
-                className="text-black text-sm font-bold"
-                htmlFor="grid-answer"
-              >
-                Answer
-              </label>
-              <input
-                className="w-full bg-gray-200 text-gray-700 py-3 px-2"
-                id="grid-answer"
-                name="answer"
-                type="text"
-                value={answer}
-                onChange={handleChange}
-              />
-            </div>
-          </div> */}
           <div className="md:flex md:items-center mb-6">
             <label className="block tracking-wide text-gray-700 text-xs font-bold mb-2">
               <input type="checkbox" className="mr-2 leading-tight" />
@@ -295,11 +180,7 @@ const Signup = () => {
             </label>
           </div>
           <div className={styles.createButtonDiv}>
-            <button
-              className={styles.signupButton}
-              type="submit"
-              // onClick={() => signup()}
-            >
+            <button className={styles.signupButton} type="submit">
               Create account
             </button>
           </div>
