@@ -31,38 +31,39 @@ const About = () => {
         {/* Jumbotron Ends */}
         {/* Description */}
         <div className={styles.description}>
+          {/* <div className="grid grid-cols-3 md:grid-cols-3"> */}
+          {/* <div> */}
           <div className={styles.whoAreWe}>
             <h4 className={styles.whoAreWeHeader}>Who Are We?</h4>
-            <hr />
+            <hr style={{ width: "70%", alignSelf: "center" }} />
             <p className={styles.whoAreWeMessage}>
               We are an investment company,
-              <br /> offering and trading crypto-based
-              <br />
+              <br className={styles.brTag} /> offering and trading crypto-based
+              <br className={styles.brTag} />
               assets and other financial instruments
-              <br /> for investors.
+              <br className={styles.brTag} /> for investors.
             </p>
           </div>
           <div className={styles.whoAreWe}>
             <h4 className={styles.whoAreWeHeader}>What do we do?</h4>
-            <hr />
+            <hr style={{ width: "70%", alignSelf: "center" }} />
             <p className={styles.whoAreWeMessage}>
               We allocate investors funds to financial,
-              <br /> instruments in trading and manage these
-              <br /> trades to bring profits for investors.
+              <br className={styles.brTag} /> instruments in trading and manage
+              these
+              <br className={styles.brTag} /> trades to bring profits for
+              investors.
             </p>
           </div>
-          <div className={styles.whoAreWe}>
+          <div className={styles.meetCEO}>
             <h4 className={styles.whoAreWeHeader}>Meet our CEO</h4>
-            <hr />
+            <hr style={{ width: "70%", alignSelf: "center" }} />
             <p className={styles.ceoMessage}>
-              Pritchard Potts currently sits on the Board of
+              Pritchard Potts currently sits on the Board of Monnay Finance
+              Limited as Managing Director/Chief Executive Officer.
               <br />
-              Monnay Finance Limited as Managing Director/Chief Executive
-              Officer.
-              <br />
-              He holds an MBA, with distinction, from The Kellogg
-              <br /> School of Management, and a Masters of
-              <br /> Engineering Management from The
+              He holds an MBA, with distinction, from The Kellogg School of
+              Management, and a Masters of Engineering Management from The
               <br /> McCormick School of Engineering and
               <br /> Applied Science, at Northwestern
               <br /> University in the USA. He also holds a<br /> Bachelor of
@@ -75,7 +76,7 @@ const About = () => {
               <br /> has received several awards of excellence
               <br /> from diverse Companies and brokers.
             </p>
-            <ul>
+            <ul className={styles.ceoButtonDiv}>
               <li>
                 <a
                   href="https://app.companiesoffice.govt.nz/co/8372576"
@@ -166,8 +167,8 @@ const About = () => {
           >
             <Image
               src="/monnayFooter.png"
-              width={100}
-              height={30}
+              width={180}
+              height={50}
               alt="footer image"
             />
             <p style={{ color: "#ffffff", marginTop: 10, textAlign: "center" }}>
@@ -179,33 +180,41 @@ const About = () => {
             <h5>Quick links</h5>
             <Link href="/">
               <li>
-                <a href="#">Home</a>
+                <a href="#" style={{ fontSize: 16 }}>
+                  Home
+                </a>
               </li>
             </Link>
             <Link href="/about">
               <li>
-                <a href="#">About us</a>
+                <a href="#" style={{ fontSize: 16 }}>
+                  About us
+                </a>
               </li>
             </Link>
             <Link href="/contact">
               <li>
-                <a href="#">Contact us</a>
+                <a href="#" style={{ fontSize: 16 }}>
+                  Contact us
+                </a>
               </li>
             </Link>
             <Link href="/faq">
               <li>
-                <a href="#">FAQ</a>
+                <a href="#" style={{ fontSize: 16 }}>
+                  FAQ
+                </a>
               </li>
             </Link>
           </ul>
           <ul className={styles.footerBottomText}>
             <h5>Address</h5>
-            <li>Vanha Talvitie 11 C,</li>
-            <li>HELSINKI 00580 Finland</li>
+            <li style={{ fontSize: 16 }}>Vanha Talvitie 11 C,</li>
+            <li style={{ fontSize: 16 }}>HELSINKI 00580 Finland</li>
             <br />
             <br />
-            <lh>Email:</lh>
-            <li>contact@monnay.finance</li>
+            <li style={{ fontSize: 18 }}>Email:</li>
+            <li style={{ fontSize: 16 }}>contact@monnay.finance</li>
           </ul>
         </div>
         <div className={styles.footerBottom}>

@@ -73,7 +73,7 @@ const Signup = () => {
       </Head>
       <Navbar />
       {/* <div className={styles.signupContainer}> */}
-      <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2  columns-md -z-10">
+      <div className="bg-white shadow-md rounded px-6 py-6 pt-6 pb-6 mb-4 flex flex-col my-2 mx-2 columns-md -z-10">
         <div className={styles.createDiv}>
           <Image src="/icon.png" alt=" Logo" width={20} height={20} />
           <p className={styles.create}>Create Account</p>
@@ -89,7 +89,7 @@ const Signup = () => {
                 Full name
               </label>
               <input
-                className=" w-full bg-gray-200 text-gray-700 py-3 px-2"
+                className=" border rounded w-full py-2 px-2 text-gray-700"
                 id="fullname"
                 name="fullname"
                 type="text"
@@ -106,7 +106,7 @@ const Signup = () => {
                 Username
               </label>
               <input
-                className="w-full bg-gray-200 text-gray-700 py-3 px-2"
+                className="border rounded w-full py-2 px-2 text-gray-700"
                 id="username"
                 name="username"
                 type="text"
@@ -122,7 +122,7 @@ const Signup = () => {
                 Email
               </label>
               <input
-                className="w-full bg-gray-200 text-gray-700 py-3 px-2"
+                className="border rounded w-full py-2 px-1 text-gray-700"
                 id="email"
                 name="email"
                 type="email"
@@ -141,7 +141,7 @@ const Signup = () => {
                 Password
               </label>
               <input
-                className="w-full bg-gray-200 text-gray-700 py-3 px-2"
+                className="border rounded w-full py-2 px-2 text-gray-700"
                 id="password"
                 name="password"
                 type="password"
@@ -158,7 +158,7 @@ const Signup = () => {
                 Confirm Password
               </label>
               <input
-                className="w-full bg-gray-200 text-gray-700 py-3 px-2"
+                className="border rounded w-full py-2 px-2 text-gray-700"
                 id="grid-password"
                 name="confirmPassword"
                 type="password"
@@ -200,8 +200,8 @@ const Signup = () => {
           >
             <Image
               src="/monnayFooter.png"
-              width={100}
-              height={30}
+              width={180}
+              height={50}
               alt="footer image"
             />
             <p style={{ color: "#ffffff", marginTop: 10, textAlign: "center" }}>
@@ -213,33 +213,41 @@ const Signup = () => {
             <h5>Quick links</h5>
             <Link href="/">
               <li>
-                <a href="#">Home</a>
+                <a href="#" style={{ fontSize: 16 }}>
+                  Home
+                </a>
               </li>
             </Link>
             <Link href="/about">
               <li>
-                <a href="#">About us</a>
+                <a href="#" style={{ fontSize: 16 }}>
+                  About us
+                </a>
               </li>
             </Link>
             <Link href="/contact">
               <li>
-                <a href="#">Contact us</a>
+                <a href="#" style={{ fontSize: 16 }}>
+                  Contact us
+                </a>
               </li>
             </Link>
             <Link href="/faq">
               <li>
-                <a href="#">FAQ</a>
+                <a href="#" style={{ fontSize: 16 }}>
+                  FAQ
+                </a>
               </li>
             </Link>
           </ul>
           <ul className={styles.footerBottomText}>
             <h5>Address</h5>
-            <li>Vanha Talvitie 11 C,</li>
-            <li>HELSINKI 00580 Finland</li>
+            <li style={{ fontSize: 16 }}>Vanha Talvitie 11 C,</li>
+            <li style={{ fontSize: 16 }}>HELSINKI 00580 Finland</li>
             <br />
             <br />
-            <lh>Email:</lh>
-            <li>contact@monnay.finance</li>
+            <li style={{ fontSize: 18 }}>Email:</li>
+            <li style={{ fontSize: 16 }}>contact@monnay.finance</li>
           </ul>
         </div>
         <div className={styles.footerBottom}>

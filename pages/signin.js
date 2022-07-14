@@ -65,83 +65,74 @@ const Signin = () => {
         <link rel="icon" href="/icon.png" />
       </Head>
       <Navbar />
-      <div className="h-screen w-full">
-        <div className={styles.signinContainer}>
-          <div className={styles.createDiv}>
-            <Image src="/icon.png" alt=" Logo" width={20} height={20} />
-            <p className={styles.create}>Log in</p>
-          </div>
-          {/* form proper */}
-          <div className="w-full">
-            <form
-              onSubmit={handleSubmit(login)}
-              className="rounded px-4 pt-6 pb-8 mb-10"
-            >
-              <div className="mb-4">
-                <label
-                  className="text-black text-sm font-bold"
-                  htmlFor="username"
-                >
-                  Username
-                </label>
-                <input
-                  className="border rounded w-full py-2 px-2 text-gray-700"
-                  id="username"
-                  name="username"
-                  type="text"
-                  value={username}
-                  onChange={handleChange}
-                  // {...register("username", { required: true })}
-                />
-                {errors.username && errors.username.type === "required" && (
-                  <p className="text-red-700">Please enter a valid username</p>
-                )}
-              </div>
-              <div className="mb-4">
-                <label
-                  className="text-black text-sm font-bold"
-                  htmlFor="password"
-                >
-                  Password
-                </label>
-                <input
-                  className="border rounded w-full py-2 px-2 text-gray-700"
-                  id="password"
-                  name="password"
-                  type="password"
-                  value={password}
-                  onChange={handleChange}
-                  // {...register("password", { required: true })}
-                />
-                {errors.password && errors.password.type === "required" && (
-                  <p className="text-red-700">Field Required</p>
-                )}
-                {errors.password && errors.password.type === "minLength" && (
-                  <p className="text-red-700">
-                    Please enter a minimum of 6 characters
-                  </p>
-                )}
-              </div>
-              <div className="flex items-center justify-between align-middle mt-8">
-                <label className="block tracking-wide text-gray-700 text-xs font-bold mb-2">
-                  <input type="checkbox" className="mr-2 leading-tight" />
-                  <span>Remember me</span>
-                </label>
-                <a className="font-bold text-xm text-blue-300 mb-6" href="#">
-                  Forgot Password?
-                </a>
-              </div>
-              {/* <div className={styles.createButtonDiv}> */}
-              <button className={styles.signinButton} type="submit">
-                Log in
-              </button>
-              {/* </div> */}
-            </form>
-          </div>
-          {/* form proper ends */}
+      {/* <div className="h-screen w-full bg-pink-700"> */}
+      <div className={styles.signinContainer}>
+        <div className={styles.createDiv}>
+          <Image src="/icon.png" alt=" Logo" width={20} height={20} />
+          <p className={styles.create}>Log in</p>
         </div>
+        {/* form proper */}
+        {/* <div className="w-full"> */}
+        <form onSubmit={handleSubmit(login)} className="py-4 px-4 pt-6 pb-8">
+          <div className="mb-4">
+            <label className="text-black text-sm font-bold" htmlFor="username">
+              Username
+            </label>
+            <input
+              className="border rounded w-full py-2 px-2 text-gray-700"
+              id="username"
+              name="username"
+              type="text"
+              value={username}
+              onChange={handleChange}
+              // {...register("username", { required: true })}
+            />
+            {errors.username && errors.username.type === "required" && (
+              <p className="text-red-700">Please enter a valid username</p>
+            )}
+          </div>
+          <div className="mb-4">
+            <label className="text-black text-sm font-bold" htmlFor="password">
+              Password
+            </label>
+            <input
+              className="border rounded w-full py-2 px-2 text-gray-700"
+              id="password"
+              name="password"
+              type="password"
+              value={password}
+              onChange={handleChange}
+              // {...register("password", { required: true })}
+            />
+            {errors.password && errors.password.type === "required" && (
+              <p className="text-red-700">Field Required</p>
+            )}
+            {errors.password && errors.password.type === "minLength" && (
+              <p className="text-red-700">
+                Please enter a minimum of 6 characters
+              </p>
+            )}
+          </div>
+          <div className="flex items-center justify-between align-middle mt-8">
+            <label className="block tracking-wide text-gray-700 text-xs font-bold mb-2">
+              <input type="checkbox" className="mr-2 leading-tight" />
+              <span>Remember me</span>
+            </label>
+            <a className="font-bold text-xm text-blue-300 mb-6" href="#">
+              Forgot Password?
+            </a>
+          </div>
+          {/* <div className={styles.createButtonDiv}> */}
+          <button className={styles.signinButton} type="submit">
+            Log in
+          </button>
+          {/* </div> */}
+        </form>
+        {/* </div> */}
+        {/* form proper ends */}
       </div>
-      <footer className={styles.footer}>
+      {/* </div> */}
+      {/* <footer className={styles.footer}>
         <div className={styles.footerInfo}>
           <div
             style={{
@@ -200,7 +191,7 @@ const Signin = () => {
             COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
           </p>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 };

@@ -148,8 +148,8 @@ const FAQ = () => {
           >
             <Image
               src="/monnayFooter.png"
-              width={100}
-              height={30}
+              width={180}
+              height={50}
               alt="footer image"
             />
             <p style={{ color: "#ffffff", marginTop: 10, textAlign: "center" }}>
@@ -161,33 +161,41 @@ const FAQ = () => {
             <h5>Quick links</h5>
             <Link href="/">
               <li>
-                <a href="#">Home</a>
+                <a href="#" style={{ fontSize: 16 }}>
+                  Home
+                </a>
               </li>
             </Link>
             <Link href="/about">
               <li>
-                <a href="#">About us</a>
+                <a href="#" style={{ fontSize: 16 }}>
+                  About us
+                </a>
               </li>
             </Link>
             <Link href="/contact">
               <li>
-                <a href="#">Contact us</a>
+                <a href="#" style={{ fontSize: 16 }}>
+                  Contact us
+                </a>
               </li>
             </Link>
             <Link href="/faq">
               <li>
-                <a href="#">FAQ</a>
+                <a href="#" style={{ fontSize: 16 }}>
+                  FAQ
+                </a>
               </li>
             </Link>
           </ul>
           <ul className={styles.footerBottomText}>
             <h5>Address</h5>
-            <li>Vanha Talvitie 11 C,</li>
-            <li>HELSINKI 00580 Finland</li>
+            <li style={{ fontSize: 16 }}>Vanha Talvitie 11 C,</li>
+            <li style={{ fontSize: 16 }}>HELSINKI 00580 Finland</li>
             <br />
             <br />
-            <lh>Email:</lh>
-            <li>contact@monnay.finance</li>
+            <li style={{ fontSize: 18 }}>Email:</li>
+            <li style={{ fontSize: 16 }}>contact@monnay.finance</li>
           </ul>
         </div>
         <div className={styles.footerBottom}>
