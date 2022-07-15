@@ -96,8 +96,8 @@ const About = () => {
         {/* Description Ends */}
         {/* ourStrategy */}
         <div className={styles.ourStrategy}>
-          <h3 className={styles.ourStrategyHeader}>Our Strategy</h3>
-          <hr />
+          <h3 className={styles.whoAreWeHeader}>Our Strategy</h3>
+          <hr style={{ width: "80%", alignSelf: "center" }} />
           <p className={styles.ourStrategyMessage}>
             Our commitment to be a leader in responsible business (RB) stems
             from our purpose in society. It is core to our business. Thinking,

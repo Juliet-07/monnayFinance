@@ -25,7 +25,7 @@ const Contact = () => {
       >
         <div className={styles.jumbotronFluid}>
           <h2 className={styles.about}>Contact Us</h2>
-          <p className={styles.content}>
+          <p className={styles.content} id={styles.message}>
             We would love to hear from you. Kindly fill the form below and we
             will get back to you within 24 hours.
           </p>

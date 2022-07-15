@@ -117,12 +117,12 @@ const Signup = () => {
             </div>
           </div>
           <div className="flex flex-wrap -mx-3 mb-4">
-            <div className="w-full px-2 py-2">
+            <div className="w-full px-3 py-2 ">
               <label className="text-black text-sm font-bold" htmlFor="email">
                 Email
               </label>
               <input
-                className="border rounded w-full py-2 px-1 text-gray-700"
+                className="border rounded w-full py-2 px-2 text-gray-700"
                 id="email"
                 name="email"
                 type="email"
@@ -188,7 +188,7 @@ const Signup = () => {
         {/* form proper ends */}
       </div>
       {/* </div> */}
-      <footer className={styles.footer}>
+      {/* <footer className={styles.footer}>
         <div className={styles.footerInfo}>
           <div
             style={{
@@ -255,7 +255,7 @@ const Signup = () => {
             COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
           </p>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 };

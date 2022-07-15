@@ -409,14 +409,15 @@
   border-radius: 20px;
 } */
 .signinContainer {
-  position: relative;
+  /* position: relative; */
   width: 500px;
   height: 550px;
   /* left: 700px; */
-  top: 150px;
+  /* top: 150px; */
   background-color: #ffffff;
   border-radius: 20px;
-  padding: 15px;
+  padding: 20px;
+  margin: 130px;
   z-index: -2;
 }
 .signinButton {
@@ -516,7 +517,7 @@
   display: flex;
   flex-direction: column;
   width: 377px;
-  height: 750px;
+  height: 800px;
   margin-top: 50px;
   background-color: #ffffff;
 }
@@ -546,7 +547,7 @@
   padding-left: 50px;
   padding-right: 25px;
 }
-.ceoButtonDiv{
+.ceoButtonDiv {
   margin: 40px;
 }
 .ceoButton {
@@ -581,7 +582,6 @@
 }
 .ourStrategyMessage {
   color: #000000;
-  font-weight: 500;
   font-size: 16px;
   line-height: 26px;
   text-align: left;
@@ -680,7 +680,6 @@
   font-size: 28px;
   text-align: left;
   line-height: 40px;
-  padding: 20px;
   margin-top: 5px;
 }
 /* contact section */
@@ -1055,6 +1054,7 @@
   .description {
     flex-direction: column;
     padding: 40px;
+    z-index: -1;
   }
   .ourStrategy {
     width: 350px;
@@ -1063,7 +1063,7 @@
     top: 15px;
     padding: 25px;
   }
-  .whoAreWeHeader{
+  .whoAreWeHeader {
     left: 30px;
   }
   .whoAreWe {
@@ -1075,7 +1075,7 @@
   .whoAreWeMessage {
     padding-left: 30px;
   }
-  .meetCEO{
+  .meetCEO {
     width: 330px;
     margin-top: 15px;
   }
@@ -1084,16 +1084,18 @@
     line-height: 23px;
     padding-left: 35px;
   }
-  .ceoButtonDiv{
+  .ceoButtonDiv {
     margin-left: 35px;
   }
-  .ceoButton{
+  .ceoButton {
     width: 250px;
   }
   .planJumbo {
-    top: 30px;
+    top: 40px;
     font-size: 32px;
     line-height: 39px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .content {
     font-size: 14px;
@@ -1117,12 +1119,9 @@
     right: 1rem;
   }
   .signinContainer {
-    position: relative;
     width: 350px;
     height: 550px;
-    /* left: 10px; */
-    top: 20px;
-    padding: 20px;
+    margin: 25px;
   }
   .signinButton {
     width: 250px;
