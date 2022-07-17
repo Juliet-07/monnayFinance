@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "./sidebar";
 import NavDashboard from "./navbarDashboard";
+import styles from "../styles/Home.module.css";
 
 const Layout = ({ children }) => {
   return (

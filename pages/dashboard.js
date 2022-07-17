@@ -10,12 +10,12 @@ import { MdOutlineNotificationsNone } from "react-icons/md";
 import { FcMoneyTransfer } from "react-icons/fc";
 
 // const BASE_URI = `https://monnayfinance.com/api/user/profile/${user.id}`;
-const BASE_URI = "https://monnayfinance.com/api/user/profile/6";
+const BASE_URI = "https://monnayfinance.com/api/user/profile";
 
 export async function getServerSideProps() {
   const res = await fetch(BASE_URI, {
     headers: new Headers({
-      Authorization: `Bearer ${token}`,
+      Authorization: "Bearer token",
       "Content-type": "application/json; charset=UTF-8",
     }),
   });
