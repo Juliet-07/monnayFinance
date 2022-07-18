@@ -12,6 +12,7 @@ import {
 import { BiBarChartSquare } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 import { IoSettingsOutline } from "react-icons/io5";
+import NavDashboard from "./navbarDashboard";
 
 const menuItems = [
   {
@@ -49,6 +50,7 @@ const menuItems = [
 const Sidebar = () => {
   const [toggleCollapse, setToggleCollapse] = useState(false);
   const [isCollapsible, setIsCollapsible] = useState(false);
+  const [showSidebar, setShowSidebar] = useState("-left-64");
 
   const router = useRouter();
 
@@ -65,12 +67,9 @@ const Sidebar = () => {
     }
   );
 
-  const collapseIconClasses = classNames(
-    "p-3 bg-primary absolute right-0",
-    {
-      "rotate-180": toggleCollapse,
-    }
-  );
+  const collapseIconClasses = classNames("p-3 bg-primary absolute right-0", {
+    "rotate-180": toggleCollapse,
+  });
 
   const getNavItemClasses = (menu) => {
     return classNames(
@@ -96,7 +95,6 @@ const Sidebar = () => {
       onMouseLeave={onMouseOver}
       style={{ transition: "width 300ms cubic-bezier(0.2, 0, 0, 1) 0s" }}
     >
-      
       <div className="flex flex-col">
         <div className="flex items-center justify-between relative">
           <div className="flex items-center pl-1 gap-4">

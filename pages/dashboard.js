@@ -63,7 +63,7 @@ const Dashboard = ({ data }) => {
           {/* Content */}
           <div className="main-panel">
             {/* Navbar */}
-            <nav className="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top">
+            {/* <nav className="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top">
               <div className="container-fluid">
                 <div className="navbar-wrapper">
                   <a className="navbar-brand" href="#">
@@ -150,7 +150,7 @@ const Dashboard = ({ data }) => {
                   </ul>
                 </div>
               </div>
-            </nav>
+            </nav> */}
             {/* Navbar Ends */}
             <div className="content">
               <div className="container-fluid">
@@ -282,11 +282,12 @@ const Dashboard = ({ data }) => {
               {/* footer */}
             </div>
             <footer className="footer">
-              {/* <div className="flex justify-center align-center"> */}
-              <p className="footer-text">
-                COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
-              </p>
-              {/* </div> */}
+              <div className="flex justify-center align-center">
+                <p className="footer-text">
+                  COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY
+                  POLICY
+                </p>
+              </div>
             </footer>
           </div>
           {/* Content Ends*/}
