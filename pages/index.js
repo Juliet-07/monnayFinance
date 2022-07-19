@@ -73,7 +73,7 @@ const Home = () => {
               <br className={styles.brTag} />
               Since we came into existence, our role is to offer each person the
               chance to attend the bitcoin related business{" "}
-              <br className={styles.brTag} />
+              <br id={styles.brTag} />
               and earn profit easily with our powerful investment sytem.
             </p>
           </div>

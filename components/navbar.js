@@ -140,7 +140,7 @@ export default function Navbar() {
   return (
     <nav className="flex filter drop-shadow-md bg-white px-3 py-4 h-20 items-center">
       <MobileNav open={open} setOpen={setOpen} />
-      <div className="w-3/12 flex items-center justify-center">
+      <div className="w-3/12 flex justify-center">
         <Link href="/">
           <Image src="/monnayLogo.png" width={150} height={40} alt="logo" />
         </Link>
@@ -170,7 +170,7 @@ export default function Navbar() {
           />
         </div>
 
-        <div className="hidden md:flex space-x-1 space-y-1">
+        <div className="hidden md:flex space-x-0 space-y-1">
           <NavLink to="/">HOME</NavLink>
           <NavLink to="/about">ABOUT</NavLink>
           <NavLink to="/investment">INVESTMENTS</NavLink>

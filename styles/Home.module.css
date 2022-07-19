@@ -1168,9 +1168,9 @@
   }
 }
 /* for laptops */
-@media screen and (min-device-width: 720px) and (max-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
+@media screen and (min-device-width: 720px) and (max-device-width: 1600px) {
   #navbarStyle {
-    left: -50px;
+    left: -30px;
   }
   .buttonNav {
     top: 10px;
@@ -1213,7 +1213,7 @@
     /* margin-top: 0px; */
     margin-left: 30px;
     margin-right: 30px;
-    background-color: tomato;
+    /* background-color: tomato; */
   }
   .tradeImageDiv {
     padding-left: 10px;
@@ -1227,11 +1227,11 @@
   .tradeMessage {
     font-size: 14px;
     line-height: 30px;
-    padding-right: 20px;
+    /* padding-right: 30px; */
   }
-  /* .brTag {
+  #brTag {
     display: none;
-  } */
+  }
   .trustContainer {
     height: 976px;
   }
