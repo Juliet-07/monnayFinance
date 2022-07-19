@@ -6,7 +6,11 @@ import styles from "../styles/Home.module.css";
 
 function NavLink({ to, children }) {
   return (
-    <a href={to} className={`mx-4 my-2 hover:font-bold`}>
+    <a
+      href={to}
+      className={`mx-3 my-2 hover:font-bold`}
+      id={styles.navbarStyle}
+    >
       {children}
     </a>
   );
@@ -25,7 +29,7 @@ function MobileNav({ open, setOpen }) {
       <div className="flex flex-col ml-4">
         <Link href="/">
           <p
-            className="uppercase text-xl font-medium my-4 px-4 mx-4 text-black"
+            className="uppercase text-xl font-medium mx-3 my-4 px-3  text-black"
             onClick={() =>
               setTimeout(() => {
                 setOpen(!open);
@@ -37,7 +41,7 @@ function MobileNav({ open, setOpen }) {
         </Link>
         <Link href="/about">
           <p
-            className="uppercase text-xl font-medium my-4 px-4 mx-4 text-black"
+            className="uppercase text-xl font-medium mx-3 my-4 px-3  text-black"
             onClick={() =>
               setTimeout(() => {
                 setOpen(!open);
@@ -49,7 +53,7 @@ function MobileNav({ open, setOpen }) {
         </Link>
         <Link href="/investment">
           <p
-            className="uppercase text-xl font-medium my-4 px-4 mx-4 text-black"
+            className="uppercase text-xl font-medium mx-3 my-4 px-3  text-black"
             href="#"
             onClick={() =>
               setTimeout(() => {
@@ -62,7 +66,7 @@ function MobileNav({ open, setOpen }) {
         </Link>
         <Link href="/faq">
           <p
-            className="uppercase text-xl font-medium my-4 px-4 mx-4 text-black"
+            className="uppercase text-xl font-medium mx-3 my-4 px-3  text-black"
             href="#"
             onClick={() =>
               setTimeout(() => {
@@ -75,7 +79,7 @@ function MobileNav({ open, setOpen }) {
         </Link>
         <Link href="/courses">
           <p
-            className="uppercase text-xl font-medium my-4 px-4 mx-4 text-black"
+            className="uppercase text-xl font-medium mx-3 my-4 px-3  text-black"
             href="#"
             onClick={() =>
               setTimeout(() => {
@@ -88,7 +92,7 @@ function MobileNav({ open, setOpen }) {
         </Link>
         <Link href="/contact">
           <p
-            className="uppercase text-xl font-medium my-4 px-4 mx-4 text-black"
+            className="uppercase text-xl font-medium mx-3 my-4 px-3  text-black"
             href="#"
             onClick={() =>
               setTimeout(() => {
@@ -134,7 +138,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { status } = useSession();
   return (
-    <nav className="flex filter drop-shadow-md bg-white px-4 py-4 h-20 items-center">
+    <nav className="flex filter drop-shadow-md bg-white px-3 py-4 h-20 items-center">
       <MobileNav open={open} setOpen={setOpen} />
       <div className="w-3/12 flex items-center justify-center">
         <Link href="/">
@@ -166,9 +170,9 @@ export default function Navbar() {
           />
         </div>
 
-        <div className="hidden md:flex">
+        <div className="hidden md:flex space-x-1 space-y-1">
           <NavLink to="/">HOME</NavLink>
-          <NavLink to="/about">ABOUT US</NavLink>
+          <NavLink to="/about">ABOUT</NavLink>
           <NavLink to="/investment">INVESTMENTS</NavLink>
           <NavLink to="/faq">FAQ</NavLink>
           <NavLink to="/courses">COURSES</NavLink>

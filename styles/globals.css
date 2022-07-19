@@ -28,7 +28,7 @@ a :hover {
 hr {
   width: 100%;
   background-color: #057d99;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   margin-bottom: 10px;
 }
 .sidebar-wrapper {

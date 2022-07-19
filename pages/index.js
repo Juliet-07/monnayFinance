@@ -402,60 +402,44 @@ const Home = () => {
                 height={50}
                 alt="footer image"
               />
-              <p
-                style={{ color: "#ffffff", marginTop: 10, textAlign: "center" }}
-              >
+              <p style={{ color: "#ffffff", marginTop: 10, textAlign: "left" }}>
                 Investment opportunities in multiple
                 <br /> markets, one account.
               </p>
             </div>
-            <ul className={styles.footerBottomText}>
-              <h5>Quick links</h5>
+            <ul className={styles.footerBottomList}>
+              <h5 style={{ fontWeight: 700, textAlign: "center" }}>
+                Quick links
+              </h5>
               <Link href="/">
-                <li>
-                  <a href="#" style={{ fontSize: 16 }}>
-                    Home
-                  </a>
-                </li>
+                <li style={{ fontSize: 16 }}>Home</li>
               </Link>
               <Link href="/about">
-                <li>
-                  <a href="#" style={{ fontSize: 16 }}>
-                    About us
-                  </a>
-                </li>
+                <li style={{ fontSize: 16 }}>About us</li>
               </Link>
               <Link href="/contact">
-                <li>
-                  <a href="#" style={{ fontSize: 16 }}>
-                    Contact us
-                  </a>
-                </li>
+                <li style={{ fontSize: 16 }}>Contact us</li>
               </Link>
               <Link href="/faq">
-                <li>
-                  <a href="#" style={{ fontSize: 16 }}>
-                    FAQ
-                  </a>
-                </li>
+                <li style={{ fontSize: 16 }}>FAQ</li>
               </Link>
             </ul>
             <ul className={styles.footerBottomText}>
-              <h5>Address</h5>
+              <h5 style={{ fontWeight: 700 }}>Address</h5>
               <li style={{ fontSize: 16 }}>Vanha Talvitie 11 C,</li>
               <li style={{ fontSize: 16 }}>HELSINKI 00580 Finland</li>
               <br />
               <br />
-              <li style={{ fontSize: 18 }}>Email:</li>
+              <li style={{ fontSize: 18, fontWeight: 700 }}>Email:</li>
               <li style={{ fontSize: 16 }}>contact@monnay.finance</li>
             </ul>
           </div>
-          <div className={styles.footerBottom}>
-            <p className={styles.footerBottomText}>
-              COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
-            </p>
-          </div>
         </footer>
+        <div className={styles.footerBottom}>
+          <p className={styles.footerBottomText}>
+            COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
+          </p>
+        </div>
       </div>
     </>
   );

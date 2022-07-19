@@ -7,7 +7,7 @@ import Navbar from "../components/navbar";
 
 const About = () => {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>MonnayFinance</title>
         <meta name="description" content="Generated monnay finance" />
@@ -31,94 +31,137 @@ const About = () => {
         {/* Jumbotron Ends */}
         {/* Description */}
         <div className={styles.description}>
-          {/* <div className="grid grid-cols-3 md:grid-cols-3"> */}
-          {/* <div> */}
-          <div className={styles.whoAreWe}>
-            <h4 className={styles.whoAreWeHeader}>Who Are We?</h4>
-            <hr style={{ width: "70%", alignSelf: "center" }} />
-            <p className={styles.whoAreWeMessage}>
-              We are an investment company,
-              <br className={styles.brTag} /> offering and trading crypto-based
-              <br className={styles.brTag} />
-              assets and other financial instruments
-              <br className={styles.brTag} /> for investors.
-            </p>
+          <div className={styles.whoAreWeDiv}>
+            <div className={styles.whoAreWe}>
+              <h4 className={styles.whoAreWeHeader}>Who Are We?</h4>
+              <hr
+                style={{
+                  width: "70%",
+                  position: "relative",
+                  top: "10px",
+                  left: "33px",
+                }}
+              />
+              <p className={styles.whoAreWeMessage}>
+                We are an investment company,
+                <br className={styles.brTag} /> offering and trading
+                crypto-based
+                <br />
+                assets and other financial instruments
+                <br className={styles.brTag} /> for investors.
+              </p>
+            </div>
+            <div className={styles.whoAreWe}>
+              <h4 className={styles.whoAreWeHeader}>What do we do?</h4>
+              <hr
+                style={{
+                  width: "70%",
+                  position: "relative",
+                  top: "10px",
+                  left: "33px",
+                }}
+              />
+              <p className={styles.whoAreWeMessage}>
+                We allocate investors funds to financial,
+                <br className={styles.brTag} /> instruments in trading and
+                manage these
+                <br className={styles.brTag} /> trades to bring profits for
+                investors.
+              </p>
+            </div>
+            <div className={styles.meetCEO}>
+              <h4 className={styles.whoAreWeHeader}>Meet our CEO</h4>
+              <hr
+                style={{
+                  width: "70%",
+                  position: "relative",
+                  top: "10px",
+                  left: "33px",
+                }}
+              />
+              <div className={styles.ceoPicture}>
+                <Image
+                  src="/ceo.jpeg"
+                  width={90}
+                  height={90}
+                  alt="ceoPicture"
+                  className={styles.img}
+                />
+              </div>
+              <p className={styles.ceoMessage}>
+                Pritchard Potts currently sits on the Board of Monnay Finance
+                Limited as Managing Director/Chief Executive Officer.
+                <br className={styles.brTag} />
+                He holds an MBA, with distinction, from The Kellogg School of
+                Management, and a Masters of Engineering Management from The
+                McCormick School of Engineering and
+                <br className={styles.brTag} />
+                Applied Science, at Northwestern
+                <br className={styles.brTag} />
+                University in the USA. He also holds a
+                <br className={styles.brTag} /> Bachelor of Commerce (Hons) with
+                a major <br className={styles.brTag} />
+                in Accounting and Finance, from the{" "}
+                <br className={styles.brTag} />
+                University of Auckland.
+                <br />
+                <br /> Pritchard has over 20 years experience in
+                <br className={styles.brTag} /> the Crypto and Investment
+                Industry and
+                <br className={styles.brTag} /> has received several awards of
+                excellence
+                <br className={styles.brTag} /> from diverse Companies and
+                brokers.
+              </p>
+              <ul className={styles.ceoButtonDiv}>
+                <li>
+                  <a
+                    href="https://app.companiesoffice.govt.nz/co/8372576"
+                    className={styles.ceoButton}
+                  >
+                    View Company Certificate
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className={styles.ceoButton}>
+                    View CEO Awards
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className={styles.whoAreWe}>
-            <h4 className={styles.whoAreWeHeader}>What do we do?</h4>
-            <hr style={{ width: "70%", alignSelf: "center" }} />
-            <p className={styles.whoAreWeMessage}>
-              We allocate investors funds to financial,
-              <br className={styles.brTag} /> instruments in trading and manage
-              these
-              <br className={styles.brTag} /> trades to bring profits for
-              investors.
-            </p>
-          </div>
-          <div className={styles.meetCEO}>
-            <h4 className={styles.whoAreWeHeader}>Meet our CEO</h4>
-            <hr style={{ width: "70%", alignSelf: "center" }} />
-            <p className={styles.ceoMessage}>
-              Pritchard Potts currently sits on the Board of Monnay Finance
-              Limited as Managing Director/Chief Executive Officer.
+          <div className={styles.ourStrategy}>
+            <h3 className={styles.whoAreWeHeader}>Our Strategy</h3>
+            <hr
+              style={{
+                width: "80%",
+                position: "relative",
+                top: "10px",
+                left: "33px",
+              }}
+            />
+            <p className={styles.ourStrategyMessage}>
+              Our commitment to be a leader in responsible business (RB) stems
+              from our purpose in society. It is core to our business. Thinking,
+              acting and investing responsibly not only shapes what we do but
+              how we do it. We will actively manage your portfolio to ensure it
+              remains appropriate for the ever-changing conditions in the global
+              economy and financial markets. We will also be responsible for
+              making any adjustments if your personal situation or objectives
+              change.
               <br />
-              He holds an MBA, with distinction, from The Kellogg School of
-              Management, and a Masters of Engineering Management from The
-              <br /> McCormick School of Engineering and
-              <br /> Applied Science, at Northwestern
-              <br /> University in the USA. He also holds a<br /> Bachelor of
-              Commerce (Hons) with a major <br />
-              in Accounting and Finance, from the <br />
-              University of Auckland.
-              <br />
-              <br /> Pritchard has over 20 years experience in
-              <br /> the Crypto and Investment Industry and
-              <br /> has received several awards of excellence
-              <br /> from diverse Companies and brokers.
+              <br /> A diversified investment strategy (sometimes called a
+              “balanced portfolio” or “multi-asset portfolio”) that combines
+              different assets can be one of the best ways to preserve and
+              enhance wealth over the long term. This approach can provide
+              exposure to a wide set of investment opportunities and reduce
+              losses when market conditions are challenging.
             </p>
-            <ul className={styles.ceoButtonDiv}>
-              <li>
-                <a
-                  href="https://app.companiesoffice.govt.nz/co/8372576"
-                  className={styles.ceoButton}
-                >
-                  View Company Certificate
-                </a>
-              </li>
-              <li>
-                <a href="#" className={styles.ceoButton}>
-                  View CEO Awards
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
         {/* Description Ends */}
-        {/* ourStrategy */}
-        <div className={styles.ourStrategy}>
-          <h3 className={styles.whoAreWeHeader}>Our Strategy</h3>
-          <hr style={{ width: "80%", alignSelf: "center" }} />
-          <p className={styles.ourStrategyMessage}>
-            Our commitment to be a leader in responsible business (RB) stems
-            from our purpose in society. It is core to our business. Thinking,
-            acting and investing responsibly not only shapes what we do but how
-            we do it. We will actively manage your portfolio to ensure it
-            remains appropriate for the ever-changing conditions in the global
-            economy and financial markets. We will also be responsible for
-            making any adjustments if your personal situation or objectives
-            change.
-            <br />
-            <br /> A diversified investment strategy (sometimes called a
-            “balanced portfolio” or “multi-asset portfolio”) that combines
-            different assets can be one of the best ways to preserve and enhance
-            wealth over the long term. This approach can provide exposure to a
-            wide set of investment opportunities and reduce losses when market
-            conditions are challenging.
-          </p>
-        </div>
-        {/* ourStrategy Ends */}
         {/* Investors */}
-        <div className={styles.investorDiv}>
+        <div className={styles.investorDivAbout}>
           <div className={styles.investorHeaderDiv}>
             <hr className={styles.investorHr} />
             <h3 className={styles.investorHeader}>
@@ -171,59 +214,45 @@ const About = () => {
               height={50}
               alt="footer image"
             />
-            <p style={{ color: "#ffffff", marginTop: 10, textAlign: "center" }}>
+            <p style={{ color: "#ffffff", marginTop: 10, textAlign: "left" }}>
               Investment opportunities in multiple
               <br /> markets, one account.
             </p>
           </div>
-          <ul className={styles.footerBottomText}>
-            <h5>Quick links</h5>
+          <ul className={styles.footerBottomList}>
+            <h5 style={{ fontWeight: 700, textAlign: "center" }}>
+              Quick links
+            </h5>
             <Link href="/">
-              <li>
-                <a href="#" style={{ fontSize: 16 }}>
-                  Home
-                </a>
-              </li>
+              <li style={{ fontSize: 16 }}>Home</li>
             </Link>
             <Link href="/about">
-              <li>
-                <a href="#" style={{ fontSize: 16 }}>
-                  About us
-                </a>
-              </li>
+              <li style={{ fontSize: 16 }}>About us</li>
             </Link>
             <Link href="/contact">
-              <li>
-                <a href="#" style={{ fontSize: 16 }}>
-                  Contact us
-                </a>
-              </li>
+              <li style={{ fontSize: 16 }}>Contact us</li>
             </Link>
             <Link href="/faq">
-              <li>
-                <a href="#" style={{ fontSize: 16 }}>
-                  FAQ
-                </a>
-              </li>
+              <li style={{ fontSize: 16 }}>FAQ</li>
             </Link>
           </ul>
           <ul className={styles.footerBottomText}>
-            <h5>Address</h5>
+            <h5 style={{ fontWeight: 700 }}>Address</h5>
             <li style={{ fontSize: 16 }}>Vanha Talvitie 11 C,</li>
             <li style={{ fontSize: 16 }}>HELSINKI 00580 Finland</li>
             <br />
             <br />
-            <li style={{ fontSize: 18 }}>Email:</li>
+            <li style={{ fontSize: 18, fontWeight: 700 }}>Email:</li>
             <li style={{ fontSize: 16 }}>contact@monnay.finance</li>
           </ul>
         </div>
-        <div className={styles.footerBottom}>
-          <p className={styles.footerBottomText}>
-            COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
-          </p>
-        </div>
       </footer>
-    </div>
+      <div className={styles.footerBottom}>
+        <p className={styles.footerBottomText}>
+          COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
+        </p>
+      </div>
+    </>
   );
 };
 export default About;
