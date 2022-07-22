@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
@@ -19,7 +18,6 @@ function NavLink({ to, children }) {
 
 export default function NavDashboard() {
   const [open, setOpen] = useState(false);
-  const { status } = useSession();
   return (
     <nav className="flex filter drop-shadow-md bg-white px-4 py-4 h-20 items-center">
       {/* <MobileNav open={open} setOpen={setOpen} /> */}

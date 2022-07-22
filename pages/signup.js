@@ -41,7 +41,6 @@ const Signup = () => {
             username: details.username,
             email: details.email,
             password: details.password,
-            confirmPassword: details.confirmPassword,
           }),
           headers: {
             "Content-type": "application/json; charset=UTF-8",
@@ -73,9 +72,9 @@ const Signup = () => {
       </Head>
       <Navbar />
       {/* <div className={styles.signupContainer}> */}
-      <div className="bg-white shadow-md rounded px-6 py-6 pt-6 pb-6 mb-4 flex flex-col my-2 mx-2 columns-md -z-10">
+      <div className="bg-white shadow-md rounded px-6 py-6 pt-6 pb-6 mb-4 flex flex-col my-2 mx-2 columns-md ">
         <div className={styles.createDiv}>
-          <Image src="/icon.png" alt=" Logo" width={20} height={20} />
+          <Image src="/icon.png" alt=" Logo" width={20} height={20} className={styles.createDivImg}/>
           <p className={styles.create}>Create Account</p>
         </div>
         {/* form proper */}

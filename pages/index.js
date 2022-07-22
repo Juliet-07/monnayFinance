@@ -151,9 +151,7 @@ const Home = () => {
               challenging.
             </p>
           </div>
-          <div className={styles.strategyImageContainer}>
-            <Image src={Strategy} width={1000} height={740} alt="strategy" />
-          </div>
+          <Image src={Strategy} width={900} height={704} alt="strategy" />
         </div>
         {/* Strategy Ends */}
         {/* Investment Plans */}

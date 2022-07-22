@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
@@ -136,7 +135,6 @@ function MobileNav({ open, setOpen }) {
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const { status } = useSession();
   return (
     <nav className="flex filter drop-shadow-md bg-white px-3 py-4 h-20 items-center">
       <MobileNav open={open} setOpen={setOpen} />
@@ -170,7 +168,7 @@ export default function Navbar() {
           />
         </div>
 
-        <div className="hidden md:flex space-x-0 space-y-1">
+        <div className="hidden md:flex space-x-1 space-y-1">
           <NavLink to="/">HOME</NavLink>
           <NavLink to="/about">ABOUT</NavLink>
           <NavLink to="/investment">INVESTMENTS</NavLink>

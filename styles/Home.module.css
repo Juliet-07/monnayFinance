@@ -262,14 +262,16 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  /* height: 704px; */
+  /* background-color: tomato; */
 }
 .strategyTextContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  height: 704px;
+  width: 60%;
+  /* height: 704px; */
   background-color: #0a4f60;
 }
 .strategyText {
@@ -282,13 +284,13 @@
 .strategyMessage {
   font-weight: 500;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 40px;
   color: #ffffff;
   text-align: left;
 }
-.strategyImageContainer {
+/* .strategyImageContainer {
   width: 50%;
-}
+} */
 .investmentHeader {
   font-weight: 700;
   font-size: 48px;
@@ -419,7 +421,7 @@
   border-radius: 20px;
   padding: 20px;
   margin: 130px;
-  z-index: -2;
+  /* z-index: -2; */
 }
 .signinButton {
   position: relative;
@@ -454,6 +456,10 @@
   justify-content: center;
   align-items: center;
   padding-top: 20px;
+}
+.createDivImg{
+  position: absolute;
+  /* z-index: -1; */
 }
 .create {
   font-style: bold;
@@ -1167,14 +1173,14 @@
     left: 10px;
   }
 }
-/* for laptops */
+/* FOR LAPTOPS */
 @media screen and (min-device-width: 926px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
   #navbarStyle {
-    left: -45px;
+    left: -100px;
   }
   .buttonNav {
     top: 10px;
-    left: -10px;
+    left: -20px;
   }
   .buttonOutlineNav {
     top: 10px;
