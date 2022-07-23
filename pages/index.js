@@ -61,7 +61,7 @@ const Home = () => {
               alt="trade"
             />
           </div>
-          <div style={{ margin: 50 }}>
+          <div style={{ margin: 50 }} className={styles.tradeTextContainer}>
             <h3 className={styles.tradeText}>
               You have the <font color="#057d99"> best hands </font>
               <br className={styles.brTag} />

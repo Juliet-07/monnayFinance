@@ -25,7 +25,13 @@ const Signin = () => {
     setProfile({ ...profile, [name]: value });
   };
   const { username, password } = profile;
+  const [error, setError] = useState(false);
+  useEffect(() => {
+    if (localStorage.getItem("Juliet")) {
+    }
+  }, []);
   const login = () => {
+    setError(false);
     try {
       fetch(BASE_URI + "/auth/login", {
         method: "POST",
@@ -44,9 +50,9 @@ const Signin = () => {
           let userDetail = JSON.stringify(user.data);
           localStorage.setItem("Juliet", userDetail);
         });
-      router.push("/dashboard");
+      // router.push("/dashboard");
     } catch (err) {
-      console.log(err.message);
+      setError(true);
     }
   };
   return (
@@ -118,6 +124,9 @@ const Signin = () => {
           <button className={styles.signinButton} type="submit">
             Log in
           </button>
+          <div className={`${!error ? "hidden" : ""}`}>
+            <p className="text-red-700">INCORRECT USERNAME OR PASSWORD</p>
+          </div>
           {/* </div> */}
         </form>
         {/* </div> */}

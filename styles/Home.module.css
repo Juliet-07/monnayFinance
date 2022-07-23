@@ -1,6 +1,6 @@
 #navbarStyle {
   position: relative;
-  left: -400px;
+  left: -350px;
 }
 .buttonNav {
   display: block;
@@ -457,7 +457,7 @@
   align-items: center;
   padding-top: 20px;
 }
-.createDivImg{
+.createDivImg {
   position: absolute;
   /* z-index: -1; */
 }
@@ -510,10 +510,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 1000px;
 }
 .whoAreWeDiv {
+  position: relative;
   display: flex;
-  margin: 50px;
+  top: 250px;
 }
 .whoAreWe {
   position: relative;
@@ -590,7 +592,7 @@
   flex-direction: column;
   position: relative;
   right: 200px;
-  bottom: 530px;
+  bottom: 180px;
   width: 796px;
   height: 482px;
   background-color: #ffffff;
@@ -625,6 +627,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  margin-top: 50px;
 }
 .investorHeaderDiv {
   display: flex;
@@ -1101,16 +1104,11 @@
   }
   .description {
     z-index: -1;
+    height: 2500px;
   }
   .whoAreWeDiv {
-    flex-direction: column;
-  }
-  .ourStrategy {
-    width: 330px;
-    height: 800px;
-    right: 0px;
     top: 5px;
-    /* padding: 25px; */
+    flex-direction: column;
   }
   .whoAreWe {
     width: 330px;
@@ -1134,6 +1132,12 @@
   }
   .ceoButton {
     width: 250px;
+  }
+  .ourStrategy {
+    width: 330px;
+    height: 800px;
+    right: 0px;
+    top: 30px;
   }
   .planJumbo {
     top: 40px;
@@ -1187,281 +1191,45 @@
     left: -5px;
   }
   .jumbotron {
-    height: 370px !important;
-  }
-  .jumbotron h2 {
-    font-size: 32px;
-    line-height: 40px;
-  }
-  .jumbotron p {
-    font-size: 14px;
-    line-height: 20px;
-  }
-  .jumbotronProps {
-    position: relative;
-    top: 50px;
-  }
-  .jumboButton {
-    position: relative;
-    text-align: center;
-    border: 1px solid transparent;
-    border-color: #ffffff;
-    padding: 0.5rem 1rem;
-    font-size: 16px;
-    border-radius: 0.5rem;
-    color: #ffffff;
-    height: 55px;
-    width: 200px;
-    margin-top: 10px;
+    height: 450px;
   }
   .trade {
-    /* flex-direction: column-reverse; */
-    /* margin-top: 0px; */
-    margin-left: 30px;
-    margin-right: 30px;
-    /* background-color: tomato; */
+    margin: 35px;
   }
-  .tradeImageDiv {
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-top: 0px;
+  .tradeTextContainer {
+    width: 700px;
+    margin: 50px;
   }
   .tradeText {
-    font-size: 32px;
-    line-height: 39px;
-  }
-  .tradeMessage {
-    font-size: 14px;
-    line-height: 30px;
-    /* padding-right: 30px; */
+    font-size: 45px;
   }
   #brTag {
     display: none;
   }
   .trustContainer {
-    height: 976px;
-  }
-  .trustText {
-    font-size: 32px;
-    line-height: 39px;
-  }
-  #message {
-    display: none;
-  }
-  .trustMessage {
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 18px;
-    text-align: center;
-    color: #000000;
-  }
-  .trustShowBox {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .box {
-    width: 330px;
-    height: 330px;
-  }
-  .boxIconContainer {
-    top: 30px;
-    left: 30px;
-  }
-  .boxText {
-    top: 30px;
-    left: 20px;
-    font-size: 24px;
-    line-height: 17px;
-  }
-  .boxMessage {
-    line-height: 20px;
-    top: 10px;
-    padding: 20px;
-  }
-  .strategyContainer {
-    display: flex;
-    flex-direction: column-reverse;
-    width: 100%;
-  }
-  .strategyImageContainer {
-    width: 100%;
-    background-color: #0a4f60;
+    height: 740px;
   }
   .strategyTextContainer {
-    width: 100%;
-    height: 550px;
+    width: 70%;
   }
   .strategyText {
     position: relative;
-    right: 60px;
-    font-size: 32px;
+    right: 50px;
+    font-size: 30px;
     line-height: 39px;
   }
   .strategyMessage {
     padding-left: 30px;
-    padding-right: 30px;
-    font-size: 14px;
-    line-height: 19px;
-  }
-  .investmentHeader {
-    font-size: 32px;
-    line-height: 39px;
-  }
-  .investmentContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    /* background-color: tomato; */
-  }
-  .card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 350px;
-    height: 550px;
-    margin: 1.5rem;
-    background-color: #ffffff;
-    border: 1px solid #eaeaea;
-    border-radius: 1rem;
-    z-index: -1;
-  }
-  .investorHeader {
-    font-size: 32px;
-    line-height: 38px;
-    text-align: center;
-  }
-  .investorHr {
-    width: 15%;
-  }
-  .investorDivAbout {
-    margin-top: 30px;
-  }
-  .investorCardDiv {
-    display: flex;
-    flex-direction: column;
+    line-height: 23px;
   }
   .investorCard {
     width: 350px;
     height: 250px;
   }
-  .subscribeContainer {
-    height: 380px;
-  }
-  .subscribeHeader {
-    font-size: 32px;
-    line-height: 38px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .subscribeInput {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .subscribeButton {
-    width: 300px;
-    height: 60px;
-    font-weight: 700;
+  .signinContainer {
+    margin: 90px;
   }
   .footer {
-    height: 500px;
-  }
-  .footerInfo {
-    position: relative;
-    flex-direction: column;
-  }
-  .footerImage {
-    display: none;
-  }
-  .footerBottom {
-    background-color: #0a4f60;
-  }
-  .footerBottomText {
-    text-align: center;
-    font-size: 9px;
-    color: #ffffff;
-  }
-  .footerBottomList {
-    text-align: center;
-  }
-  .description {
-    z-index: -1;
-  }
-  .whoAreWeDiv {
-    flex-direction: column;
-  }
-  .ourStrategy {
-    width: 330px;
-    height: 800px;
-    right: 0px;
-    top: 5px;
-    /* padding: 25px; */
-  }
-  .whoAreWe {
-    width: 330px;
-    height: 278px;
-    margin-left: 30px;
-    margin-bottom: 20px;
-  }
-  .whoAreWeMessage {
-    padding-right: 15px;
-  }
-  .meetCEO {
-    width: 330px;
-    height: 1000px;
-    margin-left: 30px;
-  }
-  .ceoMessage {
-    padding-right: 15px;
-  }
-  .ceoButtonDiv {
-    margin-left: 35px;
-  }
-  .ceoButton {
-    width: 250px;
-  }
-  .planJumbo {
-    top: 40px;
-    font-size: 32px;
-    line-height: 39px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .content {
-    font-size: 14px;
-    line-height: 20px;
-  }
-  .registrationContainer {
-    width: 350px;
-    top: 50px;
-    left: 10px;
-  }
-  .registrationHeader {
-    font-size: 23px;
-    line-height: 30px;
-  }
-  .registrationText {
-    font-size: 14px;
-    line-height: 23px;
-  }
-  .registrationSuccessfulButton {
-    width: 250px;
-    right: 1rem;
-  }
-  .signinContainer {
-    width: 350px;
-    height: 550px;
-    margin: 25px;
-  }
-  .signinButton {
-    width: 250px;
-    left: 10px;
+    height: 300px;
   }
 }

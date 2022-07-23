@@ -12,23 +12,18 @@ import { FcMoneyTransfer } from "react-icons/fc";
 // const BASE_URI = `https://monnayfinance.com/api/user/profile/${user.id}`;
 const BASE_URI = "https://monnayfinance.com/api/user/profile";
 
-// export async function getServerSideProps() {
-//   const res = await fetch(BASE_URI, {
-//     headers: new Headers({
-//       Authorization: "Bearer token",
-//       "Content-type": "application/json; charset=UTF-8",
-//     }),
-//   });
-//   const data = await res.json();
-//   return {
-//     props: {
-//       data,
-//     },
-//   };
-// }
+export async function getServerSideProps() {
+  const res = await fetch(BASE_URI);
+  const data = await res.json();
+  return {
+    props: {
+      data,
+    },
+  };
+}
 
-const Dashboard = () => {
-  // console.log(data);
+const Dashboard = ({data}) => {
+  console.log(data);
 
   const [user, setUser] = useState("");
   useEffect(() => {
