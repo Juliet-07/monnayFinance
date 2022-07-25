@@ -50,7 +50,7 @@ const Signin = () => {
           let userDetail = JSON.stringify(user.data);
           localStorage.setItem("Juliet", userDetail);
         });
-      // router.push("/dashboard");
+      router.push("/dashboard");
     } catch (err) {
       setError(true);
     }
