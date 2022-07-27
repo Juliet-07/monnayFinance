@@ -15,7 +15,7 @@ import { FiCopy } from "react-icons/fi";
 //   const res = await fetch(BASE_URI, {
 //     headers: {
 //       Authorization: "Bearer Token",
-//       "Content-type": "application/json;",
+//       "Content-type": "application/json",
 //     },
 //   });
 //   const data = await res.json();
