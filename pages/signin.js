@@ -134,7 +134,7 @@ const Signin = () => {
         {/* form proper ends */}
         <div className="flex justify-center align-center mt-5">
           <p>
-            Don't have an account?{" "}
+            Don't have an account?
             <Link href="/signup">
               <a href="#">Register</a>
             </Link>
