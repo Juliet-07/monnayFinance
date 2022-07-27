@@ -324,6 +324,44 @@ legend {
   color: #636363;
   padding: 20px;
 }
+.investmentHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 30px;
+  bottom: 300px;
+  width: 1330px;
+  height: 64px;
+  border-radius: 10px;
+  background-color: #057d99;
+}
+.investmentHeaderText {
+  position: relative;
+  top: 14px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  color: #ffffff;
+}
+.investmentActive {
+  position: relative;
+  top: 30px;
+  bottom: 300px;
+  width: 1330px;
+  height: 64px;
+  border-radius: 10px;
+  background-color: #057d99;
+}
+.investmentActiveText {
+  position: relative;
+  top: 14px;
+  left: 20px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  color: #ffffff;
+}
 .footer {
   /* position: absolute; */
   height: 50px;
