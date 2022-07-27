@@ -133,12 +133,10 @@ const Signin = () => {
         {/* </div> */}
         {/* form proper ends */}
         <div className="flex justify-center align-center mt-5">
-          <p>
-            Don't have an account?
-            <Link href="/signup">
-              <a href="#">Register</a>
-            </Link>
-          </p>
+          <p>Don't have an account? </p>
+          <Link href="/signup">
+            <a href="#">Register</a>
+          </Link>
         </div>
       </div>
       {/* </div> */}

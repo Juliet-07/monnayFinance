@@ -191,12 +191,10 @@ const Signup = () => {
         </form>
         {/* form proper ends */}
         <div className="flex justify-center align-center mt-2">
-          <p>
-            Already have an account?{" "}
-            <Link href="/signin">
-              <a href="#">Log In</a>
-            </Link>
-          </p>
+          <p>Already have an account? </p>
+          <Link href="/signin">
+            <a href="#">Log In</a>
+          </Link>
         </div>
       </div>
     </div>
