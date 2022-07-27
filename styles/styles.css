@@ -299,7 +299,7 @@ legend {
   left: 30px;
   top: 10px;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 23px;
   line-height: 35px;
   color: #057d99;
   text-transform: uppercase;
@@ -310,6 +310,19 @@ legend {
   line-height: 20px;
   font-size: 16px;
   color: #636363;
+}
+.referLinkDiv{
+  position: relative;
+  left: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 500px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #636363;
+  color: #636363;
+  padding: 20px;
 }
 .footer {
   /* position: absolute; */
@@ -4875,10 +4888,14 @@ tbody.collapse.show {
   line-height: 20px;
   color: #057d99;
 }
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .cardPrice {
   position: relative;
-  right: 70px;
-  top: 70px;
+  right: 200px;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
@@ -4886,7 +4903,7 @@ tbody.collapse.show {
 }
 .cardButton {
   position: relative;
-  top: 70px;
+  right: 100px;
   width: 150px;
   height: 50px;
   border-radius: 5px;
@@ -4900,8 +4917,8 @@ tbody.collapse.show {
   padding: 10px;
 }
 .cardButton1 {
-  position: relative;
-  top: 70px;
+  /* position: relative;
+  left: 150px; */
   width: 150px;
   height: 50px;
   border-radius: 5px;
@@ -4939,7 +4956,13 @@ tbody.collapse.show {
 
 .card-body {
   flex: 1 1 auto;
-  padding: 1.25rem;
+  width: 1330px;
+  height: 165px;
+  border-bottom: 5px solid #057d99;
+  border-radius: 10px;
+  position: relative;
+  left: 100px;
+  background-color: #ffffff;
 }
 
 .card-title {
@@ -4962,7 +4985,16 @@ tbody.collapse.show {
 .card-link + .card-link {
   margin-left: 1.25rem;
 }
-
+.card-header1 {
+  position: relative;
+  left: 100px;
+  width: 1330px;
+  height: 95px;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
 .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
@@ -6541,7 +6573,9 @@ button.close {
 .bg-primary {
   background-color: #057d99 !important;
 }
-
+.bg-dashboard {
+  background-color: #f6fdff !important;
+}
 a.bg-primary:hover,
 a.bg-primary:focus,
 button.bg-primary:hover,
@@ -18804,11 +18838,94 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.card .card-stats {
-  background: transparent;
+.cardStats {
+  background-color: #ffffff;
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 298.88px;
+  height: 176.12px;
+  border-radius: 10px;
+  border-bottom: 5px solid #057d99;
 }
-
+.cardStats1 {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 298.88px;
+  height: 176.12px;
+  border-radius: 10px;
+  border-bottom: 5px solid #FC5F00;
+}
+.cardStats2 {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 298.88px;
+  height: 176.12px;
+  border-radius: 10px;
+  border-bottom: 5px solid #F1BC19;
+}
+.cardStats3 {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 298.88px;
+  height: 176.12px;
+  border-radius: 10px;
+  border-bottom: 5px solid #04C150;
+}
+.cardActiveDiv{
+  position: relative;
+  right: 40px;
+}
+.cardActiveHeader{
+  position: relative;
+  top: 20px;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+}
+.cardActive {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32.68px;
+  color: #057d99;
+}
+.cardActive1 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32.68px;
+  color: #FC5F00;
+}
+.cardActive2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32.68px;
+  color: #F1BC19;
+}
+.cardActive3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32.68px;
+  color: #04C150;
+}
+.cardStatsRefer {
+  position: relative;
+  top: 50px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 574px;
+  height: 190px;
+  border-radius: 15px;
+  border-bottom: 5px solid #057d99;
+}
 .card .card-stats .author,
 .card .card-stats .stats {
   display: inline-flex;
@@ -18826,7 +18943,6 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
   margin-top: 0;
   margin-bottom: 3px;
 }
-
 .card .card-body {
   padding: 0.9375rem 20px;
   position: relative;

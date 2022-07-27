@@ -74,7 +74,13 @@ const Signup = () => {
       {/* <div className={styles.signupContainer}> */}
       <div className="bg-white shadow-md rounded px-6 py-6 pt-6 pb-6 mb-4 flex flex-col mt-10 mx-2 columns-md">
         <div className={styles.createDiv}>
-          <Image src="/icon.png" alt=" Logo" width={20} height={20} className={styles.createDivImg}/>
+          <Image
+            src="/icon.png"
+            alt=" Logo"
+            width={20}
+            height={20}
+            className={styles.createDivImg}
+          />
           <p className={styles.create}>Create Account</p>
         </div>
         {/* form proper */}
@@ -170,11 +176,10 @@ const Signup = () => {
             </div>
           </div>
           <div className="md:flex md:items-center mb-6">
-            <label className="block tracking-wide text-gray-700 text-xs font-bold mb-2">
+            <label className="block tracking-wide text-gray-700 text-xs mb-2">
               <input type="checkbox" className="mr-2 leading-tight" />
               <span>
-                I agree to all the <font color="#057d99">Terms</font> and{" "}
-                <font color="#057d99">Privacy Policy</font>
+                I agree to all the <a>Terms</a> and <a>Privacy Policy</a>
               </span>
             </label>
           </div>
@@ -185,76 +190,15 @@ const Signup = () => {
           </div>
         </form>
         {/* form proper ends */}
-      </div>
-      {/* </div> */}
-      {/* <footer className={styles.footer}>
-        <div className={styles.footerInfo}>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Image
-              src="/monnayFooter.png"
-              width={180}
-              height={50}
-              alt="footer image"
-            />
-            <p style={{ color: "#ffffff", marginTop: 10, textAlign: "center" }}>
-              Investment opportunities in multiple
-              <br /> markets, one account.
-            </p>
-          </div>
-          <ul className={styles.footerBottomText}>
-            <h5>Quick links</h5>
-            <Link href="/">
-              <li>
-                <a href="#" style={{ fontSize: 16 }}>
-                  Home
-                </a>
-              </li>
+        <div className="flex justify-center align-center mt-2">
+          <p>
+            Already have an account?{" "}
+            <Link href="/signin">
+              <a href="#">Log In</a>
             </Link>
-            <Link href="/about">
-              <li>
-                <a href="#" style={{ fontSize: 16 }}>
-                  About us
-                </a>
-              </li>
-            </Link>
-            <Link href="/contact">
-              <li>
-                <a href="#" style={{ fontSize: 16 }}>
-                  Contact us
-                </a>
-              </li>
-            </Link>
-            <Link href="/faq">
-              <li>
-                <a href="#" style={{ fontSize: 16 }}>
-                  FAQ
-                </a>
-              </li>
-            </Link>
-          </ul>
-          <ul className={styles.footerBottomText}>
-            <h5>Address</h5>
-            <li style={{ fontSize: 16 }}>Vanha Talvitie 11 C,</li>
-            <li style={{ fontSize: 16 }}>HELSINKI 00580 Finland</li>
-            <br />
-            <br />
-            <li style={{ fontSize: 18 }}>Email:</li>
-            <li style={{ fontSize: 16 }}>contact@monnay.finance</li>
-          </ul>
-        </div>
-        <div className={styles.footerBottom}>
-          <p className={styles.footerBottomText}>
-            COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
           </p>
         </div>
-      </footer> */}
+      </div>
     </div>
   );
 };

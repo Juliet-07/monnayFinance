@@ -414,7 +414,7 @@
 .signinContainer {
   /* position: relative; */
   width: 500px;
-  height: 550px;
+  height: 600px;
   /* left: 700px; */
   /* top: 150px; */
   background-color: #ffffff;
@@ -426,7 +426,7 @@
 .signinButton {
   position: relative;
   left: 30px;
-  top: 50px;
+  top: 40px;
   width: 358px;
   height: 50px;
   font-weight: 500;
@@ -722,7 +722,6 @@
 /* registration successful  */
 .jumbotronReg {
   position: relative;
-  z-index: -1;
 }
 .jumbotronFluidReg {
   position: absolute;
@@ -758,7 +757,7 @@
   position: relative;
   width: 500px;
   height: 500px;
-  top: 100px;
+  top: 250px;
   left: 700px;
   bottom: 0px;
   background-color: #ffffff;
@@ -780,7 +779,6 @@
   /* margin-bottom: 30px; */
   color: #000000;
 }
-
 .registrationSuccessfulButton {
   display: block;
   position: relative;
@@ -1152,7 +1150,7 @@
   }
   .registrationContainer {
     width: 350px;
-    top: 50px;
+    top: 90px;
     left: 10px;
   }
   .registrationHeader {
@@ -1169,7 +1167,7 @@
   }
   .signinContainer {
     width: 350px;
-    height: 550px;
+    height: 570px;
     margin: 25px;
   }
   .signinButton {
@@ -1228,6 +1226,9 @@
   }
   .signinContainer {
     margin: 90px;
+  }
+  .registrationContainer {
+    left: 400px;
   }
   .footer {
     height: 300px;

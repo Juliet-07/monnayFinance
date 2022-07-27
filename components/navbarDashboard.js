@@ -6,7 +6,7 @@ import Sidebar from "./sidebar";
 import { AiOutlineDollar, AiOutlineHome } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { MdOutlineNotificationsNone } from "react-icons/md";
-import { FcMoneyTransfer } from "react-icons/fc";
+import { GiWorld } from "react-icons/gi";
 
 function NavLink({ to, children }) {
   return (
@@ -52,20 +52,14 @@ export default function NavDashboard() {
         </div> */}
         {/* <NavLink to="/">Dashboard</NavLink> */}
         <div className="hidden md:flex">
-          {/* <NavLink to="/">HOME</NavLink>
-          <NavLink to="/about">ABOUT US</NavLink>
-          <NavLink to="/investment">INVESTMENTS</NavLink>
-          <NavLink to="/faq">FAQ</NavLink>
-          <NavLink to="/courses">COURSES</NavLink>
-          <NavLink to="/contact">CONTACT</NavLink> */}
           <NavLink to="/">
-            <AiOutlineHome />
+            <GiWorld size={20} />
           </NavLink>
           <NavLink to="/">
-            <MdOutlineNotificationsNone />
+            <MdOutlineNotificationsNone size={20} />
           </NavLink>
           <NavLink to="/">
-            <CgProfile />
+            <CgProfile size={20} />
           </NavLink>
         </div>
       </div>

@@ -62,8 +62,8 @@ const Sidebar = () => {
   const wrapperClasses = classNames(
     "h-screen px-4 pt-8 pb-4 bg-light flex justify-between flex-col",
     {
-      ["w-80"]: !toggleCollapse,
-      ["w-30"]: toggleCollapse,
+      ["w-70"]: !toggleCollapse,
+      ["w-35"]: toggleCollapse,
     }
   );
 
@@ -117,7 +117,7 @@ const Sidebar = () => {
           )}
         </div>
 
-        <div className="flex flex-col items-start mt-24">
+        <div className="flex flex-col items-start mt-24 sticky">
           {menuItems.map(({ icon: Icon, ...menu }) => {
             const classes = getNavItemClasses(menu);
             return (

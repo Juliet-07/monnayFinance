@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import styles from "../styles/Home.module.css";
 import Navbar from "../components/navbar";
+import Link from "next/link";
 
 const BASE_URI = "https://monnayfinance.com/api";
 
@@ -40,7 +41,7 @@ const Signin = () => {
           password: profile.password,
         }),
         headers: {
-          Authorization: "Bearer Token",
+          // Authorization: "Bearer Token",
           "Content-type": "application/json; charset=UTF-8",
         },
       })
@@ -111,12 +112,12 @@ const Signin = () => {
               </p>
             )}
           </div>
-          <div className="flex items-center justify-between align-middle mt-8">
-            <label className="block tracking-wide text-gray-700 text-xs font-bold mb-2">
-              <input type="checkbox" className="mr-2 leading-tight" />
+          <div className="flex items-center justify-between align-center mt-8">
+            <label className="flex justify-center  text-gray-700 text-xm">
+              <input type="checkbox" />
               <span>Remember me</span>
             </label>
-            <a className="font-bold text-xm text-blue-300 mb-6" href="#">
+            <a className="text-xm mb-2" href="#">
               Forgot Password?
             </a>
           </div>
@@ -131,6 +132,14 @@ const Signin = () => {
         </form>
         {/* </div> */}
         {/* form proper ends */}
+        <div className="flex justify-center align-center mt-5">
+          <p>
+            Don't have an account?{" "}
+            <Link href="/signup">
+              <a href="#">Register</a>
+            </Link>
+          </p>
+        </div>
       </div>
       {/* </div> */}
       {/* <footer className={styles.footer}>
