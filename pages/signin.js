@@ -42,7 +42,7 @@ const Signin = () => {
         }),
         headers: {
           // Authorization: "Bearer Token",
-          "Content-type": "application/json",
+          "Content-type": "application/json; charset=UTF-8",
         },
       })
         .then((res) => res.json())
