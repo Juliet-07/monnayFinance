@@ -125,18 +125,20 @@ const Signin = () => {
           <button className={styles.signinButton} type="submit">
             Log in
           </button>
-          {/* <div className={`${!error ? "hidden" : ""}`}>
+          <div className={`${!error ? "hidden" : ""}`}>
             <p className="text-red-700">INCORRECT USERNAME OR PASSWORD</p>
-          </div> */}
+          </div>
           {/* </div> */}
         </form>
         {/* </div> */}
         {/* form proper ends */}
         <div className="flex justify-center align-center mt-5">
-          <p>Don't have an account? </p>
-          <Link href="/signup">
-            <a>Register</a>
-          </Link>
+          <p>
+            {`Don't`} have an account?{" "}
+            <Link href="/signup">
+              <a href="#">Register</a>
+            </Link>
+          </p>
         </div>
       </div>
       {/* </div> */}
