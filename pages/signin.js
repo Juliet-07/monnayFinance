@@ -84,6 +84,7 @@ const Signin = () => {
               type="text"
               value={username}
               onChange={handleChange}
+              required
               // {...register("username", { required: true })}
             />
             {errors.username && errors.username.type === "required" && (
@@ -101,6 +102,7 @@ const Signin = () => {
               type="password"
               value={password}
               onChange={handleChange}
+              required
               // {...register("password", { required: true })}
             />
             {errors.password && errors.password.type === "required" && (
