@@ -135,7 +135,7 @@ const Signin = () => {
         <div className="flex justify-center align-center mt-5">
           <p>Don't have an account? </p>
           <Link href="/signup">
-            <a href="#">Register</a>
+            <a>Register</a>
           </Link>
         </div>
       </div>
