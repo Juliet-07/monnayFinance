@@ -28,49 +28,30 @@ const FAQ = () => {
         </div>
       </div>
       {/* Jumbotron Ends */}
-      {/* Card */}
-      <div className="flex justify-center faq">
-        <div className="col-lg-4 col-md-6 mt-3 mr-4">
+      {/* FAQ BOX */}
+      <div className="faqDiv" id={styles.faqDiv}>
+        <div className={styles.faqDiv1}>
+          {/* 1 */}
           <div className={styles.faqCard}>
             <div className={styles.faqCardHeader}>
-              <h5 className={styles.faqCardTitle}>What is Monnay finance?</h5>
+              <p className={styles.faqCardTitle}>What is Monnay finance?</p>
             </div>
-            <div className="card-body">
-              <p className="card-text">
+            <div>
+              <p className={styles.faqCardBodyText}>
                 Our company provides a full investment service focused on the
                 bitcoin and cryptocurrency market. We are among the best
                 platforms to invest and grow your bitcoin and other
-                cryptocurrency
+                cryptocurrency.
               </p>
             </div>
           </div>
-        </div>
-        <div className="col-lg-4 col-md-6 mt-3 mr-4">
-          <div className={styles.faqCard}>
+          {/* 2 */}
+          <div className={styles.faqCard11}>
             <div className={styles.faqCardHeader}>
-              <h5 className={styles.faqCardTitle}>
-                How do I create an account?
-              </h5>
+              <p className={styles.faqCardTitle}>How do I make a deposit?</p>
             </div>
-            <div className="card-body">
-              <p className="card-text">
-                Registration process is very easy and will take a few moments to
-                complete. Simply click the REGISTER button and fill in all the
-                required fields. That is all.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* 22 */}
-      <div className="flex justify-center faq">
-        <div className="col-lg-4 col-md-6 mt-3 mr-4">
-          <div className={styles.faqCard}>
-            <div className={styles.faqCardHeader}>
-              <h5 className={styles.faqCardTitle}>How do I make a deposit?</h5>
-            </div>
-            <div className="card-body">
-              <p className="card-text">
+            <div>
+              <p className={styles.faqCardBodyText}>
                 To deposit funds in your trading account is quick and simple.
                 For your convenience you may choose one of the several available
                 deposit methods. To make a successful deposit, please follow the
@@ -86,55 +67,77 @@ const FAQ = () => {
               </p>
             </div>
           </div>
+          {/* 3 */}
+          <div className={styles.faqCard12}>
+            <div className={styles.faqCardHeader2}>
+              <p className={styles.faqCardTitle2}>
+                What minimum amount can I withdraw from my account balance?
+              </p>
+            </div>
+            <div>
+              <p className={styles.faqCardBodyText}>$15</p>
+            </div>
+          </div>
         </div>
-        <div className="col-lg-4 col-md-6 mt-3 mr-4">
+        <div className={styles.faqDiv2}>
+          {/* 1 */}
           <div className={styles.faqCard}>
             <div className={styles.faqCardHeader}>
-              <h5 className={styles.faqCardTitle}>How do I make withdrawal?</h5>
+              <p className={styles.faqCardTitle}>How do I create an account?</p>
             </div>
-            <div className="card-body">
-              <p className="card-text">
+            <div>
+              <p className={styles.faqCardBodyText}>
+                Registration process is very easy and will take a few moments to
+                complete. Simply click the REGISTER button and fill in all the
+                required fields. That is all.
+              </p>
+            </div>
+          </div>
+          {/* 2 */}
+          <div className={styles.faqCard}>
+            <div className={styles.faqCardHeader}>
+              <p className={styles.faqCardTitle}>How do I make withdrawal?</p>
+            </div>
+            <div>
+              <p className={styles.faqCardBodyText}>
                 To make a withdrawal request click the WITHDRAW button at the
                 top center of your spectraxfinance.com account dashboard and
                 input the required details to withdraw.
               </p>
             </div>
           </div>
-        </div>
-      </div>
-      {/* 22 */}
-      {/* 2 */}
-      <div className="flex justify-center faq">
-        <div className="col-lg-4 col-md-6 mt-3 mr-4">
-          <div className={styles.faqCard}>
-            <div className={styles.faqCardHeader}>
-              <h5 className={styles.faqCardTitle}>
-                What minimum amount can I withdraw from my account balance?
-              </h5>
-            </div>
-            <div className="card-body">
-              <p className="card-text">$15</p>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-4 col-md-6 mt-3 mr-4">
-          <div className={styles.faqCard}>
-            <div className={styles.faqCardHeader}>
-              <h5 className={styles.faqCardTitle}>
+          {/* 3 */}
+          <div className={styles.faqCard21}>
+            <div className={styles.faqCardHeader} id={styles.faqCardHeader2}>
+              <p className={styles.faqCardTitle} id={styles.faqCardTitle}>
                 How long does it take to process my withdrawal?
-              </h5>
+              </p>
             </div>
-            <div className="card-body">
-              <p className="card-text">
+            <div>
+              <p className={styles.faqCardBodyText}>
                 Once we receieve your withdrawal request we process immediately
                 and send to your wallet.
               </p>
             </div>
           </div>
+          {/* 4 */}
+          <div className={styles.faqCard22}>
+            <div className={styles.faqCardHeader}>
+              <p className={styles.faqCardTitle}>
+                Is the company legally registered?
+              </p>
+            </div>
+            <div>
+              <p className={styles.faqCardBodyText}>
+                Yes, Monnay Finance is fully registered. You can click{" "}
+                <font color="#057d99">here</font> to view the registration
+                certificate.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-      {/* 2 */}
-      {/* Card ends */}
+      {/* FAQ BOX ENDS */}
 
       <footer className={styles.footer}>
         <div className={styles.footerInfo}>

@@ -48,11 +48,9 @@ hr {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 600px) {
-  .faq {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    margin: 10px;
-  }
+.faqDiv {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  /* background-color: blueviolet; */
 }

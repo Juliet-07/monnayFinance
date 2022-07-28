@@ -17,11 +17,6 @@ const Withdraw = () => {
         <meta name="description" content="Generated monnay finance" />
         <link rel="icon" href="/icon.png" />
         <link
-          href="vendor/fontawesome-free/css/all.min.css"
-          rel="stylesheet"
-          type="text/css"
-        />
-        <link
           href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
           rel="stylesheet"
         />
@@ -117,90 +112,87 @@ const Withdraw = () => {
             <div className={styles.investFluid}>
               <div className={styles.withdraw}>
                 <div className={styles.createDiv}>
-                  <h6 className={styles.create}>Withdraw</h6>
+                  <h6 className={styles.createWithdraw}>Withdraw</h6>
                   <p>Choose the account to make your withdrawal.</p>
                 </div>
                 {/* form proper */}
                 <div className="w-full">
-                  <form className=" rounded px-8 pt-6 pb-8 mb-10">
+                  <form className=" rounded px-10 pt-6 pb-8 mb-10">
                     <div className="mb-4">
-                      <label
-                        className="block text-gray-700 text-sm font-bold"
-                        htmlFor="password"
-                      >
-                        Amount
-                      </label>
+                      <div className="flex justify-between">
+                        <label className="text-black text-sm" htmlFor="amount">
+                          Amount
+                        </label>
+                        <label
+                          className=" text-gray-500 text-sm"
+                          htmlFor="amount"
+                        >
+                          Available Balance: $4.00
+                        </label>
+                      </div>
                       <input
                         className=" border w-full py-2 px-2 mt-2"
-                        id="password"
-                        name="password"
-                        type="password"
+                        id="amount"
+                        name="amount"
+                        type="number"
                         // value={password}
                         // onChange={handleChange}
                       />
                     </div>
-                    <div className="flex flex-wrap -mx-3 mb-4">
-                      <div className="w-full md:w-1/2 px-6 mb-4 md:mb-0">
-                        <label
-                          className="block text-gray-700 text-xs font-bold mb-2"
-                          htmlFor="grid-state"
-                        >
-                          Wallet Address
-                        </label>
-                        <div className="relative">
-                          <select
-                            className="block w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                            id="grid-state"
+                    <div className="flex w-full md:w-1/2 px-6 md:mb-0">
+                      <label
+                        className="block text-black text-sm"
+                        htmlFor="grid-state"
+                      >
+                        Wallet address:
+                      </label>
+                      <div className="relative w-full">
+                        <select className="block" id="grid-state">
+                          <option>Btc</option>
+                          <option>Doge</option>
+                          <option>Eth</option>
+                          <option>Usdt</option>
+                        </select>
+                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                          <svg
+                            className="fill-current h-4 w-4"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
                           >
-                            <option>Btc</option>
-                            <option>Doge</option>
-                            <option>Eth</option>
-                            <option>Usdt</option>
-                          </select>
-                          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                            <svg
-                              className="fill-current h-4 w-4"
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 20 20"
-                            >
-                              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                            </svg>
-                          </div>
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                          </svg>
                         </div>
-                      </div>
-                      <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-                        <input
-                          className="border w-full py-2 px-2 mt-4"
-                          id="grid-password"
-                          name="confirm_password"
-                          type="password"
-                          //   value={confirm_password}
-                          //   onChange={handleChange}
-                        />
                       </div>
                     </div>
                     <div className="mb-4">
+                      <input
+                        className="border w-full py-2 px-2 mt-2"
+                        type="text"
+                        //   value={confirm_password}
+                        //   onChange={handleChange}
+                      />
+                    </div>
+                    <div className="mb-4">
                       <label
-                        className="block text-gray-700 text-sm font-bold mb-2"
-                        htmlFor="password"
+                        className="block text-black text-sm"
+                        htmlFor="comment"
                       >
                         Comment:
                       </label>
                       <textarea
                         className="border w-full py-2 px-2 mt-4"
-                        id="password"
-                        name="password"
+                        id="comment"
                         rows={7}
                         // value={password}
                         // onChange={handleChange}
                       ></textarea>
                     </div>
                     {/* <div className={styles.createButtonDiv}> */}
-                    {/* <Link href="/dashboard/dashboard"> */}
-                    <button className={styles.registrationButton} type="button">
-                      Withdraw
-                    </button>
-                    {/* </Link> */}
+                    <Link href="/req-successful">
+                      <button className={styles.withdrawButton} type="button">
+                        Withdraw
+                      </button>
+                    </Link>
                     {/* </div> */}
                   </form>
                 </div>

@@ -120,7 +120,7 @@ const Invest = () => {
             <div className={styles.investFluid}>
               <div className={styles.invest}>
                 <div className={styles.createDiv}>
-                  <h6 className={styles.create}>Invest</h6>
+                  <h6 className={styles.createWithdraw}>Invest</h6>
                   <p>
                     Kindly select the plan you wish to invest in
                     <br />
@@ -132,16 +132,13 @@ const Invest = () => {
                   <form className=" rounded px-8 pt-6 pb-8 mb-10">
                     <div className="w-full px-3 mb-6">
                       <label
-                        className="block text-gray-700 text-xs font-bold mb-2"
+                        className="block text-black text-sm mb-2"
                         htmlFor="grid-state"
                       >
-                        Plan
+                        Plan:
                       </label>
-                      <div className="relative">
-                        <select
-                          className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                          id="grid-state"
-                        >
+                      <div className="relative w-full">
+                        <select className="block " id="grid-state">
                           <option>Basic</option>
                           <option>Standard</option>
                           <option>Platinum</option>
@@ -159,23 +156,23 @@ const Invest = () => {
                     </div>
                     <div className="mb-4">
                       <label
-                        className="block text-gray-700 text-sm font-bold mb-2"
-                        htmlFor="password"
+                        className="block text-black text-sm mb-2"
+                        htmlFor="amount"
                       >
                         Amount
                       </label>
                       <input
-                        className=" border w-full py-2 px-2 mt-4"
-                        id="password"
-                        name="password"
-                        type="password"
-                        // value={password}
+                        className=" border w-full py-2 px-2 mt-2"
+                        id="amount"
+                        name="amount"
+                        type="number"
+                        // value={amount}
                         // onChange={handleChange}
                       />
                     </div>
                     {/* <div className={styles.createButtonDiv}> */}
                     {/* <Link href="/dashboard/dashboard"> */}
-                    <button className={styles.registrationButton} type="button">
+                    <button className={styles.investButton} type="button">
                       Invest
                     </button>
                     {/* </Link> */}

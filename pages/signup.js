@@ -86,7 +86,7 @@ const Signup = () => {
         {/* form proper */}
         <form onSubmit={handleSubmit(signup)} className="w-full mt-3">
           <div className="flex flex-wrap -mx-3 mb-4">
-            <div className="md:w-1/2 px-3 mb-4 md:mb-0">
+            <div className=" px-3 mb-4 md:mb-0">
               <label
                 className="text-black text-sm font-bold"
                 htmlFor="fullname"
@@ -103,7 +103,7 @@ const Signup = () => {
                 required
               />
             </div>
-            <div className="md:w-1/2 px-3">
+            <div className=" px-3">
               <label
                 className="text-black text-sm font-bold"
                 htmlFor="username"
@@ -138,7 +138,7 @@ const Signup = () => {
             </div>
           </div>
           <div className="flex flex-wrap -mx-3 mb-4">
-            <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+            <div className="w-full  px-3 mb-4 md:mb-0">
               <label
                 className="text-black text-sm font-bold"
                 htmlFor="password"
@@ -155,7 +155,7 @@ const Signup = () => {
                 required
               />
             </div>
-            <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+            <div className="w-full  px-3 mb-4 md:mb-0">
               <label
                 className="text-black text-sm font-bold"
                 htmlFor="grid-confirm"

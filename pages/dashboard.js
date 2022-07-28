@@ -8,25 +8,27 @@ import styles from "../styles/Home.module.css";
 import { AiOutlineDollar } from "react-icons/ai";
 import { BsLink45Deg } from "react-icons/bs";
 import { FiCopy } from "react-icons/fi";
-// const BASE_URI = `https://monnayfinance.com/api/user/profile/${user.id}`;
-// const BASE_URI = "https://monnayfinance.com/api/user/profile";
 
-// export async function getServerSideProps() {
-//   const res = await fetch(BASE_URI, {
-//     headers: {
-//       Authorization: "Bearer Token",
-//       "Content-type": "application/json",
-//     },
-//   });
-//   const data = await res.json();
-//   return {
-//     props: {
-//       data,
-//     },
-//   };
-// }
+const BASE_URI = "https://monnayfinance.com/api/user/profile/18";
 
-const Dashboard = () => {
+export async function getServerSideProps() {
+  const res = await fetch(BASE_URI, {
+    headers: {
+      Authorization:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInByaXZpbGVnZSI6InVzZXIiLCJ0b2tlbiI6Ijg5NGUzNDQzYjYzYzkyOTMiLCJpYXQiOjE2NTkwMDcxMjl9.oYKsguhTfAdWOZlURIJ3VIXZT0bX6UGNDpVrlKkhXEc",
+      "Content-type": "application/json",
+    },
+  });
+  const details = await res.json();
+  return {
+    props: {
+      details,
+    },
+  };
+}
+
+const Dashboard = ({ details }) => {
+  const { data = [] } = details;
   // console.log(data);
 
   const [user, setUser] = useState("");
@@ -83,7 +85,7 @@ const Dashboard = () => {
                   <div className="details">
                     <p className="cardPrice">
                       <font color="black">Available balance:</font>
-                      <br /> $ 30,000
+                      <br /> $ {data.walletBalance}
                     </p>
                     <Link href="/withdraw">
                       <button className="cardButton">Withdraw</button>
@@ -104,7 +106,7 @@ const Dashboard = () => {
                   </i>
                   <div className="cardActiveDiv">
                     <p className="cardActiveHeader">Active Investment</p>
-                    <p className="cardActive">$ 2,000.00</p>
+                    <p className="cardActive">$ {data.activeInvestment}</p>
                   </div>
                 </div>
               </div>
@@ -115,7 +117,7 @@ const Dashboard = () => {
                   </i>
                   <div className="cardActiveDiv">
                     <p className="cardActiveHeader">Total Withdrawn</p>
-                    <p className="cardActive1">$ 3,000.00</p>
+                    <p className="cardActive1">$ {data.totalEarning}</p>
                   </div>
                 </div>
               </div>
@@ -126,7 +128,7 @@ const Dashboard = () => {
                   </i>
                   <div className="cardActiveDiv">
                     <p className="cardActiveHeader">Pending Withdrawal</p>
-                    <p className="cardActive2">$ 0.00</p>
+                    <p className="cardActive2">$ {data.pendingWithdrawal}</p>
                   </div>
                 </div>
               </div>
@@ -137,7 +139,7 @@ const Dashboard = () => {
                   </i>
                   <div className="cardActiveDiv">
                     <p className="cardActiveHeader">Total Earning</p>
-                    <p className="cardActive3">$ 6,000.00</p>
+                    <p className="cardActive3">$ {data.totalEarning}</p>
                   </div>
                 </div>
               </div>
@@ -154,7 +156,7 @@ const Dashboard = () => {
                   <i className="material-icons">
                     <BsLink45Deg />
                   </i>
-                  <p>https://monnayfinance.com/ref/jhnjmsdoe</p>
+                  <p>{data.referralLink}</p>
                   <i className="material-icons">
                     <FiCopy />
                   </i>
