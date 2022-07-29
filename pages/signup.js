@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import axios from "axios";
 import styles from "../styles/Home.module.css";
 import Navbar from "../components/navbar";
+import { FiEye, FiEyeOff } from "react-icons/fi";
 
 const BASE_URI = "https://monnayfinance.com/api";
 
@@ -26,6 +27,10 @@ const Signup = () => {
   const router = useRouter();
   const [details, setDetails] = useState(initialValues);
   const [passwordError, setPasswordError] = useState(false);
+  const [showPassword, setShowPassword] = useState(true);
+  const togglePassword = () => {
+    setShowPassword(showPassword ? false : true);
+  };
   const handleChange = (e) => {
     const { name, value } = e.target;
     setDetails({ ...details, [name]: value });
@@ -84,96 +89,78 @@ const Signup = () => {
           <p className={styles.create}>Create Account</p>
         </div>
         {/* form proper */}
-        <form onSubmit={handleSubmit(signup)} className="w-full mt-3">
-          <div className="flex flex-wrap -mx-3 mb-4">
-            <div className=" px-3 mb-4 md:mb-0">
-              <label
-                className="text-black text-sm font-bold"
-                htmlFor="fullname"
-              >
-                Full name
-              </label>
-              <input
-                className=" border rounded w-full py-2 px-2 text-gray-700"
-                id="fullname"
-                name="fullname"
-                type="text"
-                value={fullname}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className=" px-3">
-              <label
-                className="text-black text-sm font-bold"
-                htmlFor="username"
-              >
-                Username
-              </label>
-              <input
-                className="border rounded w-full py-2 px-2 text-gray-700"
-                id="username"
-                name="username"
-                type="text"
-                value={username}
-                onChange={handleChange}
-                required
-              />
-            </div>
+        <form onSubmit={handleSubmit(signup)} className=" mt-3">
+          <div className=" mb-4">
+            <label className="text-black text-sm" htmlFor="fullname">
+              Full name
+            </label>
+            <input
+              className=" border rounded  text-gray-700"
+              id="fullname"
+              name="fullname"
+              type="text"
+              value={fullname}
+              onChange={handleChange}
+              required
+            />
           </div>
-          <div className="flex flex-wrap -mx-3 mb-4">
-            <div className="w-full px-3 py-2 ">
-              <label className="text-black text-sm font-bold" htmlFor="email">
-                Email
-              </label>
-              <input
-                className="border rounded w-full py-2 px-2 text-gray-700"
-                id="email"
-                name="email"
-                type="email"
-                value={email}
-                onChange={handleChange}
-                required
-              />
-            </div>
+          <div className="mb-4">
+            <label className="text-black text-sm" htmlFor="username">
+              Username
+            </label>
+            <input
+              className="border rounded  text-gray-700"
+              id="username"
+              name="username"
+              type="text"
+              value={username}
+              onChange={handleChange}
+              required
+            />
           </div>
-          <div className="flex flex-wrap -mx-3 mb-4">
-            <div className="w-full  px-3 mb-4 md:mb-0">
-              <label
-                className="text-black text-sm font-bold"
-                htmlFor="password"
-              >
-                Password
-              </label>
-              <input
-                className="border rounded w-full py-2 px-2 text-gray-700"
-                id="password"
-                name="password"
-                type="password"
-                value={password}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="w-full  px-3 mb-4 md:mb-0">
-              <label
-                className="text-black text-sm font-bold"
-                htmlFor="grid-confirm"
-              >
-                Confirm Password
-              </label>
-              <input
-                className="border rounded w-full py-2 px-2 text-gray-700"
-                id="grid-password"
-                name="confirmPassword"
-                type="password"
-                required
-                value={confirmPassword}
-                onChange={handleChange}
-                onError={passwordError ? true : false}
-              />
-              {/* {passwordError && passwordErrorMessage} */}
-            </div>
+          <div className="mb-4">
+            <label className="text-black text-sm" htmlFor="email">
+              Email
+            </label>
+            <input
+              className="border rounded  text-gray-700"
+              id="email"
+              name="email"
+              type="email"
+              value={email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="mb-4">
+            <label className="text-black text-sm" htmlFor="password">
+              Password
+            </label>
+            <input
+              className="border rounded  text-gray-700"
+              id="password"
+              name="password"
+              type="password"
+              value={password}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="mb-4">
+            <label className="text-black text-sm" htmlFor="grid-confirm">
+              Confirm Password
+            </label>
+            <input
+              className="border rounded  text-gray-700"
+              id="grid-password"
+              name="confirmPassword"
+              type="password"
+              required
+              value={confirmPassword}
+              onChange={handleChange}
+              onError={passwordError ? true : false}
+            />
+            {/* {passwordError && passwordErrorMessage} */}
           </div>
           <div className="md:flex md:items-center mb-6">
             <label className="block tracking-wide text-gray-700 text-xs mb-2">

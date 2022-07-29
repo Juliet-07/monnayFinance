@@ -4,6 +4,7 @@ import Image from "next/image";
 import Jumbo from "../public/monnayJumbo.png";
 import styles from "../styles/Home.module.css";
 import Navbar from "../components/navbar";
+import { VscQuote } from "react-icons/vsc";
 
 const About = () => {
   return (
@@ -172,26 +173,31 @@ const About = () => {
 
           <div className={styles.investorCardDiv}>
             <div className={styles.investorCard}>
+              <VscQuote size={70} className={styles.investorIcon} />
               <p className={styles.investorMessage}>
-                Beautiful performance from this company. I am glad to be an
-                investor here.
+                Beautiful performance from this company.
+                <br /> I am glad to be an investor here.
               </p>
               <p className={styles.investorName}>Iain Carmichael</p>
             </div>
-            <div className={styles.investorCard}>
+            {/* <div className={styles.investorCard}>
               <p className={styles.investorMessage}>
                 What a well designed investment structure. It is an
                 easy-to-operate system with automated payments.
               </p>
               <p className={styles.investorName}>Paul Littlefair</p>
-            </div>
+            </div> */}
             <div className={styles.investorCard}>
-              <p className={styles.investorMessage}>
-                Thank you Monnay Finance for being so efficient in service and
-                proving to be the best investment company. It has always been my
-                wish to encounter a company with such performance. Keep it up
+              <VscQuote size={70} className={styles.investorIcon} />
+              <p className={styles.investorMessage3}>
+                Thank you Monnay Finance for being so efficient{" "}
+                <br className={styles.brTag} />
+                in service and proving to be the best investment company.
+                <br className={styles.brTag} /> It has always been my wish to
+                encounter a company <br className={styles.brTag} />
+                with such performance. Keep it up
               </p>
-              <p className={styles.investorName}>Amber Oram</p>
+              <p className={styles.investorName3}>Amber Oram</p>
             </div>
             <div></div>
           </div>

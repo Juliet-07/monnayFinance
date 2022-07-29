@@ -74,11 +74,11 @@ const Signin = () => {
         {/* <div className="w-full"> */}
         <form onSubmit={handleSubmit(login)} className="py-4 px-4 pt-6 pb-8">
           <div className="mb-4">
-            <label className="text-black text-sm font-bold" htmlFor="username">
+            <label className="text-black text-sm" htmlFor="username">
               Username
             </label>
             <input
-              className="border rounded w-full py-2 px-2 text-gray-700"
+              className="border rounded w-full text-gray-700"
               id="username"
               name="username"
               type="text"
@@ -92,11 +92,11 @@ const Signin = () => {
             )}
           </div>
           <div className="mb-4">
-            <label className="text-black text-sm font-bold" htmlFor="password">
+            <label className="text-black text-sm" htmlFor="password">
               Password
             </label>
             <input
-              className="border rounded w-full py-2 px-2 text-gray-700"
+              className="border rounded w-full text-gray-700"
               id="password"
               name="password"
               type="password"
