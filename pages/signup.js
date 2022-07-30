@@ -166,7 +166,14 @@ const Signup = () => {
             <label className="block tracking-wide text-gray-700 text-xs mb-2">
               <input type="checkbox" className="mr-2 leading-tight" />
               <span>
-                I agree to all the <a>Terms</a> and <a>Privacy Policy</a>
+                I agree to all the{" "}
+                <Link href="/terms">
+                  <a>Terms</a>
+                </Link>{" "}
+                and{" "}
+                <Link href="/terms">
+                  <a>Privacy Policy</a>
+                </Link>
               </span>
             </label>
           </div>

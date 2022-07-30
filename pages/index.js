@@ -338,7 +338,7 @@ const Home = () => {
           </div>
           <div className={styles.investorCardDiv}>
             <div className={styles.investorCard}>
-              <VscQuote size={70} className={styles.investorIcon} />
+              <VscQuote size={55} className={styles.investorIcon} />
               <p className={styles.investorMessage}>
                 Beautiful performance from this company.
                 <br /> I am glad to be an investor here.
@@ -353,7 +353,7 @@ const Home = () => {
               <p className={styles.investorName}>Paul Littlefair</p>
             </div> */}
             <div className={styles.investorCard}>
-              <VscQuote size={70} className={styles.investorIcon} />
+              <VscQuote size={55} className={styles.investorIcon} />
               <p className={styles.investorMessage3}>
                 Thank you Monnay Finance for being so efficient{" "}
                 <br className={styles.brTag} />

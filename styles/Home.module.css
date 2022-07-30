@@ -450,6 +450,56 @@
   color: #ffffff;
   margin: 30px;
 }
+/* TERMS AND PRIVACY POLICY */
+.termsHeader {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 86px;
+  text-align: center;
+  color: #ffffff;
+}
+.termsBody {
+  position: relative;
+  left: 240px;
+  width: 1248px;
+  color: #ffffff;
+  /* height: 1727px; */
+  /* background-color: tomato; */
+}
+.termsListHeader {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  /* background-color: #000000; */
+}
+.termsList {
+  font-size: 16px;
+  line-height: 23px;
+  list-style-type: circle;
+  /* background-color: red; */
+}
+.agreeTerms {
+  position: relative;
+  top: 50px;
+  left: 240px;
+  font-size: 18px;
+  line-height: 23px;
+  color: #ffffff;
+}
+.termsButton {
+  position: relative;
+  top: 100px;
+  left: 1339px;
+  width: 149px;
+  height: 60px;
+  color: #057d99;
+  background-color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+/* TERMS AND PRIVACY POLICY */
 .createDiv {
   display: flex;
   flex-direction: column;
@@ -678,8 +728,8 @@
 }
 .investorMessage {
   position: relative;
-  top: 30px;
-  left: 130px;
+  top: 50px;
+  left: 100px;
   font-size: 16px;
   line-height: 22px;
   padding: 20px;
@@ -695,7 +745,8 @@
 }
 .investorMessage3 {
   position: relative;
-  left: 90px;
+  top: 20px;
+  left: 70px;
   font-size: 16px;
   line-height: 22px;
   padding: 40px;
@@ -901,6 +952,37 @@
   color: #ffffff;
   margin: 30px;
 }
+/* COURSES */
+.coursesDiv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+}
+.coursesCard {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  height: 448px;
+  border: 1px solid #057d99;
+  border-radius: 10px;
+  margin: 20px;
+  text-transform: uppercase;
+}
+.bookDiv {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  width: 250px;
+  height: 250px;
+  /* background-color: tomato; */
+}
+.book{
+  position: relative;
+  left: 30px;
+}
+/* COURSES */
 .footer {
   display: flex;
   flex-direction: column;
@@ -1195,7 +1277,7 @@
     font-size: 12px;
     line-height: 14px;
     top: 0px;
-    left: 70px;
+    left: 60px;
   }
   .investorName {
     font-size: 14px;
@@ -1205,7 +1287,7 @@
     font-size: 12px;
     line-height: 14px;
     bottom: 60px;
-    left: 30px;
+    left: 20px;
     padding-left: 70px;
     padding-right: 50px;
   }

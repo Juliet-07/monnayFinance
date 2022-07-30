@@ -14,7 +14,7 @@ const RegSuccessful = () => {
         <meta name="description" content="Generated monnay finance" />
         <link rel="icon" href="/icon.png" />
       </Head>
-      {/* <Navbar /> */}
+      <Navbar />
       <div
         className={styles.jumbotronReg}
         style={{
