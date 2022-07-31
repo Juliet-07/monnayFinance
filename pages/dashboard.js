@@ -9,35 +9,46 @@ import { AiOutlineDollar } from "react-icons/ai";
 import { BsLink45Deg } from "react-icons/bs";
 import { FiCopy } from "react-icons/fi";
 
-const BASE_URI = "https://monnayfinance.com/api/user/profile/18";
+// const BASE_URI = "https://monnayfinance.com/api/user/profile/18";
 
-export async function getServerSideProps() {
-  const res = await fetch(BASE_URI, {
-    headers: {
-      Authorization:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInByaXZpbGVnZSI6InVzZXIiLCJ0b2tlbiI6Ijg5NGUzNDQzYjYzYzkyOTMiLCJpYXQiOjE2NTkwMDcxMjl9.oYKsguhTfAdWOZlURIJ3VIXZT0bX6UGNDpVrlKkhXEc",
-      "Content-type": "application/json",
-    },
-  });
-  const details = await res.json();
-  return {
-    props: {
-      details,
-    },
-  };
-}
+// export async function getServerSideProps() {
+//   const res = await fetch(BASE_URI, {
+//     headers: {
+//       Authorization:
+//         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInByaXZpbGVnZSI6InVzZXIiLCJ0b2tlbiI6Ijg5NGUzNDQzYjYzYzkyOTMiLCJpYXQiOjE2NTkwMDcxMjl9.oYKsguhTfAdWOZlURIJ3VIXZT0bX6UGNDpVrlKkhXEc",
+//       "Content-type": "application/json",
+//     },
+//   });
+//   const details = await res.json();
+//   return {
+//     props: {
+//       details,
+//     },
+//   };
+// }
 
-const Dashboard = ({ details }) => {
-  const { data = [] } = details;
-  // console.log(data);
-
+const Dashboard = () => {
   const [user, setUser] = useState("");
+  const [details, setDetails] = useState([]);
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("Juliet"));
     if (user !== null || user !== undefined) {
       setUser(user);
     }
+    fetch(`https://monnayfinance.com/api/user/profile/${user.id}`, {
+      headers: {
+        Authorization:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInByaXZpbGVnZSI6InVzZXIiLCJ0b2tlbiI6Ijg5NGUzNDQzYjYzYzkyOTMiLCJpYXQiOjE2NTkwMDcxMjl9.oYKsguhTfAdWOZlURIJ3VIXZT0bX6UGNDpVrlKkhXEc",
+        "Content-type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setDetails(data);
+        console.log("returns", data);
+      });
   }, []);
+  const { data = [] } = details;
   return (
     <>
       <Head>
@@ -68,7 +79,7 @@ const Dashboard = ({ details }) => {
               <div className="card-header">
                 <div className="flex justify-between">
                   <h4 className="cardName">Welcome {user.username}</h4>
-                  {/* <h4 className="cardName">Welcome {user.name}</h4> */}
+                  {/* <h4 className="cardName">Welcome {user.id}</h4> */}
                   <p className="cardTime">Last Access: {user.lastlogin}</p>
                 </div>
               </div>
