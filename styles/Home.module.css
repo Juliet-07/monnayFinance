@@ -978,9 +978,85 @@
   height: 250px;
   /* background-color: tomato; */
 }
-.book{
+.bookDiv3 {
+  position: relative;
+  top: 21px;
+  left: 21px;
+  width: 228px;
+  height: 228px;
+  /* background-color: tomato; */
+}
+.book {
   position: relative;
   left: 30px;
+}
+.bookTitle {
+  position: relative;
+  top: 30px;
+  left: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+  line-height: 20px;
+}
+.bookTitle3 {
+  position: relative;
+  top: 40px;
+  left: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+  line-height: 20px;
+}
+.bookPrice {
+  position: relative;
+  top: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.bookPrice3 {
+  position: relative;
+  top: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.coursesButton {
+  position: relative;
+  width: 248px;
+  height: 50px;
+  top: 15px;
+  left: 10px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  border: 1px solid transparent;
+  padding: 0.46875rem 1rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  background-color: #057d99;
+}
+.coursesButton3 {
+  position: relative;
+  width: 248px;
+  height: 50px;
+  top: 40px;
+  left: 10px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  border: 1px solid transparent;
+  padding: 0.46875rem 1rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  background-color: #057d99;
 }
 /* COURSES */
 .footer {
@@ -1450,6 +1526,10 @@
   }
   #faqCardHeader2 {
     height: 70px;
+  }
+  .coursesDiv {
+    flex-direction: column;
+    z-index: -1;
   }
 }
 /* FOR LAPTOPS */

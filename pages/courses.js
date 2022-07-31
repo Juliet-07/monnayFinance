@@ -4,6 +4,7 @@ import Image from "next/image";
 import Jumbo from "../public/monnayJumbo.png";
 import styles from "../styles/Home.module.css";
 import Navbar from "../components/navbar";
+import { AiFillStar } from "react-icons/ai";
 
 const Courses = () => {
   return (
@@ -33,17 +34,164 @@ const Courses = () => {
         <div className={styles.coursesDiv}>
           <div className={styles.coursesCard}>
             <div className={styles.bookDiv}>
-              <p style={{ color: "orange" }}>free</p>
+              <p style={{ color: "#FC5F00" }}>free</p>
               <div style={{ position: "relative", left: "30px" }}>
                 <Image
                   src="/free.png"
-                  width={183}
-                  height={240}
+                  width={150}
+                  height={200}
                   alt="free course"
                 />
               </div>
             </div>
-            {/* <p>beginners training ebook</p> */}
+            <p className={styles.bookTitle}>
+              beginners guide to forex trading. (e-book)
+            </p>
+            <div className={styles.bookPrice}>
+              <p
+                style={{
+                  color: "#FC5F00",
+                  textTransform: "uppercase",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                free
+                <del style={{ color: "#A9A9A9" }}>$5,533</del>
+              </p>
+              <div style={{ display: "flex", color: "#F1BC19" }}>
+                <AiFillStar />
+                <AiFillStar />
+                <AiFillStar />
+                <AiFillStar />
+                <AiFillStar />
+              </div>
+            </div>
+            <button type="button" className={styles.coursesButton}>
+              download
+            </button>
+          </div>
+          <div className={styles.coursesCard}>
+            <div className={styles.bookDiv}>
+              <div style={{ position: "relative", top: "30px" }}>
+                <Image
+                  src="/expert.png"
+                  width={350}
+                  height={250}
+                  alt="expert course"
+                />
+              </div>
+            </div>
+            <p className={styles.bookTitle}>
+              expert tips for forex trading. (e-book)
+            </p>
+            <div className={styles.bookPrice}>
+              <p
+                style={{
+                  color: "#FC5F00",
+                  textTransform: "uppercase",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                $5,000
+                <del style={{ color: "#A9A9A9" }}>$5,533</del>
+              </p>
+              <div style={{ display: "flex", color: "#F1BC19" }}>
+                <AiFillStar />
+                <AiFillStar />
+                <AiFillStar />
+                <AiFillStar />
+                <AiFillStar />
+              </div>
+            </div>
+            <button type="button" className={styles.coursesButton}>
+              buy now
+            </button>
+          </div>
+          <div className={styles.coursesCard}>
+            <div className={styles.bookDiv3}>
+              <Image
+                src="/signal.png"
+                width={300}
+                height={300}
+                alt="free course"
+              />
+            </div>
+            <p className={styles.bookTitle3}>
+              a guide to signal analysis in forex. (e-book)
+            </p>
+            <div className={styles.bookPrice3}>
+              <p
+                style={{
+                  color: "#FC5F00",
+                  textTransform: "uppercase",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                $8,000
+                <del style={{ color: "#A9A9A9" }}>$9,533</del>
+              </p>
+              <div style={{ display: "flex", color: "#F1BC19" }}>
+                <AiFillStar />
+                <AiFillStar />
+                <AiFillStar />
+                <AiFillStar />
+                <AiFillStar />
+              </div>
+            </div>
+            <button type="button" className={styles.coursesButton3}>
+              buy now
+            </button>
+          </div>
+          <div className={styles.coursesCard}>
+            <div className={styles.bookDiv}>
+              <div style={{ position: "relative", left: "30px", top: "32px" }}>
+                <Image
+                  src="/candle.png"
+                  width={180}
+                  height={240}
+                  alt="course"
+                />
+              </div>
+            </div>
+            <p className={styles.bookTitle}>
+              candle analysis and trading tips. (e-book)
+            </p>
+            <div className={styles.bookPrice}>
+              <p
+                style={{
+                  color: "#FC5F00",
+                  textTransform: "uppercase",
+                  display: "flex",
+                  flexDirection: "column",
+                  fontSize: "18px",
+                  lineHeight: "27px",
+                }}
+              >
+                $6,500
+                <del
+                  style={{
+                    color: "#A9A9A9",
+                    fontSize: "14px",
+                    lineHeight: "21px",
+                  }}
+                >
+                  $8,533
+                </del>
+              </p>
+              <div style={{ display: "flex", color: "#F1BC19" }}>
+                <AiFillStar />
+                <AiFillStar />
+                <AiFillStar />
+                <AiFillStar />
+                <AiFillStar />
+              </div>
+            </div>
+            <button type="button" className={styles.coursesButton}>
+              buy now
+            </button>
           </div>
         </div>
         {/* Courses */}
