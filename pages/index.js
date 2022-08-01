@@ -343,7 +343,9 @@ const Home = () => {
                 Beautiful performance from this company.
                 <br /> I am glad to be an investor here.
               </p>
-              <p className={styles.investorName}>Iain Carmichael</p>
+              <div id={styles.investorName}>
+                <p className={styles.investorName}>Iain Carmichael</p>
+              </div>
             </div>
             {/* <div className={styles.investorCard}>
               <p className={styles.investorMessage}>

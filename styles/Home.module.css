@@ -706,18 +706,11 @@
   align-items: center;
 }
 .investorCard {
-  /* position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
   width: 590px;
   height: 292px;
   margin: 2rem;
-  /* padding: 1.5rem; */
+  padding: 1.5rem;
   background-color: whitesmoke;
-  /* background-clip: border-box;
-  border: 1px solid #eaeaea; */
   border-radius: 10px;
 }
 .investorIcon {
@@ -1478,14 +1471,14 @@
     width: 250px;
     left: 10px;
   }
-  .termsHeader{
+  .termsHeader {
     font-size: 27px;
   }
-  .termsBody{
+  .termsBody {
     width: 350px;
     left: 29px;
   }
-  .termsButton{
+  .termsButton {
     width: 319px;
     left: 47px;
   }
@@ -1581,8 +1574,25 @@
     line-height: 23px;
   }
   .investorCard {
-    width: 350px;
+    width: 450px;
     height: 250px;
+  }
+  .investorIcon {
+    top: 15px;
+    left: 20px;
+  }
+  .investorMessage {
+    top: 20px;
+    left: 60px;
+  }
+  #investorName {
+    position: relative;
+    bottom: 30px;
+  }
+  .investorMessage3{
+    top: 10px;
+    left: 40px;
+    padding: 10px;
   }
   .signinContainer {
     margin: 90px;
