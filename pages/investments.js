@@ -5,7 +5,27 @@ import Layout from "../components/layout";
 import styles from "../styles/Home.module.css";
 import { AiFillCheckCircle } from "react-icons/ai";
 
-const Investment = () => {
+const BASE_URI = `https://monnayfinance.com/api/investments/18/recent`;
+
+export async function getServerSideProps() {
+  const res = await fetch(BASE_URI, {
+    headers: {
+      Authorization:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInByaXZpbGVnZSI6InVzZXIiLCJ0b2tlbiI6Ijg5NGUzNDQzYjYzYzkyOTMiLCJpYXQiOjE2NTkwMDcxMjl9.oYKsguhTfAdWOZlURIJ3VIXZT0bX6UGNDpVrlKkhXEc",
+      "Content-type": "application/json",
+    },
+  });
+  const details = await res.json();
+  return {
+    props: {
+      details,
+    },
+  };
+}
+
+const Investment = ({ details }) => {
+  const { data = [] } = details;
+  console.log(data);
   return (
     <>
       <Head>
@@ -193,9 +213,9 @@ const Investment = () => {
                 <p className="investmentActiveText">Active Investments</p>
               </div>
             </div>
-            <div className="col-md-12">
+            <div className="col-md-10 mb-10">
               <table className="table-auto md:table-auto">
-                <thead className="text-default text-xl text-bold">
+                <thead className="text-default text-xl text-bold bg-white">
                   <tr>
                     <th>Plan</th>
                     <th>Amount</th>
@@ -232,9 +252,9 @@ const Investment = () => {
                 <p className="investmentActiveText">Recent Investments</p>
               </div>
             </div>
-            <div className="col-md-12">
+            <div className="col-md-10 mb-20">
               <table className="table-auto md:table-auto">
-                <thead className="text-default text-xl text-bold">
+                <thead className="text-default text-xl text-bold bg-white">
                   <th>Plan</th>
                   <th>Amount</th>
                   <th>End Date</th>

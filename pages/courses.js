@@ -34,12 +34,26 @@ const Courses = () => {
         <div className={styles.coursesDiv}>
           <div className={styles.coursesCard}>
             <div className={styles.bookDiv}>
-              <p style={{ color: "#FC5F00" }}>free</p>
-              <div style={{ position: "relative", left: "30px" }}>
+              <p
+                style={{
+                  color: "#FC5F00",
+                  position: "relative",
+                  top: "25px",
+                  left: "25px",
+                  fontWeight: "600",
+                  fontSize: "12px",
+                  lineHeight: "16px",
+                }}
+              >
+                free
+              </p>
+              <div
+              // style={{ position: "relative", left: "-28px", top: "-16px" }}
+              >
                 <Image
                   src="/free.png"
-                  width={150}
-                  height={200}
+                  width={300}
+                  height={300}
                   alt="free course"
                 />
               </div>
@@ -57,7 +71,7 @@ const Courses = () => {
                 }}
               >
                 free
-                <del style={{ color: "#A9A9A9" }}>$5,533</del>
+                <del style={{ color: "#A9A9A9" }}>$800</del>
               </p>
               <div style={{ display: "flex", color: "#F1BC19" }}>
                 <AiFillStar />
@@ -73,17 +87,17 @@ const Courses = () => {
           </div>
           <div className={styles.coursesCard}>
             <div className={styles.bookDiv}>
-              <div style={{ position: "relative", top: "30px" }}>
+              <div style={{ position: "relative", top: "15px" }}>
                 <Image
-                  src="/expert.png"
-                  width={350}
-                  height={250}
+                  src="/fundamental.png"
+                  width={306}
+                  height={306}
                   alt="expert course"
                 />
               </div>
             </div>
             <p className={styles.bookTitle}>
-              expert tips for forex trading. (e-book)
+              technical and fundamental analysis. (e-book)
             </p>
             <div className={styles.bookPrice}>
               <p
@@ -94,8 +108,8 @@ const Courses = () => {
                   flexDirection: "column",
                 }}
               >
-                $5,000
-                <del style={{ color: "#A9A9A9" }}>$5,533</del>
+                $1,999
+                <del style={{ color: "#A9A9A9" }}>$3,999</del>
               </p>
               <div style={{ display: "flex", color: "#F1BC19" }}>
                 <AiFillStar />
@@ -112,16 +126,16 @@ const Courses = () => {
           <div className={styles.coursesCard}>
             <div className={styles.bookDiv3}>
               <Image
-                src="/signal.png"
-                width={300}
-                height={300}
+                src="/stock.png"
+                width={306}
+                height={306}
                 alt="free course"
               />
             </div>
             <p className={styles.bookTitle3}>
-              a guide to signal analysis in forex. (e-book)
+              introduction to stocks, bonds {`&`} commodities. (e-book)
             </p>
-            <div className={styles.bookPrice3}>
+            <div className={styles.bookPrice}>
               <p
                 style={{
                   color: "#FC5F00",
@@ -130,8 +144,8 @@ const Courses = () => {
                   flexDirection: "column",
                 }}
               >
-                $8,000
-                <del style={{ color: "#A9A9A9" }}>$9,533</del>
+                $4,499
+                <del style={{ color: "#A9A9A9" }}>$6,999</del>
               </p>
               <div style={{ display: "flex", color: "#F1BC19" }}>
                 <AiFillStar />
@@ -147,17 +161,17 @@ const Courses = () => {
           </div>
           <div className={styles.coursesCard}>
             <div className={styles.bookDiv}>
-              <div style={{ position: "relative", left: "30px", top: "32px" }}>
+              <div style={{ position: "relative", top: "15px" }}>
                 <Image
-                  src="/candle.png"
-                  width={180}
-                  height={240}
+                  src="/expert.png"
+                  width={306}
+                  height={306}
                   alt="course"
                 />
               </div>
             </div>
             <p className={styles.bookTitle}>
-              candle analysis and trading tips. (e-book)
+              developing an expert trading strategy. (e-book)
             </p>
             <div className={styles.bookPrice}>
               <p
@@ -170,7 +184,7 @@ const Courses = () => {
                   lineHeight: "27px",
                 }}
               >
-                $6,500
+                $7,999
                 <del
                   style={{
                     color: "#A9A9A9",
@@ -178,7 +192,7 @@ const Courses = () => {
                     lineHeight: "21px",
                   }}
                 >
-                  $8,533
+                  $9,999
                 </del>
               </p>
               <div style={{ display: "flex", color: "#F1BC19" }}>

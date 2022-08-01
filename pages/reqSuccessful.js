@@ -38,7 +38,7 @@ const ReqSuccessful = () => {
               <p className={styles.registrationText}>
                 Congratulations!
                 <br />
-                Your deposit request has been placed successfully and will be
+                Your withdrawal request has been placed successfully and will be
                 approved automatically by the system.
               </p>
               <Link href="/dashboard">

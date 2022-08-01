@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { useForm } from "react-hook-form";
 import styles from "../styles/Home.module.css";
 import { BiBarChartSquare } from "react-icons/bi";
 import { AiOutlineClockCircle } from "react-icons/ai";
@@ -9,7 +11,45 @@ import { CgProfile } from "react-icons/cg";
 import { IoSettingsOutline } from "react-icons/io5";
 import { AiOutlineLogout, AiOutlineHome } from "react-icons/ai";
 
+const invest_uri = "https://monnayfinance.com/api/investment/";
+
 const Invest = () => {
+  const router = useRouter();
+  const initialValues = {
+    plan: ["basic", "standard", "platinum"],
+    amount: "",
+  };
+  const {
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const [invest, setInvest] = useState(initialValues);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setInvest({ ...invest, [name]: value });
+  };
+  const { plan, amount } = invest;
+  const Invest = () => {
+    try {
+      fetch(invest_uri, {
+        method: "POST",
+        body: JSON.stringify({
+          plan: invest.plan,
+          amount: invest.amount,
+        }),
+        headers: {
+          Authorization:
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInByaXZpbGVnZSI6InVzZXIiLCJ0b2tlbiI6Ijg5NGUzNDQzYjYzYzkyOTMiLCJpYXQiOjE2NTkwMDcxMjl9.oYKsguhTfAdWOZlURIJ3VIXZT0bX6UGNDpVrlKkhXEc",
+          "Content-type": "application/json;charset=UTF-8",
+        },
+      })
+        .then((res) => res.json())
+        .then((json) => console.log(json));
+    } catch (err) {
+      console.log(err);
+    }
+    alert("Amount in balance is insufficient");
+  };
   return (
     <>
       <Head>
@@ -129,7 +169,10 @@ const Invest = () => {
                 </div>
                 {/* form proper */}
                 <div className="w-full">
-                  <form className=" rounded px-8 pt-6 pb-8 mb-10">
+                  <form
+                    className=" rounded px-8 pt-6 pb-8 mb-10"
+                    onSubmit={handleSubmit(Invest)}
+                  >
                     <div className="w-full px-3 mb-6">
                       <label
                         className="block text-black text-sm mb-2"
@@ -138,10 +181,15 @@ const Invest = () => {
                         Plan:
                       </label>
                       <div className="relative w-full">
-                        <select className="block " id="grid-state">
-                          <option>Basic</option>
-                          <option>Standard</option>
-                          <option>Platinum</option>
+                        <select
+                          className="block "
+                          id="grid-state"
+                          name="plan"
+                          onChange={handleChange}
+                        >
+                          <option value="basic">Basic</option>
+                          <option value="standard">Standard</option>
+                          <option value="platinum">Platinum</option>
                         </select>
                         <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                           <svg
@@ -166,17 +214,13 @@ const Invest = () => {
                         id="amount"
                         name="amount"
                         type="number"
-                        // value={amount}
-                        // onChange={handleChange}
+                        value={amount}
+                        onChange={handleChange}
                       />
                     </div>
-                    {/* <div className={styles.createButtonDiv}> */}
-                    {/* <Link href="/dashboard/dashboard"> */}
-                    <button className={styles.investButton} type="button">
+                    <button className={styles.investButton} type="submit">
                       Invest
                     </button>
-                    {/* </Link> */}
-                    {/* </div> */}
                   </form>
                 </div>
                 {/* form proper ends */}

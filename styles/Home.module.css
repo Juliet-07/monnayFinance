@@ -1001,8 +1001,8 @@
 }
 .bookTitle3 {
   position: relative;
-  top: 40px;
-  left: 10px;
+  top: 25px;
+  padding: 10px;
   font-size: 14px;
   font-weight: 600;
   color: #000000;
@@ -1011,14 +1011,6 @@
 .bookPrice {
   position: relative;
   top: 20px;
-  display: flex;
-  justify-content: space-between;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-.bookPrice3 {
-  position: relative;
-  top: 40px;
   display: flex;
   justify-content: space-between;
   margin-left: 20px;
@@ -1045,7 +1037,7 @@
   position: relative;
   width: 248px;
   height: 50px;
-  top: 40px;
+  top: 20px;
   left: 10px;
   color: #ffffff;
   font-weight: 400;
@@ -1485,6 +1477,17 @@
   .signinButton {
     width: 250px;
     left: 10px;
+  }
+  .termsHeader{
+    font-size: 27px;
+  }
+  .termsBody{
+    width: 350px;
+    left: 29px;
+  }
+  .termsButton{
+    width: 319px;
+    left: 47px;
   }
   #faqDiv {
     flex-direction: column;
