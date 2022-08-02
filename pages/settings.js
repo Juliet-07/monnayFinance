@@ -36,15 +36,15 @@ const Settings = () => {
                 <div className="md:flex md:items-center mb-6">
                   <div className="md:w-1/3">
                     <label
-                      className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                      className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-4 text-xl"
                       htmlFor="inline-full-name"
                     >
                       Name:
                     </label>
                   </div>
-                  <div className="md:w-2/3">
+                  <div className="w-100 md:w-2/3">
                     <input
-                      className="bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 focus:outline-none focus:bg-white focus:border-blue-300"
+                      className="border w-full py-2 px-2 mt-2"
                       id="inline-full-name"
                       type="text"
                     />
@@ -53,15 +53,15 @@ const Settings = () => {
                 <div className="md:flex md:items-center mb-6">
                   <div className="md:w-1/3">
                     <label
-                      className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                      className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-4 text-xl"
                       htmlFor="inline-password"
                     >
                       Email:
                     </label>
                   </div>
-                  <div className="md:w-2/3">
+                  <div className="w-100 md:w-2/3">
                     <input
-                      className="bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 focus:outline-none focus:bg-white focus:border-blue-300"
+                      className="border w-full py-2 px-2 mt-2"
                       id="inline-password"
                       type="email"
                     />
@@ -72,20 +72,20 @@ const Settings = () => {
                 <div className="rounded h-20 bg-primary">
                   <h4 className="cardLabel text-left">Account Details</h4>
                 </div>
-                <div className="flex justify-around align-middle">
+                <div className="flex justify-between align-center mt-10 pl-20 pr-20">
                   <form className="w-full max-w-sm">
                     <div className="md:flex md:items-center mb-6">
                       <div className="md:w-1/3">
                         <label
-                          className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                          className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-3 text-xl"
                           htmlFor="inline-full-name"
                         >
                           BTC wallet:
                         </label>
                       </div>
-                      <div className="md:w-2/3">
+                      <div className="w-100 md:w-2/3">
                         <input
-                          className="bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 focus:outline-none focus:bg-white focus:border-blue-300"
+                          className="border w-full py-2 px-2 mt-2"
                           id="inline-full-name"
                           type="text"
                         />
@@ -94,16 +94,16 @@ const Settings = () => {
                     <div className="md:flex md:items-center mb-6">
                       <div className="md:w-1/3">
                         <label
-                          className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                          htmlFor="inline-password"
+                          className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-3 text-xl"
+                          htmlFor="inline-full-name"
                         >
                           ETH wallet:
                         </label>
                       </div>
-                      <div className="md:w-2/3">
+                      <div className="w-100 md:w-2/3">
                         <input
-                          className="bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 focus:outline-none focus:bg-white focus:border-blue-300"
-                          id="inline-password"
+                          className="border w-full py-2 px-2 mt-2"
+                          id="inline-full-name"
                           type="text"
                         />
                       </div>
@@ -113,15 +113,15 @@ const Settings = () => {
                     <div className="md:flex md:items-center mb-6">
                       <div className="md:w-1/3">
                         <label
-                          className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                          className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-3 text-xl"
                           htmlFor="inline-full-name"
                         >
-                          BTC wallet:
+                          DOGE wallet:
                         </label>
                       </div>
-                      <div className="md:w-2/3">
+                      <div className="w-100 md:w-2/3">
                         <input
-                          className="bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 focus:outline-none focus:bg-white focus:border-blue-300"
+                          className="border w-full py-2 px-2 mt-2"
                           id="inline-full-name"
                           type="text"
                         />
@@ -130,16 +130,16 @@ const Settings = () => {
                     <div className="md:flex md:items-center mb-6">
                       <div className="md:w-1/3">
                         <label
-                          className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                          htmlFor="inline-password"
+                          className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-3 text-xl"
+                          htmlFor="inline-full-name"
                         >
-                          ETH wallet:
+                          USDT wallet:
                         </label>
                       </div>
-                      <div className="md:w-2/3">
+                      <div className="w-100 md:w-2/3">
                         <input
-                          className="bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 focus:outline-none focus:bg-white focus:border-blue-300"
-                          id="inline-password"
+                          className="border w-full py-2 px-2 mt-2"
+                          id="inline-full-name"
                           type="text"
                         />
                       </div>
@@ -151,20 +151,20 @@ const Settings = () => {
                 <div className="rounded h-20 bg-primary">
                   <h4 className="cardLabel text-left">Account Security</h4>
                 </div>
-                <div className="flex justify-around align-middle">
+                <div className="flex justify-between align-center mt-10 pl-20 pr-20">
                   <form className="w-full max-w-sm">
                     <div className="md:flex md:items-center mb-6">
                       <div className="md:w-1/3">
                         <label
-                          className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                          className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-3 text-xl"
                           htmlFor="inline-full-name"
                         >
-                          BTC wallet:
+                          Current Pasword:
                         </label>
                       </div>
-                      <div className="md:w-2/3">
+                      <div className="w-100 md:w-2/3">
                         <input
-                          className="bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 focus:outline-none focus:bg-white focus:border-blue-300"
+                          className="border w-full py-2 px-2 mt-2"
                           id="inline-full-name"
                           type="text"
                         />
@@ -173,16 +173,16 @@ const Settings = () => {
                     <div className="md:flex md:items-center mb-6">
                       <div className="md:w-1/3">
                         <label
-                          className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                          htmlFor="inline-password"
+                          className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-3 text-xl"
+                          htmlFor="inline-full-name"
                         >
-                          ETH wallet:
+                          Security Question:
                         </label>
                       </div>
-                      <div className="md:w-2/3">
+                      <div className="w-100 md:w-2/3">
                         <input
-                          className="bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 focus:outline-none focus:bg-white focus:border-blue-300"
-                          id="inline-password"
+                          className="border w-full py-2 px-2 mt-2"
+                          id="inline-full-name"
                           type="text"
                         />
                       </div>
@@ -192,15 +192,15 @@ const Settings = () => {
                     <div className="md:flex md:items-center mb-6">
                       <div className="md:w-1/3">
                         <label
-                          className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                          className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-3 text-xl"
                           htmlFor="inline-full-name"
                         >
-                          BTC wallet:
+                          New Password:
                         </label>
                       </div>
-                      <div className="md:w-2/3">
+                      <div className="w-100 md:w-2/3">
                         <input
-                          className="bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 focus:outline-none focus:bg-white focus:border-blue-300"
+                          className="border w-full py-2 px-2 mt-2"
                           id="inline-full-name"
                           type="text"
                         />
@@ -209,16 +209,16 @@ const Settings = () => {
                     <div className="md:flex md:items-center mb-6">
                       <div className="md:w-1/3">
                         <label
-                          className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                          htmlFor="inline-password"
+                          className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-3 text-xl"
+                          htmlFor="inline-full-name"
                         >
-                          ETH wallet:
+                          Answer:
                         </label>
                       </div>
-                      <div className="md:w-2/3">
+                      <div className="w-100 md:w-2/3">
                         <input
-                          className="bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 focus:outline-none focus:bg-white focus:border-blue-300"
-                          id="inline-password"
+                          className="border w-full py-2 px-2 mt-2"
+                          id="inline-full-name"
                           type="text"
                         />
                       </div>
@@ -227,7 +227,7 @@ const Settings = () => {
                 </div>
               </div>
               <button className={styles.settingsButton} type="button">
-                Save changes
+                Save Changes
               </button>
             </div>
             {/* footer */}

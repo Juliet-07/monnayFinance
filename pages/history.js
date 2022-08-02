@@ -1,8 +1,30 @@
-import React from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Head from "next/head";
 import Layout from "../components/layout";
+import axios from "axios";
 
 const History = () => {
+  const [transaction, setTransaction] = useState([]);
+  useEffect(() => {
+    const fetchTransactionData = async () => {
+      try {
+        const { data } = await axios(
+          "https://monnayfinance.com/api/transactions/5"
+        );
+        setTransaction(data);
+      } catch (err) {
+        setTransaction([]);
+        console.log(err);
+      }
+    };
+    fetchTransactionData();
+  }, []);
+  const columns = useMemo(() => [
+     {
+       Header:"Transaction Type",
+      //  acc
+     }
+  ]);
   return (
     <>
       <Head>
@@ -21,13 +43,14 @@ const History = () => {
       <Layout>
         {/* Content */}
         <div className="main-panel">
-          <div className="content">
+          <div className="content1">
             <div className="investmentActive">
               <p className="investmentActiveText">Transaction History</p>
             </div>
-            <div className="col-md-12 mt-20">
-              <table className="table-auto md:table-auto">
-                <thead className="text-default text-xl text-bold">
+            <div className="col-md-10 mt-20">
+              <DataTable columns={columns} content={transaction} />
+              {/* <table>
+                <thead className="text-default text-xl text-bold bg-white">
                   <tr>
                     <th>Transaction Type</th>
                     <th>Amount</th>
@@ -55,18 +78,17 @@ const History = () => {
                     <td className="text-warning">Pending</td>
                   </tr>
                 </tbody>
-              </table>
+              </table> */}
             </div>
-            {/* footer */}
           </div>
-          <footer className="footer">
-            {/* <div className="flex justify-center align-center"> */}
+        </div>
+        <footer className="footer">
+          <div className="flex justify-center align-center">
             <p className="footer-text">
               COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
             </p>
-            {/* </div> */}
-          </footer>
-        </div>
+          </div>
+        </footer>
         {/* Content Ends*/}
       </Layout>
     </>

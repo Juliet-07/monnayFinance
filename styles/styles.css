@@ -363,10 +363,9 @@ legend {
   color: #ffffff;
 }
 .footer {
-  /* position: absolute; */
+  position: relative;
   height: 50px;
-  display: block;
-  padding: 2rem 0;
+  /* padding: 2rem 0; */
   background-color: #057d99;
 }
 .footer-text {
@@ -16666,6 +16665,12 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   background-color: #f6fdff;
   /* padding: 30px 15px; */
   /* min-height: calc(100vh - 123px); */
+}
+.main-panel > .content1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-panel > .footer {

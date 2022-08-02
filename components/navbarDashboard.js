@@ -10,7 +10,7 @@ import { GiWorld } from "react-icons/gi";
 
 function NavLink({ to, children }) {
   return (
-    <a href={to} className={`mx-4 my-2 hover:font-bold`}>
+    <a href={to} className={`mx-3 my-2 hover:font-bold`}>
       {children}
     </a>
   );
