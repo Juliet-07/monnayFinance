@@ -4,10 +4,12 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import axios from "axios";
 import styles from "../styles/Home.module.css";
-import Navbar from "../components/navbar";
-import { FiEye, FiEyeOff } from "react-icons/fi";
+import Input from "@material-ui/core/Input";
+import IconButton from "@material-ui/core/IconButton";
+import { InputAdornment } from "@material-ui/core";
+import Visibility from "@material-ui/icons/Visibility";
+import VisibilityOff from "@material-ui/icons/VisibilityOff";
 
 const BASE_URI = "https://monnayfinance.com/api";
 
@@ -27,10 +29,7 @@ const Signup = () => {
   const router = useRouter();
   const [details, setDetails] = useState(initialValues);
   const [passwordError, setPasswordError] = useState(false);
-  const [showPassword, setShowPassword] = useState(true);
-  const togglePassword = () => {
-    setShowPassword(showPassword ? false : true);
-  };
+  const [showPassword, setShowPassword] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setDetails({ ...details, [name]: value });
@@ -63,10 +62,19 @@ const Signup = () => {
       setPasswordError(true);
     }
   };
-  // const passwordErrorMessage = (
-  //   <p className="text-red-700 font-sans font-700">Passwords don't match!</p>
-  // );
+  const passwordErrorMessage = (
+    <p className="text-red-700 font-sans font-700 mt-3">
+      Passwords don't match!
+    </p>
+  );
   useEffect(() => {});
+  const handleClickShowPassword = () => {
+    setShowPassword(showPassword ? false : true);
+    // setShowPassword((showPassword) => !showPassword);
+  };
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
 
   return (
     <div className={styles.container}>
@@ -75,7 +83,7 @@ const Signup = () => {
         <meta name="description" content="Generated monnay finance" />
         <link rel="icon" href="/icon.png" />
       </Head>
-      <Navbar />
+      {/* <Navbar /> */}
       {/* <div className={styles.signupContainer}> */}
       <div className="bg-white shadow-md rounded px-6 py-6 pt-6 pb-6 mb-4 flex flex-col mt-10 mx-2 columns-md">
         <div className={styles.createDiv}>
@@ -136,31 +144,51 @@ const Signup = () => {
             <label className="text-black text-sm" htmlFor="password">
               Password
             </label>
-            <input
-              className="border rounded  text-gray-700"
+            <Input
+              className="w-full border rounded  text-gray-700"
               id="password"
               name="password"
-              type="password"
+              type={showPassword ? "text" : "password"}
               value={password}
               onChange={handleChange}
               required
+              endAdornment={
+                <InputAdornment position="end">
+                  <IconButton
+                    onClick={handleClickShowPassword}
+                    onMouseDown={handleMouseDownPassword}
+                  >
+                    {showPassword ? <Visibility /> : <VisibilityOff />}
+                  </IconButton>
+                </InputAdornment>
+              }
             />
           </div>
           <div className="mb-4">
             <label className="text-black text-sm" htmlFor="grid-confirm">
               Confirm Password
             </label>
-            <input
-              className="border rounded  text-gray-700"
+            <Input
+              className="w-full border rounded  text-gray-700"
               id="grid-password"
               name="confirmPassword"
-              type="password"
+              type={showPassword ? "text" : "password"}
               required
               value={confirmPassword}
               onChange={handleChange}
-              onError={passwordError ? true : false}
+              error={passwordError ? true : false}
+              endAdornment={
+                <InputAdornment position="end">
+                  <IconButton
+                    onClick={handleClickShowPassword}
+                    onMouseDown={handleMouseDownPassword}
+                  >
+                    {showPassword ? <Visibility /> : <VisibilityOff />}
+                  </IconButton>
+                </InputAdornment>
+              }
             />
-            {/* {passwordError && passwordErrorMessage} */}
+            {passwordError && passwordErrorMessage}
           </div>
           <div className="md:flex md:items-center mb-6">
             <label className="block tracking-wide text-gray-700 text-xs mb-2">

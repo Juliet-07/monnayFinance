@@ -63,7 +63,7 @@ const Signin = () => {
         <meta name="description" content="Generated monnay finance" />
         <link rel="icon" href="/icon.png" />
       </Head>
-      <Navbar />
+      {/* <Navbar /> */}
       {/* <div className="h-screen w-full bg-pink-700"> */}
       <div className={styles.signinContainer}>
         <div className={styles.createDiv}>

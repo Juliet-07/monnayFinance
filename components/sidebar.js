@@ -87,7 +87,7 @@ const Sidebar = () => {
   const handleSidebarToggle = () => {
     setToggleCollapse(!toggleCollapse);
   };
-
+  
   return (
     <div
       className={wrapperClasses}

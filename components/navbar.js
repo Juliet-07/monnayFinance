@@ -78,7 +78,7 @@ function MobileNav({ open, setOpen }) {
         </Link>
         <Link href="/courses">
           <p
-            className="uppercase text-xl font-medium mx-3 my-4 px-3  text-black"
+            className="uppercase text-xl font-medium mx-3 my-4 px-3 text-black"
             href="#"
             onClick={() =>
               setTimeout(() => {
