@@ -9,8 +9,8 @@ const DataTable = ({ columns, data }) => {
       data,
     });
   return (
-    <table {...getTableProps()} className="table">
-      <thead className="text-default text-xl text-bold bg-white">
+    <table {...getTableProps()} className="table-auto">
+      <thead className="text-black text-xl text-bold bg-white">
         {headerGroups.map((headerGroup) => (
           <tr {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map((column) => (
