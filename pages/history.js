@@ -1,30 +1,55 @@
 import React, { useState, useEffect, useMemo } from "react";
 import Head from "next/head";
 import Layout from "../components/layout";
+import DataTable from "../components/dataTable";
 import axios from "axios";
 
 const History = () => {
-  const [transaction, setTransaction] = useState([]);
+  const [transactions, setTransactions] = useState([]);
+  const columns = useMemo(
+    () => [],
+    [
+      {
+        Header: "Transaction Type",
+        accessor: "type",
+      },
+      {
+        Header: "Amount",
+        accessor: "amount",
+      },
+      {
+        Header: "Date",
+        accessor: "date",
+      },
+      {
+        Header: "Status",
+        accessor: "transactionStatus",
+      },
+    ]
+  );
   useEffect(() => {
     const fetchTransactionData = async () => {
       try {
-        const { data } = await axios(
-          "https://monnayfinance.com/api/transactions/5"
-        );
-        setTransaction(data);
+        await fetch("https://monnayfinance.com/api/transactions/18", {
+          headers: {
+            Authorization:
+              "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInByaXZpbGVnZSI6InVzZXIiLCJ0b2tlbiI6Ijg5NGUzNDQzYjYzYzkyOTMiLCJpYXQiOjE2NTkwMDcxMjl9.oYKsguhTfAdWOZlURIJ3VIXZT0bX6UGNDpVrlKkhXEc",
+            "Content-type": "application/json",
+          },
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            setTransactions(data);
+            console.log("history", data);
+            // console.log(" vnmbvm", transactions);
+          });
       } catch (err) {
-        setTransaction([]);
+        setTransactions([]);
         console.log(err);
       }
     };
     fetchTransactionData();
   }, []);
-  const columns = useMemo(() => [
-     {
-       Header:"Transaction Type",
-      //  acc
-     }
-  ]);
   return (
     <>
       <Head>
@@ -48,7 +73,7 @@ const History = () => {
               <p className="investmentActiveText">Transaction History</p>
             </div>
             <div className="col-md-10 mt-20">
-              <DataTable columns={columns} content={transaction} />
+              <DataTable columns={columns} data={transactions} />
               {/* <table>
                 <thead className="text-default text-xl text-bold bg-white">
                   <tr>

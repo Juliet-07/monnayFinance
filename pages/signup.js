@@ -64,7 +64,7 @@ const Signup = () => {
   };
   const passwordErrorMessage = (
     <p className="text-red-700 font-sans font-700 mt-3">
-      Passwords don't match!
+      Passwords {`don't`} match!
     </p>
   );
   useEffect(() => {});
