@@ -8,6 +8,7 @@ import styles from "../styles/Home.module.css";
 import { AiOutlineDollar } from "react-icons/ai";
 import { BsLink45Deg } from "react-icons/bs";
 import { FiCopy } from "react-icons/fi";
+import moment from "moment";
 
 // const BASE_URI = "https://monnayfinance.com/api/user/profile/18";
 
@@ -30,6 +31,9 @@ import { FiCopy } from "react-icons/fi";
 const Dashboard = () => {
   const [user, setUser] = useState("");
   const [details, setDetails] = useState([]);
+  const formatDate = (value) => {
+    return moment(value).format("HH:MM A DD, MM, YYYY");
+  };
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("Juliet"));
     if (user !== null || user !== undefined) {
@@ -80,7 +84,9 @@ const Dashboard = () => {
                 <div className="flex justify-between">
                   <h4 className="cardName">Welcome {user.username}</h4>
                   {/* <h4 className="cardName">Welcome {user.id}</h4> */}
-                  <p className="cardTime">Last Access: {user.lastlogin}</p>
+                  <p className="cardTime">
+                    Last Access: {formatDate(user.lastlogin)}
+                  </p>
                 </div>
               </div>
             </div>

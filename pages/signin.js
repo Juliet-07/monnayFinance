@@ -6,6 +6,11 @@ import { useRouter } from "next/router";
 import styles from "../styles/Home.module.css";
 import Navbar from "../components/navbar";
 import Link from "next/link";
+import Input from "@material-ui/core/Input";
+import IconButton from "@material-ui/core/IconButton";
+import { InputAdornment } from "@material-ui/core";
+import Visibility from "@material-ui/icons/Visibility";
+import VisibilityOff from "@material-ui/icons/VisibilityOff";
 
 const BASE_URI = "https://monnayfinance.com/api";
 
@@ -21,6 +26,7 @@ const Signin = () => {
   } = useForm();
   const router = useRouter();
   const [profile, setProfile] = useState(initialValues);
+  const [showPassword, setShowPassword] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setProfile({ ...profile, [name]: value });
@@ -41,7 +47,6 @@ const Signin = () => {
           password: profile.password,
         }),
         headers: {
-          // Authorization: "Bearer Token",
           "Content-type": "application/json; charset=UTF-8",
         },
       })
@@ -55,6 +60,14 @@ const Signin = () => {
     } catch (err) {
       setError(true);
     }
+  };
+  useEffect(() => {});
+  const handleClickShowPassword = () => {
+    setShowPassword(showPassword ? false : true);
+    // setShowPassword((showPassword) => !showPassword);
+  };
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
   };
   return (
     <div className={styles.container}>
@@ -95,14 +108,24 @@ const Signin = () => {
             <label className="text-black text-sm" htmlFor="password">
               Password
             </label>
-            <input
-              className="border rounded w-full text-gray-700"
+            <Input
+              className="border rounded w-full px-2 text-gray-700"
               id="password"
               name="password"
-              type="password"
+              type={showPassword ? "text" : "password"}
               value={password}
               onChange={handleChange}
               required
+              endAdornment={
+                <InputAdornment position="end">
+                  <IconButton
+                    onClick={handleClickShowPassword}
+                    onMouseDown={handleMouseDownPassword}
+                  >
+                    {showPassword ? <Visibility /> : <VisibilityOff />}
+                  </IconButton>
+                </InputAdornment>
+              }
               // {...register("password", { required: true })}
             />
             {errors.password && errors.password.type === "required" && (

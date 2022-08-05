@@ -22,7 +22,7 @@ const Terms = () => {
           backgroundImage: `url(${Jumbo})`,
           width: "100%",
           height: "1900px",
-          backgroundSize: "cover",
+          backgroundSize: "contain",
         }}
       >
         <div className={styles.jumbotronFluidReg}>

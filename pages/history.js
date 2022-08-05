@@ -1,36 +1,40 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Layout from "../components/layout";
-import DataTable from "../components/dataTable";
-import axios from "axios";
+import moment from "moment";
+// import DataTable from "../components/dataTable";
 
 const History = () => {
+  const [user, setUser] = useState("");
   const [transactions, setTransactions] = useState([]);
-  const columns = useMemo(
-    () => [],
-    [
-      {
-        Header: "Transaction Type",
-        accessor: "type",
-      },
-      {
-        Header: "Amount",
-        accessor: "amount",
-      },
-      {
-        Header: "Date",
-        accessor: "date",
-      },
-      {
-        Header: "Status",
-        accessor: "transactionStatus",
-      },
-    ]
-  );
+  const formatDate = (value) => {
+    return moment(value).format("HH:MM A DD, MM, YYYY");
+  };
+  const getStatus = (status) => {
+    let statusClass;
+    switch (status) {
+      case "approved":
+        statusClass = "text-success";
+        break;
+
+      case "failed":
+        statusClass = "text-danger";
+        break;
+
+      default: //pending
+        statusClass = "text-warning";
+        break;
+    }
+    return statusClass;
+  };
   useEffect(() => {
     const fetchTransactionData = async () => {
+      const user = JSON.parse(localStorage.getItem("Juliet"));
+      if (user !== null || user !== undefined) {
+        setUser(user);
+      }
       try {
-        await fetch("https://monnayfinance.com/api/transactions/18", {
+        await fetch(`https://monnayfinance.com/api/transactions/${user.id}`, {
           headers: {
             Authorization:
               "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInByaXZpbGVnZSI6InVzZXIiLCJ0b2tlbiI6Ijg5NGUzNDQzYjYzYzkyOTMiLCJpYXQiOjE2NTkwMDcxMjl9.oYKsguhTfAdWOZlURIJ3VIXZT0bX6UGNDpVrlKkhXEc",
@@ -39,9 +43,11 @@ const History = () => {
         })
           .then((res) => res.json())
           .then((data) => {
-            setTransactions(data);
-            console.log("history", data);
-            // console.log(" vnmbvm", transactions);
+            const response = [...[], ...data?.data];
+            console.log({ response });
+
+            setTransactions(response);
+            console.log({ transactions });
           });
       } catch (err) {
         setTransactions([]);
@@ -72,9 +78,9 @@ const History = () => {
             <div className="investmentActive">
               <p className="investmentActiveText">Transaction History</p>
             </div>
-            <div className="col-md-10 mt-20">
-              <DataTable columns={columns} data={transactions} />
-              {/* <table>
+            <div className="col-md-10 mt-20 mb-56">
+              {/* <DataTable columns={columns} data={transactions} /> */}
+              <table>
                 <thead className="text-default text-xl text-bold bg-white">
                   <tr>
                     <th>Transaction Type</th>
@@ -84,26 +90,19 @@ const History = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Withdrawal</td>
-                    <td>$3,000 (USDT)</td>
-                    <td>15-05-2022</td>
-                    <td className="text-success">Approved</td>
-                  </tr>
-                  <tr>
-                    <td>Deposit</td>
-                    <td>$5,000 (BTC)</td>
-                    <td>15-05-2022</td>
-                    <td className="text-success">Approved</td>
-                  </tr>
-                  <tr>
-                    <td>Withdrawal</td>
-                    <td>$3,000 (USDT)</td>
-                    <td>15-05-2022</td>
-                    <td className="text-warning">Pending</td>
-                  </tr>
+                  {transactions.length > 0 &&
+                    transactions.map((item, index) => (
+                      <tr key={index}>
+                        <td>{item?.type}</td>
+                        <td>${item?.amount}</td>
+                        <td>{formatDate(item?.date)}</td>
+                        <td className={getStatus(item?.transactionStatus)}>
+                          {item?.transactionStatus}
+                        </td>
+                      </tr>
+                    ))}
                 </tbody>
-              </table> */}
+              </table>
             </div>
           </div>
         </div>

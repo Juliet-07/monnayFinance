@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Layout from "../components/layout";
 import styles from "../styles/Home.module.css";
-import { AiOutlineHome } from "react-icons/ai";
+import { AiOutlineCamera } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { MdOutlineNotificationsNone } from "react-icons/md";
 
@@ -25,213 +25,191 @@ const Settings = () => {
       <Layout>
         {/* Content */}
         <div className="main-panel">
-          <div className="content">
-            <div className="container-fluid">
-              <div className="mb-10">
-                <div className="rounded h-20 bg-primary">
-                  <h4 className="cardLabel text-left">Personal Details</h4>
-                </div>
+          <div className="container">
+            <div className="mb-10">
+              <div className="profileSettings">
+                <p className="profileSettingsText">Personal Details</p>
               </div>
-              <form className="w-full max-w-sm">
+            </div>
+            <div className="flex">
+              <form className="mt-4">
                 <div className="md:flex md:items-center mb-6">
-                  <div className="md:w-1/3">
+                  <label
+                    className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-4 text-xl"
+                    htmlFor="full-name"
+                  >
+                    Name:
+                  </label>
+                  <input
+                    className="w-full border rounded px-4 text-gray-700"
+                    id="full-name"
+                    type="text"
+                  />
+                </div>
+                <div className="md:flex md:items-center mb-6">
+                  <label
+                    className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-4 text-xl"
+                    htmlFor="password"
+                  >
+                    Email:
+                  </label>
+
+                  <input
+                    className="w-full border rounded px-4 text-gray-700"
+                    id="password"
+                    type="email"
+                  />
+                </div>
+              </form>
+              {/* picture */}
+              <div className="profilePictureDiv">
+                <p className="edit">Edit Display Photo</p>
+                <div className="picture">
+                  <AiOutlineCamera size={56} />
+                </div>
+                <button className="uploadPicture">Upload</button>
+                <p className="size">Max size: 12MB</p>
+              </div>
+            </div>
+            <div className="mb-10">
+              <div className="profileSettings">
+                <p className="profileSettingsText">Account Details</p>
+              </div>
+              <div className="flex justify-between align-center mt-10 pl-20 pr-20">
+                <form className="mt-4">
+                  <div className="md:flex md:items-center mb-6">
                     <label
-                      className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-4 text-xl"
-                      htmlFor="inline-full-name"
+                      className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-3 text-xl"
+                      htmlFor="btc"
                     >
-                      Name:
+                      BTC wallet:
                     </label>
-                  </div>
-                  <div className="w-100 md:w-2/3">
+
                     <input
-                      className="border w-full py-2 px-2 mt-2"
-                      id="inline-full-name"
+                      className="border rounded w-full px-4 text-gray-700"
+                      id="btc"
                       type="text"
                     />
                   </div>
-                </div>
-                <div className="md:flex md:items-center mb-6">
-                  <div className="md:w-1/3">
+                  <div className="md:flex md:items-center mb-6">
                     <label
-                      className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-4 text-xl"
-                      htmlFor="inline-password"
+                      className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-3 text-xl"
+                      htmlFor="eth"
                     >
-                      Email:
+                      ETH wallet:
                     </label>
-                  </div>
-                  <div className="w-100 md:w-2/3">
+
                     <input
-                      className="border w-full py-2 px-2 mt-2"
-                      id="inline-password"
-                      type="email"
+                      className="border w-full rounded px-4"
+                      id="eth"
+                      type="text"
                     />
                   </div>
-                </div>
-              </form>
-              <div className="mb-10">
-                <div className="rounded h-20 bg-primary">
-                  <h4 className="cardLabel text-left">Account Details</h4>
-                </div>
-                <div className="flex justify-between align-center mt-10 pl-20 pr-20">
-                  <form className="w-full max-w-sm">
-                    <div className="md:flex md:items-center mb-6">
-                      <div className="md:w-1/3">
-                        <label
-                          className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-3 text-xl"
-                          htmlFor="inline-full-name"
-                        >
-                          BTC wallet:
-                        </label>
-                      </div>
-                      <div className="w-100 md:w-2/3">
-                        <input
-                          className="border w-full py-2 px-2 mt-2"
-                          id="inline-full-name"
-                          type="text"
-                        />
-                      </div>
-                    </div>
-                    <div className="md:flex md:items-center mb-6">
-                      <div className="md:w-1/3">
-                        <label
-                          className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-3 text-xl"
-                          htmlFor="inline-full-name"
-                        >
-                          ETH wallet:
-                        </label>
-                      </div>
-                      <div className="w-100 md:w-2/3">
-                        <input
-                          className="border w-full py-2 px-2 mt-2"
-                          id="inline-full-name"
-                          type="text"
-                        />
-                      </div>
-                    </div>
-                  </form>
-                  <form className="w-full max-w-sm">
-                    <div className="md:flex md:items-center mb-6">
-                      <div className="md:w-1/3">
-                        <label
-                          className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-3 text-xl"
-                          htmlFor="inline-full-name"
-                        >
-                          DOGE wallet:
-                        </label>
-                      </div>
-                      <div className="w-100 md:w-2/3">
-                        <input
-                          className="border w-full py-2 px-2 mt-2"
-                          id="inline-full-name"
-                          type="text"
-                        />
-                      </div>
-                    </div>
-                    <div className="md:flex md:items-center mb-6">
-                      <div className="md:w-1/3">
-                        <label
-                          className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-3 text-xl"
-                          htmlFor="inline-full-name"
-                        >
-                          USDT wallet:
-                        </label>
-                      </div>
-                      <div className="w-100 md:w-2/3">
-                        <input
-                          className="border w-full py-2 px-2 mt-2"
-                          id="inline-full-name"
-                          type="text"
-                        />
-                      </div>
-                    </div>
-                  </form>
-                </div>
+                </form>
+                <form className="mt-4">
+                  <div className="md:flex md:items-center mb-6">
+                    <label
+                      className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-3 text-xl"
+                      htmlFor="doge"
+                    >
+                      DOGE wallet:
+                    </label>
+
+                    <input
+                      className="border w-full rounded px-4"
+                      id="doge"
+                      type="text"
+                    />
+                  </div>
+                  <div className="md:flex md:items-center mb-6">
+                    <label
+                      className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-3 text-xl"
+                      htmlFor="usdt"
+                    >
+                      USDT wallet:
+                    </label>
+
+                    <input
+                      className="border w-full rounded px-4"
+                      id="usdt"
+                      type="text"
+                    />
+                  </div>
+                </form>
               </div>
-              <div className="mb-10">
-                <div className="rounded h-20 bg-primary">
-                  <h4 className="cardLabel text-left">Account Security</h4>
-                </div>
-                <div className="flex justify-between align-center mt-10 pl-20 pr-20">
-                  <form className="w-full max-w-sm">
-                    <div className="md:flex md:items-center mb-6">
-                      <div className="md:w-1/3">
-                        <label
-                          className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-3 text-xl"
-                          htmlFor="inline-full-name"
-                        >
-                          Current Pasword:
-                        </label>
-                      </div>
-                      <div className="w-100 md:w-2/3">
-                        <input
-                          className="border w-full py-2 px-2 mt-2"
-                          id="inline-full-name"
-                          type="text"
-                        />
-                      </div>
-                    </div>
-                    <div className="md:flex md:items-center mb-6">
-                      <div className="md:w-1/3">
-                        <label
-                          className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-3 text-xl"
-                          htmlFor="inline-full-name"
-                        >
-                          Security Question:
-                        </label>
-                      </div>
-                      <div className="w-100 md:w-2/3">
-                        <input
-                          className="border w-full py-2 px-2 mt-2"
-                          id="inline-full-name"
-                          type="text"
-                        />
-                      </div>
-                    </div>
-                  </form>
-                  <form className="w-full max-w-sm">
-                    <div className="md:flex md:items-center mb-6">
-                      <div className="md:w-1/3">
-                        <label
-                          className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-3 text-xl"
-                          htmlFor="inline-full-name"
-                        >
-                          New Password:
-                        </label>
-                      </div>
-                      <div className="w-100 md:w-2/3">
-                        <input
-                          className="border w-full py-2 px-2 mt-2"
-                          id="inline-full-name"
-                          type="text"
-                        />
-                      </div>
-                    </div>
-                    <div className="md:flex md:items-center mb-6">
-                      <div className="md:w-1/3">
-                        <label
-                          className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-3 text-xl"
-                          htmlFor="inline-full-name"
-                        >
-                          Answer:
-                        </label>
-                      </div>
-                      <div className="w-100 md:w-2/3">
-                        <input
-                          className="border w-full py-2 px-2 mt-2"
-                          id="inline-full-name"
-                          type="text"
-                        />
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <button className={styles.settingsButton} type="button">
-                Save Changes
-              </button>
             </div>
-            {/* footer */}
+            <div className="mb-10">
+              <div className="profileSettings">
+                <p className="profileSettingsText">Account Security</p>
+              </div>
+              <div className="flex justify-between align-center mt-10 pl-20 pr-20">
+                <form className="mt-4">
+                  <div className="md:flex md:items-center mb-6">
+                    <label
+                      className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-3 text-xl"
+                      htmlFor="currentPassword"
+                    >
+                      Current Pasword:
+                    </label>
+
+                    <input
+                      className="border w-full rounded px-4"
+                      id="currentPassword"
+                      type="text"
+                    />
+                  </div>
+                  <div className="md:flex md:items-center mb-6">
+                    <label
+                      className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-3 text-xl"
+                      htmlFor="question"
+                    >
+                      Security Question:
+                    </label>
+
+                    <input
+                      className="border w-full rounded px-4"
+                      id="question"
+                      type="text"
+                    />
+                  </div>
+                </form>
+                <form className="mt-4">
+                  <div className="md:flex md:items-center mb-6">
+                    <label
+                      className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-3 text-xl"
+                      htmlFor="newPassword"
+                    >
+                      New Password:
+                    </label>
+
+                    <input
+                      className="border w-full rounded px-4"
+                      id="newPassword"
+                      type="text"
+                    />
+                  </div>
+                  <div className="md:flex md:items-center mb-6">
+                    <label
+                      className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-3 text-xl"
+                      htmlFor="answer"
+                    >
+                      Answer:
+                    </label>
+
+                    <input
+                      className="border w-full rounded px-4"
+                      id="answer"
+                      type="text"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+            <button className={styles.settingsButton} type="button">
+              Save Changes
+            </button>
           </div>
+          {/* footer */}
           <footer className="footer">
             {/* <div className="flex justify-center align-center"> */}
             <p className="footer-text">

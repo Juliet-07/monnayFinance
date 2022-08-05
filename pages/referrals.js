@@ -5,7 +5,7 @@ import { CgProfile } from "react-icons/cg";
 import { AiOutlineHome } from "react-icons/ai";
 import { MdOutlineNotificationsNone } from "react-icons/md";
 
-const History = () => {
+const Referrals = () => {
   return (
     <>
       <Head>
@@ -28,7 +28,7 @@ const History = () => {
             <div className="investmentActive">
               <p className="investmentActiveText">Referrals</p>
             </div>
-            <div className="col-md-12 mt-20">
+            <div className="col-md-10 mt-20 mb-56">
               <table className="table-auto md:table-auto">
                 <thead className="text-default text-xl text-bold">
                   <tr>
@@ -71,4 +71,4 @@ const History = () => {
     </>
   );
 };
-export default History;
+export default Referrals;

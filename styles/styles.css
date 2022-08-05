@@ -362,6 +362,66 @@ legend {
   line-height: 33px;
   color: #ffffff;
 }
+.profileSettings {
+  position: relative;
+  top: 30px;
+  border-radius: 10px;
+  width: 1319px;
+  height: 64px;
+  padding: 20px;
+  background-color: #057d99;
+}
+.profileSettingsText {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.profilePictureDiv {
+  position: relative;
+  left: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #05990c; */
+}
+.edit {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  color: #000000;
+}
+.picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 119px;
+  height: 119px;
+  border: 1px solid #a9a9a9;
+  border-radius: 72px;
+  color: #a9a9a9;
+}
+.uploadPicture{
+  position: relative;
+  top: 16px;
+  width: 170px;
+  height: 60px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+  background-color: #057d99;
+}
+.size{
+  position: relative;
+  top: 15px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #a9a9a9;
+}
 .footer {
   position: relative;
   height: 50px;
@@ -16649,22 +16709,16 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 }
 
 .main-panel {
-  /* position: relative; */
-  /* float: right; */
   width: 100%;
   height: 100%;
-  margin: 0;
-  /* transition: 0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1); */
 }
 
 .main-panel > .content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
+  justify-content: center;
   background-color: #f6fdff;
-  /* padding: 30px 15px; */
-  /* min-height: calc(100vh - 123px); */
 }
 .main-panel > .content1 {
   display: flex;
@@ -16672,7 +16726,11 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   align-items: center;
   justify-content: center;
 }
-
+.main-panel > .container {
+  width: 100%;
+  margin: 20px;
+  /* background-color: red; */
+}
 .main-panel > .footer {
   border-top: 1px solid #e7e7e7;
 }

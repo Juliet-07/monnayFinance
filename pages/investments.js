@@ -1,31 +1,49 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import Layout from "../components/layout";
 import styles from "../styles/Home.module.css";
 import { AiFillCheckCircle } from "react-icons/ai";
+import moment from "moment";
 
-const BASE_URI = `https://monnayfinance.com/api/investments/18/recent`;
-
-export async function getServerSideProps() {
-  const res = await fetch(BASE_URI, {
-    headers: {
-      Authorization:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInByaXZpbGVnZSI6InVzZXIiLCJ0b2tlbiI6Ijg5NGUzNDQzYjYzYzkyOTMiLCJpYXQiOjE2NTkwMDcxMjl9.oYKsguhTfAdWOZlURIJ3VIXZT0bX6UGNDpVrlKkhXEc",
-      "Content-type": "application/json",
-    },
-  });
-  const details = await res.json();
-  return {
-    props: {
-      details,
-    },
+const Investment = () => {
+  const [user, setUser] = useState("");
+  const [investment, setInvestment] = useState([]);
+  const formatDate = (value) => {
+    return moment(value).format("HH:MM A DD, MM, YYYY");
   };
-}
+  useEffect(() => {
+    const fetchInvestmentData = async () => {
+      const user = JSON.parse(localStorage.getItem("Juliet"));
+      if (user !== null || user !== undefined) {
+        setUser(user);
+      }
+      try {
+        await fetch(
+          `https://monnayfinance.com/api/investments/${user.id}/active`,
+          {
+            headers: {
+              Authorization:
+                "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInByaXZpbGVnZSI6InVzZXIiLCJ0b2tlbiI6Ijg5NGUzNDQzYjYzYzkyOTMiLCJpYXQiOjE2NTkwMDcxMjl9.oYKsguhTfAdWOZlURIJ3VIXZT0bX6UGNDpVrlKkhXEc",
+              "Content-type": "application/json",
+            },
+          }
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            const response = [...[], ...data?.data];
+            console.log({ response });
 
-const Investment = ({ details }) => {
-  const { data = [] } = details;
-  console.log(data);
+            setInvestment(response);
+            console.log({ investment });
+          });
+      } catch (err) {
+        setInvestment([]);
+        console.log(err);
+      }
+    };
+    fetchInvestmentData();
+  }, []);
   return (
     <>
       <Head>
@@ -226,24 +244,16 @@ const Investment = ({ details }) => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Basic</td>
-                    <td>$300</td>
-                    <td>1 day</td>
-                    <td>$306</td>
-                  </tr>
-                  <tr>
-                    <td>Premium</td>
-                    <td>$30,000</td>
-                    <td>3 days</td>
-                    <td>$31,500</td>
-                  </tr>
-                  <tr>
-                    <td>Standard</td>
-                    <td>$12,000</td>
-                    <td>1 day</td>
-                    <td>$12,420</td>
-                  </tr>
+                  {investment.map((item, index) => (
+                    <tr key={index}>
+                      <td>{item?.investmentPlan}</td>
+                      <td>${item?.investmentAmount}</td>
+                      <td>{item?.investmentDays} day</td>
+                      <td>${item?.estimatedReturn}</td>
+                      <td>{formatDate(item?.startDate)}</td>
+                      <td>{formatDate(item?.endDate)}</td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
@@ -260,24 +270,13 @@ const Investment = ({ details }) => {
                   <th>End Date</th>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Basic</td>
-                    <td>$300</td>
-                    <td>1 day</td>
-                    {/* <td>$306</td> */}
-                  </tr>
-                  <tr>
-                    <td>Premium</td>
-                    <td>$30,000</td>
-                    <td>3 days</td>
-                    {/* <td>$31,500</td> */}
-                  </tr>
-                  <tr>
-                    <td>Standard</td>
-                    <td>$12,000</td>
-                    <td>1 day</td>
-                    {/* <td>$12,420</td> */}
-                  </tr>
+                  {investment.map((item, index) => (
+                    <tr key={index}>
+                      <td>{item?.investmentPlan}</td>
+                      <td>${item?.investmentAmount}</td>
+                      <td>{formatDate(item?.endDate)}</td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>

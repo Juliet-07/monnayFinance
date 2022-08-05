@@ -936,7 +936,7 @@
 /* registration successful  */
 .settingsButton {
   position: relative;
-  left: 1390px;
+  left: 1000px;
   width: 206px;
   height: 60px;
   font-weight: 700;
@@ -1476,14 +1476,27 @@
   }
   .termsHeader {
     font-size: 27px;
+    color: #000000;
   }
   .termsBody {
     width: 350px;
     left: 29px;
+    color: #000000;
   }
   .termsButton {
     width: 319px;
     left: 47px;
+  }
+  .agreeTerms{
+    left: 15px;
+    font-size: 12px;
+    line-height: 18px;
+    top: 15px;
+    padding: 20px;
+    color: #000000;
+  }
+  .termsButton{
+    top: 25px;
   }
   #faqDiv {
     flex-direction: column;
@@ -1602,6 +1615,15 @@
   }
   .registrationContainer {
     left: 400px;
+  }
+  .termsBody{
+    left: 30px;
+  }
+  .agreeTerms{
+    left: 30px;
+  }
+  .termsButton{
+    left: 1050px;
   }
   .footer {
     height: 300px;

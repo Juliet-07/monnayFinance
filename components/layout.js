@@ -1,7 +1,6 @@
 import React from "react";
 import Sidebar from "./sidebar";
 import NavDashboard from "./navbarDashboard";
-import Footer from "./footerDashboard";
 import styles from "../styles/Home.module.css";
 
 const Layout = ({ children }) => {
@@ -16,7 +15,6 @@ const Layout = ({ children }) => {
           <Sidebar />
           <div className="flex-1 text-black bg-white">{children}</div>
         </div>
-        <Footer />
       </div>
     </>
   );
