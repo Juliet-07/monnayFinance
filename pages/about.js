@@ -180,13 +180,6 @@ const About = () => {
               </p>
               <p className={styles.investorName}>Iain Carmichael</p>
             </div>
-            {/* <div className={styles.investorCard}>
-              <p className={styles.investorMessage}>
-                What a well designed investment structure. It is an
-                easy-to-operate system with automated payments.
-              </p>
-              <p className={styles.investorName}>Paul Littlefair</p>
-            </div> */}
             <div className={styles.investorCard}>
               <VscQuote size={55} className={styles.investorIcon} />
               <p className={styles.investorMessage3}>
@@ -194,10 +187,9 @@ const About = () => {
                 <br className={styles.brTag} />
                 in service and proving to be the best investment company.
                 <br className={styles.brTag} /> It has always been my wish to
-                encounter a company <br className={styles.brTag} />
-                with such performance. Keep it up
+                encounter a company with such performance. Keep it up
               </p>
-              <p className={styles.investorName3}>Amber Oram</p>
+              <p className={styles.investorName}>Amber Oram</p>
             </div>
             <div></div>
           </div>
@@ -244,12 +236,12 @@ const About = () => {
           </ul>
           <ul className={styles.footerBottomText}>
             <h5 style={{ fontWeight: 700 }}>Address</h5>
-            <li style={{ fontSize: 16 }}>Vanha Talvitie 11 C,</li>
-            <li style={{ fontSize: 16 }}>HELSINKI 00580 Finland</li>
+            <li style={{ fontSize: 16 }}>22 Albert Street,</li>
+            <li style={{ fontSize: 16 }}>AUCKLAND 1010, New Zealand</li>
             <br />
             <br />
             <li style={{ fontSize: 18, fontWeight: 700 }}>Email:</li>
-            <li style={{ fontSize: 16 }}>contact@monnay.finance</li>
+            <li style={{ fontSize: 16 }}>contact@monnayfinance.com</li>
           </ul>
         </div>
       </footer>

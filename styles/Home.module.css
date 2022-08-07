@@ -713,7 +713,6 @@
   width: 590px;
   height: 292px;
   margin: 2rem;
-  padding: 1.5rem;
   background-color: whitesmoke;
   border-radius: 10px;
 }
@@ -733,7 +732,7 @@
 }
 .investorName {
   position: relative;
-  top: 50px;
+  top: 70px;
   right: 50px;
   font-weight: 700;
   font-size: 20px;
@@ -742,20 +741,11 @@
 }
 .investorMessage3 {
   position: relative;
-  top: 20px;
-  left: 70px;
+  top: 70px;
+  left: 100px;
   font-size: 16px;
   line-height: 22px;
-  padding: 40px;
-}
-.investorName3 {
-  position: relative;
-  bottom: 20px;
-  right: 50px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 26px;
-  text-align: right;
+  padding-right: 50px;
 }
 /* about page */
 /* faq section */
@@ -1324,6 +1314,7 @@
   }
   .investorDivAbout {
     margin-top: 30px;
+    height: 600px;
   }
   .investorCardDiv {
     display: flex;
@@ -1334,30 +1325,28 @@
     height: 177px;
   }
   .investorIcon {
-    top: 20px;
+    top: 10px;
     left: 20px;
+    font-size: 10px;
   }
   .investorMessage {
+    /* font-weight: 600; */
     font-size: 12px;
     line-height: 14px;
-    top: 0px;
-    left: 60px;
+    top: 8px;
+    left: 50px;
   }
   .investorName {
     font-size: 14px;
     top: 0px;
   }
   .investorMessage3 {
+    /* font-weight: 600; */
     font-size: 12px;
     line-height: 14px;
-    bottom: 60px;
-    left: 20px;
-    padding-left: 70px;
-    padding-right: 50px;
-  }
-  .investorName3 {
-    font-size: 14px;
-    bottom: 100px;
+    top: 12px;
+    left: 70px;
+    padding-right: 80px;
   }
   .subscribeContainer {
     height: 380px;
@@ -1401,14 +1390,16 @@
     text-align: center;
   }
   .description {
-    z-index: -1;
+    /* z-index: -1; */
     height: 2500px;
   }
   .whoAreWeDiv {
+    /* z-index: -1; */
     top: 5px;
     flex-direction: column;
   }
   .whoAreWe {
+    z-index: -1;
     width: 330px;
     height: 278px;
     margin-left: 30px;
@@ -1487,7 +1478,7 @@
     width: 319px;
     left: 47px;
   }
-  .agreeTerms{
+  .agreeTerms {
     left: 15px;
     font-size: 12px;
     line-height: 18px;
@@ -1495,7 +1486,7 @@
     padding: 20px;
     color: #000000;
   }
-  .termsButton{
+  .termsButton {
     top: 25px;
   }
   #faqDiv {
@@ -1594,21 +1585,23 @@
     height: 250px;
   }
   .investorIcon {
-    top: 15px;
-    left: 20px;
+    top: 30px;
+    left: 30px;
   }
   .investorMessage {
-    top: 20px;
+    top: 35px;
+    left: 55px;
+  }
+  .investorName {
+    top: 30px;
+  }
+  .investorMessage3 {
+    top: 40px;
     left: 60px;
+    padding-right: 70px;
   }
-  #investorName {
-    position: relative;
-    bottom: 30px;
-  }
-  .investorMessage3{
-    top: 10px;
-    left: 40px;
-    padding: 10px;
+  .brTag {
+    display: none;
   }
   .signinContainer {
     margin: 90px;
@@ -1616,13 +1609,13 @@
   .registrationContainer {
     left: 400px;
   }
-  .termsBody{
+  .termsBody {
     left: 30px;
   }
-  .agreeTerms{
+  .agreeTerms {
     left: 30px;
   }
-  .termsButton{
+  .termsButton {
     left: 1050px;
   }
   .footer {

@@ -130,8 +130,10 @@ const FAQ = () => {
             <div>
               <p className={styles.faqCardBodyText}>
                 Yes, Monnay Finance is fully registered. You can click{" "}
-                <font color="#057d99">here</font> to view the registration
-                certificate.
+                <a href="https://app.companiesoffice.govt.nz/co/8372576">
+                  here
+                </a>{" "}
+                to view the registration certificate.
               </p>
             </div>
           </div>
@@ -179,12 +181,12 @@ const FAQ = () => {
           </ul>
           <ul className={styles.footerBottomText}>
             <h5 style={{ fontWeight: 700 }}>Address</h5>
-            <li style={{ fontSize: 16 }}>Vanha Talvitie 11 C,</li>
-            <li style={{ fontSize: 16 }}>HELSINKI 00580 Finland</li>
+            <li style={{ fontSize: 16 }}>22 Albert Street,</li>
+            <li style={{ fontSize: 16 }}>AUCKLAND 1010, New Zealand</li>
             <br />
             <br />
             <li style={{ fontSize: 18, fontWeight: 700 }}>Email:</li>
-            <li style={{ fontSize: 16 }}>contact@monnay.finance</li>
+            <li style={{ fontSize: 16 }}>contact@monnayfinance.com</li>
           </ul>
         </div>
       </footer>
