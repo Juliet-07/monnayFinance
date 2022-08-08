@@ -81,18 +81,21 @@ const Dashboard = () => {
         <div className="main-panel">
           <div className="content">
             <div className="mb-20">
-              <div className="card-header">
-                <div className="flex justify-between">
-                  <h4 className="cardName">Welcome {user.username}</h4>
-                  {/* <h4 className="cardName">Welcome {user.id}</h4> */}
-                  <p className="cardTime">
-                    Last Access: {formatDate(user.lastlogin)}
-                  </p>
-                </div>
+              <div
+                className="card-header flex justify-between"
+                id={styles.contentHeader}
+              >
+                {/* <div className="flex justify-between bg-red-900"> */}
+                <h4 className="cardName">Welcome {user.username}</h4>
+                {/* <h4 className="cardName">Welcome {user.id}</h4> */}
+                <p className="cardTime">
+                  Last Access: {formatDate(user.lastlogin)}
+                </p>
+                {/* </div> */}
               </div>
             </div>
             <div className="mb-20">
-              <div className="card-body">
+              <div className="card-body" id={styles.contentBody}>
                 <div className="flex align-center justify-between">
                   <Image
                     src="/monnayCoin.png"
@@ -101,15 +104,19 @@ const Dashboard = () => {
                     alt="coin"
                   />
                   <div className="details">
-                    <p className="cardPrice">
+                    <p className="cardPrice" id={styles.cardPrice}>
                       <font color="black">Available balance:</font>
                       <br /> $ {data.walletBalance}
                     </p>
                     <Link href="/withdraw">
-                      <button className="cardButton">Withdraw</button>
+                      <button className="cardButton" id={styles.cardButton}>
+                        Withdraw
+                      </button>
                     </Link>
                     <Link href="/deposit">
-                      <button className="cardButton1">Deposit</button>
+                      <button className="cardButton1" id={styles.cardButton1}>
+                        Deposit
+                      </button>
                     </Link>
                   </div>
                 </div>
@@ -164,7 +171,7 @@ const Dashboard = () => {
             </div>
             {/* card row ends */}
             {/* chart section */}
-            <div className="flex flex-row justify-between mt-10">
+            <div className="flex flex-row mt-10" id={styles.referDiv}>
               <div className="cardStatsRefer">
                 <p className="refer">refer and earn</p>
                 <p className="refer1">
@@ -189,11 +196,9 @@ const Dashboard = () => {
             {/* footer */}
           </div>
           <footer className="footer">
-            <div className="flex justify-center align-center">
-              <p className="footer-text">
-                COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
-              </p>
-            </div>
+            <p className="footer-text">
+              COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
+            </p>
           </footer>
         </div>
         {/* Content Ends*/}

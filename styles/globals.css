@@ -54,3 +54,15 @@ hr {
   margin: 20px;
   /* background-color: blueviolet; */
 }
+.contain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.box {
+  width: 10px;
+  height: 0px;
+  margin-right: 100px;
+}

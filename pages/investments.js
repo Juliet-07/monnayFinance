@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Head from "next/head";
+import NavDashboard from "../components/navbarDashboard";
 import Layout from "../components/layout";
 import styles from "../styles/Home.module.css";
 import { AiFillCheckCircle } from "react-icons/ai";
@@ -60,6 +61,7 @@ const Investment = () => {
         />
       </Head>
       <Layout>
+        <NavDashboard />
         {/* Content */}
         <div className="main-panel">
           <div className="content">
@@ -283,11 +285,9 @@ const Investment = () => {
             {/* footer */}
           </div>
           <footer className="footer">
-            {/* <div className="flex justify-center align-center"> */}
             <p className="footer-text">
               COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
             </p>
-            {/* </div> */}
           </footer>
         </div>
         {/* Content Ends*/}

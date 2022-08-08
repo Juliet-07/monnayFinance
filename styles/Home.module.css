@@ -1622,4 +1622,28 @@
   .footer {
     height: 300px;
   }
+  /* DASHBOARD STYLING */
+  #contentHeader {
+    width: 1230px;
+    position: relative;
+    left: 20px;
+  }
+  #contentBody {
+    width: 1220px;
+    position: relative;
+    left: 20px;
+  }
+  #cardPrice {
+    right: 150px;
+  }
+  #cardButton {
+    right: 70px;
+  }
+  #cardButton1 {
+    margin-right: 30px;
+  }
+  #referDiv {
+    position: relative;
+    left: 70px;
+  }
 }

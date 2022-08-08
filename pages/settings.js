@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Layout from "../components/layout";
+import NavDashboard from "../components/navbarDashboard";
 import styles from "../styles/Home.module.css";
 import { AiOutlineCamera } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
@@ -23,6 +24,7 @@ const Settings = () => {
         />
       </Head>
       <Layout>
+        <NavDashboard />
         {/* Content */}
         <div className="main-panel">
           <div className="container">
@@ -211,11 +213,9 @@ const Settings = () => {
           </div>
           {/* footer */}
           <footer className="footer">
-            {/* <div className="flex justify-center align-center"> */}
             <p className="footer-text">
               COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
             </p>
-            {/* </div> */}
           </footer>
         </div>
         {/* Content Ends*/}

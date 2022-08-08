@@ -5,7 +5,7 @@ import React, { useContext, useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
-    var addScript = document.createElement("script");
+    let addScript = document.createElement("script");
     addScript.setAttribute(
       "src",
       "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
@@ -18,7 +18,7 @@ export default function Home() {
     new window.google.translate.TranslateElement(
       {
         pageLanguage: "en",
-        includedLanguages: "en,ms,ta,zh-CN", // include this for selected languages
+        // includedLanguages: "en,ms,ta,zh-CN", // include this for selected languages
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
       },
       "google_translate_element"
@@ -26,9 +26,8 @@ export default function Home() {
   };
 
   return (
-    <div className={styles.container}>
-      <div id="google_translate_element"> </div>
-
+    <div className="contain">
+      <p id="google_translate_element" className="box"></p>
       <div>Welcome to Next JS</div>
     </div>
   );

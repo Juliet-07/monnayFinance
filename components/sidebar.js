@@ -66,7 +66,7 @@ const Sidebar = () => {
     }
   );
 
-  const collapseIconClasses = classNames("p-3 bg-primary absolute right-0", {
+  const collapseIconClasses = classNames("p-3 mt-4 bg-light absolute right-0", {
     "rotate-180": toggleCollapse,
   });
 
@@ -106,14 +106,9 @@ const Sidebar = () => {
               {/* <Image src="/icon.png" width={100} height={100} /> */}
             </span>
           </div>
-          {isCollapsible && (
-            <button
-              className={collapseIconClasses}
-              onClick={handleSidebarToggle}
-            >
-              <AiOutlineMenu size={20} />
-            </button>
-          )}
+          <p className={collapseIconClasses} onClick={handleSidebarToggle}>
+            <AiOutlineMenu size={30} />
+          </p>
         </div>
 
         <div className="flex flex-col items-start mt-24 sticky">

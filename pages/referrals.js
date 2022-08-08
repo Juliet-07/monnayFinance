@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import NavDashboard from "../components/navbarDashboard";
 import Layout from "../components/layout";
 import { CgProfile } from "react-icons/cg";
 import { AiOutlineHome } from "react-icons/ai";
@@ -22,6 +23,7 @@ const Referrals = () => {
         />
       </Head>
       <Layout>
+        <NavDashboard />
         {/* Content */}
         <div className="main-panel">
           <div className="content">
@@ -59,11 +61,9 @@ const Referrals = () => {
             {/* footer */}
           </div>
           <footer className="footer">
-            {/* <div className="flex justify-center align-center"> */}
             <p className="footer-text">
               COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
             </p>
-            {/* </div> */}
           </footer>
         </div>
         {/* Content Ends*/}

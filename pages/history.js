@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
+import NavDashboard from "../components/navbarDashboard";
 import Layout from "../components/layout";
 import moment from "moment";
 // import DataTable from "../components/dataTable";
@@ -72,6 +73,7 @@ const History = () => {
         />
       </Head>
       <Layout>
+        <NavDashboard />
         {/* Content */}
         <div className="main-panel">
           <div className="content1">
