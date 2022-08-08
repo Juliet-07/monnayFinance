@@ -359,9 +359,9 @@ const Home = () => {
               <VscQuote size={55} className={styles.investorIcon} />
               <p className={styles.investorMessage3}>
                 Thank you Monnay Finance for being so efficient{" "}
-                <br className={styles.brTag} />
+                <br className={styles.brTagI} />
                 in service and proving to be the best investment company.
-                <br className={styles.brTag} /> It has always been my wish to
+                <br className={styles.brTagI} /> It has always been my wish to
                 encounter a company with such performance. Keep it up
               </p>
               <p className={styles.investorName}>Amber Oram</p>

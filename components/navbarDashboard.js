@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../styles/Home.module.css";
-import Sidebar from "./sidebar";
-import { AiOutlineDollar, AiOutlineHome } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { MdOutlineNotificationsNone } from "react-icons/md";
 import { GiWorld } from "react-icons/gi";
@@ -17,49 +14,23 @@ function NavLink({ to, children }) {
 }
 
 export default function NavDashboard() {
-  const [open, setOpen] = useState(false);
   return (
-    <nav className="flex filter drop-shadow-md bg-white px-4 py-4 h-20 items-center">
-      {/* <MobileNav open={open} setOpen={setOpen} /> */}
-      <div className="w-3/12 flex items-center justify-center">
-        <Link href="/">
+    <nav className="flex bg-white px-4 py-4 h-20">
+      <div className="w-3/12 flex items-center justify-start">
+        <Link href="/dashboard">
           <Image src="/monnayLogo.png" width={140} height={40} alt="logo" />
         </Link>
       </div>
-      <div className="w-9/12 flex justify-end items-center">
-        {/* <div
-          className="z-50 flex relative w-8 h-8 flex-col justify-between items-center md:hidden"
-          onClick={() => {
-            setOpen(!open);
-          }}
-        > */}
-        {/* hamburger button */}
-        {/* <span
-            className={`h-1 w-full bg-black rounded-lg transform transition duration-300 ease-in-out ${
-              open ? "rotate-45 translate-y-3.5" : ""
-            }`}
-          />
-          <span
-            className={`h-1 w-full bg-black rounded-lg transition-all duration-300 ease-in-out ${
-              open ? "w-0" : "w-full"
-            }`}
-          />
-          <span
-            className={`h-1 w-full bg-black rounded-lg transform transition duration-300 ease-in-out ${
-              open ? "-rotate-45 -translate-y-3.5" : ""
-            }`}
-          />
-        </div> */}
-        {/* <NavLink to="/">Dashboard</NavLink> */}
+      <div className="w-9/12 flex justify-center items-center relative left-96">
         <div className="hidden md:flex">
           <NavLink to="/">
-            <GiWorld size={20} />
+            <GiWorld size={30} />
           </NavLink>
           <NavLink to="/">
-            <MdOutlineNotificationsNone size={20} />
+            <MdOutlineNotificationsNone size={30} />
           </NavLink>
           <NavLink to="/">
-            <CgProfile size={20} />
+            <CgProfile size={30} />
           </NavLink>
         </div>
       </div>

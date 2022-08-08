@@ -126,6 +126,7 @@
   bottom: 0px;
   left: 0px;
   background-color: rgba(10, 79, 96, 0.72);
+  /* z-index: -1; */
 }
 .jumbotronProps {
   display: flex;
@@ -1600,7 +1601,7 @@
     left: 60px;
     padding-right: 70px;
   }
-  .brTag {
+  .brTagI {
     display: none;
   }
   .signinContainer {

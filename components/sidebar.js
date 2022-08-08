@@ -50,7 +50,6 @@ const menuItems = [
 const Sidebar = () => {
   const [toggleCollapse, setToggleCollapse] = useState(false);
   const [isCollapsible, setIsCollapsible] = useState(false);
-  const [showSidebar, setShowSidebar] = useState("-left-64");
 
   const router = useRouter();
 
@@ -87,7 +86,7 @@ const Sidebar = () => {
   const handleSidebarToggle = () => {
     setToggleCollapse(!toggleCollapse);
   };
-  
+
   return (
     <div
       className={wrapperClasses}
@@ -98,7 +97,7 @@ const Sidebar = () => {
       <div className="flex flex-col">
         <div className="flex items-center justify-between relative">
           <div className="flex items-center pl-1 gap-4">
-            {/* <LogoIcon /> */}
+            {/* <Image src="/icon.png" width={50} height={50} /> */}
             <span
               className={classNames("mt-2 text-lg font-medium text-text", {
                 hidden: toggleCollapse,
@@ -112,7 +111,7 @@ const Sidebar = () => {
               className={collapseIconClasses}
               onClick={handleSidebarToggle}
             >
-              <AiOutlineMenu size={30} />
+              <AiOutlineMenu size={20} />
             </button>
           )}
         </div>

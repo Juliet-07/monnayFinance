@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Chart from "../public/monnay-chart.jpeg";
 import Layout from "../components/layout";
+import NavDashboard from "../components/navbarDashboard";
 import styles from "../styles/Home.module.css";
 import { AiOutlineDollar } from "react-icons/ai";
 import { BsLink45Deg } from "react-icons/bs";
@@ -73,8 +74,8 @@ const Dashboard = () => {
           href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
         />
       </Head>
-
       <Layout>
+        <NavDashboard />
         {/* <div> */}
         {/* Content */}
         <div className="main-panel">
