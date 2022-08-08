@@ -65,7 +65,7 @@ const Investment = () => {
         {/* Content */}
         <div className="main-panel">
           <div className="content">
-            <div className="investmentHeader">
+            <div className="investmentHeader" id={styles.contentHeader}>
               <p className="investmentHeaderText">Investment Plans</p>
             </div>
             <div className="col-md-12 mt-20">
@@ -229,7 +229,7 @@ const Investment = () => {
               </div>
             </div>
             <div className="mb-20">
-              <div className="investmentActive">
+              <div className="investmentActive" id={styles.contentHeader}>
                 <p className="investmentActiveText">Active Investments</p>
               </div>
             </div>
@@ -260,7 +260,7 @@ const Investment = () => {
               </table>
             </div>
             <div className="mb-20">
-              <div className="investmentActive">
+              <div className="investmentActive" id={styles.contentHeader}>
                 <p className="investmentActiveText">Recent Investments</p>
               </div>
             </div>
@@ -282,7 +282,6 @@ const Investment = () => {
                 </tbody>
               </table>
             </div>
-            {/* footer */}
           </div>
           <footer className="footer">
             <p className="footer-text">

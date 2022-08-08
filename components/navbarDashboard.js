@@ -40,12 +40,12 @@ export default function NavDashboard() {
           <Image src="/monnayLogo.png" width={140} height={40} alt="logo" />
         </Link>
       </div>
-      <div className="w-9/12 flex justify-center items-center relative left-96">
+      <div className="flex justify-center items-center relative left-96">
         <div className="hidden md:flex">
           <div id="google_translate_element" className="box"></div>
-          <NavLink to="#">
+          {/* <NavLink to="#">
             <GiWorld size={30} id="google_translate_element" />
-          </NavLink>
+          </NavLink> */}
           <NavLink to="/">
             <MdOutlineNotificationsNone size={30} />
           </NavLink>

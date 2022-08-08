@@ -11,6 +11,8 @@ import IconButton from "@material-ui/core/IconButton";
 import { InputAdornment } from "@material-ui/core";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
+import { AiFillBackward } from "react-icons/ai";
+import { icons } from "react-icons";
 
 const BASE_URI = "https://monnayfinance.com/api";
 
@@ -76,6 +78,7 @@ const Signin = () => {
         <meta name="description" content="Generated monnay finance" />
         <link rel="icon" href="/icon.png" />
       </Head>
+      {/* <AiFillBackward size={30}/> */}
       {/* <Navbar /> */}
       {/* <div className="h-screen w-full bg-pink-700"> */}
       <div className={styles.signinContainer}>

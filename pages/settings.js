@@ -29,7 +29,7 @@ const Settings = () => {
         <div className="main-panel">
           <div className="container">
             <div className="mb-10">
-              <div className="profileSettings">
+              <div className="profileSettings" id={styles.contentHeader}>
                 <p className="profileSettingsText">Personal Details</p>
               </div>
             </div>
@@ -74,7 +74,7 @@ const Settings = () => {
               </div>
             </div>
             <div className="mb-10">
-              <div className="profileSettings">
+              <div className="profileSettings" id={styles.contentHeader}>
                 <p className="profileSettingsText">Account Details</p>
               </div>
               <div className="flex justify-between align-center mt-10 pl-20 pr-20">
@@ -141,7 +141,7 @@ const Settings = () => {
               </div>
             </div>
             <div className="mb-10">
-              <div className="profileSettings">
+              <div className="profileSettings" id={styles.contentHeader}>
                 <p className="profileSettingsText">Account Security</p>
               </div>
               <div className="flex justify-between align-center mt-10 pl-20 pr-20">

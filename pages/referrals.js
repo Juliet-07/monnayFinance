@@ -2,10 +2,7 @@ import React from "react";
 import Head from "next/head";
 import NavDashboard from "../components/navbarDashboard";
 import Layout from "../components/layout";
-import { CgProfile } from "react-icons/cg";
-import { AiOutlineHome } from "react-icons/ai";
-import { MdOutlineNotificationsNone } from "react-icons/md";
-
+import styles from "../styles/Home.module.css";
 const Referrals = () => {
   return (
     <>
@@ -27,7 +24,7 @@ const Referrals = () => {
         {/* Content */}
         <div className="main-panel">
           <div className="content">
-            <div className="investmentActive">
+            <div className="investmentActive" id={styles.contentHeader1}>
               <p className="investmentActiveText">Referrals</p>
             </div>
             <div className="col-md-10 mt-20 mb-56">

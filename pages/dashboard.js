@@ -123,8 +123,8 @@ const Dashboard = () => {
               </div>
             </div>
             {/* card row */}
-            <div className="row">
-              <div className="col-lg-3 col-md-6 col-sm-6">
+            <div className="flex justify-around w-full">
+              <div className="col-lg-3 col-md-4 col-sm-4">
                 <div className="cardStats">
                   <i className="material-icons">
                     <AiOutlineDollar size={50} color="#057D99" />
@@ -135,7 +135,7 @@ const Dashboard = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-6 col-sm-6">
+              <div className="col-lg-3 col-md-4 col-sm-4">
                 <div className="cardStats1">
                   <i className="material-icons">
                     <AiOutlineDollar size={50} color="#FC5F00" />
@@ -146,7 +146,7 @@ const Dashboard = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-6 col-sm-6">
+              <div className="col-lg-3 col-md-4 col-sm-4">
                 <div className="cardStats2">
                   <i className="material-icons">
                     <AiOutlineDollar size={50} color="#F1BC19" />
@@ -157,7 +157,7 @@ const Dashboard = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-6 col-sm-6">
+              <div className="col-lg-3 col-md-4 col-sm-4">
                 <div className="cardStats3">
                   <i className="material-icons">
                     <AiOutlineDollar size={50} color="#04C150" />
@@ -187,9 +187,9 @@ const Dashboard = () => {
                   </i>
                 </div>
               </div>
-              <div className="imageDiv">
+              {/* <div className="imageDiv">
                 <Image src={Chart} width={703} height={440} />
-              </div>
+              </div> */}
             </div>
             {/* chart section ends */}
 

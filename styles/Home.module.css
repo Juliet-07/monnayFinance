@@ -1082,7 +1082,7 @@
 .footer li {
   list-style-type: disc;
 }
-/* Others, Dashboard and all */
+/* Dashboard styling mostly and others */
 .investContainer {
   position: relative;
   background: url("/public/monnayJumbo.png");
@@ -1164,6 +1164,10 @@
 /* RESPONSIVENESS */
 /* for mobile screens*/
 @media only screen and (min-width: 360px) and (max-width: 926px) {
+  .navbarMode {
+    display: none;
+    /* z-index: -10; */
+  }
   .jumbotron {
     height: 370px !important;
   }
@@ -1624,20 +1628,25 @@
   }
   /* DASHBOARD STYLING */
   #contentHeader {
-    width: 1230px;
+    width: 1200px;
     position: relative;
-    left: 20px;
+    left: 15px;
+  }
+  #contentHeader1 {
+    width: 950px;
+    position: relative;
+    left: 15px;
   }
   #contentBody {
-    width: 1220px;
+    width: 1200px;
     position: relative;
-    left: 20px;
+    left: 15px;
   }
   #cardPrice {
-    right: 150px;
+    right: 100px;
   }
   #cardButton {
-    right: 70px;
+    right: 50px;
   }
   #cardButton1 {
     margin-right: 30px;

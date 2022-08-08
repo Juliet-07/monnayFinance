@@ -3,6 +3,7 @@ import Head from "next/head";
 import NavDashboard from "../components/navbarDashboard";
 import Layout from "../components/layout";
 import moment from "moment";
+import styles from "../styles/Home.module.css";
 // import DataTable from "../components/dataTable";
 
 const History = () => {
@@ -77,7 +78,7 @@ const History = () => {
         {/* Content */}
         <div className="main-panel">
           <div className="content1">
-            <div className="investmentActive">
+            <div className="investmentActive" id={styles.contentHeader}>
               <p className="investmentActiveText">Transaction History</p>
             </div>
             <div className="col-md-10 mt-20 mb-56">
