@@ -19021,8 +19021,6 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
   color: #04c150;
 }
 .cardStatsRefer {
-  position: relative;
-  /* right: 100px; */
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -19035,7 +19033,7 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 }
 .imageDiv {
   width: 704px;
-  margin-left: 100px;
+  /* margin-left: 100px; */
 }
 .card .card-stats .author,
 .card .card-stats .stats {

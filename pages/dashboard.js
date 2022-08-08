@@ -171,7 +171,7 @@ const Dashboard = () => {
             </div>
             {/* card row ends */}
             {/* chart section */}
-            <div className="flex flex-row mt-10" id={styles.referDiv}>
+            <div className="w-full flex justify-around mt-10">
               <div className="cardStatsRefer">
                 <p className="refer">refer and earn</p>
                 <p className="refer1">
@@ -187,9 +187,9 @@ const Dashboard = () => {
                   </i>
                 </div>
               </div>
-              {/* <div className="imageDiv">
-                <Image src={Chart} width={703} height={440} />
-              </div> */}
+              {/* <div className="imageDiv"> */}
+              <Image src={Chart} width={600} height={400} />
+              {/* </div> */}
             </div>
             {/* chart section ends */}
 
