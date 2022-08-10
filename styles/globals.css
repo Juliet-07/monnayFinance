@@ -66,3 +66,83 @@ hr {
   height: 0px;
   margin-right: 100px;
 }
+#google_translate_element {
+  position: absolute;
+  left: 300px !important;
+  /* top: 20px !important; */
+}
+.goog-te-gadget {
+  /* display: flex;
+  background-color: black;
+  width: 300px; */
+  /* font-family: Roboto, "Open Sans", sans-serif !important; */
+  /* text-transform: uppercase; */
+}
+.goog-te-gadget-simple {
+  background-color: rgba(255, 255, 255, 0.877) !important;
+  border: 2px solid rgba(255, 255, 255, 0.5) !important;
+  padding: 10px !important;
+  border-radius: 4px !important;
+  font-size: 1rem !important;
+  display: flex !important;
+  cursor: pointer;
+  width: 180px !important;
+  height: 10px !important;
+}
+.goog-te-gadget-icon {
+  position: relative;
+  bottom: 10px !important;
+  font-size: 15px;
+}
+.goog-te-menu-value {
+  position: relative;
+  bottom: 30px;
+  /* font-size: 10px !important; */
+}
+.goog-te-menu-value span:nth-child(5) {
+  position: relative;
+  left: 110px;
+  bottom: 115px;
+  font-size: 18px !important;
+}
+@media (max-width: 667px) {
+  #google_translate_element {
+    position: absolute;
+    left: 150px !important;
+    top: 425px !important;
+  }
+  .goog-te-gadget {
+    /* display: flex;
+    background-color: black;
+    width: 300px; */
+    /* font-family: Roboto, "Open Sans", sans-serif !important; */
+    /* text-transform: uppercase; */
+  }
+  .goog-te-gadget-simple {
+    background-color: rgba(255, 255, 255, 0.726) !important;
+    border: 2px solid rgba(255, 255, 255, 0.5) !important;
+    padding: 10px !important;
+    border-radius: 4px !important;
+    font-size: 1rem !important;
+    display: flex !important;
+    cursor: pointer;
+    width: 180px !important;
+    height: 10px !important;
+  }
+  .goog-te-gadget-icon {
+    position: relative;
+    bottom: 10px !important;
+    font-size: 15px;
+  }
+  .goog-te-menu-value {
+    position: relative;
+    bottom: 30px;
+    /* font-size: 10px !important; */
+  }
+  .goog-te-menu-value span:nth-child(5) {
+    position: relative;
+    left: 110px;
+    bottom: 115px;
+    font-size: 18px !important;
+  }
+}

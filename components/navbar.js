@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
@@ -128,6 +128,7 @@ function MobileNav({ open, setOpen }) {
             LOG IN
           </button>
         </Link>
+        <div id="google_translate_element"></div>
       </div>
     </div>
   );
@@ -135,6 +136,25 @@ function MobileNav({ open, setOpen }) {
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const googleTranslateElementInit = () => {
+    new window.google.translate.TranslateElement(
+      {
+        pageLanguage: "en",
+        // includedLanguages: "en,ms,ta,zh-CN", // include this for selected languages
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      },
+      "google_translate_element"
+    );
+  };
+  useEffect(() => {
+    let addScript = document.createElement("script");
+    addScript.setAttribute(
+      "src",
+      "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    );
+    document.body.appendChild(addScript);
+    window.googleTranslateElementInit = googleTranslateElementInit;
+  }, []);
   return (
     <nav className="flex filter drop-shadow-md bg-white px-3 py-4 h-20 items-center">
       <MobileNav open={open} setOpen={setOpen} />
@@ -168,7 +188,7 @@ export default function Navbar() {
           />
         </div>
 
-        <div className="hidden md:flex space-x-1 space-y-1">
+        <div className="hidden md:flex">
           <NavLink to="/">HOME</NavLink>
           <NavLink to="/about">ABOUT</NavLink>
           <NavLink to="/investment">INVESTMENTS</NavLink>

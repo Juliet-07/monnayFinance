@@ -52,7 +52,7 @@ export default function NavDashboard() {
           <NavLink to="/">
             <CgProfile size={30} />
           </NavLink>
-          {/* <div id="google_translate_element"> </div> */}
+          <div id="google_translate_element"> </div>
         </div>
       </div>
     </nav>

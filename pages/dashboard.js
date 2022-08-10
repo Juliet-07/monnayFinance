@@ -85,9 +85,7 @@ const Dashboard = () => {
                 className="card-header flex justify-between"
                 id={styles.contentHeader}
               >
-                {/* <div className="flex justify-between bg-red-900"> */}
                 <h4 className="cardName">Welcome {user.username}</h4>
-                {/* <h4 className="cardName">Welcome {user.id}</h4> */}
                 <p className="cardTime">
                   Last Access: {formatDate(user.lastlogin)}
                 </p>

@@ -1539,6 +1539,13 @@
     flex-direction: column;
     z-index: -1;
   }
+  /* Dashboard Styling */
+  #contentHeader{
+    display: flex;
+    flex-direction: column;
+    width: 353px;
+    height: 113px;
+  }
 }
 /* FOR LAPTOPS */
 @media screen and (min-device-width: 926px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
