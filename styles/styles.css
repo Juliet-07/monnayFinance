@@ -299,15 +299,15 @@ legend {
   left: 30px;
   top: 10px;
   font-weight: 500;
-  font-size: 23px;
-  line-height: 35px;
+  font-size: 24px;
+  line-height: 33px;
   color: #057d99;
   text-transform: uppercase;
 }
 .refer1 {
   position: relative;
   left: 23px;
-  line-height: 20px;
+  line-height: 22px;
   font-size: 16px;
   color: #636363;
 }
@@ -4975,7 +4975,7 @@ tbody.collapse.show {
   left: 30px;
   font-weight: 700;
   font-size: 24px;
-  line-height: 30px;
+  line-height: 33px;
   color: #057d99;
 }
 .cardTime {
@@ -16718,10 +16718,8 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
   background-color: #f6fdff;
-  position: relative;
-  left: 90px;
+  padding-left: 5rem;
 }
 .main-panel > .content1 {
   display: flex;

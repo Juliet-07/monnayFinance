@@ -83,13 +83,13 @@ function SideNavbar() {
             // onClick={handleSidebarToggle}
           />
         </Disclosure.Button>
-        <div className="p-4 w-1/2 h-screen bg-white z-20 fixed top-0 -left-96 lg:left-0 lg:w-60  peer-focus:left-0 peer:transition ease-out delay-150 duration-200">
+        <div className="p-2 h-full bg-white z-20 fixed top-0 -left-96 lg:left-0 lg:w-60  peer-focus:left-0 peer:transition ease-out delay-150 duration-200">
           <div className="flex flex-col justify-start item-center">
             {/* <h1 className="text-base text-center cursor-pointer font-bold text-blue-900 border-b border-gray-100 pb-4 w-full">
               Virtual Dashboard
             </h1> */}
             <Link href="/dashboard">
-              <Image src="/monnayLogo.png" width={120} height={40} alt="logo" />
+              <Image src="/monnayLogo.png" width={100} height={50} alt="logo" />
             </Link>
             <div className="flex flex-col items-start mt-24 sticky">
               {menuItems.map(({ icon: Icon, ...menu }) => {

@@ -86,7 +86,7 @@ const Dashboard = () => {
                 id={styles.contentHeader}
               >
                 <h4 className="cardName">Welcome {user.username}</h4>
-                <p className="cardTime">
+                <p className="cardTime" id={styles.cardTime}>
                   Last Access: {formatDate(user.lastlogin)}
                 </p>
                 {/* </div> */}
@@ -121,48 +121,76 @@ const Dashboard = () => {
               </div>
             </div>
             {/* card row */}
-            <div className="flex">
-              <div className="col-lg-3 col-md-4 col-sm-4">
-                <div className="cardStats">
+            <div className="row" id={styles.cardDisplay}>
+              <div className="col col-md-3">
+                <div className="cardStats" id={styles.cardStats}>
                   <i className="material-icons">
                     <AiOutlineDollar size={50} color="#057D99" />
                   </i>
                   <div className="cardActiveDiv">
-                    <p className="cardActiveHeader">Active Investment</p>
-                    <p className="cardActive">$ {data.activeInvestment}</p>
+                    <p
+                      className="cardActiveHeader"
+                      id={styles.cardActiveHeader}
+                    >
+                      Active Investment
+                    </p>
+                    <p className="cardActive" id={styles.cardActive}>
+                      $ {data.activeInvestment}
+                    </p>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-4 col-sm-4">
-                <div className="cardStats1">
+              <div className="col col-md-3">
+                <div className="cardStats1" id={styles.cardStats1}>
                   <i className="material-icons">
                     <AiOutlineDollar size={50} color="#FC5F00" />
                   </i>
                   <div className="cardActiveDiv">
-                    <p className="cardActiveHeader">Total Withdrawn</p>
-                    <p className="cardActive1">$ {data.totalEarning}</p>
+                    <p
+                      className="cardActiveHeader"
+                      id={styles.cardActiveHeader}
+                    >
+                      Total Withdrawn
+                    </p>
+                    <p className="cardActive1" id={styles.cardActive1}>
+                      $ {data.totalEarning}
+                    </p>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-4 col-sm-4">
-                <div className="cardStats2">
+              <div className="col col-md-3">
+                <div className="cardStats2" id={styles.cardStats1}>
                   <i className="material-icons">
                     <AiOutlineDollar size={50} color="#F1BC19" />
                   </i>
                   <div className="cardActiveDiv">
-                    <p className="cardActiveHeader">Pending Withdrawal</p>
-                    <p className="cardActive2">$ {data.pendingWithdrawal}</p>
+                    <p
+                      className="cardActiveHeader"
+                      id={styles.cardActiveHeader}
+                    >
+                      Pending Withdrawal
+                    </p>
+                    <p className="cardActive2" id={styles.cardActive1}>
+                      $ {data.pendingWithdrawal}
+                    </p>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-4 col-sm-4">
-                <div className="cardStats3">
+              <div className="col col-md-3">
+                <div className="cardStats3" id={styles.cardStats2}>
                   <i className="material-icons">
                     <AiOutlineDollar size={50} color="#04C150" />
                   </i>
                   <div className="cardActiveDiv">
-                    <p className="cardActiveHeader">Total Earning</p>
-                    <p className="cardActive3">$ {data.totalEarning}</p>
+                    <p
+                      className="cardActiveHeader"
+                      id={styles.cardActiveHeader}
+                    >
+                      Total Earning
+                    </p>
+                    <p className="cardActive3" id={styles.cardActive2}>
+                      $ {data.totalEarning}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -170,18 +198,20 @@ const Dashboard = () => {
             {/* card row ends */}
             {/* chart section */}
             <div className="w-full flex justify-around mt-10">
-              <div className="cardStatsRefer">
-                <p className="refer">refer and earn</p>
-                <p className="refer1">
+              <div className="cardStatsRefer" id={styles.cardStatsRefer}>
+                <p className="refer" id={styles.refer}>
+                  refer and earn
+                </p>
+                <p className="refer1" id={styles.refer1}>
                   Use the link below to invite your friends
                 </p>
-                <div className="referLinkDiv">
+                <div className="referLinkDiv" id={styles.referLinkDiv}>
                   <i className="material-icons">
                     <BsLink45Deg />
                   </i>
-                  <p>{data.referralLink}</p>
+                  <p id={styles.link}>{data.referralLink}</p>
                   <i className="material-icons">
-                    <FiCopy />
+                    <FiCopy id={styles.icons} />
                   </i>
                 </div>
               </div>
@@ -193,8 +223,8 @@ const Dashboard = () => {
 
             {/* footer */}
           </div>
-          <footer className="footer">
-            <p className="footer-text">
+          <footer className="footer" id={styles.footer}>
+            <p className="footer-text" id={styles.footerText}>
               COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
             </p>
           </footer>

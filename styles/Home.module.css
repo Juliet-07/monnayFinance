@@ -1614,6 +1614,101 @@
     flex-direction: column;
     width: 353px;
     height: 113px;
+    left: -30px;
+    border: 2px solid #057d99;
+    border-radius: 10px;
+  }
+  #cardTime {
+    font-weight: 600;
+    font-size: 9px;
+    line-height: 12px;
+    right: 0px;
+    top: 10px;
+    text-align: right;
+  }
+  #cardDisplay {
+    position: relative;
+    left: -60px;
+  }
+  #icon {
+    color: #ffffff;
+  }
+  #cardStats {
+    margin: 20px;
+    border-bottom: 0px;
+    background-color: #0a4f60;
+  }
+  #cardStats1 {
+    margin: 20px;
+    border-bottom: 5px solid #ffc700;
+    background-color: #0a4f60;
+  }
+  #cardStats2 {
+    margin: 20px;
+    border-bottom: 5px solid #04c150;
+    background-color: #0a4f60;
+  }
+  #cardActiveHeader {
+    font-weight: 600;
+    margin-left: 10px;
+    color: #ffffff;
+  }
+  #cardActive {
+    position: relative;
+    left: 15px;
+    top: 10px;
+    color: #ffffff;
+  }
+  #cardActive1 {
+    position: relative;
+    left: 15px;
+    top: 10px;
+    color: #ffc700;
+  }
+  #cardActive2 {
+    position: relative;
+    left: 15px;
+    top: 10px;
+  }
+  #cardStatsRefer {
+    position: relative;
+    left: -30px;
+    width: 414px;
+    border-radius: 0px;
+    background-color: #0a4f60;
+  }
+  #refer {
+    top: 0px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  #refer1 {
+    font-weight: 600;
+    color: #ffffff;
+    bottom: 10px;
+  }
+  #referLinkDiv {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+  }
+  #link {
+    position: relative;
+    left: -50px;
+    top: 5px;
+  }
+  #icons {
+    position: relative;
+    left: -500px;
+  }
+  #footer {
+    background-color: #ffffff;
+  }
+  #footerText {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #0a4f60;
+    text-align: center;
   }
 }
 /* FOR LAPTOPS */
@@ -1715,7 +1810,7 @@
   #contentHeader {
     width: 1000px;
     position: relative;
-    left: 15px;
+    left: 60px;
   }
   #contentHeader1 {
     width: 950px;
@@ -1725,13 +1820,13 @@
   #contentBody {
     width: 1000px;
     position: relative;
-    left: 15px;
+    left: 70px;
   }
   #cardPrice {
-    right: 100px;
+    right: -20px;
   }
   #cardButton {
-    right: 50px;
+    right: 20px;
   }
   #cardButton1 {
     margin-right: 30px;
