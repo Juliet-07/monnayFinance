@@ -417,16 +417,29 @@
   border-radius: 20px;
 } */
 .signinContainer {
-  /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signinFluid {
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(35, 161, 192, 0.72);
+}
+.signin {
+  position: relative;
   width: 500px;
   height: 600px;
-  /* left: 700px; */
-  /* top: 150px; */
+  left: 600px;
+  top: 50px;
   background-color: #ffffff;
   border-radius: 20px;
   padding: 20px;
   margin: 130px;
-  /* z-index: -2; */
 }
 .signinButton {
   position: relative;
@@ -1084,11 +1097,6 @@
 }
 /* Dashboard styling mostly and others */
 .investContainer {
-  position: relative;
-  background: url("/public/monnayJumbo.png");
-  background-size: cover;
-  height: 1000px;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1105,11 +1113,11 @@
   position: relative;
   width: 500px;
   height: 612px;
-  left: 800px;
-  top: 200px;
+  left: 700px;
+  top: 150px;
   background-color: #ffffff;
   border-radius: 20px;
-  /* padding: 15px; */
+  padding: 15px;
 }
 .createWithdraw {
   font-weight: 700;
@@ -1122,16 +1130,16 @@
   position: relative;
   width: 500px;
   height: 757px;
-  left: 800px;
+  left: 700px;
   top: 100px;
   background-color: #ffffff;
   border-radius: 20px;
-  /* padding: 15px; */
+  padding: 15px;
 }
 .withdrawButton {
   display: block;
   position: relative;
-  left: 40px;
+  left: 25px;
   width: 350px;
   height: 50px;
   color: #ffffff;
@@ -1160,6 +1168,21 @@
   padding: 0.46875rem 1rem;
   border-radius: 5px;
   background-color: #057d99;
+}
+.screenshotDeposit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: rebeccapurple; */
+}
+.screenshotDiv {
+  margin: 30px;
+}
+.proof {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
 }
 /* RESPONSIVENESS */
 /* for mobile screens*/
@@ -1461,10 +1484,12 @@
     width: 250px;
     right: 1rem;
   }
-  .signinContainer {
+  .signin {
     width: 350px;
     height: 570px;
-    margin: 25px;
+    left: 0px;
+    top: 50px;
+    margin: 15px;
   }
   .signinButton {
     width: 250px;
@@ -1540,7 +1565,51 @@
     z-index: -1;
   }
   /* Dashboard Styling */
-  #contentHeader{
+  .createWithdraw {
+    font-size: 21px;
+    line-height: 29px;
+  }
+  .withdrawText {
+    font-family: Open Sans;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #000000;
+  }
+  .withdraw {
+    width: 381px;
+    height: 640px;
+    left: 0px;
+    top: 15px;
+    padding: 0px;
+  }
+  #deposit {
+    top: 0px;
+    height: 700px;
+  }
+  .invest {
+    width: 350px;
+    height: 500px;
+    left: 15px;
+    top: 60px;
+    padding: 0px;
+  }
+  .investButton {
+    left: 0px;
+    top: 50px;
+    width: 300px;
+  }
+  .screenshotDeposit {
+    justify-content: center;
+    margin: 20px;
+  }
+  .withdrawButton {
+    width: 320px;
+    left: 0px;
+  }
+  #contentHeader {
     display: flex;
     flex-direction: column;
     width: 353px;
@@ -1615,8 +1684,9 @@
   .brTagI {
     display: none;
   }
-  .signinContainer {
-    margin: 90px;
+  .signin {
+    top: 0px;
+    left: 300px;
   }
   .registrationContainer {
     left: 400px;
@@ -1630,12 +1700,20 @@
   .termsButton {
     left: 1050px;
   }
+  .withdraw {
+    top: 25px;
+    left: 400px;
+  }
+  .invest {
+    top: 90px;
+    left: 400px;
+  }
   .footer {
     height: 300px;
   }
   /* DASHBOARD STYLING */
   #contentHeader {
-    width: 1200px;
+    width: 1000px;
     position: relative;
     left: 15px;
   }
@@ -1645,7 +1723,7 @@
     left: 15px;
   }
   #contentBody {
-    width: 1200px;
+    width: 1000px;
     position: relative;
     left: 15px;
   }

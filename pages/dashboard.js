@@ -121,7 +121,7 @@ const Dashboard = () => {
               </div>
             </div>
             {/* card row */}
-            <div className="flex justify-around w-full">
+            <div className="flex">
               <div className="col-lg-3 col-md-4 col-sm-4">
                 <div className="cardStats">
                   <i className="material-icons">

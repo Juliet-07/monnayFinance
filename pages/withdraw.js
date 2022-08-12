@@ -1,15 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
+import Jumbo from "../public/monnayJumbo.png";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import styles from "../styles/Home.module.css";
-import { BiBarChartSquare } from "react-icons/bi";
-import { AiOutlineClockCircle } from "react-icons/ai";
-import { CgProfile } from "react-icons/cg";
-import { IoSettingsOutline } from "react-icons/io5";
-import { AiOutlineLogout, AiOutlineHome } from "react-icons/ai";
 
 const withdraw_uri = "https://monnayfinance.com/api/withdrawal";
 
@@ -95,93 +89,24 @@ const Withdraw = () => {
       </Head>
 
       <div className="wrapper">
-        {/* Side bar */}
-        <div
-          className="sidebar"
-          // data-color="#057D99"
-          data-color="azure"
-          data-background-color="white"
-        >
-          {/* Sidebar Brand */}
-          <div className="logo">
-            <a href="#" className="simple-text logo-normal">
-              <Image src="/monnayLogo.png" width={200} height={50} alt="logo" />
-            </a>
-          </div>
-          {/* Sidebar Brand Ends*/}
-          <div className="sidebar-wrapper">
-            <ul className="nav">
-              <li className="nav-item">
-                <Link href="/dashboard/dashboard">
-                  <a className="nav-link" href="#">
-                    <i className="material-icons">
-                      <AiOutlineHome />
-                    </i>
-                    <p>Dashboard</p>
-                  </a>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/dashboard/investments">
-                  <a className="nav-link" href="#">
-                    <i className="material-icons">
-                      <BiBarChartSquare />
-                    </i>
-                    <p>Investment</p>
-                  </a>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/dashboard/history">
-                  <a className="nav-link" href="#">
-                    <i className="material-icons">
-                      <AiOutlineClockCircle />
-                    </i>
-                    <p>Transaction History</p>
-                  </a>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/dashboard/referrals">
-                  <a className="nav-link" href="#">
-                    <i className="material-icons">
-                      <CgProfile />
-                    </i>
-                    <p>Referrals</p>
-                  </a>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/dashboard/settings">
-                  <a className="nav-link" href="#">
-                    <i className="material-icons">
-                      <IoSettingsOutline />
-                    </i>
-                    <p>Settings</p>
-                  </a>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/">
-                  <a className="nav-link" href="#">
-                    <i className="material-icons">
-                      <AiOutlineLogout />
-                    </i>
-                    <p>Logout</p>
-                  </a>
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-        {/* Side bar */}
         <div className="main-panel">
-          <div className={styles.investContainer}>
+          <div
+            className={styles.investContainer}
+            style={{
+              backgroundImage: `url(${Jumbo})`,
+              width: "100%",
+              height: "100%",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
             <div className={styles.investFluid}>
               <div className={styles.withdraw}>
                 <div className={styles.createDiv}>
                   <h6 className={styles.createWithdraw}>Withdraw</h6>
-                  <p>Choose the account to make your withdrawal.</p>
+                  <p className={styles.withdrawText}>
+                    Choose the account to make your withdrawal.
+                  </p>
                 </div>
                 {/* form proper */}
                 <div className="w-full">
@@ -260,7 +185,7 @@ const Withdraw = () => {
                       </label>
                       <textarea
                         name="comment"
-                        className="border w-full py-2 px-2 mt-4"
+                        className="border w-full py-2 px-2"
                         id="comment"
                         rows={7}
                         value={comment}

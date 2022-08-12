@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
-import Image from "next/image";
+import Jumbo from "../public/monnayJumbo.png";
 import styles from "../styles/Home.module.css";
-import { BiBarChartSquare } from "react-icons/bi";
-import { AiOutlineClockCircle } from "react-icons/ai";
-import { CgProfile } from "react-icons/cg";
-import { IoSettingsOutline } from "react-icons/io5";
-import { AiOutlineLogout, AiOutlineHome } from "react-icons/ai";
+
+import { AiOutlineCamera } from "react-icons/ai";
 
 const deposit_uri = "https://monnayfinance.com/api/deposit";
 
@@ -97,100 +93,31 @@ const Deposit = () => {
       </Head>
 
       <div className="wrapper">
-        {/* Side bar */}
-        <div
-          className="sidebar"
-          // data-color="#057D99"
-          data-color="azure"
-          data-background-color="white"
-        >
-          {/* Sidebar Brand */}
-          <div className="logo">
-            <a href="#" className="simple-text logo-normal">
-              <Image src="/monnayLogo.png" width={200} height={50} alt="logo" />
-            </a>
-          </div>
-          {/* Sidebar Brand Ends*/}
-          <div className="sidebar-wrapper">
-            <ul className="nav">
-              <li className="nav-item">
-                <Link href="/dashboard/dashboard">
-                  <a className="nav-link" href="#">
-                    <i className="material-icons">
-                      <AiOutlineHome />
-                    </i>
-                    <p>Dashboard</p>
-                  </a>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/dashboard/depositments">
-                  <a className="nav-link" href="#">
-                    <i className="material-icons">
-                      <BiBarChartSquare />
-                    </i>
-                    <p>depositment</p>
-                  </a>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/dashboard/history">
-                  <a className="nav-link" href="#">
-                    <i className="material-icons">
-                      <AiOutlineClockCircle />
-                    </i>
-                    <p>Transaction History</p>
-                  </a>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/dashboard/referrals">
-                  <a className="nav-link" href="#">
-                    <i className="material-icons">
-                      <CgProfile />
-                    </i>
-                    <p>Referrals</p>
-                  </a>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/dashboard/settings">
-                  <a className="nav-link" href="#">
-                    <i className="material-icons">
-                      <IoSettingsOutline />
-                    </i>
-                    <p>Settings</p>
-                  </a>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/">
-                  <a className="nav-link" href="#">
-                    <i className="material-icons">
-                      <AiOutlineLogout />
-                    </i>
-                    <p>Logout</p>
-                  </a>
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-        {/* Side bar */}
         {/* Content */}
         <div className="main-panel">
-          <div className={styles.depositContainer}>
-            <div className={styles.depositFluid}>
-              <div className={styles.withdraw}>
+          <div
+            className={styles.investContainer}
+            style={{
+              backgroundImage: `url(${Jumbo})`,
+              width: "100%",
+              height: "100%",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            <div className={styles.investFluid}>
+              <div className={styles.withdraw} id={styles.deposit}>
                 <div className={styles.createDiv}>
                   <h6 className={styles.createWithdraw}>Deposit</h6>
-                  <p>Choose the method you want to deposit with below.</p>
+                  <p className={styles.withdrawText}>
+                    Choose the method you want to deposit with below.
+                  </p>
                 </div>
                 {/* form proper */}
                 <div className="w-full">
                   <form
                     onSubmit={handleSubmit(Deposit)}
-                    className=" rounded px-8 pt-6 pb-8 mb-6 mt-10"
+                    className=" rounded px-8 pt-6 pb-8 mb-6 mt-4"
                   >
                     <div className="mb-4">
                       <div className="flex justify-between">
@@ -256,9 +183,27 @@ const Deposit = () => {
                         required
                       />
                     </div>
-                    {/* <div>
-                      <p>upload a screenshot</p>
-                    </div> */}
+                    <div className={styles.screenshotDeposit}>
+                      <div className={styles.screenshotDiv}>
+                        <p className={styles.proof}>Proof of Payment</p>
+                        <div className="picture">
+                          <AiOutlineCamera size={56} />
+                        </div>
+                      </div>
+                      <div>
+                        <p
+                          style={{
+                            fontSize: "12px",
+                            lineHeight: "17px",
+                            color: "#000000",
+                          }}
+                        >
+                          Upload a screenshot of the
+                          <br /> deposit page of your crypto wallet
+                        </p>
+                        <button className="uploadPicture">Upload</button>
+                      </div>
+                    </div>
                     <button className={styles.withdrawButton} type="submit">
                       Submit
                     </button>

@@ -42,7 +42,7 @@ export default function NavDashboard() {
       </div>
       <div className="flex justify-center items-center relative left-96">
         <div className="hidden md:flex">
-          <div id="google_translate_element" className="box"></div>
+          <div id="google_translate_element"></div>
           {/* <NavLink to="#">
             <GiWorld size={30} id="google_translate_element" />
           </NavLink> */}
