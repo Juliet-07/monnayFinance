@@ -362,6 +362,25 @@ legend {
   line-height: 33px;
   color: #ffffff;
 }
+.historyHeader {
+  position: relative;
+  top: 30px;
+  left: 50px;
+  bottom: 300px;
+  width: 1800px;
+  height: 64px;
+  border-radius: 10px;
+  background-color: #057d99;
+}
+.historyHeaderText {
+  position: relative;
+  top: 14px;
+  left: 20px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  color: #ffffff;
+}
 .profileSettings {
   position: relative;
   top: 30px;
@@ -16734,6 +16753,12 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   margin: 20px;
   position: relative;
   left: 350px;
+}
+.main-panel > .container1 {
+  /* width: 100%; */
+  /* margin: 20px; */
+  position: relative;
+  left: 300px;
 }
 .main-panel > .footer {
   border-top: 1px solid #e7e7e7;

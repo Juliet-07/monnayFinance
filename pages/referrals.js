@@ -1,3 +1,4 @@
+// https://www.youtube.com/watch?v=S4MhQ6peq8A
 import React from "react";
 import Head from "next/head";
 import NavDashboard from "../components/navbarDashboard";
@@ -19,52 +20,55 @@ const Referrals = () => {
           href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
         />
       </Head>
-      <Layout>
-        <NavDashboard />
-        {/* Content */}
-        <div className="main-panel">
-          <div className="content">
-            <div className="investmentActive" id={styles.contentHeader1}>
-              <p className="investmentActiveText">Referrals</p>
-            </div>
-            <div className="col-md-10 mt-20 mb-56">
-              <table className="table-auto md:table-auto">
-                <thead className="text-default text-xl text-bold">
-                  <tr>
-                    <th>Username</th>
-                    <th>Email</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>dozykeys</td>
-                    <td>j@gmail.com</td>
-                    <td className="text-success">Active</td>
-                  </tr>
-                  <tr>
-                    <td>dozykeys</td>
-                    <td>j@gmail.com</td>
-                    <td className="text-success">Active</td>
-                  </tr>
-                  <tr>
-                    <td>dozykeys</td>
-                    <td>j@gmail.com</td>
-                    <td className="text-warning">Inactive</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            {/* footer */}
-          </div>
-          <footer className="footer">
-            <p className="footer-text">
-              COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
-            </p>
-          </footer>
+      {/* <Layout> */}
+      <NavDashboard />
+      {/* Content */}
+      <div className="main-panel">
+        <div className="historyHeader" id={styles.historyHeader}>
+          <p className="historyHeaderText" id={styles.historyHeaderText}>
+            Referrals
+          </p>
         </div>
-        {/* Content Ends*/}
-      </Layout>
+        <div className="col-md-10 mt-20 mb-56 relative left-6">
+          <table className="table-auto md:table-auto">
+            <thead className="text-default text-xl text-bold bg-white">
+              <tr>
+                <th>Username</th>
+                <th>E-mail</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ian</td>
+                <td>i@gmail.com</td>
+                <td className="text-success">Active</td>
+              </tr>
+              <tr>
+                <td>Amber</td>
+                <td>a@gmail.com</td>
+                <td className="text-success">Active</td>
+              </tr>
+              <tr>
+                <td>Emelda</td>
+                <td>e@gmail.com</td>
+                <td className="text-warning">Inactive</td>
+              </tr>
+            </tbody>
+          </table>
+          {/* <div>
+            <p>referral commmission box</p>
+          </div> */}
+        </div>
+        {/* footer */}
+        <footer className="footer">
+          <p className="footer-text">
+            COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
+          </p>
+        </footer>
+      </div>
+      {/* Content Ends*/}
+      {/* </Layout> */}
     </>
   );
 };

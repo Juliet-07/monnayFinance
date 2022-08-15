@@ -4,7 +4,6 @@ import NavDashboard from "../components/navbarDashboard";
 import Layout from "../components/layout";
 import moment from "moment";
 import styles from "../styles/Home.module.css";
-// import DataTable from "../components/dataTable";
 
 const History = () => {
   const [user, setUser] = useState("");
@@ -12,19 +11,36 @@ const History = () => {
   const formatDate = (value) => {
     return moment(value).format("HH:MM A DD, MM, YYYY");
   };
+  const getType = (type) => {
+    let typeClass;
+    switch (type) {
+      case "deposit":
+        typeClass = "capitalize font-semibold text-blue-500";
+        break;
+
+      case "withdrawal":
+        typeClass = "capitalize font-semibold text-red-500";
+        break;
+
+      // default: //pending
+      //   typeClass = "text-warning";
+      //   break;
+    }
+    return typeClass;
+  };
   const getStatus = (status) => {
     let statusClass;
     switch (status) {
       case "approved":
-        statusClass = "text-success";
+        statusClass = "capitalize font-semibold text-success";
         break;
 
       case "failed":
-        statusClass = "text-danger";
+        statusClass = "capitalize font-semibold text-danger";
         break;
 
       default: //pending
-        statusClass = "text-warning";
+        statusClass = "capitalize font-semibold text-warning";
         break;
     }
     return statusClass;
@@ -73,51 +89,52 @@ const History = () => {
           href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
         />
       </Head>
-      <Layout>
-        <NavDashboard />
-        {/* Content */}
-        <div className="main-panel">
-          <div className="content1">
-            <div className="investmentActive" id={styles.contentHeader}>
-              <p className="investmentActiveText">Transaction History</p>
-            </div>
-            <div className="col-md-10 mt-20 mb-56">
-              {/* <DataTable columns={columns} data={transactions} /> */}
-              <table>
-                <thead className="text-default text-xl text-bold bg-white">
-                  <tr>
-                    <th>Transaction Type</th>
-                    <th>Amount</th>
-                    <th>Date</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {transactions.length > 0 &&
-                    transactions.map((item, index) => (
-                      <tr key={index}>
-                        <td>{item?.type}</td>
-                        <td>${item?.amount}</td>
-                        <td>{formatDate(item?.date)}</td>
-                        <td className={getStatus(item?.transactionStatus)}>
-                          {item?.transactionStatus}
-                        </td>
-                      </tr>
-                    ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
+      {/* <Layout> */}
+      <NavDashboard />
+      {/* Content */}
+      <div className="main-panel">
+        <div className="historyHeader" id={styles.historyHeader}>
+          <p className="historyHeaderText" id={styles.historyHeaderText}>
+            Transaction History
+          </p>
         </div>
-        <footer className="footer">
-          <div className="flex justify-center align-center">
-            <p className="footer-text">
-              COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
-            </p>
-          </div>
-        </footer>
-        {/* Content Ends*/}
-      </Layout>
+        <div className="overflow-auto rounded-lg shadow ml-14 mr-12 mb-32 mt-20">
+          <table className="w-full">
+            <thead className="text-default text-xl text-bold bg-white">
+              <tr>
+                <th className="24">Type</th>
+                <th className="20">Amount</th>
+                <th className="20">Date</th>
+                <th className="32">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {transactions.length > 0 &&
+                transactions.map((item, index) => (
+                  <tr key={index}>
+                    <td className={getType(item?.type)}>{item?.type}</td>
+                    <td className="whitespace-nowrap font-semibold">
+                      ${item?.amount}
+                    </td>
+                    <td className="whitespace-nowrap font-semibold">
+                      {formatDate(item?.date)}
+                    </td>
+                    <td className={getStatus(item?.transactionStatus)}>
+                      {item?.transactionStatus}
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <footer className="footer" id={styles.footer}>
+        <p className="footer-text" id={styles.footerText}>
+          COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
+        </p>
+      </footer>
+      {/* Content Ends*/}
+      {/* </Layout> */}
     </>
   );
 };

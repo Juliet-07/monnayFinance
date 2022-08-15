@@ -1710,6 +1710,18 @@
     color: #0a4f60;
     text-align: center;
   }
+  #historyHeader{
+    position: relative;
+    left: 22px;
+    width: 370px;
+    height: 64px;
+    background-color: #0a4f60;
+    border-radius: 0px;
+    border-bottom: 2px solid #fff500;
+  }
+  #historyHeaderText{
+    text-align: center;
+  }
 }
 /* FOR LAPTOPS */
 @media screen and (min-device-width: 926px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
@@ -1830,5 +1842,8 @@
   }
   #cardButton1 {
     margin-right: 30px;
+  }
+  #historyHeader {
+    width: 1200px;
   }
 }
