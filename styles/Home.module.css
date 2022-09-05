@@ -153,7 +153,7 @@
   text-align: center;
   border: 1px solid transparent;
   border-color: #ffffff;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   font-size: 16px;
   border-radius: 0.5rem;
   color: #ffffff;
@@ -1191,10 +1191,14 @@
     display: none;
     /* z-index: -10; */
   }
-  .jumbotron {
+  #jumbotron {
     height: 370px !important;
   }
   .jumbotron h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .properties {
     font-size: 32px;
     line-height: 40px;
   }
@@ -1211,7 +1215,7 @@
     text-align: center;
     border: 1px solid transparent;
     border-color: #ffffff;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
     font-size: 16px;
     border-radius: 0.5rem;
     color: #ffffff;
@@ -1710,7 +1714,7 @@
     color: #0a4f60;
     text-align: center;
   }
-  #historyHeader{
+  #historyHeader {
     position: relative;
     left: 22px;
     width: 370px;
@@ -1719,7 +1723,7 @@
     border-radius: 0px;
     border-bottom: 2px solid #fff500;
   }
-  #historyHeaderText{
+  #historyHeaderText {
     text-align: center;
   }
 }
@@ -1736,8 +1740,12 @@
     top: 10px;
     left: -5px;
   }
-  .jumbotron {
+  #jumbotron {
     height: 450px;
+  }
+  .properties {
+    font-size: 60px;
+    line-height: 40px;
   }
   .trade {
     margin: 35px;

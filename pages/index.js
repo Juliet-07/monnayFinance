@@ -4,11 +4,12 @@ import Image from "next/image";
 import Jumbo from "../public/monnayJumbo.png";
 import Strategy from "../public/monnayStrategy.png";
 import styles from "../styles/Home.module.css";
-import Navbar from "../components/navbar";
+import Navbar from "./components/navbar";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { FaHandshake } from "react-icons/fa";
 import { BiBarChartSquare } from "react-icons/bi";
 import { VscQuote } from "react-icons/vsc";
+import ClientLayout from "./components/clientLayout";
 
 const Home = () => {
   return (
@@ -21,7 +22,11 @@ const Home = () => {
       <Navbar />
       <div className={styles.container}>
         {/* Jumbotron */}
-        <div
+        <ClientLayout
+          heading="Dedicated to your financial growth"
+          message="We create equal opportunities for all investors to thrive in the crypto and forex markets"
+        />
+        {/* <div
           className={styles.jumbotron}
           style={{
             backgroundImage: `url(${Jumbo})`,
@@ -43,13 +48,13 @@ const Home = () => {
                 <br /> thrive in the crypto and forex markets
               </p>
               <Link href="/signup">
-                <button type="button" className={styles.jumboButton}>
+                <button className={styles.jumboButton}>
                   GET STARTED
                 </button>
               </Link>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Jumbotron Ends */}
         {/* Trade */}
         <div className={styles.trade}>

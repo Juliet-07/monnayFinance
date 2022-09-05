@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
-import NavDashboard from "../components/navbarDashboard";
-import Layout from "../components/layout";
+import NavDashboard from "./components/navbarDashboard";
+import Layout from "./components/layout";
 import moment from "moment";
 import styles from "../styles/Home.module.css";
 
