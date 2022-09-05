@@ -1,7 +1,7 @@
 // https://www.youtube.com/watch?v=S4MhQ6peq8A
 import React from "react";
 import Head from "next/head";
-import NavDashboard from "../components/navbarDashboard";
+import NavDashboard from "./components/navbarDashboard";
 import Layout from "./components/layout";
 import styles from "../styles/Home.module.css";
 const Referrals = () => {
