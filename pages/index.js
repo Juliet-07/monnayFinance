@@ -3,12 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import Strategy from "../public/monnayStrategy.png";
 import styles from "../styles/Home.module.css";
-import Navbar from "../components/navbar";
+import Navbar from "../public/components/navbar";
+import Jumbotron from "../public/components/jumbotron";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { FaHandshake } from "react-icons/fa";
 import { BiBarChartSquare } from "react-icons/bi";
 import { VscQuote } from "react-icons/vsc";
-import Jumbotron from "../components/jumbotron";
 
 const Home = () => {
   return (

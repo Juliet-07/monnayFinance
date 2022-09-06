@@ -5,7 +5,7 @@ import Image from "next/image";
 import Jumbo from "../public/monnayJumbo.png";
 import { useRouter } from "next/router";
 import styles from "../styles/Home.module.css";
-import Navbar from "../components/navbar";
+import Navbar from "../public/components/navbar";
 import Link from "next/link";
 import Input from "@material-ui/core/Input";
 import IconButton from "@material-ui/core/IconButton";
