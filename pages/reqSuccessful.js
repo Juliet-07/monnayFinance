@@ -4,7 +4,7 @@ import Image from "next/image";
 import Jumbo from "../public/monnayJumbo.png";
 import styles from "../styles/Home.module.css";
 import { TiTick } from "react-icons/ti";
-import Navbar from "../public/components/navbar";
+import Navbar from "../components/navbar";
 
 const ReqSuccessful = () => {
   return (

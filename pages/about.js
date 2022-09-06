@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Jumbo from "../public/monnayJumbo.png";
 import styles from "../styles/Home.module.css";
-import Navbar from "../public/components/navbar";
+import Navbar from "../components/navbar";
 import { VscQuote } from "react-icons/vsc";
 
 const About = () => {

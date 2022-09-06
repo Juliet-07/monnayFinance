@@ -4,7 +4,7 @@ import Image from "next/image";
 import Jumbo from "../public/monnayJumbo.png";
 import styles from "../styles/Home.module.css";
 import { AiFillCheckCircle } from "react-icons/ai";
-import Navbar from "../public/components/navbar";
+import Navbar from "../components/navbar";
 
 const Investment = () => {
   return (

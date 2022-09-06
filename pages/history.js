@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
-import NavDashboard from "../public/components/navbarDashboard";
+import NavDashboard from "../components/navbarDashboard";
 import moment from "moment";
 import styles from "../styles/Home.module.css";
 
