@@ -2,12 +2,12 @@ import React from "react";
 import Link from "next/link";
 import styles from "../../styles/Home.module.css";
 
-const ClientLayout = ({ heading, message }) => {
+const Jumbotron = ({ heading, message }) => {
   return (
     <>
       <div
         className=" relative w-full h-[560px] mb-12 bg-fixed bg-center bg-cover custom-img"
-        id={styles.jumbotron}
+        id= {styles.jumbotron}
       >
         <div className={styles.jumbotronFluid} />
         <div className={styles.jumbotronProps}>
@@ -21,4 +21,4 @@ const ClientLayout = ({ heading, message }) => {
     </>
   );
 };
-export default ClientLayout;
+export default Jumbotron;

@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import Jumbo from "../public/monnayJumbo.png";
 import Strategy from "../public/monnayStrategy.png";
 import styles from "../styles/Home.module.css";
 import Navbar from "./components/navbar";
@@ -9,7 +8,7 @@ import { AiFillCheckCircle } from "react-icons/ai";
 import { FaHandshake } from "react-icons/fa";
 import { BiBarChartSquare } from "react-icons/bi";
 import { VscQuote } from "react-icons/vsc";
-import ClientLayout from "./components/clientLayout";
+import Jumbotron from "./components/jumbotron";
 
 const Home = () => {
   return (
@@ -22,7 +21,7 @@ const Home = () => {
       <Navbar />
       <div className={styles.container}>
         {/* Jumbotron */}
-        <ClientLayout
+        <Jumbotron
           heading="Dedicated to your financial growth"
           message="We create equal opportunities for all investors to thrive in the crypto and forex markets"
         />
