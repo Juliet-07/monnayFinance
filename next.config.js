@@ -19,6 +19,7 @@ module.exports = withImages({
       "www.google.com",
       "docs.google.com",
       "/public",
+      "/components",
     ],
   },
 });

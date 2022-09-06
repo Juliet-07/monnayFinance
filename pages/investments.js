@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Head from "next/head";
-import NavDashboard from "./components/navbarDashboard";
-import Layout from "./components/layout";
+import NavDashboard from "../components/navbarDashboard";
+import Layout from "../components/layout";
 import styles from "../styles/Home.module.css";
 import { AiFillCheckCircle } from "react-icons/ai";
 import moment from "moment";
