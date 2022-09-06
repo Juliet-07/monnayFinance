@@ -126,13 +126,14 @@
   bottom: 0px;
   left: 0px;
   background-color: rgba(10, 79, 96, 0.72);
-  /* z-index: -1; */
+  z-index: 2;
 }
 .jumbotronProps {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 .properties {
   color: #ffffff;
@@ -1193,6 +1194,7 @@
   }
   #jumbotron {
     height: 370px !important;
+    /* z-index: -1; */
   }
   .jumbotron h2 {
     font-size: 32px;

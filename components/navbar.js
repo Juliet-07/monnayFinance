@@ -18,7 +18,7 @@ function NavLink({ to, children }) {
 function MobileNav({ open, setOpen }) {
   return (
     <div
-      className={`absolute top-0 left-0 w-screen h-screen bg-white transform ${
+      className={`absolute top-0 left-0 w-screen h-screen z-10 bg-white transform ${
         open ? "-translate-x-0" : "-translate-x-full"
       } transition-transform duration-300 ease-in-out filter drop-shadow-md `}
     >
@@ -158,14 +158,14 @@ export default function Navbar() {
   return (
     <nav className="flex filter drop-shadow-md bg-white px-3 py-4 h-20 items-center">
       <MobileNav open={open} setOpen={setOpen} />
-      <div className="w-3/12 flex justify-center">
+      <div className="w-3/12 flex justify-center z-10">
         <Link href="/">
           <Image src="/monnayLogo.png" width={150} height={40} alt="logo" />
         </Link>
       </div>
       <div className="w-9/12 flex justify-end items-center">
         <div
-          className="z-50 flex relative w-8 h-8 flex-col justify-between items-center md:hidden"
+          className="z-10 flex relative w-8 h-8 flex-col justify-between items-center md:hidden"
           onClick={() => {
             setOpen(!open);
           }}

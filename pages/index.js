@@ -20,7 +20,6 @@ const Home = () => {
       </Head>
       <Navbar />
       <div className={styles.container}>
-        {/* Jumbotron */}
         <Jumbotron
           heading="Dedicated to your financial growth"
           message="We create equal opportunities for all investors to thrive in the crypto and forex markets"
