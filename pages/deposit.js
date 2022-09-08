@@ -66,7 +66,7 @@ const Deposit = () => {
           .then((res) => res.json())
           .then((json) => console.log(json))
       )
-        router.push("/req-successful");
+        router.push("/depositConfirm");
     } catch (err) {
       console.log(err);
     }
@@ -106,7 +106,7 @@ const Deposit = () => {
             }}
           >
             <div className={styles.investFluid}>
-              <div className={styles.withdraw} id={styles.deposit}>
+              <div className={styles.withdraw}>
                 <div className={styles.createDiv}>
                   <h6 className={styles.createWithdraw}>Deposit</h6>
                   <p className={styles.withdrawText}>
@@ -117,7 +117,7 @@ const Deposit = () => {
                 <div className="w-full">
                   <form
                     onSubmit={handleSubmit(Deposit)}
-                    className=" rounded px-8 pt-6 pb-8 mb-6 mt-4"
+                    className=" rounded px-8 pb-8 mb-6 mt-4"
                   >
                     <div className="mb-4">
                       <div className="flex justify-between">
@@ -201,7 +201,12 @@ const Deposit = () => {
                           Upload a screenshot of the
                           <br /> deposit page of your crypto wallet
                         </p>
-                        <button className="uploadPicture">Upload</button>
+                        <button
+                          className="uploadPicture"
+                          id={styles.uploadPicture}
+                        >
+                          Upload
+                        </button>
                       </div>
                     </div>
                     <button className={styles.withdrawButton} type="submit">

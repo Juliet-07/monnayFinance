@@ -67,7 +67,7 @@ const Withdraw = () => {
           .then((json) => console.log(json))
       )
         alert("Amount in balace is insufficient");
-      router.push("/reqSuccessful");
+      router.push("/withdrawConfirm");
     } catch (err) {
       console.log(err);
     }
@@ -112,7 +112,7 @@ const Withdraw = () => {
                 <div className="w-full">
                   <form
                     onSubmit={handleSubmit(withdrawal)}
-                    className=" rounded px-10 pt-6 pb-8 mb-10"
+                    className=" rounded px-8 pb-8 mb-10"
                   >
                     <div className="mb-4">
                       <div className="flex justify-between">

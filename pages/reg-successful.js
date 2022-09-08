@@ -21,7 +21,7 @@ const RegSuccessful = () => {
           position: "relative",
           backgroundImage: `url(${Jumbo})`,
           width: "100%",
-          height: "850px",
+          height: "650px",
           backgroundSize: "cover",
         }}
       >
@@ -50,9 +50,68 @@ const RegSuccessful = () => {
                   Log in
                 </button>
               </Link>
+              <Link href="/">
+                <p className={styles.home}>
+                  Go back <font color="#057d99">HOME</font>
+                </p>
+              </Link>
             </div>
           </div>
         </div>
+      </div>
+      <footer className={styles.footer}>
+        <div className={styles.footerInfo}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Image
+              src="/monnayFooter.png"
+              width={180}
+              height={50}
+              alt="footer image"
+            />
+            <p style={{ color: "#ffffff", marginTop: 10, textAlign: "left" }}>
+              Investment opportunities in multiple
+              <br /> markets, one account.
+            </p>
+          </div>
+          <ul className={styles.footerBottomList}>
+            <h5 style={{ fontWeight: 700, textAlign: "center" }}>
+              Quick links
+            </h5>
+            <Link href="/">
+              <li style={{ fontSize: 16 }}>Home</li>
+            </Link>
+            <Link href="/about">
+              <li style={{ fontSize: 16 }}>About us</li>
+            </Link>
+            <Link href="/contact">
+              <li style={{ fontSize: 16 }}>Contact us</li>
+            </Link>
+            <Link href="/faq">
+              <li style={{ fontSize: 16 }}>FAQ</li>
+            </Link>
+          </ul>
+          <ul className={styles.footerBottomText}>
+            <h5 style={{ fontWeight: 700 }}>Address</h5>
+            <li style={{ fontSize: 16 }}>22 Albert Street,</li>
+            <li style={{ fontSize: 16 }}>AUCKLAND 1010, New Zealand</li>
+            <br />
+            <br />
+            <li style={{ fontSize: 18, fontWeight: 700 }}>Email:</li>
+            <li style={{ fontSize: 16 }}>contact@monnayfinance.com</li>
+          </ul>
+        </div>
+      </footer>
+      <div className={styles.footerBottom}>
+        <p className={styles.footerBottomText}>
+          COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
+        </p>
       </div>
     </div>
   );

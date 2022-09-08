@@ -101,7 +101,7 @@ const Dashboard = () => {
                     height={165}
                     alt="coin"
                   />
-                  <div className="details">
+                  <div className="details" id={styles.details}>
                     <p className="cardPrice" id={styles.cardPrice}>
                       <font color="black">Available balance:</font>
                       <br /> $ {data.walletBalance}

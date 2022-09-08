@@ -21,7 +21,7 @@ const Home = () => {
       <Navbar />
       <div className={styles.container}>
         <Jumbotron
-          heading="Dedicated to your financial growth"
+          heading={`Dedicated to your \n\n financial growth`}
           message="We create equal opportunities for all investors to thrive in the crypto and forex markets"
         />
         {/* <div
