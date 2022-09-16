@@ -15,7 +15,7 @@ import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import { AiFillBackward } from "react-icons/ai";
 import { icons } from "react-icons";
 
-const BASE_URI = "https://monnayfinance.com/api";
+const BASE_URI = "https://monnayfinance.online/api";
 
 const Signin = () => {
   const initialValues = {

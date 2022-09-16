@@ -11,7 +11,7 @@ import { InputAdornment } from "@material-ui/core";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
 
-const BASE_URI = "https://monnayfinance.com/api";
+const BASE_URI = "https://monnayfinance.online/api";
 
 const Signup = () => {
   const initialValues = {

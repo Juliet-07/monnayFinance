@@ -51,7 +51,7 @@ const History = () => {
         setUser(user);
       }
       try {
-        await fetch(`https://monnayfinance.com/api/transactions/${user.id}`, {
+        await fetch(`https://monnayfinance.online/api/transactions/${user.id}`, {
           headers: {
             Authorization:
               "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInByaXZpbGVnZSI6InVzZXIiLCJ0b2tlbiI6Ijg5NGUzNDQzYjYzYzkyOTMiLCJpYXQiOjE2NTkwMDcxMjl9.oYKsguhTfAdWOZlURIJ3VIXZT0bX6UGNDpVrlKkhXEc",

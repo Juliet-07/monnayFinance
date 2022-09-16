@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import styles from "../styles/Home.module.css";
 
-const withdraw_uri = "https://monnayfinance.com/api/withdrawal";
+const withdraw_uri = "https://monnayfinance.online/api/withdrawal";
 
 const Withdraw = () => {
   const router = useRouter();
@@ -26,7 +26,7 @@ const Withdraw = () => {
     if (user !== null || user !== undefined) {
       setUser(user);
     }
-    fetch(`https://monnayfinance.com/api/user/profile/${user.id}`, {
+    fetch(`https://monnayfinance.online/api/user/profile/${user.id}`, {
       headers: {
         Authorization:
           "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInByaXZpbGVnZSI6InVzZXIiLCJ0b2tlbiI6Ijg5NGUzNDQzYjYzYzkyOTMiLCJpYXQiOjE2NTkwMDcxMjl9.oYKsguhTfAdWOZlURIJ3VIXZT0bX6UGNDpVrlKkhXEc",

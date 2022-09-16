@@ -11,7 +11,7 @@ import { BsLink45Deg } from "react-icons/bs";
 import { FiCopy } from "react-icons/fi";
 import moment from "moment";
 
-// const BASE_URI = "https://monnayfinance.com/api/user/profile/18";
+// const BASE_URI = "https://monnayfinance.online/api/user/profile/18";
 
 // export async function getServerSideProps() {
 //   const res = await fetch(BASE_URI, {
@@ -40,7 +40,7 @@ const Dashboard = () => {
     if (user !== null || user !== undefined) {
       setUser(user);
     }
-    fetch(`https://monnayfinance.com/api/user/profile/${user.id}`, {
+    fetch(`https://monnayfinance.online/api/user/profile/${user.id}`, {
       headers: {
         Authorization:
           "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInByaXZpbGVnZSI6InVzZXIiLCJ0b2tlbiI6Ijg5NGUzNDQzYjYzYzkyOTMiLCJpYXQiOjE2NTkwMDcxMjl9.oYKsguhTfAdWOZlURIJ3VIXZT0bX6UGNDpVrlKkhXEc",
@@ -100,6 +100,8 @@ const Dashboard = () => {
                     width={445}
                     height={165}
                     alt="coin"
+                    // layout="responsive"
+                    objectFit="cover"
                   />
                   <div className="details" id={styles.details}>
                     <p className="cardPrice" id={styles.cardPrice}>

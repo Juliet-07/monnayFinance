@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import styles from "../styles/Home.module.css";
 
-const invest_uri = "https://monnayfinance.com/api/investment/";
+const invest_uri = "https://monnayfinance.online/api/investment/";
 
 const Invest = () => {
   const router = useRouter();

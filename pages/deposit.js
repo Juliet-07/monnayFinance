@@ -7,7 +7,7 @@ import styles from "../styles/Home.module.css";
 
 import { AiOutlineCamera } from "react-icons/ai";
 
-const deposit_uri = "https://monnayfinance.com/api/deposit";
+const deposit_uri = "https://monnayfinance.online/api/deposit";
 
 const Deposit = () => {
   const router = useRouter();
@@ -27,7 +27,7 @@ const Deposit = () => {
     if (user !== null || user !== undefined) {
       setUser(user);
     }
-    fetch(`https://monnayfinance.com/api/user/profile/${user.id}`, {
+    fetch(`https://monnayfinance.online/api/user/profile/${user.id}`, {
       headers: {
         Authorization:
           "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInByaXZpbGVnZSI6InVzZXIiLCJ0b2tlbiI6Ijg5NGUzNDQzYjYzYzkyOTMiLCJpYXQiOjE2NTkwMDcxMjl9.oYKsguhTfAdWOZlURIJ3VIXZT0bX6UGNDpVrlKkhXEc",

@@ -21,7 +21,7 @@ const Investment = () => {
       }
       try {
         await fetch(
-          `https://monnayfinance.com/api/investments/${user.id}/active`,
+          `https://monnayfinance.online/api/investments/${user.id}/active`,
           {
             headers: {
               Authorization:
