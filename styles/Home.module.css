@@ -962,7 +962,7 @@
 /* registration successful  */
 .settingsButton {
   position: relative;
-  left: 1000px;
+  left: 1500px;
   width: 206px;
   height: 60px;
   font-weight: 700;
@@ -1827,6 +1827,13 @@
   #historyHeaderText {
     text-align: center;
   }
+  #profileSettings {
+    width: 370px;
+    left: 22px;
+  }
+  .settingsButton{
+    left: 150px;
+  }
 }
 /* FOR LAPTOPS */
 @media screen and (min-device-width: 926px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
@@ -1928,6 +1935,9 @@
     height: 300px;
   }
   /* DASHBOARD STYLING */
+  .settingsButton {
+    left: 1000px;
+  }
   #contentHeader {
     width: 1000px;
     position: relative;
@@ -1942,6 +1952,11 @@
     width: 1000px;
     position: relative;
     left: 60px;
+  }
+  #profileSettings {
+    width: 1000px;
+    position: relative;
+    left: 250px;
   }
   #contentBody {
     width: 1000px;
@@ -1958,6 +1973,7 @@
     margin-right: 30px;
   }
   #historyHeader {
-    width: 1200px;
+    width: 1000px;
+    left: 260px;
   }
 }

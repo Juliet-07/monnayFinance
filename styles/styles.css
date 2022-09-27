@@ -373,12 +373,12 @@ legend {
 .historyHeader {
   position: relative;
   top: 30px;
-  left: 50px;
-  bottom: 300px;
-  width: 1800px;
+  left: 318px;
+  width: 1330px;
   height: 64px;
   border-radius: 10px;
   background-color: #057d99;
+  margin-bottom: 50px;
 }
 .historyHeaderText {
   position: relative;
@@ -392,8 +392,9 @@ legend {
 .profileSettings {
   position: relative;
   top: 30px;
+  left: 318px;
   border-radius: 10px;
-  width: 1319px;
+  width: 1500px;
   height: 64px;
   padding: 20px;
   background-color: #057d99;
@@ -405,8 +406,8 @@ legend {
   color: #ffffff;
 }
 .profilePictureDiv {
-  position: relative;
-  left: 400px;
+  /* position: relative; */
+  /* left: 400px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
