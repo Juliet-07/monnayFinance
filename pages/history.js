@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import NavDashboard from "../components/navbarDashboard";
+import Layout from "../components/layout";
 import moment from "moment";
 import styles from "../styles/Home.module.css";
 
@@ -51,13 +52,16 @@ const History = () => {
         setUser(user);
       }
       try {
-        await fetch(`https://monnayfinance.online/api/transactions/${user.id}`, {
-          headers: {
-            Authorization:
-              "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInByaXZpbGVnZSI6InVzZXIiLCJ0b2tlbiI6Ijg5NGUzNDQzYjYzYzkyOTMiLCJpYXQiOjE2NTkwMDcxMjl9.oYKsguhTfAdWOZlURIJ3VIXZT0bX6UGNDpVrlKkhXEc",
-            "Content-type": "application/json",
-          },
-        })
+        await fetch(
+          `https://monnayfinance.online/api/transactions/${user.id}`,
+          {
+            headers: {
+              Authorization:
+                "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInByaXZpbGVnZSI6InVzZXIiLCJ0b2tlbiI6Ijg5NGUzNDQzYjYzYzkyOTMiLCJpYXQiOjE2NTkwMDcxMjl9.oYKsguhTfAdWOZlURIJ3VIXZT0bX6UGNDpVrlKkhXEc",
+              "Content-type": "application/json",
+            },
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             const response = [...[], ...data?.data];
@@ -88,52 +92,52 @@ const History = () => {
           href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
         />
       </Head>
-      {/* <Layout> */}
-      <NavDashboard />
-      {/* Content */}
-      <div className="main-panel">
-        <div className="historyHeader" id={styles.historyHeader}>
-          <p className="historyHeaderText" id={styles.historyHeaderText}>
-            Transaction History
+      <Layout>
+        <NavDashboard />
+        {/* Content */}
+        <div className="main-panel">
+          <div className="historyHeader" id={styles.historyHeader}>
+            <p className="historyHeaderText" id={styles.historyHeaderText}>
+              Transaction History
+            </p>
+          </div>
+          <div className="overflow-auto rounded-lg shadow ml-14 mr-12 mb-32 mt-20">
+            <table className="w-full">
+              <thead className="text-default text-xl text-bold bg-white">
+                <tr>
+                  <th className="24">Type</th>
+                  <th className="20">Amount</th>
+                  <th className="20">Date</th>
+                  <th className="32">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {transactions.length > 0 &&
+                  transactions.map((item, index) => (
+                    <tr key={index}>
+                      <td className={getType(item?.type)}>{item?.type}</td>
+                      <td className="whitespace-nowrap font-semibold">
+                        ${item?.amount}
+                      </td>
+                      <td className="whitespace-nowrap font-semibold">
+                        {formatDate(item?.date)}
+                      </td>
+                      <td className={getStatus(item?.transactionStatus)}>
+                        {item?.transactionStatus}
+                      </td>
+                    </tr>
+                  ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <footer className="footer" id={styles.footer}>
+          <p className="footer-text" id={styles.footerText}>
+            COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
           </p>
-        </div>
-        <div className="overflow-auto rounded-lg shadow ml-14 mr-12 mb-32 mt-20">
-          <table className="w-full">
-            <thead className="text-default text-xl text-bold bg-white">
-              <tr>
-                <th className="24">Type</th>
-                <th className="20">Amount</th>
-                <th className="20">Date</th>
-                <th className="32">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              {transactions.length > 0 &&
-                transactions.map((item, index) => (
-                  <tr key={index}>
-                    <td className={getType(item?.type)}>{item?.type}</td>
-                    <td className="whitespace-nowrap font-semibold">
-                      ${item?.amount}
-                    </td>
-                    <td className="whitespace-nowrap font-semibold">
-                      {formatDate(item?.date)}
-                    </td>
-                    <td className={getStatus(item?.transactionStatus)}>
-                      {item?.transactionStatus}
-                    </td>
-                  </tr>
-                ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <footer className="footer" id={styles.footer}>
-        <p className="footer-text" id={styles.footerText}>
-          COPYRIGHT MONNAYFINANCE 2022 - TERMS & CONDITIONS PRIVACY POLICY
-        </p>
-      </footer>
-      {/* Content Ends*/}
-      {/* </Layout> */}
+        </footer>
+        {/* Content Ends*/}
+      </Layout>
     </>
   );
 };

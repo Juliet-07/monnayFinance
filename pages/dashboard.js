@@ -123,7 +123,7 @@ const Dashboard = () => {
               </div>
             </div>
             {/* card row */}
-            <div className="row" id={styles.cardDisplay}>
+            <div className="grid grid-cols md:grid-cols-3 gap-4 relative right-8 md:left-20">
               <div className="col col-md-3">
                 <div className="cardStats" id={styles.cardStats}>
                   <i className="material-icons">
@@ -218,7 +218,7 @@ const Dashboard = () => {
                 </div>
               </div>
               {/* <div className="imageDiv"> */}
-              <Image src={Chart} width={600} height={400} />
+              <Image src={Chart} width={400} height={200} />
               {/* </div> */}
             </div>
             {/* chart section ends */}

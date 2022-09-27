@@ -324,6 +324,19 @@
   border: 1px solid #eaeaea;
   border-radius: 1rem;
 }
+.card1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 600px;
+  margin: 2rem;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 1rem;
+}
 .cardTitle {
   position: relative;
   width: 70%;
@@ -940,7 +953,7 @@
   border-radius: 5px;
   background-color: #057d99;
 }
-.home{
+.home {
   position: relative;
   top: 120px;
   left: 180px;
@@ -1350,6 +1363,13 @@
     width: 100%;
     /* background-color: tomato; */
   }
+  #investmentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
   .card {
     position: relative;
     display: flex;
@@ -1363,6 +1383,21 @@
     border: 1px solid #eaeaea;
     border-radius: 1rem;
     z-index: -1;
+  }
+  .card1 {
+    position: relative;
+    left: -30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 550px;
+    margin: 1.5rem;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 1rem;
+    /* z-index: -1; */
   }
   .investorHeader {
     font-size: 32px;
@@ -1653,6 +1688,13 @@
     border: 2px solid #057d99;
     border-radius: 10px;
   }
+  #investmentHeader {
+    position: relative;
+    left: -30px;
+    width: 370px;
+    height: 64px;
+    /* margin: 10px; */
+  }
   #cardTime {
     font-weight: 600;
     font-size: 9px;
@@ -1692,10 +1734,6 @@
     border: 1px solid #0a4f60;
     left: 25px;
     top: 60px;
-  }
-  #cardDisplay {
-    position: relative;
-    left: -60px;
   }
   #icon {
     color: #ffffff;
@@ -1899,6 +1937,11 @@
     width: 950px;
     position: relative;
     left: 15px;
+  }
+  #investmentHeader {
+    width: 1000px;
+    position: relative;
+    left: 60px;
   }
   #contentBody {
     width: 1000px;

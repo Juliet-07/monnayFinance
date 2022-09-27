@@ -344,6 +344,14 @@ legend {
   line-height: 33px;
   color: #ffffff;
 }
+.investmentContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .investmentActive {
   position: relative;
   top: 30px;
@@ -19049,11 +19057,13 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 }
 .cardStatsRefer {
   background-color: #ffffff;
+  position: relative;
+  left: 80px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 574px;
+  width: 550px;
   height: 190px;
   border-radius: 15px;
   border-bottom: 5px solid #057d99;

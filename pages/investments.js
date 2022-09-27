@@ -65,12 +65,15 @@ const Investment = () => {
         {/* Content */}
         <div className="main-panel">
           <div className="content">
-            <div className="investmentHeader" id={styles.contentHeader}>
+            <div className="investmentHeader" id={styles.investmentHeader}>
               <p className="investmentHeaderText">Investment Plans</p>
             </div>
             <div className="col-md-12 mt-20">
-              <div className={styles.investmentContainer}>
-                <div className={styles.card}>
+              <div
+                className="investmentContainer"
+                id={styles.investmentContainer}
+              >
+                <div className={styles.card1}>
                   <div className={styles.cardTitle}>
                     <h2 className={styles.basic}>Basic</h2>
                     <p className={styles.basicTitle}>2% ROI Daily</p>
@@ -122,7 +125,7 @@ const Investment = () => {
                     </Link>
                   </div>
                 </div>
-                <div className={styles.card}>
+                <div className={styles.card1}>
                   <div className={styles.cardTitle}>
                     <h2 className={styles.basic}>Standard</h2>
                     <p className={styles.basicTitle}>3.5% ROI Daily</p>
@@ -174,7 +177,7 @@ const Investment = () => {
                     </Link>
                   </div>
                 </div>
-                <div className={styles.card}>
+                <div className={styles.card1}>
                   <div className={styles.cardTitle}>
                     <h2 className={styles.basic}>Platinum</h2>
                     <p className={styles.basicTitle}>5% ROI Daily for 3 days</p>
@@ -229,58 +232,96 @@ const Investment = () => {
               </div>
             </div>
             <div className="mb-20">
-              <div className="investmentActive" id={styles.contentHeader}>
+              <div className="investmentActive" id={styles.investmentHeader}>
                 <p className="investmentActiveText">Active Investments</p>
               </div>
             </div>
-            <div className="col-md-10 mb-10">
-              <table className="table-auto md:table-auto">
-                <thead className="text-default text-xl text-bold bg-white">
-                  <tr>
-                    <th>Plan</th>
-                    <th>Amount</th>
-                    <th>Duration</th>
-                    <th>Est. Return</th>
-                    <th>Start Date</th>
-                    <th>End Date</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {investment.map((item, index) => (
-                    <tr key={index}>
-                      <td>{item?.investmentPlan}</td>
-                      <td>${item?.investmentAmount}</td>
-                      <td>{item?.investmentDays} day</td>
-                      <td>${item?.estimatedReturn}</td>
-                      <td>{formatDate(item?.startDate)}</td>
-                      <td>{formatDate(item?.endDate)}</td>
+            <div className="w-full max-w-3xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200 relative left-[-20px]">
+              <div className="overflow-x-auto">
+                <table className="table-auto w-full">
+                  <thead className="text-xl text-bold  bg-white">
+                    <tr>
+                      <th className="p-2 whitespace-nowrap text-left">Plan</th>
+                      <th className="p-2 whitespace-nowrap text-left">
+                        Amount
+                      </th>
+                      <th className="p-2 whitespace-nowrap text-left">
+                        Duration
+                      </th>
+                      <th className="p-2 whitespace-nowrap text-left">
+                        Est. Return
+                      </th>
+                      <th className="p-2 whitespace-nowrap text-left">
+                        Start Date
+                      </th>
+                      <th className="p-2 whitespace-nowrap text-left">
+                        End Date
+                      </th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody className="text-sm divide-y divide-gray-100">
+                    {investment.map((item, index) => (
+                      <tr key={index}>
+                        <td className="p-2 whitespace-nowrap">
+                          {item?.investmentPlan}
+                        </td>
+                        <td className="p-2 whitespace-nowrap">
+                          ${item?.investmentAmount}
+                        </td>
+                        <td className="p-2 whitespace-nowrap">
+                          {item?.investmentDays} day
+                        </td>
+                        <td className="p-2 whitespace-nowrap">
+                          ${item?.estimatedReturn}
+                        </td>
+                        <td className="p-2 whitespace-nowrap">
+                          {formatDate(item?.startDate)}
+                        </td>
+                        <td className="p-2 whitespace-nowrap">
+                          {formatDate(item?.endDate)}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div className="mb-20">
-              <div className="investmentActive" id={styles.contentHeader}>
+              <div className="investmentActive" id={styles.investmentHeader}>
                 <p className="investmentActiveText">Recent Investments</p>
               </div>
             </div>
-            <div className="col-md-10 mb-20">
-              <table className="table-auto md:table-auto">
-                <thead className="text-default text-xl text-bold bg-white">
-                  <th>Plan</th>
-                  <th>Amount</th>
-                  <th>End Date</th>
-                </thead>
-                <tbody>
-                  {investment.map((item, index) => (
-                    <tr key={index}>
-                      <td>{item?.investmentPlan}</td>
-                      <td>${item?.investmentAmount}</td>
-                      <td>{formatDate(item?.endDate)}</td>
+            <div className="w-full max-w-3xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200 relative left-[-20px]">
+              <div className="overflow-x-auto">
+                <table className="table-auto w-full">
+                  <thead className="text-xl text-bold bg-white">
+                    <tr>
+                      <th className="p-2 whitespace-nowrap text-left">Plan</th>
+                      <th className="p-2 whitespace-nowrap text-left">
+                        Amount
+                      </th>
+                      <th className="p-2 whitespace-nowrap text-left">
+                        End Date
+                      </th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody className="text-sm divide-y divide-gray-100">
+                    {investment.map((item, index) => (
+                      <tr key={index}>
+                        <td className="p-2 whitespace-nowrap">
+                          {item?.investmentPlan}
+                        </td>
+                        <td className="p-2 whitespace-nowrap">
+                          ${item?.investmentAmount}
+                        </td>
+                        <td className="p-2 whitespace-nowrap">
+                          {formatDate(item?.endDate)}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
           <footer className="footer">
